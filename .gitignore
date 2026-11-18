@@ -14,3 +14,13 @@ __pycache__/
 !.env.example
 *.jks
 *.keystore
+
+# Wonder Window — never commit family data, generated media or API data
+family.properties
+*.apk
+*.aab
+app/src/main/assets/voice/
+app/src/main/assets/catalog.json
+catalog/catalog.json
+shots*/
+*.png.tmp

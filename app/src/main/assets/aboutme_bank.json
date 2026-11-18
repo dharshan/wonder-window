@@ -1,0 +1,1424 @@
+[
+ {
+  "id": "me-001",
+  "domain": "aboutme",
+  "level": 1,
+  "format": "pick_letter",
+  "prompt": "Which letter does your name start with?",
+  "say": "Your name is {name}. Which letter does {name} start with?",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "first_letter",
+  "choices_from": "2 distractors: letters not in his first name; never visually confusable with the answer (b/d/p/q, m/n/u, i/l/j); different first sound; uppercase+lowercase shown",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 0,
+   "requires_fact": [
+    "first_name"
+   ]
+  },
+  "why": "Cued recognition of his own initial: the strongest early-literacy anchor (own-name advantage).",
+  "hint": "play each tile's letter sound, then say {name} slowly",
+  "say_ok": "Yes! {name} starts with {letter}!",
+  "show_answer": true,
+  "passport_page": 1,
+  "success": "tile_to_cover_emboss"
+ },
+ {
+  "id": "me-002",
+  "domain": "aboutme",
+  "level": 1,
+  "format": "colour_wheel",
+  "prompt": "Your favourite colour",
+  "say": "Which colour do you love the most? Spin the wheel!",
+  "big": "",
+  "choices": [
+   {
+    "id": "red",
+    "pic": "🍅",
+    "say": "red"
+   },
+   {
+    "id": "orange",
+    "pic": "🍊",
+    "say": "orange"
+   },
+   {
+    "id": "yellow",
+    "pic": "🍌",
+    "say": "yellow"
+   },
+   {
+    "id": "green",
+    "pic": "🍃",
+    "say": "green"
+   },
+   {
+    "id": "blue",
+    "pic": "💧",
+    "say": "blue"
+   },
+   {
+    "id": "purple",
+    "pic": "🍇",
+    "say": "purple"
+   },
+   {
+    "id": "pink",
+    "pic": "🌸",
+    "say": "pink"
+   },
+   {
+    "id": "brown",
+    "pic": "🍫",
+    "say": "brown"
+   },
+   {
+    "id": "cant_choose",
+    "pic": "🤔",
+    "say": "Can't choose!"
+   }
+  ],
+  "answer": -1,
+  "source": "child:fav_colour",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_colour",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 0
+  },
+  "why": "No-wrong-answer opener; his choice personalises the app so sharing feels rewarding.",
+  "reask_after_days": 28,
+  "personalise": "passport cover, focus ring and buddy scarf (contrast-safe tone)",
+  "say_ok": "Lovely! That's your colour now.",
+  "passport_page": 1,
+  "success": "paint_splash_cover"
+ },
+ {
+  "id": "me-003",
+  "domain": "aboutme",
+  "level": 1,
+  "format": "picture_grid",
+  "prompt": "Your favourite animal",
+  "say": "Which animal do you love the most?",
+  "big": "",
+  "choices": [
+   {
+    "id": "tiger",
+    "pic": "🐯",
+    "say": "tiger"
+   },
+   {
+    "id": "elephant",
+    "pic": "🐘",
+    "say": "elephant"
+   },
+   {
+    "id": "peacock",
+    "pic": "🦚",
+    "say": "peacock"
+   },
+   {
+    "id": "monkey",
+    "pic": "🐒",
+    "say": "monkey"
+   },
+   {
+    "id": "dog",
+    "pic": "🐶",
+    "say": "dog"
+   },
+   {
+    "id": "cat",
+    "pic": "🐱",
+    "say": "cat"
+   },
+   {
+    "id": "cow",
+    "pic": "🐄",
+    "say": "cow"
+   },
+   {
+    "id": "dolphin",
+    "pic": "🐬",
+    "say": "dolphin"
+   },
+   {
+    "id": "lion",
+    "pic": "🦁",
+    "say": "lion"
+   },
+   {
+    "id": "cant_choose",
+    "pic": "🤔",
+    "say": "Can't choose!"
+   }
+  ],
+  "answer": -1,
+  "source": "child:fav_animal",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_animal",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 1
+  },
+  "why": "Preference talk builds self-concept and vocabulary; no wrong answer.",
+  "reask_after_days": 35,
+  "personalise": "greeting clip 'Hello, <animal> friend!' (fixed clip per animal) and cover sticker",
+  "say_ok": "Great choice! I'll put it on your passport.",
+  "passport_page": 1,
+  "success": "sticker_stamp"
+ },
+ {
+  "id": "me-004",
+  "domain": "aboutme",
+  "level": 1,
+  "format": "cake",
+  "prompt": "Which cake is yours?",
+  "say": "How old are you? Which cake is yours?",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:age",
+  "check": "exact",
+  "choices_from": "3 cakes with age-1, age, age+1 candles (min 1, max 10), order shuffled",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 2,
+   "requires_fact": [
+    "birth_month_year"
+   ]
+  },
+  "why": "Age as recognition among age-1, age, age+1 candles; numeracy crossover (subitising up to 6).",
+  "mode": "pick",
+  "hint": "Hold up your fingers. How many?",
+  "say_ok": "Yes! You are {age}!",
+  "show_answer": true,
+  "passport_page": 3,
+  "success": "candles_out_confetti"
+ },
+ {
+  "id": "me-005",
+  "domain": "aboutme",
+  "level": 1,
+  "format": "picture_grid",
+  "prompt": "Your favourite food",
+  "say": "What do you love to eat the most?",
+  "big": "",
+  "choices": [
+   {
+    "id": "dosa",
+    "pic": "🫓",
+    "say": "dosa"
+   },
+   {
+    "id": "idli",
+    "pic": "🍚",
+    "say": "idli"
+   },
+   {
+    "id": "mango",
+    "pic": "🥭",
+    "say": "mango"
+   },
+   {
+    "id": "banana",
+    "pic": "🍌",
+    "say": "banana"
+   },
+   {
+    "id": "chapati",
+    "pic": "🫓",
+    "say": "chapati"
+   },
+   {
+    "id": "rice_dal",
+    "pic": "🍛",
+    "say": "rice and dal"
+   },
+   {
+    "id": "curd_rice",
+    "pic": "🥣",
+    "say": "curd rice"
+   },
+   {
+    "id": "apple",
+    "pic": "🍎",
+    "say": "apple"
+   },
+   {
+    "id": "ice_cream",
+    "pic": "🍨",
+    "say": "ice cream"
+   },
+   {
+    "id": "cant_choose",
+    "pic": "🤔",
+    "say": "Can't choose!"
+   }
+  ],
+  "answer": -1,
+  "source": "child:fav_food",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_food",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 4
+  },
+  "why": "Familiar Bangalore foods; no wrong answer.",
+  "reask_after_days": 35,
+  "say_ok": "Yum! That goes on your 'Things I love' page.",
+  "passport_page": 5,
+  "success": "sticker_stamp"
+ },
+ {
+  "id": "me-006",
+  "domain": "aboutme",
+  "level": 2,
+  "format": "pick_letter",
+  "prompt": "Find your first letter",
+  "say": "Your name is {name}. Which letter does {name} start with?",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "first_letter",
+  "choices_from": "3 distractors: one visually similar to the answer (b/d, p/q, m/n, E/F, C/G), two not in his name",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-001"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Harder discrimination: 4 tiles including one look-alike.",
+  "hint": "play each tile's letter sound",
+  "say_ok": "You found it! {letter}!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "tile_to_train"
+ },
+ {
+  "id": "me-007",
+  "domain": "aboutme",
+  "level": 2,
+  "format": "pick_letter",
+  "prompt": "Which letter does your name end with?",
+  "say": "{name}. Listen to the end. Which letter does {name} end with?",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "last_letter",
+  "choices_from": "2 distractors not in his name, not confusable; never the first letter",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-001"
+   ],
+   "mastered": true,
+   "correct_days": 2
+  },
+  "why": "Final-position awareness; harder than initial. If the name ends in a digraph (sh, th) or silent h, the hint is visual (count from the end), not sound.",
+  "hint": "show the name train and light the last carriage's outline",
+  "say_ok": "Yes! {name} ends with {letter}!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "caboose_stamp"
+ },
+ {
+  "id": "me-008",
+  "domain": "aboutme",
+  "level": 2,
+  "format": "cake",
+  "prompt": "Put your candles on the cake",
+  "say": "How old are you? Put your candles on the cake. Then press OK to blow!",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:age",
+  "check": "exact",
+  "choices_from": "none: 0 to 10 candles with Up/Down",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-004"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Recall instead of recognition: he builds the number.",
+  "mode": "build",
+  "hint": "Hold up your fingers. How many?",
+  "say_ok": "Whoosh! You are {age}!",
+  "show_answer": true,
+  "passport_page": 3,
+  "success": "buddy_blow"
+ },
+ {
+  "id": "me-009",
+  "domain": "aboutme",
+  "level": 2,
+  "format": "picture_grid",
+  "prompt": "Your favourite game",
+  "say": "What do you love to play the most?",
+  "big": "",
+  "choices": [
+   {
+    "id": "cricket",
+    "pic": "🏏",
+    "say": "cricket"
+   },
+   {
+    "id": "football",
+    "pic": "⚽",
+    "say": "football"
+   },
+   {
+    "id": "cycling",
+    "pic": "🚲",
+    "say": "cycling"
+   },
+   {
+    "id": "hide_seek",
+    "pic": "🙈",
+    "say": "hide and seek"
+   },
+   {
+    "id": "blocks",
+    "pic": "🧱",
+    "say": "building blocks"
+   },
+   {
+    "id": "drawing",
+    "pic": "🖍️",
+    "say": "drawing"
+   },
+   {
+    "id": "swimming",
+    "pic": "🏊",
+    "say": "swimming"
+   },
+   {
+    "id": "dancing",
+    "pic": "💃",
+    "say": "dancing"
+   },
+   {
+    "id": "puzzles",
+    "pic": "🧩",
+    "say": "puzzles"
+   },
+   {
+    "id": "cant_choose",
+    "pic": "🤔",
+    "say": "Can't choose!"
+   }
+  ],
+  "answer": -1,
+  "source": "child:fav_game",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_game",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 7
+  },
+  "why": "Links to the Move & Sport row and Try-it pictures.",
+  "reask_after_days": 35,
+  "personalise": "Try-it picture tie-breaker",
+  "say_ok": "Fun! Let's play that today.",
+  "passport_page": 5,
+  "success": "sticker_stamp"
+ },
+ {
+  "id": "me-010",
+  "domain": "aboutme",
+  "level": 2,
+  "format": "picture_grid",
+  "prompt": "When is your birthday?",
+  "say": "When is your birthday? When it's hot and sunny, when it's rainy, or when it's cool?",
+  "big": "",
+  "choices": [
+   {
+    "id": "hot",
+    "pic": "☀️",
+    "say": "hot and sunny"
+   },
+   {
+    "id": "rainy",
+    "pic": "🌧️",
+    "say": "rainy"
+   },
+   {
+    "id": "cool",
+    "pic": "🧥",
+    "say": "cool"
+   }
+  ],
+  "answer": null,
+  "source": "parent:birth_month",
+  "check": "season",
+  "choices_from": "all 3 seasons",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 9,
+   "requires_fact": [
+    "birth_month_year"
+   ]
+  },
+  "why": "Months are abstract at 5½; Bangalore seasons are concrete (Mar-May hot, Jun-Oct rainy, Nov-Feb cool; locale en-IN-KA).",
+  "hint": "Think! Was it raining on your last birthday?",
+  "say_ok": "Yes! Your birthday comes in that time of year!",
+  "show_answer": true,
+  "passport_page": 4,
+  "success": "season_scene"
+ },
+ {
+  "id": "me-011",
+  "domain": "aboutme",
+  "level": 2,
+  "format": "count_tiles",
+  "prompt": "How many letters in your name?",
+  "say": "How many letters are in your name? Let's count them.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "count",
+  "choices_from": "length, length-1, length+1 (min 2)",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-006"
+   ],
+   "mastered": true,
+   "correct_days": 2
+  },
+  "why": "Numeracy crossover; the name is shown, so this is counting, not recall.",
+  "hint": "move along the tiles; each one counts aloud",
+  "say_ok": "Yes! Your name has that many letters!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "number_on_engine"
+ },
+ {
+  "id": "me-012",
+  "domain": "aboutme",
+  "level": 3,
+  "format": "order_tiles",
+  "prompt": "Build your name train (first 3)",
+  "say": "Let's build your name train! Put the first three letters in order.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "order",
+  "choices_from": "his first 3 letters + 1 distractor not in his name",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-007"
+   ],
+   "mastered": true,
+   "correct_days": 2
+  },
+  "why": "First production-like step with full support: only his first 3 letters, scrambled.",
+  "hint": "the next correct tile glows after 3 soft bounces",
+  "say_ok": "Toot toot! {name}'s train is starting!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "train_toot"
+ },
+ {
+  "id": "me-013",
+  "domain": "aboutme",
+  "level": 3,
+  "format": "order_tiles",
+  "prompt": "Build your whole name train",
+  "say": "Let's build your name train! Put all the letters in order.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "order",
+  "choices_from": "all letters of his first name (max 8 free tiles) + 1 distractor",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-012"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Whole first name; up to 8 tiles (longer names: first letters pre-placed).",
+  "hint": "the next correct tile glows after 3 soft bounces",
+  "say_ok": "Toot toot! That's {name}!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "train_drives_into_passport"
+ },
+ {
+  "id": "me-014",
+  "domain": "aboutme",
+  "level": 3,
+  "format": "letter_hunt",
+  "prompt": "Catch your letters",
+  "say": "Catch the letters of your name!",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "set_lenient",
+  "choices_from": "4x4 grid: each distinct letter of his name once + distractors avoiding look-alikes",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-006"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Visual search for his letters among others; playful variety between tile items.",
+  "hint": "a found slot twinkles near the grid",
+  "say_ok": "You caught them all!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "butterflies_carry"
+ },
+ {
+  "id": "me-015",
+  "domain": "aboutme",
+  "level": 3,
+  "format": "family_house",
+  "prompt": "Who lives in your house?",
+  "say": "Who lives in your house with you? Put them in the windows.",
+  "big": "",
+  "choices": [
+   {
+    "id": "amma",
+    "pic": "👩",
+    "say": "Amma"
+   },
+   {
+    "id": "appa",
+    "pic": "👨",
+    "say": "Appa"
+   },
+   {
+    "id": "ajji",
+    "pic": "👵",
+    "say": "Ajji"
+   },
+   {
+    "id": "thatha",
+    "pic": "👴",
+    "say": "Thatha"
+   },
+   {
+    "id": "brother",
+    "pic": "👦",
+    "say": "brother"
+   },
+   {
+    "id": "sister",
+    "pic": "👧",
+    "say": "sister"
+   },
+   {
+    "id": "baby",
+    "pic": "👶",
+    "say": "baby"
+   },
+   {
+    "id": "aunt_uncle",
+    "pic": "🧑",
+    "say": "aunty or uncle"
+   },
+   {
+    "id": "dog",
+    "pic": "🐶",
+    "say": "dog"
+   },
+   {
+    "id": "cat",
+    "pic": "🐱",
+    "say": "cat"
+   },
+   {
+    "id": "someone",
+    "pic": "⭐",
+    "say": "someone else"
+   }
+  ],
+  "answer": null,
+  "source": "parent:household",
+  "check": "set_lenient",
+  "choices_from": "all role icons; 6 windows",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 12,
+   "requires_fact": [
+    "household"
+   ]
+  },
+  "why": "Family vocabulary (Amma, Appa, Ajji, Thatha) with role icons only, never photos or names. Extras like a pet are welcome and reported to the parent.",
+  "hint": "Did we forget anyone? (asked once, then accepted)",
+  "say_ok": "What a happy house!",
+  "show_answer": false,
+  "passport_page": 6,
+  "success": "windows_glow_heart"
+ },
+ {
+  "id": "me-016",
+  "domain": "aboutme",
+  "level": 3,
+  "format": "picture_grid",
+  "prompt": "When I grow up",
+  "say": "What do you want to be when you grow up?",
+  "big": "",
+  "choices": [
+   {
+    "id": "doctor",
+    "pic": "🧑‍⚕️",
+    "say": "doctor"
+   },
+   {
+    "id": "astronaut",
+    "pic": "🧑‍🚀",
+    "say": "astronaut"
+   },
+   {
+    "id": "cricketer",
+    "pic": "🏏",
+    "say": "cricket player"
+   },
+   {
+    "id": "teacher",
+    "pic": "🧑‍🏫",
+    "say": "teacher"
+   },
+   {
+    "id": "farmer",
+    "pic": "🧑‍🌾",
+    "say": "farmer"
+   },
+   {
+    "id": "scientist",
+    "pic": "🧑‍🔬",
+    "say": "scientist"
+   },
+   {
+    "id": "firefighter",
+    "pic": "🧑‍🚒",
+    "say": "firefighter"
+   },
+   {
+    "id": "chef",
+    "pic": "🧑‍🍳",
+    "say": "cook"
+   },
+   {
+    "id": "pilot",
+    "pic": "🧑‍✈️",
+    "say": "pilot"
+   },
+   {
+    "id": "cant_choose",
+    "pic": "🤔",
+    "say": "Can't choose!"
+   }
+  ],
+  "answer": -1,
+  "source": "child:fav_dream",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_dream",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 14
+  },
+  "why": "Gender-balanced community helpers; links to the Community helpers school theme.",
+  "reask_after_days": 42,
+  "personalise": "Try-it picture tie-breaker",
+  "say_ok": "Wow! You can be anything!",
+  "passport_page": 8,
+  "success": "sticker_stamp"
+ },
+ {
+  "id": "me-017",
+  "domain": "aboutme",
+  "level": 3,
+  "format": "picture_grid",
+  "prompt": "Your favourite video world",
+  "say": "Which videos do you love the most?",
+  "big": "",
+  "choices": [
+   {
+    "id": "animals",
+    "pic": "🐘",
+    "say": "animals"
+   },
+   {
+    "id": "space",
+    "pic": "🚀",
+    "say": "space"
+   },
+   {
+    "id": "sport",
+    "pic": "⚽",
+    "say": "sport"
+   },
+   {
+    "id": "science",
+    "pic": "🔬",
+    "say": "science"
+   },
+   {
+    "id": "stories",
+    "pic": "📖",
+    "say": "stories"
+   },
+   {
+    "id": "music",
+    "pic": "🎵",
+    "say": "songs"
+   },
+   {
+    "id": "cant_choose",
+    "pic": "🤔",
+    "say": "Can't choose!"
+   }
+  ],
+  "answer": -1,
+  "source": "child:fav_world",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_world",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 16
+  },
+  "why": "Gives the child a voice in his media diet within the curated rows.",
+  "reask_after_days": 28,
+  "personalise": "+1 mission card in 3 leans to this row; never overrides curation, shares, sport rule or minutes",
+  "say_ok": "I'll remember that!",
+  "passport_page": 5,
+  "success": "sticker_stamp"
+ },
+ {
+  "id": "me-018",
+  "domain": "aboutme",
+  "level": 3,
+  "format": "cake",
+  "prompt": "Your next birthday cake",
+  "say": "How old will you be on your next birthday? Add the candles!",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:age",
+  "check": "exact",
+  "choices_from": "none: 0 to 10 candles",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-008"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Age + 1: 'one more' in a meaningful context.",
+  "mode": "build",
+  "hint": "Make your cake first, then add one more!",
+  "say_ok": "One more candle! Next birthday you'll be one year bigger!",
+  "show_answer": true,
+  "passport_page": 3,
+  "success": "outline_cake_fills"
+ },
+ {
+  "id": "me-019",
+  "domain": "aboutme",
+  "level": 4,
+  "format": "letter_board",
+  "prompt": "Write your name (with help)",
+  "say": "Can you write your name? Find the letters on the board.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "exact",
+  "choices_from": "A-Z alphabet-order board",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-013"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Recall-to-production with scaffolding: slots shown, the next key pulses after 4 s idle.",
+  "mode": "highlight",
+  "hint": "the next correct key pulses; focus steps towards it",
+  "say_ok": "That's YOUR name, {name}!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "letters_light_fireworks"
+ },
+ {
+  "id": "me-020",
+  "domain": "aboutme",
+  "level": 4,
+  "format": "map_pin",
+  "prompt": "Where do you live?",
+  "say": "Where do you live? Find your home on the map.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:city",
+  "check": "region",
+  "choices_from": "step 1: Karnataka + 2 other states; step 2: his city + 2 other Karnataka cities, each with a landmark icon. Cities not in the map pack fall back to say_aloud",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 18,
+   "requires_fact": [
+    "city"
+   ]
+  },
+  "why": "Place identity from big to small (country, state, city); pictures only, no labels to read.",
+  "hint": "Our city has a big building called Vidhana Soudha.",
+  "say_ok": "That's where you live!",
+  "show_answer": true,
+  "passport_page": 7,
+  "success": "buddy_flies_pin_bounce"
+ },
+ {
+  "id": "me-021",
+  "domain": "aboutme",
+  "level": 4,
+  "format": "picture_grid",
+  "prompt": "Your birthday month",
+  "say": "Which month is your birthday?",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:birth_month",
+  "check": "exact",
+  "choices_from": "his month + 2 months from other seasons; each tile has a month clip and a season picture",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-010"
+   ],
+   "mastered": true,
+   "correct_days": 2
+  },
+  "why": "Stretch: month names, using 3 choices with season and festival pictures.",
+  "hint": "Remember: your birthday comes when it's (season clip).",
+  "say_ok": "Yes! That's your birthday month!",
+  "show_answer": true,
+  "passport_page": 4,
+  "success": "calendar_page_flip"
+ },
+ {
+  "id": "me-022",
+  "domain": "aboutme",
+  "level": 4,
+  "format": "still_love",
+  "prompt": "Do you still love this animal?",
+  "say": "Do you still love this one the most?",
+  "big": "<saved fav_animal picture>",
+  "choices": [
+   {
+    "id": "still",
+    "pic": "💛",
+    "say": "Still my favourite!"
+   },
+   {
+    "id": "new",
+    "pic": "🔄",
+    "say": "I have a new one!"
+   }
+  ],
+  "answer": -1,
+  "source": "item:me-003",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_animal",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-003"
+   ],
+   "mastered": false,
+   "min_days": 28
+  },
+  "why": "Joyful re-ask: changing your mind is celebrated; the old and new stickers sit side by side.",
+  "say_ok": "I love that you know what you love!",
+  "passport_page": 5,
+  "success": "gold_ribbon_or_new_sticker"
+ },
+ {
+  "id": "me-023",
+  "domain": "aboutme",
+  "level": 4,
+  "format": "still_love",
+  "prompt": "Is this still your colour?",
+  "say": "Is this still your favourite colour?",
+  "big": "<saved fav_colour swatch>",
+  "choices": [
+   {
+    "id": "still",
+    "pic": "💛",
+    "say": "Still my favourite!"
+   },
+   {
+    "id": "new",
+    "pic": "🔄",
+    "say": "I have a new one!"
+   }
+  ],
+  "answer": -1,
+  "source": "item:me-002",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_colour",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-002"
+   ],
+   "mastered": false,
+   "min_days": 28
+  },
+  "why": "Re-ask; a new pick re-themes the app.",
+  "say_ok": "Colourful!",
+  "passport_page": 1,
+  "success": "gold_ribbon_or_new_sticker"
+ },
+ {
+  "id": "me-024",
+  "domain": "aboutme",
+  "level": 4,
+  "format": "left_right",
+  "prompt": "Your drawing hand",
+  "say": "Which hand do you draw with? Press the arrow on that side!",
+  "big": "",
+  "choices": [
+   {
+    "id": "left",
+    "pic": "🫲",
+    "say": "left hand"
+   },
+   {
+    "id": "right",
+    "pic": "🫱",
+    "say": "right hand"
+   }
+  ],
+  "answer": -1,
+  "source": "child:drawing_hand",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "drawing_hand",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 20
+  },
+  "why": "Body awareness and a playful first left/right practice; no wrong answer.",
+  "reask_after_days": 60,
+  "say_ok": "That's your drawing hand! Wave it!",
+  "passport_page": 1,
+  "success": "hand_waves_star"
+ },
+ {
+  "id": "me-025",
+  "domain": "aboutme",
+  "level": 4,
+  "format": "letter_board",
+  "prompt": "Write your name all by yourself",
+  "say": "Can you write your name all by yourself?",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:first_name",
+  "check": "exact",
+  "choices_from": "A-Z alphabet-order board",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-019"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Unsupported production: no slot count, no highlight.",
+  "mode": "free",
+  "hint": "on a miss: wrong letters fade, correct ones stay",
+  "say_ok": "All by yourself! Super, {name}!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "letters_light_fireworks"
+ },
+ {
+  "id": "me-026",
+  "domain": "aboutme",
+  "level": 5,
+  "format": "order_tiles",
+  "prompt": "Your family name train",
+  "say": "Now let's build your family name! Put the letters in order.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:family_name",
+  "check": "order",
+  "choices_from": "letters of the family name (max 8 free tiles) + 1 distractor",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-013"
+   ],
+   "mastered": true,
+   "correct_days": 3,
+   "requires_fact": [
+    "family_name"
+   ]
+  },
+  "why": "The second part of his full name; the parent chooses which part to teach.",
+  "hint": "the next correct tile glows after 3 soft bounces",
+  "say_ok": "That's your family name!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "second_train_couples"
+ },
+ {
+  "id": "me-027",
+  "domain": "aboutme",
+  "level": 5,
+  "format": "letter_board",
+  "prompt": "Write your family name",
+  "say": "Can you write your family name? Find the letters on the board.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:family_name",
+  "check": "exact",
+  "choices_from": "A-Z alphabet-order board",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-026"
+   ],
+   "mastered": true,
+   "correct_days": 3
+  },
+  "why": "Production of the family name with highlight support.",
+  "mode": "highlight",
+  "hint": "the next correct key pulses",
+  "say_ok": "Brilliant writing!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "letters_light_fireworks"
+ },
+ {
+  "id": "me-029",
+  "domain": "aboutme",
+  "level": 5,
+  "format": "picture_grid",
+  "prompt": "What's near your home?",
+  "say": "What is near your house?",
+  "big": "",
+  "choices": [
+   {
+    "id": "temple",
+    "pic": "🛕",
+    "say": "temple"
+   },
+   {
+    "id": "park",
+    "pic": "🌳",
+    "say": "park"
+   },
+   {
+    "id": "metro",
+    "pic": "🚇",
+    "say": "metro"
+   },
+   {
+    "id": "school",
+    "pic": "🏫",
+    "say": "school"
+   },
+   {
+    "id": "shop",
+    "pic": "🏪",
+    "say": "shop"
+   },
+   {
+    "id": "lake",
+    "pic": "🌊",
+    "say": "lake"
+   },
+   {
+    "id": "big_tree",
+    "pic": "🌲",
+    "say": "big tree"
+   }
+  ],
+  "answer": null,
+  "source": "parent:landmark",
+  "check": "exact",
+  "choices_from": "his landmark icon + 2 others",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 22,
+   "requires_fact": [
+    "landmark"
+   ]
+  },
+  "why": "Landmark recognition is a key part of 'I'm lost' help; an icon reveals almost nothing.",
+  "hint": "Think about what you see when you walk home.",
+  "say_ok": "Yes! That's near your home!",
+  "show_answer": true,
+  "passport_page": 7,
+  "success": "landmark_pops_up"
+ },
+ {
+  "id": "me-035",
+  "domain": "aboutme",
+  "level": 6,
+  "format": "still_love",
+  "prompt": "Do you still love this food?",
+  "say": "Do you still love this one the most?",
+  "big": "<saved fav_food picture>",
+  "choices": [
+   {
+    "id": "still",
+    "pic": "💛",
+    "say": "Still my favourite!"
+   },
+   {
+    "id": "new",
+    "pic": "🔄",
+    "say": "I have a new one!"
+   }
+  ],
+  "answer": -1,
+  "source": "item:me-005",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_food",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-005"
+   ],
+   "mastered": false,
+   "min_days": 35
+  },
+  "why": "Re-ask.",
+  "say_ok": "Yum, yum!",
+  "passport_page": 5,
+  "success": "gold_ribbon_or_new_sticker"
+ },
+ {
+  "id": "me-036",
+  "domain": "aboutme",
+  "level": 5,
+  "format": "count_tiles",
+  "prompt": "How many letters in your family name?",
+  "say": "How many letters are in your family name? Let's count them.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:family_name",
+  "check": "count",
+  "choices_from": "length, length-1, length+1",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-026"
+   ],
+   "mastered": true,
+   "correct_days": 2
+  },
+  "why": "Counting crossover for the second name.",
+  "hint": "move along the tiles; each one counts aloud",
+  "say_ok": "Great counting!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "number_on_engine"
+ },
+ {
+  "id": "me-037",
+  "domain": "aboutme",
+  "level": 6,
+  "format": "letter_board",
+  "prompt": "Write your full name",
+  "say": "Can you write your whole name? First name, then a space, then your family name.",
+  "big": "",
+  "choices": [],
+  "answer": null,
+  "source": "parent:full_name",
+  "check": "exact",
+  "choices_from": "A-Z alphabet-order board + space key",
+  "save_as": null,
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [
+    "me-025"
+   ],
+   "mastered": true,
+   "correct_days": 3,
+   "requires_fact": [
+    "family_name"
+   ],
+   "also_mastered": [
+    "me-027"
+   ]
+  },
+  "why": "The father's goal: spell the full name. The board has a space key in this mode.",
+  "mode": "free_with_space",
+  "hint": "on a miss: wrong letters fade, correct ones stay",
+  "say_ok": "Your whole name! You are a real writer, {name}!",
+  "show_answer": true,
+  "passport_page": 2,
+  "success": "both_trains_parade"
+ },
+ {
+  "id": "me-038",
+  "domain": "aboutme",
+  "level": 2,
+  "format": "cake",
+  "prompt": "Decorate your birthday cake",
+  "say": "What would you like on your birthday cake?",
+  "big": "",
+  "choices": [
+   {
+    "id": "fruit",
+    "pic": "🍓",
+    "say": "fruit"
+   },
+   {
+    "id": "chocolate",
+    "pic": "🍫",
+    "say": "chocolate"
+   },
+   {
+    "id": "sprinkles",
+    "pic": "🌈",
+    "say": "sprinkles"
+   },
+   {
+    "id": "candles_stars",
+    "pic": "⭐",
+    "say": "stars"
+   },
+   {
+    "id": "cant_choose",
+    "pic": "🤔",
+    "say": "Can't choose!"
+   }
+  ],
+  "answer": -1,
+  "source": "child:fav_cake_topping",
+  "check": "none",
+  "choices_from": null,
+  "save_as": "fav_cake_topping",
+  "tier": "me",
+  "counts": false,
+  "unlock": {
+   "after": [],
+   "mastered": false,
+   "min_days": 10
+  },
+  "why": "Pure play between checked items; keeps the cake page joyful.",
+  "mode": "decorate",
+  "reask_after_days": 60,
+  "say_ok": "Mmm, what a cake!",
+  "passport_page": 3,
+  "success": "topping_rain"
+ }
+]

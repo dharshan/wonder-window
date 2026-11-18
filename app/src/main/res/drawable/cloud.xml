@@ -1,0 +1,5 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp" android:height="90dp"
+    android:viewportWidth="160" android:viewportHeight="90">
+    <path android:name="cloud" android:pathData="M20,80 C0,80 0,50 24,48 C26,22 62,14 76,36 C88,12 130,14 134,44 C160,42 166,80 140,80 Z" android:fillColor="#E6FFFFFF"/>
+</vector>

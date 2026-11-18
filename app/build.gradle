@@ -1,0 +1,69 @@
+plugins { id 'com.android.application' }
+
+// Two editions (flavorDimension "edition"):
+//   public - what CI and GitHub releases build. NEVER reads family.properties: it ships only the defaults below,
+//            so no child or family value can reach a public APK. tools/check_public_apk.py verifies this.
+//   family - local-only personalised build. Copy family.properties.example to family.properties and edit.
+//            A family APK must never be uploaded as a public release.
+// The parent phone number is not supported in any edition (no phone, hash or salt value is ever built in).
+def esc = { String v -> v.replace('&', '&amp;').replace('<', '&lt;').replace("'", "\\'") }
+
+def publicDefaults = [
+        app_name: 'Wonder Window', buddy_name: 'Pip', warmup_title: "Pip's Warm-up",
+        child_name: '', child_birth: '', aboutme_unlock_all: 'false', daily_limit_min: '120',
+        try_v3: 'true', try_enabled: 'true', try_allow_supervised: 'true', try_families: '', try_age_band: '5-6'
+]
+
+// Read family.properties lazily: only the family flavor calls this.
+def familyValues = {
+    def family = new Properties()
+    def famFile = rootProject.file('family.properties')
+    if (famFile.exists()) famFile.withReader('UTF-8') { family.load(it) }
+    def buddy = family.getProperty('buddy_name', publicDefaults.buddy_name)
+    [
+            app_name            : family.getProperty('app_title', publicDefaults.app_name),
+            buddy_name          : buddy,
+            warmup_title        : family.getProperty('warmup_title', buddy + "'s Warm-up"),
+            child_name          : family.getProperty('child_name', ''),
+            child_birth         : family.getProperty('child_birth', ''),
+            aboutme_unlock_all  : family.getProperty('aboutme_unlock_all', 'false'),
+            // One daily screen-time limit shared by Watch, Play and Try (30-180 min, default 120).
+            daily_limit_min     : Math.max(30, Math.min(180, (family.getProperty('daily_limit_min', '120') as int))).toString(),
+            try_v3              : family.getProperty('try_v3', 'true'),
+            try_enabled         : family.getProperty('try_enabled', 'true'),
+            try_allow_supervised: family.getProperty('try_allow_supervised', 'true'),
+            try_families        : family.getProperty('try_families', ''),
+            try_age_band        : family.getProperty('try_age_band', '5-6')
+    ]
+}
+
+def addResValues = { flavor, Map v ->
+    flavor.resValue 'string', 'app_name', esc(v.app_name)
+    flavor.resValue 'string', 'buddy_name', esc(v.buddy_name)
+    flavor.resValue 'string', 'warmup_title', esc(v.warmup_title)
+    flavor.resValue 'string', 'child_name', esc(v.child_name)
+    flavor.resValue 'string', 'child_birth', esc(v.child_birth)
+    flavor.resValue 'bool', 'aboutme_unlock_all', v.aboutme_unlock_all
+    flavor.resValue 'integer', 'daily_limit_min', v.daily_limit_min
+    flavor.resValue 'bool', 'try_v3', v.try_v3
+    flavor.resValue 'bool', 'try_enabled', v.try_enabled
+    flavor.resValue 'bool', 'try_allow_supervised', v.try_allow_supervised
+    flavor.resValue 'string', 'try_families', esc(v.try_families)
+    flavor.resValue 'string', 'try_age_band', esc(v.try_age_band)
+}
+
+android {
+    namespace 'org.wonderwindow.tv'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'org.wonderwindow.tv'; minSdk 26; targetSdk 34; versionCode 22; versionName '0.9.0-try3'
+    }
+    flavorDimensions 'edition'
+    productFlavors {
+        create('public') { dimension 'edition'; addResValues(delegate, publicDefaults) }
+        create('family') { dimension 'edition'; addResValues(delegate, familyValues()) }
+    }
+    buildTypes { release { minifyEnabled false; signingConfig signingConfigs.debug } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    lint { error 'NewApi'; abortOnError true; checkReleaseBuilds false }
+}
