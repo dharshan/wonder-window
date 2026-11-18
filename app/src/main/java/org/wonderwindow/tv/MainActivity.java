@@ -353,24 +353,22 @@ public class MainActivity extends Activity {
     // ------------------------------------------------------------------ anti-repeat rotation (docs/DECISIONS.md D8)
     // The only WATCH history kept: IDs and launch times of videos actually started, used to avoid repeating them
     // for 7 days and purged after 14. No progress, completion, feedback, channel scores or inferred interests.
-    private static final long REPEAT_MS = 7L * 24 * 3600_000, KEEP_MS = 14L * 24 * 3600_000;
 
-    private JSONObject launched() {
-        JSONObject l;
-        try { l = new JSONObject(prefs.getString("launched", "{}")); } catch (Exception e) { l = new JSONObject(); }
-        long now = System.currentTimeMillis();
-        List<String> old = new ArrayList<>();
-        for (java.util.Iterator<String> it = l.keys(); it.hasNext(); ) { String k = it.next(); if (now - l.optLong(k) > KEEP_MS) old.add(k); }
-        for (String k : old) l.remove(k);
-        return l;
+    private AntiRepeat antiRepeat;
+
+    /** Loads the anti-repeat history and persists the 14-day purge immediately. */
+    private AntiRepeat antiRepeat() {
+        if (antiRepeat == null) {
+            String stored = prefs.getString("launched", "");
+            antiRepeat = AntiRepeat.parse(stored, System.currentTimeMillis());
+            if (!antiRepeat.serialize().equals(stored)) prefs.edit().putString("launched", antiRepeat.serialize()).apply();
+        } else if (antiRepeat.purge(System.currentTimeMillis())) {
+            prefs.edit().putString("launched", antiRepeat.serialize()).apply();
+        }
+        return antiRepeat;
     }
 
-    private void markLaunched(JSONObject v) {
-        try { JSONObject l = launched(); l.put(v.optString("id"), System.currentTimeMillis()); prefs.edit().putString("launched", l.toString()).apply(); }
-        catch (Exception ignored) { }
-    }
-
-    private boolean seenRecently(String id) { return System.currentTimeMillis() - launched().optLong(id, 0) < REPEAT_MS; }
+    private boolean seenRecently(String id) { return antiRepeat().recentlyStarted(id, System.currentTimeMillis()); }
 
     /** Removes the behavioural ranking state kept by v0.9 and earlier (scores, likes, dislikes). */
     private void dropLegacyRanking() {
@@ -382,9 +380,7 @@ public class MainActivity extends Activity {
     private double maxFrac;
 
     private void leaveVideo(boolean finished) {
-        if (queue.isEmpty()) return;
-        markLaunched(queue.get(qIndex));
-        maxFrac = 0;
+        maxFrac = 0;                                             // nothing about how the video ended is stored (D8)
     }
 
     // ------------------------------------------------------------------ daily budget (shared for all kids, D43)
@@ -3256,6 +3252,7 @@ public class MainActivity extends Activity {
     // ------------------------------------------------------------------ framed player (tech §2.3 / design D1)
     @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface"})
     private void showPlayer() {
+        antiRepeat().newItem();
         stopVoice();
         root.removeAllViews();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -3354,6 +3351,7 @@ public class MainActivity extends Activity {
         if (ending) { endSession(); return; }
         qIndex = (qIndex + 1) % queue.size();
         showNow();
+        antiRepeat().newItem();
         js("ld('" + queue.get(qIndex).optString("id") + "')");
     }
 
@@ -3389,7 +3387,13 @@ public class MainActivity extends Activity {
     private class Bridge {
         @JavascriptInterface public void onReady() { Log.i(TAG, "player ready"); }
         @JavascriptInterface public void onState(int st) {
-            ui.post(() -> { Log.i(TAG, "state " + st); if (st == 0) nextVideo(true); });
+            ui.post(() -> {
+                Log.i(TAG, "state " + st);
+                // D8: record the start only when playback really begins (state 1), once per queue item
+                if (!queue.isEmpty() && antiRepeat().onPlayerState(st, queue.get(qIndex).optString("id"), System.currentTimeMillis()))
+                    prefs.edit().putString("launched", antiRepeat().serialize()).apply();
+                if (st == 0) nextVideo(true);
+            });
         }
         @JavascriptInterface public void onError(int code) {
             ui.post(() -> { Log.w(TAG, "player error " + code + " on " + queue.get(qIndex).optString("id")); nextVideo(); });

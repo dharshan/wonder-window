@@ -39,3 +39,13 @@ def test_sentinel_values_fail():
 
 def test_missing_default_fails_closed():
     assert mod.check([v for v in CLEAN if v[0] != "buddy_name"])
+
+
+def test_child_reachability_booleans_must_equal_public_defaults():
+    # #10: these four change what the child can reach, so a family value must never pass as public.
+    vals = dict(CLEAN)
+    for k, bad in (("aboutme_unlock_all", "true"), ("try_v3", "false"), ("try_enabled", "false"),
+                   ("try_allow_supervised", "false")):
+        changed = dict(vals); changed[k] = bad
+        assert mod.check(list(changed.items())), k
+        assert mod.check([v for v in CLEAN if v[0] != k]), k + " missing must fail closed"

@@ -22,7 +22,10 @@ import xml.etree.ElementTree as ET
 MUST_BE_EMPTY = ("child_name", "child_birth")
 # Every family-controlled value must equal the public default in a public build.
 PUBLIC_DEFAULTS = {"app_name": "Wonder Window", "buddy_name": "Pip", "warmup_title": "Pip's Warm-up",
-                   "daily_limit_min": "120", "watch_session_min": "20", "try_families": "", "try_age_band": "5-6"}
+                   "daily_limit_min": "120", "watch_session_min": "20", "try_families": "", "try_age_band": "5-6",
+                   # booleans that change what the child can reach (#10)
+                   "aboutme_unlock_all": "false", "try_v3": "true", "try_enabled": "true",
+                   "try_allow_supervised": "true"}
 SENTINEL = re.compile(r"SENTINEL", re.I)
 FORBIDDEN = re.compile(r"phone|salt|passcode", re.I)
 
