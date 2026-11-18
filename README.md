@@ -16,3 +16,5 @@ Rendered with headless Chrome and the app's own bundled Fredoka and Andika fonts
 ## `design-92350ba/`: revised PR #12 concepts rendered the same way
 
 ## `design-e1f71ce/`: PR #12 concepts at e1f71ce, rendered at 1080 and 720
+
+## `design-7ce3b5e/`: PR #12 concepts at 7ce3b5e, rendered at 1080 and 720
