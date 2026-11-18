@@ -1,8 +1,8 @@
 # What the app keeps on the TV
 
-Wonder Window has no backend of its own, no accounts and no first-party analytics. Everything listed below stays on the TV, in the app's private storage, and the app never uploads it.
+Wonder Window has no backend of its own, no accounts and no first-party analytics. Everything listed below is data the app itself stores. It stays on the TV, in the app's private storage, and the app never uploads it.
 
-**Network use is not zero.** WATCH plays curated videos through the YouTube IFrame player, which the app loads from Google/YouTube hosts (`www.youtube.com/iframe_api`, `www.youtube-nocookie.com`). Those requests come from Google's player, not from Wonder Window, and Google's own terms and privacy policy apply to them. Wonder Window sends no child data with them: no name, age, birth date, address, phone or app history. PLAY and TRY work offline. See [`docs/compliance/youtube.md`](compliance/youtube.md) for the player configuration and the made-for-kids notes.
+**Network use is not zero.** WATCH plays curated videos through the YouTube IFrame player, which the app loads from Google/YouTube hosts (`www.youtube.com/iframe_api`, `www.youtube-nocookie.com`). Google/YouTube receives those playback requests, including the video ID, and may receive network, device, request and player-interaction information under its own terms and privacy policy. What Wonder Window controls is what it puts in the requests it builds: it does not add the child's name, age, birth date, address, phone number or any of the stored app history below. PLAY and TRY work offline. See [`docs/compliance/youtube.md`](compliance/youtube.md) for the player configuration and the made-for-kids notes.
 
 | Kept on the TV | Why | How long |
 | --- | --- | --- |
@@ -13,4 +13,4 @@ Wonder Window has no backend of its own, no accounts and no first-party analytic
 
 Not kept: watch progress or completion, likes or dislikes, inferred interests, voice, photos, location, and no address or phone number. Version 0.9 and earlier kept a behavioural ranking; the app deletes it on first start (D8).
 
-To clear everything today: Android Settings → Apps → Wonder Window → Clear data. A parent-authenticated reset inside the app will come with the parent gate (issue #6).
+There is no in-app reset today. D8 plans a parent-authenticated reset of this history with the parent gate (issue #6). Until then, Android's system-level action (Settings → Apps → Wonder Window → Clear data) is the only way to clear it, and it removes all of the app's state at once: screen-time minutes, game levels and TRY history as well as the video history.

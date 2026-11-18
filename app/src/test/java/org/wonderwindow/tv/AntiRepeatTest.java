@@ -55,4 +55,14 @@ public class AntiRepeatTest {
         a.onPlayerState(1, "abc", NOW);
         assertEquals("abc:" + NOW, a.serialize());
     }
+
+    @Test public void persistDecisionWritesOnlyWhenPurgeChangesStorage() {
+        String old = "v1:" + (NOW - 15 * DAY) + ",v2:" + (NOW - DAY);
+        assertEquals("v2:" + (NOW - DAY), AntiRepeat.valueToPersist(old, NOW));       // expired entry -> write pruned value
+        assertNull(AntiRepeat.valueToPersist("v2:" + (NOW - DAY), NOW));             // already clean -> no write
+        assertNull(AntiRepeat.valueToPersist("", NOW));
+        assertNull(AntiRepeat.valueToPersist(null, NOW));
+        assertEquals("", AntiRepeat.valueToPersist("{\"legacy\":1}", NOW));          // legacy/garbage -> cleared
+        assertEquals("", AntiRepeat.valueToPersist("v1:" + (NOW - 20 * DAY), NOW));   // everything expired -> cleared
+    }
 }

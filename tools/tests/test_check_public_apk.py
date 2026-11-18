@@ -1,6 +1,8 @@
 import importlib.util
 import pathlib
 
+import pytest
+
 spec = importlib.util.spec_from_file_location("check_public_apk", pathlib.Path(__file__).resolve().parents[1] / "check_public_apk.py")
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
@@ -49,3 +51,15 @@ def test_child_reachability_booleans_must_equal_public_defaults():
         changed = dict(vals); changed[k] = bad
         assert mod.check(list(changed.items())), k
         assert mod.check([v for v in CLEAN if v[0] != k]), k + " missing must fail closed"
+
+
+def _non_default(v):
+    return {"": "x", "true": "false", "false": "true"}.get(v, v + "1")
+
+
+@pytest.mark.parametrize("key", sorted(mod.PUBLIC_DEFAULTS))
+def test_every_public_default_is_enforced(key):
+    # Any family-controlled value that differs from the public default, or is missing, must fail (#10).
+    changed = dict(CLEAN); changed[key] = _non_default(mod.PUBLIC_DEFAULTS[key])
+    assert mod.check(list(changed.items())), key + " changed must fail"
+    assert mod.check([v for v in CLEAN if v[0] != key]), key + " missing must fail closed"

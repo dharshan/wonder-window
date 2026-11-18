@@ -25,6 +25,15 @@ final class AntiRepeat {
         return a;
     }
 
+    /**
+     * Load-and-persist decision used at app start and whenever WATCH reads the history: returns the value to write
+     * back to storage, or null when the stored value is already clean (nothing to write).
+     */
+    static String valueToPersist(String stored, long now) {
+        String clean = parse(stored, now).serialize();
+        return clean.equals(stored == null ? "" : stored) ? null : clean;
+    }
+
     /** Drops entries older than 14 days. Returns true if anything was removed (caller persists). */
     boolean purge(long now) {
         return starts.values().removeIf(t -> now - t > KEEP_MS || t > now + 60_000);

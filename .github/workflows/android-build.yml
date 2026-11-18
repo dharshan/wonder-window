@@ -31,7 +31,7 @@ jobs:
       - name: Public build never reads family.properties (fail-closed test)
         run: |
           # Invalid and sentinel values: if the public build read this file, it would fail or leak them.
-          printf 'child_name=SENTINEL_NAME\nchild_birth=2000-01\nparent_phone=0000000000\nbuddy_name=SentinelBuddy\napp_title=SentinelTitle\nwarmup_title=SentinelWarm\ndaily_limit_min=not-a-number\naboutme_unlock_all=true\ntry_v3=false\ntry_enabled=false\ntry_allow_supervised=false\n' > family.properties
+          printf 'child_name=SENTINEL_NAME\nchild_birth=2000-01\nparent_phone=0000000000\nbuddy_name=SentinelBuddy\napp_title=SentinelTitle\nwarmup_title=SentinelWarm\ndaily_limit_min=not-a-number\naboutme_unlock_all=true\ntry_v3=false\ntry_enabled=false\ntry_allow_supervised=false\nwatch_session_min=47\ntry_families=sentinel_family\ntry_age_band=9-10\n' > family.properties
           ./gradlew --no-daemon assemblePublicDebug
           python3 tools/check_public_apk.py --apk app/build/outputs/apk/public/debug/app-public-debug.apk
           # Negative control: an explicitly requested family build must be flagged by the checker.

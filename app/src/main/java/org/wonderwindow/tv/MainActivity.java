@@ -121,6 +121,7 @@ public class MainActivity extends Activity {
         s = getResources().getDisplayMetrics().widthPixels / 1920f;
         prefs = getSharedPreferences("ww", MODE_PRIVATE);
         dropLegacyRanking();
+        antiRepeat();                 // D8: purge history older than 14 days at every start, even if WATCH is never opened
         reconcileMeter();
         loadFonts();
         outer = new FrameLayout(this);
@@ -359,9 +360,11 @@ public class MainActivity extends Activity {
     /** Loads the anti-repeat history and persists the 14-day purge immediately. */
     private AntiRepeat antiRepeat() {
         if (antiRepeat == null) {
+            long now = System.currentTimeMillis();
             String stored = prefs.getString("launched", "");
-            antiRepeat = AntiRepeat.parse(stored, System.currentTimeMillis());
-            if (!antiRepeat.serialize().equals(stored)) prefs.edit().putString("launched", antiRepeat.serialize()).apply();
+            String write = AntiRepeat.valueToPersist(stored, now);
+            if (write != null) prefs.edit().putString("launched", write).apply();
+            antiRepeat = AntiRepeat.parse(write != null ? write : stored, now);
         } else if (antiRepeat.purge(System.currentTimeMillis())) {
             prefs.edit().putString("launched", antiRepeat.serialize()).apply();
         }
