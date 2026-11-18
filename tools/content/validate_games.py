@@ -83,7 +83,7 @@ LOCAL_EMOJI = set("🚕🚇🛵🥥🥭🍆🥜🍲🥣☕🌺🦚🎆🎇🏏�
 
 def check_spoken(where, s):
     """TTS rules for lines recorded with macOS say (Rishi)."""
-    if "{" in s:
+    if "{" in s.replace("{buddy}", ""):                    # {buddy} is filled by make_voice.py and the app
         errors.append(f"{where}: spoken line contains a placeholder: {s!r}")
     for m in SINGLE.finditer(s):
         ch = m.group(1)

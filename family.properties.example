@@ -3,12 +3,12 @@
 # buddy_name  = the friendly guide's name, used in sentences like "<buddy> picked a 15-minute adventure"
 # warmup_title = title of the warm-up game (defaults to "<buddy_name>'s Warm-up")
 app_title=Wonder Window
-buddy_name=Gubbi
+buddy_name=Pip
 # voice = macOS voice used to record the spoken lines (say -v ? lists them; Rishi = Indian English)
 voice=Rishi
 voice_rate=150
 # About Me warm-up (stays on this laptop and the TV; never committed):
-# child_name  = the first name he is learning to spell, e.g. Cherry
+# child_name  = the first name he is learning to spell, e.g. Asha
 # child_birth = birth year and month, YYYY-MM
 # aboutme_unlock_all = true shows all About Me question types at once (for testing)
 child_name=
@@ -31,3 +31,10 @@ try_families=
 try_age_band=5-6
 # show activities that need a grown-up's supervision
 try_allow_supervised=true
+
+# Watch: true = the warm-up questions decide how many minutes a session gets (your family's choice;
+# the v1.1 brief says no quiz gates, so the public default is false and a fixed session length is used)
+watch_warmup_minutes=false
+watch_session_min=20
+# All About Me: phone-number entry and saying the home address aloud (needs a threat model per v1.1; off by default)
+aboutme_phone_address=false

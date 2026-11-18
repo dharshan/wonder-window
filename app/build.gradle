@@ -4,7 +4,7 @@ plugins { id 'com.android.application' }
 def family = new Properties()
 def famFile = rootProject.file('family.properties')
 if (famFile.exists()) famFile.withReader('UTF-8') { family.load(it) }
-def buddy = family.getProperty('buddy_name', 'Gubbi')
+def buddy = family.getProperty('buddy_name', 'Pip')
 def appTitle = family.getProperty('app_title', 'Wonder Window')
 def warmup = family.getProperty('warmup_title', buddy + "'s Warm-up")
 def childName = family.getProperty('child_name', '')
@@ -17,6 +17,10 @@ def tryFamilies = family.getProperty('try_families', '')
 def tryAge = family.getProperty('try_age_band', '5-6')
 def trySup = family.getProperty('try_allow_supervised', 'true')
 def tryOn = family.getProperty('try_enabled', 'true')
+// v1.1-review flags (public default OFF): warm-up decides session minutes; phone/address rounds in All About Me
+def warmupMinutes = family.getProperty('watch_warmup_minutes', 'false')
+def sessionMin = Math.max(5, Math.min(60, (family.getProperty('watch_session_min', '20') as int)))
+def aboutSafety = family.getProperty('aboutme_phone_address', 'false')
 def dailyLimit = Math.max(30, Math.min(180, (family.getProperty('daily_limit_min', '120') as int)))
 // Phone practice: only a slow salted hash (PBKDF2, 200k rounds, fresh salt each build) of the whole number reaches the TV.
 def phone = family.getProperty('parent_phone', '').replaceAll('[^0-9]', '')
@@ -40,6 +44,9 @@ android {
         resValue 'bool', 'aboutme_unlock_all', aboutAll
         resValue 'integer', 'daily_limit_min', dailyLimit.toString()
         resValue 'bool', 'try_v3', tryV3
+        resValue 'bool', 'watch_warmup_minutes', warmupMinutes
+        resValue 'integer', 'watch_session_min', sessionMin.toString()
+        resValue 'bool', 'aboutme_phone_address', aboutSafety
         resValue 'bool', 'try_enabled', tryOn
         resValue 'bool', 'try_allow_supervised', trySup
         resValue 'string', 'try_families', tryFamilies
