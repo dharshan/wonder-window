@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Wonder Window five-beat story arc</title>
+<desc>Five visual beats show a child arriving in the shared world, noticing a landmark, choosing with remote focus, discovering a result and carrying the idea away from the TV.</desc>
+<defs><filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1F2547" flood-opacity=".12"/></filter></defs>
+<rect width="1920" height="1080" fill="#F8F3E8"/>
+<text x="80" y="100" font-family="Fredoka,Arial,sans-serif" font-size="54" font-weight="700" fill="#1F2547">The five beats of wonder</text>
+<text x="82" y="150" font-family="Andika,Arial,sans-serif" font-size="26" fill="#46516B">A repeatable rhythm for every child-facing flow — never a forced sequence or timed task.</text>
+<!-- connectors -->
+<g stroke="#C4B18A" stroke-width="8" fill="none" stroke-linecap="round"><path d="M400 500h32m-14 -16 16 16 -16 16"/><path d="M770 500h32m-14 -16 16 16 -16 16"/><path d="M1140 500h32m-14 -16 16 16 -16 16"/><path d="M1510 500h32m-14 -16 16 16 -16 16"/></g>
+<!-- panels -->
+<g filter="url(#shadow)">
+ <rect x="70" y="230" width="330" height="570" rx="28" fill="#FFFFFF"/>
+ <rect x="440" y="230" width="330" height="570" rx="28" fill="#FFFFFF"/>
+ <rect x="810" y="230" width="330" height="570" rx="28" fill="#FFFFFF"/>
+ <rect x="1180" y="230" width="330" height="570" rx="28" fill="#FFFFFF"/>
+ <rect x="1550" y="230" width="300" height="570" rx="28" fill="#FFFFFF"/>
+</g>
+<!-- Arrive -->
+<g>
+ <rect x="90" y="250" width="290" height="310" rx="20" fill="#CDEBFA"/>
+ <circle cx="320" cy="300" r="24" fill="#F3D37C"/>
+ <path d="M90 460q75 -55 145 0t145 0v100H90z" fill="#A7D69B"/>
+ <path d="M90 510q85 -40 160 0t130 0v50H90z" fill="#6FB47C"/>
+ <path d="M165 435v-105m0 35q-55 -40 -60 10q35 25 60 -10m0 20q55 -40 60 10q-35 25 -60 -10" stroke="#286B43" stroke-width="8" fill="#559A65"/>
+ <text x="235" y="635" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="34" font-weight="700" fill="#1F2547">1 · Arrive</text>
+ <text x="235" y="685" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">Recognise the shared</text>
+ <text x="235" y="720" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">Sky Garden world.</text>
+</g>
+<!-- Notice -->
+<g>
+ <rect x="460" y="250" width="290" height="310" rx="20" fill="#E5F1D8"/>
+ <path d="M545 480q55 -170 140 -110q-25 130 -140 110z" fill="#559A65" stroke="#286B43" stroke-width="7"/>
+ <path d="M560 470l95 -70" stroke="#F8F3E8" stroke-width="7"/>
+ <circle cx="685" cy="325" r="38" fill="#F3D37C"/>
+ <text x="605" y="635" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="34" font-weight="700" fill="#1F2547">2 · Notice</text>
+ <text x="605" y="685" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">One landmark tells</text>
+ <text x="605" y="720" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">the story of this screen.</text>
+</g>
+<!-- Choose -->
+<g>
+ <rect x="830" y="250" width="290" height="310" rx="20" fill="#DCECF8"/>
+ <g fill="#FFFFFF" stroke="#1F2547" stroke-width="5"><rect x="855" y="340" width="105" height="105" rx="18"/><rect x="985" y="340" width="105" height="105" rx="18"/></g>
+ <rect x="848" y="333" width="119" height="119" rx="24" fill="none" stroke="#1F2547" stroke-width="5"/>
+ <rect x="855" y="340" width="105" height="105" rx="18" fill="none" stroke="#FFC94A" stroke-width="9"/>
+ <path d="M885 400q20 -50 50 0" stroke="#559A65" stroke-width="12" fill="none" stroke-linecap="round"/>
+ <circle cx="1037" cy="390" r="32" fill="#F3C75F"/>
+ <text x="975" y="635" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="34" font-weight="700" fill="#1F2547">3 · Choose</text>
+ <text x="975" y="685" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">The focus ring makes</text>
+ <text x="975" y="720" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">OK feel predictable.</text>
+</g>
+<!-- Discover -->
+<g>
+ <rect x="1200" y="250" width="290" height="310" rx="20" fill="#FBE8B9"/>
+ <path d="M1345 315l20 52 55 5 -42 36 13 55 -46 -29 -47 29 14 -55 -43 -36 56 -5z" fill="#F3C75F" stroke="#8B6936" stroke-width="5"/>
+ <circle cx="1305" cy="320" r="10" fill="#E98778"/><circle cx="1415" cy="455" r="9" fill="#559A65"/>
+ <text x="1345" y="635" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="34" font-weight="700" fill="#1F2547">4 · Discover</text>
+ <text x="1345" y="685" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">A small echo confirms</text>
+ <text x="1345" y="720" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">what happened.</text>
+</g>
+<!-- Carry out -->
+<g>
+ <rect x="1570" y="250" width="260" height="310" rx="20" fill="#E5F1D8"/>
+ <path d="M1695 330q70 -70 105 0q-45 70 -105 0z" fill="#559A65" stroke="#286B43" stroke-width="6"/>
+ <path d="M1698 330l80 0" stroke="#F8F3E8" stroke-width="5"/>
+ <path d="M1640 470q45 -45 90 0t90 0" stroke="#F3C75F" stroke-width="10" fill="none" stroke-linecap="round"/>
+ <text x="1700" y="635" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="31" font-weight="700" fill="#1F2547">5 · Carry out</text>
+ <text x="1700" y="685" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B">TRY invites the child</text>
+ <text x="1700" y="720" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B">into the real world.</text>
+</g>
+<rect x="80" y="865" width="1760" height="105" rx="24" fill="#FFFFFF" stroke="#E6DDC9" stroke-width="3"/>
+<text x="110" y="925" font-family="Andika,Arial,sans-serif" font-size="25" fill="#1F2547">Guardrail:</text>
+<text x="245" y="925" font-family="Andika,Arial,sans-serif" font-size="25" fill="#46516B">The child may leave at any beat. No countdown, autoplay, streak, forced next step or reward for staying.</text>
+</svg>
