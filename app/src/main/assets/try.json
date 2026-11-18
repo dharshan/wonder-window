@@ -1,0 +1,7906 @@
+{
+ "version": 2,
+ "categories": [
+  {
+   "id": "draw",
+   "name": "Draw",
+   "icon": "🖍",
+   "color": "#B23A86",
+   "say": "Let's draw something!",
+   "wait": "I'll wait here. Go and draw, then come back and tell me!",
+   "page": {
+    "title": "My drawings",
+    "icon": "🎨",
+    "say": "Look at all the things you drew!"
+   }
+  },
+  {
+   "id": "build",
+   "name": "Build",
+   "icon": "🧱",
+   "color": "#B4531C",
+   "say": "Let's build something!",
+   "wait": "I'll wait here. Go and build, then come back and tell me!",
+   "page": {
+    "title": "My buildings",
+    "icon": "🏗️",
+    "say": "Look at all the things you built!"
+   }
+  },
+  {
+   "id": "find",
+   "name": "Find",
+   "icon": "🔍",
+   "color": "#1D7468",
+   "say": "Let's go on a hunt!",
+   "wait": "I'll wait here. Go and look, then come back and tell me!",
+   "page": {
+    "title": "My hunts",
+    "icon": "🔍",
+    "say": "Look at all the things you found!"
+   }
+  },
+  {
+   "id": "experiment",
+   "name": "Experiment",
+   "icon": "💡",
+   "color": "#5B47C9",
+   "say": "Let's try an experiment!",
+   "wait": "I'll wait here. Try it with Amma or Appa, then come back!",
+   "page": {
+    "title": "My experiments",
+    "icon": "🔬",
+    "say": "Look at all the things you discovered!"
+   }
+  }
+ ],
+ "lines": {
+  "home": "What shall we try today?",
+  "idea": "Here's an idea. Want to try it?",
+  "gather_done": "All set! Let's go!",
+  "best_q": "Which part was the best? Show me!",
+  "best_reply": "Mine too! I loved that part.",
+  "guess_reply": "Scientists love to find out!",
+  "sticker": "A new sticker for your sticker book!",
+  "sticker_gold": "A shiny gold sticker, because you did the challenge!",
+  "sticker_again": "You made it again! Look, your sticker is still here.",
+  "book": "This is your book of things you made.",
+  "challenge_q": "Want a challenge?",
+  "bye": "Bye bye! Go and show everyone!",
+  "checkin_seeds": "How are your seeds? Show me!",
+  "checkin_hanky": "Did you touch the two hankies? Which one is dry?"
+ },
+ "stuck_generic": [
+  {
+   "pic": "👩👨",
+   "text": "Ask Amma or Appa",
+   "say": "Ask Amma or Appa to help you. Two hands are better than one!"
+  },
+  {
+   "pic": "🔁",
+   "text": "Watch it again",
+   "say": "Let's watch it again, slowly. Then you try."
+  },
+  {
+   "pic": "🐢",
+   "text": "Try again, slowly",
+   "say": "Try again, slowly. Every try teaches your hands something new!"
+  }
+ ],
+ "activities": [
+  {
+   "id": "draw-001",
+   "category": "draw",
+   "title": "Draw your family",
+   "icon": "👪",
+   "sticker": "👪",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I drew my whole sparrow family, but I have never seen yours! Will you draw everyone at home?",
+    "text": "Draw your family for me",
+    "scene": {
+     "frames": [
+      "🖼️",
+      "❓",
+      "👪"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "👪",
+    "text": "Draw everyone in your home"
+   },
+   "fun": "He becomes the family's illustrator: big people, small people, and who is who.",
+   "word": {
+    "en": "family",
+    "kn": "ಕುಟುಂಬ",
+    "kn_roman": "kuṭumba",
+    "hi": "परिवार",
+    "hi_roman": "parivār"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "👪",
+     "text": "Draw everyone at home",
+     "say": "Now draw everyone who lives in your home. Big people and small people!",
+     "demo": {
+      "frames": [
+       "👨",
+       "👩",
+       "🧒"
+      ],
+      "motion": "pop"
+     },
+     "stuck": [
+      {
+       "pic": "⭕",
+       "text": "Start with a round head",
+       "say": "Start with a big round head. Then a body, two arms and two legs."
+      },
+      {
+       "pic": "🧒",
+       "text": "Draw yourself first",
+       "say": "Draw yourself first. Then draw the next person, right next to you."
+      }
+     ]
+    },
+    {
+     "pic": "👵👴",
+     "text": "Add Ajji and Thatha",
+     "say": "Do you want to add Ajji, Thatha, or someone else you love?",
+     "demo": {
+      "frames": [
+       "👵",
+       "👴"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Tell who is who",
+     "say": "Point to each one. Who is this? And who is this?",
+     "demo": {
+      "frames": [
+       "👉",
+       "👨",
+       "👩",
+       "🧒"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🎩",
+    "text": "Give everyone a silly hat",
+    "say": "Now give everyone at home a silly hat. Even Ajji!"
+   },
+   "challenge": {
+    "pic": "✋",
+    "text": "Give everyone five fingers",
+    "say": "Can you give everyone five fingers on each hand? Count them!",
+    "demo": {
+     "frames": [
+      "✋",
+      "✋"
+     ],
+     "motion": "count"
+    }
+   },
+   "show": "Show your drawing to Amma or Appa!",
+   "done": "Wow! Tell me who is in your family picture.",
+   "why": "Drawing a whole person is a UKG fine-motor goal, and naming family builds talk and belonging (CG-4, CG-12)."
+  },
+  {
+   "id": "draw-002",
+   "category": "draw",
+   "title": "My favourite animal",
+   "icon": "🐘",
+   "sticker": "🐘",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "The animals at Bannerghatta want a picture! Which animal do you love most? Draw it big!",
+    "text": "Which animal do you love?",
+    "scene": {
+     "frames": [
+      "🐘",
+      "🐅",
+      "🦒"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🐘",
+    "text": "Draw your animal, big!"
+   },
+   "fun": "Big, bold drawing plus talking about tails, ears, stripes and homes.",
+   "word": {
+    "en": "elephant",
+    "kn": "ಆನೆ",
+    "kn_roman": "āne",
+    "hi": "हाथी",
+    "hi_roman": "hāthī"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "🤔",
+     "text": "Think of your favourite animal",
+     "say": "Close your eyes. Which animal do you love the most?",
+     "demo": {
+      "frames": [
+       "🤔",
+       "💭"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🐘",
+     "text": "Draw it big",
+     "say": "Draw your animal big, big, big! Does it have a tail? Ears? Stripes?",
+     "demo": {
+      "frames": [
+       "🐘"
+      ],
+      "motion": "grow"
+     },
+     "stuck": [
+      {
+       "pic": "⭕",
+       "text": "Start with a big body",
+       "say": "Start with a big round body. Then add a head, legs and a tail."
+      },
+      {
+       "pic": "📖",
+       "text": "Look at a picture",
+       "say": "Look at a toy or a book picture of your animal. What shape is it?"
+      }
+     ]
+    },
+    {
+     "pic": "🌳🌊",
+     "text": "Draw where it lives",
+     "say": "Where does your animal live? In a forest, in the sea, or in a house?",
+     "demo": {
+      "frames": [
+       "🐘",
+       "🌳",
+       "🌊"
+      ],
+      "motion": "show"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🦋",
+    "text": "Give your animal wings",
+    "say": "What if your animal had wings? Draw some on it!"
+   },
+   "challenge": {
+    "pic": "🐾",
+    "text": "Draw its baby too",
+    "say": "Can you draw the animal's baby next to it? Make it small!",
+    "demo": {
+     "frames": [
+      "🐘",
+      "🐾"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Show Amma or Appa, and make your animal's sound!",
+   "done": "Wow! Tell me about your animal. What sound does it make?",
+   "why": "Links an animal to its habitat and lets him describe features in full sentences (CG-6, CG-9)."
+  },
+  {
+   "id": "draw-003",
+   "category": "draw",
+   "title": "What I saw in the video",
+   "icon": "📺",
+   "sticker": "📺",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I fell asleep in my nest and missed the video! Can you draw me one thing you saw?",
+    "text": "Draw what you saw for me",
+    "scene": {
+     "frames": [
+      "📺",
+      "🐦",
+      "💤"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "📺",
+    "text": "Draw one thing from the video"
+   },
+   "fun": "Turning a video into a drawing and a story is how watching becomes learning.",
+   "word": {
+    "en": "picture",
+    "kn": "ಚಿತ್ರ",
+    "kn_roman": "citra",
+    "hi": "चित्र",
+    "hi_roman": "citra"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "📺💭",
+     "text": "Remember the video",
+     "say": "Think about the video. What is one thing you saw?",
+     "demo": {
+      "frames": [
+       "📺",
+       "💭"
+      ],
+      "motion": "pulse"
+     },
+     "stuck": [
+      {
+       "pic": "🎬",
+       "text": "Think of the best part",
+       "say": "What was the funniest part? Or the most surprising? Draw that one."
+      },
+      {
+       "pic": "👤",
+       "text": "Draw who was in it",
+       "say": "Who was in the video? Start by drawing them."
+      }
+     ]
+    },
+    {
+     "pic": "🖍️",
+     "text": "Draw that one thing",
+     "say": "Draw that one thing. Take your time.",
+     "demo": {
+      "frames": [
+       "🖍️",
+       "🖼️"
+      ],
+      "motion": "draw",
+      "path": "wave"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Tell what is happening",
+     "say": "Now tell the story of your picture. What is happening?",
+     "demo": {
+      "frames": [
+       "👉",
+       "🖼️"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🌙",
+    "text": "Draw it at night",
+    "say": "Now draw the same thing again, but at night time!"
+   },
+   "challenge": {
+    "pic": "📄",
+    "text": "Draw start, middle, end",
+    "say": "Fold your paper into three boxes. Draw the start, the middle, and the end!",
+    "demo": {
+     "frames": [
+      "📄",
+      "📄",
+      "📄"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Tell Amma or Appa about your picture!",
+   "done": "Wow! Tell me what you drew from the video.",
+   "why": "Recalling and retelling one idea from a video is how watching turns into learning (CG-9, CG-13)."
+  },
+  {
+   "id": "draw-004",
+   "category": "draw",
+   "title": "Feelings faces",
+   "icon": "😀",
+   "sticker": "😀",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I am a little bird, so I can't make faces! Can you draw happy, sad and surprised faces for me?",
+    "text": "Draw faces for me",
+    "scene": {
+     "frames": [
+      "🐦",
+      "😀",
+      "😢",
+      "😮"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "😀",
+    "text": "Draw happy, sad, surprised"
+   },
+   "fun": "He gets to be the face-maker, and names feelings out loud.",
+   "word": {
+    "en": "happy",
+    "kn": "ಖುಷಿ",
+    "kn_roman": "khuṣi",
+    "hi": "ख़ुश",
+    "hi_roman": "khuś"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "😀",
+     "text": "Draw a happy face",
+     "say": "Draw a happy face. Is the mouth going up?",
+     "demo": {
+      "frames": [
+       "✏️",
+       "😀"
+      ],
+      "motion": "draw",
+      "path": "circle"
+     },
+     "stuck": [
+      {
+       "pic": "⭕",
+       "text": "Round face, two eyes",
+       "say": "Draw a big circle. Two dots for eyes. Then a mouth that curves up, like a smile."
+      }
+     ]
+    },
+    {
+     "pic": "😢",
+     "text": "Draw a sad face",
+     "say": "Now draw a sad face. Where do the tears go?",
+     "demo": {
+      "frames": [
+       "✏️",
+       "😢"
+      ],
+      "motion": "draw",
+      "path": "circle"
+     },
+     "stuck": [
+      {
+       "pic": "🙁",
+       "text": "Mouth curves down",
+       "say": "For sad, the mouth curves down. Add one tear under an eye."
+      }
+     ]
+    },
+    {
+     "pic": "😮",
+     "text": "Draw a surprised face",
+     "say": "Now a surprised face! Big round eyes, big round mouth.",
+     "demo": {
+      "frames": [
+       "✏️",
+       "😮"
+      ],
+      "motion": "draw",
+      "path": "circle"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "When do you feel happy?",
+     "say": "Tell Amma or Appa: when do you feel happy? When do you feel sad?",
+     "demo": {
+      "frames": [
+       "😀",
+       "😢"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "😜",
+    "text": "Draw a silly face",
+    "say": "Can you draw a silly face? Or a sleepy face?"
+   },
+   "challenge": {
+    "pic": "😠",
+    "text": "Draw a cross face",
+    "say": "Can you draw a cross face? The eyebrows go down, like this!",
+    "demo": {
+     "frames": [
+      "✏️",
+      "😠"
+     ],
+     "motion": "draw",
+     "path": "circle"
+    }
+   },
+   "show": "Show your faces to Amma or Appa. Can they guess each one?",
+   "done": "Wow! Which face did you like drawing most?",
+   "why": "Naming and drawing feelings builds emotional vocabulary, the base of self-calming (CG-4)."
+  },
+  {
+   "id": "draw-005",
+   "category": "draw",
+   "title": "Hand-shape bird",
+   "icon": "✋",
+   "sticker": "✋",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I want a new friend to fly with! Can your hand turn into a bird? Let's find out!",
+    "text": "Make me a bird friend",
+    "scene": {
+     "frames": [
+      "✋",
+      "🦚"
+     ],
+     "motion": "fold"
+    }
+   },
+   "mission": {
+    "pic": "🦚",
+    "text": "Turn your hand into a bird"
+   },
+   "fun": "Tracing his own hand is magic: it becomes a peacock.",
+   "word": {
+    "en": "bird",
+    "kn": "ಹಕ್ಕಿ",
+    "kn_roman": "hakki",
+    "hi": "चिड़िया",
+    "hi_roman": "ciṛiyā"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "✋",
+     "text": "Draw around your hand",
+     "say": "Put your hand flat on the paper. Draw slowly around each finger.",
+     "demo": {
+      "frames": [
+       "✏️",
+       "✋"
+      ],
+      "motion": "draw",
+      "path": "around"
+     },
+     "stuck": [
+      {
+       "pic": "🖐️",
+       "text": "Keep your hand still",
+       "say": "Spread your fingers and keep your hand very still. Draw slowly, like an ant walking."
+      },
+      {
+       "pic": "🤝",
+       "text": "Someone holds the paper",
+       "say": "Ask someone to hold the paper still for you."
+      }
+     ]
+    },
+    {
+     "pic": "🦚",
+     "text": "Turn it into a bird",
+     "say": "Can your hand become a peacock or a hen? Add an eye and legs.",
+     "demo": {
+      "frames": [
+       "✋",
+       "👁️",
+       "🦚"
+      ],
+      "motion": "show"
+     },
+     "stuck": [
+      {
+       "pic": "👍",
+       "text": "Thumb is the head",
+       "say": "Your thumb is the bird's head. Add an eye and a beak. Fingers are feathers!"
+      }
+     ]
+    },
+    {
+     "pic": "🎨",
+     "text": "Colour it in",
+     "say": "Now colour your bird. Which colours will you use?",
+     "demo": {
+      "frames": [
+       "🖍️",
+       "🦚"
+      ],
+      "motion": "draw",
+      "path": "zigzag"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🦶",
+    "text": "Now trace your foot",
+    "say": "Now draw around your foot. What can it become?"
+   },
+   "challenge": {
+    "pic": "🐦",
+    "text": "Make a flock of three",
+    "say": "Draw around your hand three times. Make a whole bird family!",
+    "demo": {
+     "frames": [
+      "🦚",
+      "🐔",
+      "🐦"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Show your hand-bird to Amma or Appa!",
+   "done": "Wow! Tell me about your hand-bird.",
+   "why": "Tracing strengthens pencil control, and turning a shape into something new is imagination at work (CG-12)."
+  },
+  {
+   "id": "draw-006",
+   "category": "draw",
+   "title": "The night sky",
+   "icon": "🌙",
+   "sticker": "🌙",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "It's bedtime in my nest, but I can't sleep without stars. Can you draw me a night sky?",
+    "text": "Draw me a night sky",
+    "scene": {
+     "frames": [
+      "🌙",
+      "⭐",
+      "⭐",
+      "⭐"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🌌",
+    "text": "Draw the moon and stars"
+   },
+   "fun": "A calm drawing with counting built in: every star is a number.",
+   "word": {
+    "en": "moon",
+    "kn": "ಚಂದ್ರ",
+    "kn_roman": "candra",
+    "hi": "चाँद",
+    "hi_roman": "cā̃d"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "🌙",
+     "text": "Draw the moon",
+     "say": "Draw the moon. Is it round, or a thin smile?",
+     "demo": {
+      "frames": [
+       "✏️",
+       "🌙"
+      ],
+      "motion": "draw",
+      "path": "circle"
+     },
+     "stuck": [
+      {
+       "pic": "🍌",
+       "text": "Moon like a banana",
+       "say": "A thin moon looks like a banana. Draw a curve, then another curve inside."
+      }
+     ]
+    },
+    {
+     "pic": "⭐",
+     "text": "Add lots of stars",
+     "say": "Now add stars. Count them as you draw. One, two, three...",
+     "demo": {
+      "frames": [
+       "⭐",
+       "⭐",
+       "⭐"
+      ],
+      "motion": "count"
+     },
+     "stuck": [
+      {
+       "pic": "✳️",
+       "text": "Star: plus, then cross",
+       "say": "An easy star: draw a plus, then a cross on top. Like this!"
+      }
+     ]
+    },
+    {
+     "pic": "🦉",
+     "text": "Who is awake at night?",
+     "say": "Who is awake at night? An owl? Draw a night-time friend.",
+     "demo": {
+      "frames": [
+       "🦉"
+      ],
+      "motion": "pop"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🚀",
+    "text": "Add a rocket",
+    "say": "Draw a rocket flying up to the moon. Whoosh!"
+   },
+   "challenge": {
+    "pic": "🔟",
+    "text": "Draw exactly ten stars",
+    "say": "Can you draw exactly ten stars? Count each one as you draw!",
+    "demo": {
+     "frames": [
+      "⭐",
+      "⭐",
+      "⭐",
+      "⭐",
+      "⭐"
+     ],
+     "motion": "count"
+    }
+   },
+   "show": "Show Amma or Appa, and count your stars together!",
+   "done": "Wow! How many stars did you draw?",
+   "why": "Counting while drawing practises one-to-one counting, and talks about day and night (CG-7, CG-8)."
+  },
+  {
+   "id": "draw-007",
+   "category": "draw",
+   "title": "My breakfast plate",
+   "icon": "🍛",
+   "sticker": "🍛",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I only peck grains for breakfast! What was on your plate today? Idli? Dosa? Draw it for me!",
+    "text": "Show me your breakfast",
+    "scene": {
+     "frames": [
+      "🐦",
+      "🌾",
+      "🍽️"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🍽️",
+    "text": "Draw your breakfast plate"
+   },
+   "fun": "Talking about real home food: idli circles, dosa triangles, chutney colours.",
+   "word": {
+    "en": "breakfast",
+    "kn": "ತಿಂಡಿ",
+    "kn_roman": "tiṇḍi",
+    "hi": "नाश्ता",
+    "hi_roman": "nāśtā"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "🍽️",
+     "text": "Think of your breakfast",
+     "say": "What did you have for breakfast today? Idli? Dosa? Upma?",
+     "demo": {
+      "frames": [
+       "🍽️",
+       "💭"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "⭕",
+     "text": "Draw a big round plate",
+     "say": "Draw a big round plate.",
+     "demo": {
+      "frames": [
+       "✏️",
+       "⭕"
+      ],
+      "motion": "draw",
+      "path": "circle"
+     },
+     "stuck": [
+      {
+       "pic": "🍽️",
+       "text": "Trace a real plate",
+       "say": "Put a steel plate on the paper and draw around it. A perfect circle!"
+      }
+     ]
+    },
+    {
+     "pic": "🍛",
+     "text": "Draw your breakfast on it",
+     "say": "Now draw your breakfast on the plate. What colours does it have?",
+     "demo": {
+      "frames": [
+       "🍛",
+       "🥥",
+       "🍌"
+      ],
+      "motion": "pop"
+     },
+     "stuck": [
+      {
+       "pic": "⚪",
+       "text": "Idli is a white circle",
+       "say": "Idli is a white circle. Dosa is a big triangle, or a roll!"
+      }
+     ]
+    }
+   ],
+   "twist": {
+    "pic": "😀",
+    "text": "Give your food a face",
+    "say": "Give your breakfast a funny face!"
+   },
+   "challenge": {
+    "pic": "🍲",
+    "text": "Draw tonight's dinner too",
+    "say": "Draw a second plate. What do you want for dinner tonight?",
+    "demo": {
+     "frames": [
+      "🍽️",
+      "🍽️"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Show Amma or Appa your plate and tell your favourite part!",
+   "done": "Wow! Tell me what is on your plate.",
+   "why": "Talking about real food builds vocabulary about healthy habits and circles as a shape (CG-1, CG-8)."
+  },
+  {
+   "id": "draw-008",
+   "category": "draw",
+   "title": "Kolam dots",
+   "icon": "✨",
+   "sticker": "✨",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Every morning, Ajji draws a kolam at the door. Can you draw one for my nest?",
+    "text": "Draw a kolam for my nest",
+    "scene": {
+     "frames": [
+      "✏️",
+      "➰"
+     ],
+     "motion": "draw",
+     "path": "loop"
+    }
+   },
+   "mission": {
+    "pic": "✨",
+    "text": "Make a dot kolam"
+   },
+   "fun": "A family tradition that is secretly maths: rows, counting, symmetry.",
+   "word": {
+    "en": "kolam",
+    "kn": "ರಂಗೋಲಿ",
+    "kn_roman": "raṅgōli",
+    "hi": "रंगोली",
+    "hi_roman": "raṅgolī"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "⚫⚫⚫",
+     "text": "Make three rows of dots",
+     "say": "Make three rows of dots, like Amma's kolam. Three dots in each row.",
+     "demo": {
+      "frames": [
+       "⚫⚫⚫",
+       "⚫⚫⚫",
+       "⚫⚫⚫"
+      ],
+      "motion": "pop",
+      "layout": "col"
+     },
+     "stuck": [
+      {
+       "pic": "☝",
+       "text": "Leave a finger gap",
+       "say": "Put one finger between each dot. Then the dots are not too close."
+      }
+     ]
+    },
+    {
+     "pic": "➰",
+     "text": "Join dots with curvy lines",
+     "say": "Join the dots with curvy lines. Loop around them, slowly.",
+     "demo": {
+      "frames": [
+       "✏️",
+       "➰"
+      ],
+      "motion": "draw",
+      "path": "loop"
+     },
+     "stuck": [
+      {
+       "pic": "🐢",
+       "text": "Go round, slowly",
+       "say": "Go round each dot like a snake, slowly. Try not to touch the dots."
+      },
+      {
+       "pic": "➕",
+       "text": "Start with a plus",
+       "say": "Easy start: join the dots in a plus shape first."
+      }
+     ]
+    },
+    {
+     "pic": "🌈",
+     "text": "Colour your kolam",
+     "say": "Colour your kolam. Make both sides the same, if you like.",
+     "demo": {
+      "frames": [
+       "🖍️",
+       "🌈"
+      ],
+      "motion": "draw",
+      "path": "zigzag"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "⚫⚫⚫⚫",
+    "text": "Try four rows of dots",
+    "say": "Try again with four rows of dots. A bigger kolam!"
+   },
+   "challenge": {
+    "pic": "🦋",
+    "text": "Make both sides match",
+    "say": "Can you make the left side and the right side look the same, like butterfly wings?",
+    "demo": {
+     "frames": [
+      "🦋"
+     ],
+     "motion": "pulse"
+    }
+   },
+   "show": "Show your kolam to Amma or Appa!",
+   "done": "Wow! Tell me about your kolam.",
+   "why": "Dot-grid kolam builds pattern, symmetry and counting through a family tradition (CG-8, CG-12)."
+  },
+  {
+   "id": "draw-009",
+   "category": "draw",
+   "title": "Today's weather",
+   "icon": "⛅",
+   "sticker": "⛅",
+   "level": 2,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I want to fly to Lalbagh today. Is it sunny or rainy? Can you check the sky for me?",
+    "text": "Check the sky for me",
+    "scene": {
+     "frames": [
+      "☀️",
+      "☁️",
+      "🌧️"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🌤️",
+    "text": "Draw today's weather"
+   },
+   "fun": "He is the family weather reporter, and dresses himself for it on paper.",
+   "word": {
+    "en": "rain",
+    "kn": "ಮಳೆ",
+    "kn_roman": "maḷe",
+    "hi": "बारिश",
+    "hi_roman": "bāriś"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "👀",
+     "text": "Look out of the window",
+     "say": "Look out of the window. What is the sky doing?",
+     "demo": {
+      "frames": [
+       "👀",
+       "☀️",
+       "☁️",
+       "🌧️"
+      ],
+      "motion": "point"
+     }
+    },
+    {
+     "pic": "☀️🌧️",
+     "text": "Sunny, cloudy or rainy?",
+     "say": "Is it sunny, cloudy, or rainy today? Is the wind moving the trees?",
+     "demo": {
+      "frames": [
+       "☀️",
+       "☁️",
+       "🌧️"
+      ],
+      "motion": "pulse"
+     },
+     "stuck": [
+      {
+       "pic": "🌳",
+       "text": "Watch the trees",
+       "say": "Look at the trees. Are the leaves moving? Then it's windy!"
+      },
+      {
+       "pic": "☁️",
+       "text": "Grey sky? Rain soon",
+       "say": "Is the sky grey and dark? Rain might come soon!"
+      }
+     ]
+    },
+    {
+     "pic": "🌤️",
+     "text": "Draw today's sky",
+     "say": "Draw the sky as it is today.",
+     "demo": {
+      "frames": [
+       "🖍️",
+       "🌤️"
+      ],
+      "motion": "draw",
+      "path": "wave"
+     }
+    },
+    {
+     "pic": "🧒",
+     "text": "Draw you in today's clothes",
+     "say": "Now draw yourself, wearing the right clothes for this weather.",
+     "demo": {
+      "frames": [
+       "🧒",
+       "👕",
+       "☂️"
+      ],
+      "motion": "pop"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🌈",
+    "text": "Add a rainbow",
+    "say": "What if a rainbow came out? Draw one in your sky!"
+   },
+   "challenge": {
+    "pic": "🌇",
+    "text": "Draw the evening sky too",
+    "say": "Look again in the evening. Is the sky the same, or different? Draw it!",
+    "demo": {
+     "frames": [
+      "🌤️",
+      "🌇"
+     ],
+     "motion": "show"
+    }
+   },
+   "show": "Tell Amma or Appa what the weather is today!",
+   "done": "Wow! Tell me what the weather is today.",
+   "why": "Observing and recording the weather is early science: noticing and describing (CG-6, CG-7)."
+  },
+  {
+   "id": "draw-010",
+   "category": "draw",
+   "title": "Big and small",
+   "icon": "🐜",
+   "sticker": "🐜",
+   "level": 2,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "An ant told me he is the biggest animal in the world! Is that true? Let's draw and see!",
+    "text": "Is the ant the biggest?",
+    "scene": {
+     "frames": [
+      "🐜",
+      "❓"
+     ],
+     "motion": "pulse"
+    }
+   },
+   "mission": {
+    "pic": "🐘",
+    "text": "Draw something big and tiny"
+   },
+   "fun": "Proving a silly ant wrong teaches big, small and comparing.",
+   "word": {
+    "en": "big",
+    "kn": "ದೊಡ್ಡ",
+    "kn_roman": "doḍḍa",
+    "hi": "बड़ा",
+    "hi_roman": "baṛā"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "🐘",
+     "text": "Draw something very big",
+     "say": "Draw something very big. A bus? An elephant? A tree?",
+     "demo": {
+      "frames": [
+       "🐘"
+      ],
+      "motion": "grow"
+     },
+     "stuck": [
+      {
+       "pic": "📄",
+       "text": "Fill the whole paper",
+       "say": "Big means it fills almost the whole paper, from top to bottom!"
+      }
+     ]
+    },
+    {
+     "pic": "🐜",
+     "text": "Draw something tiny",
+     "say": "Now, next to it, draw something tiny. An ant? A tiny flower?",
+     "demo": {
+      "frames": [
+       "🐜"
+      ],
+      "motion": "pop"
+     },
+     "stuck": [
+      {
+       "pic": "👌",
+       "text": "Tiny like a fingernail",
+       "say": "Tiny means as small as your fingernail."
+      }
+     ]
+    },
+    {
+     "pic": "🗣️",
+     "text": "Which is bigger?",
+     "say": "Point and say: this one is big, this one is small.",
+     "demo": {
+      "frames": [
+       "👉",
+       "🐘",
+       "🐜"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🏠",
+    "text": "A house for the tiny one",
+    "say": "Now draw a tiny house for your tiny thing."
+   },
+   "challenge": {
+    "pic": "🐕",
+    "text": "Add a middle-size one",
+    "say": "Draw something in the middle: not big, not tiny. Then point: big, middle, small!",
+    "demo": {
+     "frames": [
+      "🐜",
+      "🐕",
+      "🐘"
+     ],
+     "motion": "line"
+    }
+   },
+   "show": "Show Amma or Appa your big and small picture!",
+   "done": "Wow! Tell me what is big and what is small.",
+   "why": "Comparing sizes and using words like bigger and smaller is a UKG measurement goal (CG-8)."
+  },
+  {
+   "id": "draw-011",
+   "category": "draw",
+   "title": "When I grow up",
+   "icon": "🌟",
+   "sticker": "🌟",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "When I grow up, I want to be a pilot! What do you want to be? Draw it for me!",
+    "text": "What will you be?",
+    "scene": {
+     "frames": [
+      "🐦",
+      "✈️"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🌟",
+    "text": "Draw you as a grown-up"
+   },
+   "fun": "Dreaming out loud: jobs, tools and who helps our city.",
+   "word": {
+    "en": "work",
+    "kn": "ಕೆಲಸ",
+    "kn_roman": "kelasa",
+    "hi": "काम",
+    "hi_roman": "kām"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "🤔",
+     "text": "What will you be?",
+     "say": "When you grow big, what do you want to be? A doctor? A farmer? A cricketer?",
+     "demo": {
+      "frames": [
+       "🚜",
+       "🏏",
+       "🚑"
+      ],
+      "motion": "show"
+     },
+     "stuck": [
+      {
+       "pic": "👀",
+       "text": "Who do you see working?",
+       "say": "Think of people you see. The bus driver? The doctor? The vegetable seller?"
+      }
+     ]
+    },
+    {
+     "pic": "🧒",
+     "text": "Draw you, grown up",
+     "say": "Draw yourself as a grown-up, doing that job.",
+     "demo": {
+      "frames": [
+       "🧒"
+      ],
+      "motion": "grow"
+     },
+     "stuck": [
+      {
+       "pic": "🧒",
+       "text": "Draw you, then a hat",
+       "say": "Draw yourself first. Then add a work hat or a uniform."
+      }
+     ]
+    },
+    {
+     "pic": "🔧",
+     "text": "Draw your tools",
+     "say": "What tools will you use? Draw them next to you.",
+     "demo": {
+      "frames": [
+       "🔧",
+       "🔨",
+       "🏏"
+      ],
+      "motion": "pop"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🚌",
+    "text": "How will you go to work?",
+    "say": "How will you go to work? Draw your bus, car, or cycle."
+   },
+   "challenge": {
+    "pic": "🏥",
+    "text": "Draw where you'll work",
+    "say": "Where will you work? A hospital, a farm, a cricket ground? Draw it all around you!",
+    "demo": {
+     "frames": [
+      "🏥",
+      "🌾",
+      "🏟️"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Tell Amma or Appa about your job!",
+   "done": "Wow! Tell me what you will be.",
+   "why": "Imagining a future self and naming helpers' tools builds confidence and community awareness (CG-4, CG-5)."
+  },
+  {
+   "id": "draw-012",
+   "category": "draw",
+   "title": "My cricket game",
+   "icon": "🏏",
+   "sticker": "🏏",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Imagine you hit a huge six at Chinnaswamy stadium! Can you draw it for me?",
+    "text": "Draw your big six!",
+    "scene": {
+     "frames": [
+      "🏏",
+      "💫"
+     ],
+     "motion": "draw",
+     "path": "wave"
+    }
+   },
+   "mission": {
+    "pic": "🏏",
+    "text": "Draw your big six"
+   },
+   "fun": "Cricket plus drawing motion: where did the ball fly, high or low?",
+   "word": {
+    "en": "ball",
+    "kn": "ಚೆಂಡು",
+    "kn_roman": "ceṇḍu",
+    "hi": "गेंद",
+    "hi_roman": "gẽd"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "🏏",
+     "text": "Draw the bat and ball",
+     "say": "Draw a bat and a ball. Is the ball red or white?",
+     "demo": {
+      "frames": [
+       "🏏",
+       "🔴"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🧒",
+     "text": "Draw you hitting the ball",
+     "say": "Now draw yourself hitting the ball. Swing!",
+     "demo": {
+      "frames": [
+       "🏏"
+      ],
+      "motion": "shake"
+     },
+     "stuck": [
+      {
+       "pic": "🧒",
+       "text": "Stick person first",
+       "say": "Draw a stick person first: a circle and lines. Then put the bat in the hands."
+      }
+     ]
+    },
+    {
+     "pic": "➰",
+     "text": "Show where the ball flew",
+     "say": "Draw a dotted line where the ball flew. High or low? Near or far?",
+     "demo": {
+      "frames": [
+       "🔴",
+       "➰"
+      ],
+      "motion": "draw",
+      "path": "wave"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "👏",
+    "text": "Draw people cheering",
+    "say": "Draw people cheering for you. Hooray!"
+   },
+   "challenge": {
+    "pic": "👏",
+    "text": "Draw the cheering crowd",
+    "say": "Draw the crowd and the big stadium lights all around you!",
+    "demo": {
+     "frames": [
+      "👏",
+      "👏",
+      "💡"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Show Appa, then play a little catch together!",
+   "done": "Wow! Tell me about your cricket picture.",
+   "why": "Drawing a movement he knows helps him plan the action, and leads into real ball play (CG-3, CG-12)."
+  },
+  {
+   "id": "draw-013",
+   "category": "draw",
+   "title": "Map of my room",
+   "icon": "🗺️",
+   "sticker": "🗺️",
+   "level": 3,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I fly up high and look down. Everything looks so small! Can you draw your room like a bird?",
+    "text": "Draw your room like a bird",
+    "scene": {
+     "frames": [
+      "🐦",
+      "⬇️",
+      "🛏️"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🗺️",
+    "text": "Draw a map of your room"
+   },
+   "fun": "His first map: seeing his own room from above is a big thinking leap.",
+   "word": {
+    "en": "map",
+    "kn": "ನಕ್ಷೆ",
+    "kn_roman": "nakṣe",
+    "hi": "नक्शा",
+    "hi_roman": "nakśā"
+   },
+   "materials": [
+    "📄",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and crayons.",
+   "steps": [
+    {
+     "pic": "🛏️",
+     "text": "Look around your room",
+     "say": "Stand in your room. What is in it? A bed? A cupboard? A door?",
+     "demo": {
+      "frames": [
+       "👀",
+       "🛏️",
+       "🚪",
+       "🧸"
+      ],
+      "motion": "point"
+     }
+    },
+    {
+     "pic": "🐦",
+     "text": "Draw it like a bird sees",
+     "say": "Pretend you are a bird, looking down from the ceiling. Draw your bed and your door.",
+     "demo": {
+      "frames": [
+       "🛏️",
+       "⬜"
+      ],
+      "motion": "fold"
+     },
+     "stuck": [
+      {
+       "pic": "⬜",
+       "text": "A bed is a rectangle",
+       "say": "From the top, a bed is just a long box. Draw a rectangle!"
+      },
+      {
+       "pic": "🚪",
+       "text": "Start with the door",
+       "say": "Start with the door. Then draw what is next to it."
+      }
+     ]
+    },
+    {
+     "pic": "⭐",
+     "text": "Star where your toys live",
+     "say": "Put a star where your toys live.",
+     "demo": {
+      "frames": [
+       "⭐"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Give a map tour",
+     "say": "Show your map. Walk your finger from the door to your bed.",
+     "demo": {
+      "frames": [
+       "👉",
+       "🗺️"
+      ],
+      "motion": "draw",
+      "path": "line"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "💎",
+    "text": "Hide a treasure on it",
+    "say": "Draw a secret treasure on your map. Can Appa find it?"
+   },
+   "challenge": {
+    "pic": "🏠",
+    "text": "Map your whole home",
+    "say": "Can you draw a map of your whole home? The hall, Amma's room and your room!",
+    "demo": {
+     "frames": [
+      "🛏️",
+      "🛋️",
+      "🍽️"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Give Amma or Appa a tour of your map!",
+   "done": "Wow! Tell me where your toys live on your map.",
+   "why": "Drawing from above is early map thinking: position words like near, next to and behind (CG-7, CG-8)."
+  },
+  {
+   "id": "draw-014",
+   "category": "draw",
+   "title": "Rangoli with powder",
+   "icon": "🌸",
+   "sticker": "🌸",
+   "level": 3,
+   "time": "15 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "It's festival time! Every home needs a rangoli at the door. Shall we make one together?",
+    "text": "Make a festival rangoli",
+    "scene": {
+     "frames": [
+      "🌸",
+      "✨",
+      "🌸"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🌸",
+    "text": "Make a rangoli with Amma"
+   },
+   "fun": "Real rangoli powder, a real festival skill, side by side with Amma.",
+   "word": {
+    "en": "dot",
+    "kn": "ಚುಕ್ಕೆ",
+    "kn_roman": "cukke",
+    "hi": "बिंदु",
+    "hi_roman": "bindu"
+   },
+   "materials": [
+    "🎨",
+    "⚫"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🎨",
+     "name": "rangoli powder",
+     "grownup": true
+    },
+    {
+     "pic": "⚫",
+     "name": "a floor spot",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need rangoli powder and a floor spot.",
+   "steps": [
+    {
+     "pic": "👩",
+     "text": "Ask Amma for rangoli powder",
+     "say": "Ask Amma or Appa for a little rangoli powder. Do it together, on the floor.",
+     "demo": {
+      "frames": [
+       "👩",
+       "🎨"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "⚫⚫",
+     "text": "Make a few dots",
+     "say": "With a tiny pinch, make a few dots on the floor.",
+     "demo": {
+      "frames": [
+       "⚫",
+       "⚫",
+       "⚫"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "➰",
+     "text": "Pinch and pour a line",
+     "say": "Take a pinch. Let it fall slowly from your fingers, making a line.",
+     "demo": {
+      "frames": [
+       "👌",
+       "➰"
+      ],
+      "motion": "draw",
+      "path": "line"
+     },
+     "stuck": [
+      {
+       "pic": "👌",
+       "text": "Rub thumb and finger",
+       "say": "Hold the powder between your thumb and finger. Rub them slowly, and it falls."
+      },
+      {
+       "pic": "🐢",
+       "text": "Move your hand slowly",
+       "say": "Move your hand very slowly. Slow hand, nice line."
+      }
+     ]
+    },
+    {
+     "pic": "🌈",
+     "text": "Fill in the colours",
+     "say": "Fill the shapes with colours. Keep your hands away from your eyes.",
+     "demo": {
+      "frames": [
+       "👌",
+       "🌈"
+      ],
+      "motion": "draw",
+      "path": "zigzag"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🌸",
+    "text": "Flower in the middle",
+    "say": "Make a flower right in the middle of your rangoli."
+   },
+   "challenge": {
+    "pic": "⭐",
+    "text": "Make a star rangoli",
+    "say": "Can you join dots to make a star shape? Ask Amma to show you one.",
+    "demo": {
+     "frames": [
+      "👌",
+      "⭐"
+     ],
+     "motion": "draw",
+     "path": "zigzag"
+    }
+   },
+   "show": "Show your rangoli to everyone at home!",
+   "done": "Wow! Tell me which colours you used.",
+   "why": "The pinch-and-pour grip builds the same finger strength as holding a pencil, inside a festival tradition (CG-2, CG-12)."
+  },
+  {
+   "id": "build-001",
+   "category": "build",
+   "title": "Tall block tower",
+   "icon": "🧱",
+   "sticker": "🧱",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "A naughty wind knocked down my block tower! Can you build a new one, even taller?",
+    "text": "Build me a taller tower",
+    "scene": {
+     "frames": [
+      "🧱",
+      "🧱",
+      "🧱",
+      "🧱"
+     ],
+     "motion": "topple"
+    }
+   },
+   "mission": {
+    "pic": "🧱",
+    "text": "Build a taller block tower"
+   },
+   "fun": "Stacking, guessing and counting, and knocking it down is allowed.",
+   "word": {
+    "en": "tower",
+    "kn": "ಗೋಪುರ",
+    "kn_roman": "gōpura",
+    "hi": "मीनार",
+    "hi_roman": "mīnār"
+   },
+   "materials": [
+    "🧱",
+    "📦"
+   ],
+   "gather": [
+    {
+     "pic": "🧱",
+     "name": "blocks",
+     "grownup": false
+    },
+    {
+     "pic": "📦",
+     "name": "a box",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need blocks and a box.",
+   "steps": [
+    {
+     "pic": "⬆️",
+     "text": "Stack them up",
+     "say": "Put one block on top of another. Slowly, slowly.",
+     "demo": {
+      "frames": [
+       "🧱",
+       "🧱",
+       "🧱",
+       "🧱"
+      ],
+      "motion": "stack"
+     },
+     "stuck": [
+      {
+       "pic": "⬛",
+       "text": "Big blocks at the bottom",
+       "say": "Put the biggest blocks at the bottom. Small ones go on top."
+      },
+      {
+       "pic": "🐢",
+       "text": "Slow hands, still tower",
+       "say": "Put each block down slowly, right in the middle."
+      }
+     ]
+    },
+    {
+     "pic": "🤔",
+     "text": "Guess how tall",
+     "say": "Guess! How many blocks before it falls?",
+     "demo": {
+      "frames": [
+       "🤔",
+       "🧱"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🔢",
+     "text": "Count your blocks",
+     "say": "Count your blocks. Did it fall? Build again, even taller!",
+     "demo": {
+      "frames": [
+       "🧱",
+       "🧱",
+       "🧱"
+      ],
+      "motion": "count"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🧸",
+    "text": "Can it hold a toy?",
+    "say": "Can your tower hold a tiny toy on top?"
+   },
+   "challenge": {
+    "pic": "🦵",
+    "text": "Taller than your knee!",
+    "say": "Can you build it taller than your knee? Stand next to it and check!",
+    "demo": {
+     "frames": [
+      "🧱",
+      "🧱",
+      "🧱",
+      "🧱",
+      "🧱"
+     ],
+     "motion": "stack"
+    }
+   },
+   "show": "Show Amma or Appa your tower before it falls!",
+   "done": "Wow! Tell me how tall your tower got.",
+   "why": "Stacking trains balance, hand control and counting, and rebuilding after a fall practises persistence (CG-8, CG-13)."
+  },
+  {
+   "id": "build-002",
+   "category": "build",
+   "title": "Shapes with pencils",
+   "icon": "🔺",
+   "sticker": "🔺",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I tried to make a triangle with sticks for my nest, but it fell apart! Can you show me how?",
+    "text": "Show me pencil shapes",
+    "scene": {
+     "frames": [
+      "🥢",
+      "❓",
+      "🔺"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🔺",
+    "text": "Make shapes with pencils"
+   },
+   "fun": "Shapes he can hold: count the sides, then build a house.",
+   "word": {
+    "en": "triangle",
+    "kn": "ತ್ರಿಕೋನ",
+    "kn_roman": "trikōna",
+    "hi": "त्रिकोण",
+    "hi_roman": "trikoṇ"
+   },
+   "materials": [
+    "✏️",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "✏️",
+     "name": "pencils",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need pencils and crayons.",
+   "steps": [
+    {
+     "pic": "🔺",
+     "text": "Make a triangle",
+     "say": "Lay three pencils on the floor. Make their ends touch. A triangle!",
+     "demo": {
+      "frames": [
+       "✏️✏️✏️",
+       "🔺"
+      ],
+      "motion": "show"
+     },
+     "stuck": [
+      {
+       "pic": "👉",
+       "text": "Ends must touch",
+       "say": "Make each pencil end touch the next pencil's end. No gaps!"
+      },
+      {
+       "pic": "📏",
+       "text": "Use same-size pencils",
+       "say": "Pencils that are the same size make a neat triangle."
+      }
+     ]
+    },
+    {
+     "pic": "🔲",
+     "text": "Make a square",
+     "say": "Now try four pencils. Can you make a square?",
+     "demo": {
+      "frames": [
+       "✏️✏️✏️✏️",
+       "🔲"
+      ],
+      "motion": "show"
+     }
+    },
+    {
+     "pic": "🏠",
+     "text": "Make a house shape",
+     "say": "How many pencils for a house? A square with a triangle roof!",
+     "demo": {
+      "frames": [
+       "🔲",
+       "🔺"
+      ],
+      "motion": "stack"
+     },
+     "stuck": [
+      {
+       "pic": "🔲",
+       "text": "Square first, then roof",
+       "say": "Make the square first. Then lean two pencils on top for a roof."
+      }
+     ]
+    }
+   ],
+   "twist": {
+    "pic": "🐟",
+    "text": "Make a fish shape",
+    "say": "Can you make a fish with pencils? Try a triangle tail!"
+   },
+   "challenge": {
+    "pic": "🔷",
+    "text": "Make a diamond shape",
+    "say": "Can you make a diamond? It's a square standing on its corner!",
+    "demo": {
+     "frames": [
+      "🔲",
+      "🔷"
+     ],
+     "motion": "fold"
+    }
+   },
+   "show": "Show Amma or Appa your shapes and count the sides!",
+   "done": "Wow! Tell me which shapes you built.",
+   "why": "Building shapes from sides makes 2D shapes concrete: three sides, four sides (CG-8)."
+  },
+  {
+   "id": "build-003",
+   "category": "build",
+   "title": "Chappal train",
+   "icon": "👡",
+   "sticker": "👡",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Toot toot! The chappal train is going to Mysuru, but the carriages are lost. Can you find them?",
+    "text": "Find the train carriages",
+    "scene": {
+     "frames": [
+      "🚂",
+      "👡",
+      "👟",
+      "👞"
+     ],
+     "motion": "line"
+    }
+   },
+   "mission": {
+    "pic": "🚂",
+    "text": "Make a chappal train"
+   },
+   "fun": "Ordering by size with the whole family's chappals, plus counting carriages.",
+   "word": {
+    "en": "train",
+    "kn": "ರೈಲು",
+    "kn_roman": "railu",
+    "hi": "रेलगाड़ी",
+    "hi_roman": "relgāṛī"
+   },
+   "materials": [
+    "👡",
+    "👟"
+   ],
+   "gather": [
+    {
+     "pic": "👡",
+     "name": "chappals",
+     "grownup": false
+    },
+    {
+     "pic": "👟",
+     "name": "shoes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need chappals and shoes.",
+   "steps": [
+    {
+     "pic": "👡",
+     "text": "Collect the chappals",
+     "say": "Go to the door. Bring all the chappals and shoes to one place.",
+     "demo": {
+      "frames": [
+       "👡",
+       "👟",
+       "👞"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🚂",
+     "text": "Make a long train",
+     "say": "Line them up, one behind the other, like a train.",
+     "demo": {
+      "frames": [
+       "👟",
+       "👡",
+       "👞"
+      ],
+      "motion": "line"
+     }
+    },
+    {
+     "pic": "📏",
+     "text": "Biggest to smallest",
+     "say": "Can you put the biggest chappal first, and the smallest one last?",
+     "demo": {
+      "frames": [
+       "👞",
+       "👟",
+       "👡"
+      ],
+      "motion": "line"
+     },
+     "stuck": [
+      {
+       "pic": "👣",
+       "text": "Two side by side",
+       "say": "Put two chappals side by side. Which one is longer? That one goes first."
+      },
+      {
+       "pic": "👨",
+       "text": "Appa's is the biggest",
+       "say": "Whose chappal is the biggest? Appa's? Start the train with that one!"
+      }
+     ]
+    },
+    {
+     "pic": "🔢",
+     "text": "Count the carriages",
+     "say": "Count your train carriages. Then wash your hands!",
+     "demo": {
+      "frames": [
+       "👡",
+       "👟",
+       "👞"
+      ],
+      "motion": "count"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🚂",
+    "text": "Make a curvy train",
+    "say": "Make your chappal train go around a corner. Choo choo!"
+   },
+   "challenge": {
+    "pic": "🙈",
+    "text": "Which carriage is missing?",
+    "say": "Close your eyes. Ask Amma to take one chappal away. Which carriage is missing?",
+    "demo": {
+     "frames": [
+      "🙈",
+      "❓"
+     ],
+     "motion": "show"
+    }
+   },
+   "show": "Show Amma or Appa your chappal train!",
+   "done": "Wow! Tell me about your chappal train.",
+   "why": "Putting things in order by size (seriation) and counting are core UKG number skills (CG-8)."
+  },
+  {
+   "id": "build-004",
+   "category": "build",
+   "title": "Paper fan",
+   "icon": "🌬️",
+   "sticker": "🌬️",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Phew! It's so hot in my nest today. Can you make me a paper fan?",
+    "text": "Make me a fan",
+    "scene": {
+     "frames": [
+      "🐦",
+      "☀️",
+      "🥵"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🌬️",
+    "text": "Fold a paper fan"
+   },
+   "fun": "Folding back and forth, then a real cool breeze he made himself.",
+   "word": {
+    "en": "fan",
+    "kn": "ಬೀಸಣಿಗೆ",
+    "kn_roman": "bīsaṇige",
+    "hi": "पंखा",
+    "hi_roman": "paṅkhā"
+   },
+   "materials": [
+    "📄"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "one paper",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need one paper.",
+   "steps": [
+    {
+     "pic": "〰️",
+     "text": "Fold forward, fold back",
+     "say": "Fold a small strip. Turn the paper over. Fold again. A zig-zag!",
+     "demo": {
+      "frames": [
+       "📄",
+       "〰",
+       "〰"
+      ],
+      "motion": "fold"
+     },
+     "stuck": [
+      {
+       "pic": "🔄",
+       "text": "Fold, flip, fold, flip",
+       "say": "Fold a strip. Flip the paper over. Fold again. Fold, flip, fold, flip!"
+      },
+      {
+       "pic": "☝",
+       "text": "Keep strips thin",
+       "say": "Make each strip as thin as your finger."
+      }
+     ]
+    },
+    {
+     "pic": "✊",
+     "text": "Squeeze one end",
+     "say": "Keep folding to the end. Squeeze one end tight.",
+     "demo": {
+      "frames": [
+       "〰",
+       "✊"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "🌬️",
+     "text": "Fan Amma gently",
+     "say": "Open it out and fan Amma gently. Ahh, cool wind!",
+     "demo": {
+      "frames": [
+       "〰",
+       "🌬️"
+      ],
+      "motion": "shake"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🌈",
+    "text": "Colour stripes first",
+    "say": "Colour stripes first, then fold. A rainbow fan!"
+   },
+   "challenge": {
+    "pic": "🦚",
+    "text": "Make a peacock tail",
+    "say": "Make three fans and put them side by side. A peacock tail!",
+    "demo": {
+     "frames": [
+      "〰",
+      "〰",
+      "〰"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Give Amma or Appa a cool breeze with your fan!",
+   "done": "Wow! Tell me how your fan feels.",
+   "why": "Repeated folding builds finger strength and a sense of pattern, and he feels air moving (CG-2, CG-7)."
+  },
+  {
+   "id": "build-005",
+   "category": "build",
+   "title": "Book domino line",
+   "icon": "📚",
+   "sticker": "📚",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I saw dominoes fall: click, click, click! Can books fall like that too?",
+    "text": "Make the books fall",
+    "scene": {
+     "frames": [
+      "📕",
+      "📗",
+      "📘",
+      "📙"
+     ],
+     "motion": "domino"
+    }
+   },
+   "mission": {
+    "pic": "📚",
+    "text": "Make a book domino line"
+   },
+   "fun": "A chain reaction he sets up and sets off: guess, push, watch.",
+   "word": {
+    "en": "book",
+    "kn": "ಪುಸ್ತಕ",
+    "kn_roman": "pustaka",
+    "hi": "किताब",
+    "hi_roman": "kitāb"
+   },
+   "materials": [
+    "📚"
+   ],
+   "gather": [
+    {
+     "pic": "📚",
+     "name": "books, big and small",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need books, big and small.",
+   "steps": [
+    {
+     "pic": "📚📚📚",
+     "text": "Stand them in a line",
+     "say": "Stand the books up in a long line, with a little gap between each.",
+     "demo": {
+      "frames": [
+       "📕",
+       "📗",
+       "📘",
+       "📙"
+      ],
+      "motion": "line"
+     },
+     "stuck": [
+      {
+       "pic": "✌️",
+       "text": "Gap: two fingers",
+       "say": "Leave a gap of two fingers between books. Not too far!"
+      },
+      {
+       "pic": "📖",
+       "text": "Open each book a little",
+       "say": "Open each book a little, so it stands up by itself."
+      }
+     ]
+    },
+    {
+     "pic": "🤔",
+     "text": "What will happen?",
+     "say": "Guess! If you push the first book, what will happen?",
+     "demo": {
+      "frames": [
+       "🤔",
+       "📚"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "👉",
+     "text": "Push the first one",
+     "say": "Push the first book gently. Watch!",
+     "demo": {
+      "frames": [
+       "📕",
+       "📗",
+       "📘"
+      ],
+      "motion": "domino"
+     }
+    },
+    {
+     "pic": "🔁",
+     "text": "Make a longer line",
+     "say": "Try a longer line, or a curvy one. Does it still work?",
+     "demo": {
+      "frames": [
+       "📕",
+       "📗",
+       "📘",
+       "📙",
+       "📒"
+      ],
+      "motion": "domino"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🧱",
+    "text": "Mix in some blocks",
+    "say": "Mix blocks into your book line. Do they still fall?"
+   },
+   "challenge": {
+    "pic": "➰",
+    "text": "Make a curvy line",
+    "say": "Can you make the line curve like a snake, and still fall?",
+    "demo": {
+     "frames": [
+      "📕",
+      "📗",
+      "📘",
+      "📙"
+     ],
+     "motion": "domino"
+    }
+   },
+   "show": "Show Amma or Appa your domino line falling!",
+   "done": "Wow! Tell me what happened to your books.",
+   "why": "Setting up a chain and predicting the result is cause-and-effect thinking (CG-7)."
+  },
+  {
+   "id": "build-006",
+   "category": "build",
+   "title": "Book bridge",
+   "icon": "🌉",
+   "sticker": "🌉",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "My toy car wants to cross the river, but there is no bridge! Can you build one?",
+    "text": "Build the car a bridge",
+    "scene": {
+     "frames": [
+      "🚙",
+      "🌊"
+     ],
+     "motion": "slide"
+    }
+   },
+   "mission": {
+    "pic": "🌉",
+    "text": "Build a book bridge"
+   },
+   "fun": "Engineering at floor level: will it hold the car? A heavier toy?",
+   "word": {
+    "en": "bridge",
+    "kn": "ಸೇತುವೆ",
+    "kn_roman": "sētuve",
+    "hi": "पुल",
+    "hi_roman": "pul"
+   },
+   "materials": [
+    "📚",
+    "🚙"
+   ],
+   "gather": [
+    {
+     "pic": "📚",
+     "name": "books",
+     "grownup": false
+    },
+    {
+     "pic": "📰",
+     "name": "newspaper",
+     "grownup": false
+    },
+    {
+     "pic": "🚙",
+     "name": "a toy car",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need books, newspaper and a toy car.",
+   "steps": [
+    {
+     "pic": "📚📚",
+     "text": "Make two book piles",
+     "say": "Make two piles of books, a little bit apart.",
+     "demo": {
+      "frames": [
+       "📚",
+       "📚"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "📰",
+     "text": "Lay a paper across",
+     "say": "Lay a folded newspaper across the top, from one pile to the other.",
+     "demo": {
+      "frames": [
+       "📚📰📚"
+      ],
+      "motion": "show"
+     },
+     "stuck": [
+      {
+       "pic": "📏",
+       "text": "Piles closer together",
+       "say": "Is the paper falling in? Move the piles closer together."
+      },
+      {
+       "pic": "📰",
+       "text": "Fold it thicker",
+       "say": "Fold the newspaper again to make it thicker and stronger."
+      }
+     ]
+    },
+    {
+     "pic": "🚙",
+     "text": "Drive a toy over",
+     "say": "Drive a small toy car across your bridge. Does it hold?",
+     "demo": {
+      "frames": [
+       "🚙"
+      ],
+      "motion": "slide"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Will it hold more?",
+     "say": "What if you put a heavier toy on it? Guess, then try!",
+     "demo": {
+      "frames": [
+       "🤔",
+       "🧸"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🐜",
+    "text": "Make one for an ant",
+    "say": "Now make a tiny bridge for an ant, with two small books."
+   },
+   "challenge": {
+    "pic": "🌉",
+    "text": "Make a longer bridge",
+    "say": "Move the piles further apart. Can your bridge still hold the car?",
+    "demo": {
+     "frames": [
+      "📚",
+      "📚"
+     ],
+     "motion": "pair"
+    }
+   },
+   "show": "Show Amma or Appa your bridge and what it can hold!",
+   "done": "Wow! Tell me what your bridge could hold.",
+   "why": "Testing what a bridge can hold is early engineering: strong, weak, heavy, light (CG-7, CG-8)."
+  },
+  {
+   "id": "build-007",
+   "category": "build",
+   "title": "Steel tumbler tower",
+   "icon": "🥛",
+   "sticker": "🥛",
+   "level": 2,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Oh no! My steel tumbler tower fell down. Can you build a taller one?",
+    "text": "My tower fell down!",
+    "scene": {
+     "frames": [
+      "🥛🥛🥛",
+      "🍽️",
+      "🥛🥛"
+     ],
+     "motion": "topple"
+    }
+   },
+   "mission": {
+    "pic": "🥛",
+    "text": "Build a taller tumbler tower"
+   },
+   "fun": "Shiny steel, a satisfying clink, and real balance-and-floors building.",
+   "word": {
+    "en": "tumbler",
+    "kn": "ಲೋಟ",
+    "kn_roman": "lōṭa",
+    "hi": "गिलास",
+    "hi_roman": "gilās"
+   },
+   "materials": [
+    "🥛",
+    "🍽️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🥛",
+     "name": "steel tumblers",
+     "grownup": true
+    },
+    {
+     "pic": "🍽️",
+     "name": "steel plates",
+     "grownup": true
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need steel tumblers and steel plates.",
+   "steps": [
+    {
+     "pic": "🥛",
+     "text": "Turn tumblers upside down",
+     "say": "Turn three tumblers upside down on the floor.",
+     "demo": {
+      "frames": [
+       "🥛",
+       "🥛"
+      ],
+      "motion": "fold"
+     }
+    },
+    {
+     "pic": "🍽️",
+     "text": "Put a plate on top",
+     "say": "Put a plate on top of them, like a floor.",
+     "demo": {
+      "frames": [
+       "🥛🥛🥛",
+       "🍽️"
+      ],
+      "motion": "stack"
+     }
+    },
+    {
+     "pic": "⬆️",
+     "text": "Add another floor",
+     "say": "Add more tumblers and another plate. Build it higher!",
+     "demo": {
+      "frames": [
+       "🥛🥛🥛",
+       "🍽️",
+       "🥛🥛",
+       "🍽️"
+      ],
+      "motion": "stack"
+     },
+     "stuck": [
+      {
+       "pic": "🎯",
+       "text": "Tumblers near the edges",
+       "say": "Put the tumblers near the edges of the plate, not in the middle."
+      },
+      {
+       "pic": "🍽️",
+       "text": "Same size plates",
+       "say": "Plates that are the same size make a steady floor."
+      }
+     ]
+    },
+    {
+     "pic": "🤔",
+     "text": "How high can it go?",
+     "say": "How many floors can you make before it wobbles?",
+     "demo": {
+      "frames": [
+       "🍽️",
+       "🍽️",
+       "🍽️"
+      ],
+      "motion": "count"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🧸",
+    "text": "Make it teddy's house",
+    "say": "Can teddy sit inside your tower, like a house?"
+   },
+   "challenge": {
+    "pic": "🦵",
+    "text": "Taller than your knee!",
+    "say": "Can your tower be taller than your knee? Build it slowly!",
+    "demo": {
+     "frames": [
+      "🥛🥛🥛",
+      "🍽️",
+      "🥛🥛🥛",
+      "🍽️",
+      "🥛🥛"
+     ],
+     "motion": "stack"
+    }
+   },
+   "show": "Show Amma your tower, then help put everything back!",
+   "done": "Wow! Tell me how many floors you built.",
+   "why": "Balancing and layering teaches stability, and putting things back is seva (CG-5, CG-7)."
+  },
+  {
+   "id": "build-008",
+   "category": "build",
+   "title": "Toy car track",
+   "icon": "🚗",
+   "sticker": "🚗",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "My toy car wants to visit Thatha, but it doesn't know the way! Can you build a track?",
+    "text": "Build a track to Thatha's",
+    "scene": {
+     "frames": [
+      "🚗",
+      "🏠"
+     ],
+     "motion": "slide"
+    }
+   },
+   "mission": {
+    "pic": "🛣️",
+    "text": "Build a track for the car"
+   },
+   "fun": "Tearing paper (allowed!) and building a little town to drive through.",
+   "word": {
+    "en": "car",
+    "kn": "ಕಾರು",
+    "kn_roman": "kāru",
+    "hi": "गाड़ी",
+    "hi_roman": "gāṛī"
+   },
+   "materials": [
+    "📰",
+    "🚙",
+    "🧱"
+   ],
+   "gather": [
+    {
+     "pic": "📰",
+     "name": "old newspaper",
+     "grownup": false
+    },
+    {
+     "pic": "🚙",
+     "name": "a toy car",
+     "grownup": false
+    },
+    {
+     "pic": "🧱",
+     "name": "blocks",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need old newspaper, a toy car and blocks.",
+   "steps": [
+    {
+     "pic": "📰",
+     "text": "Tear newspaper strips",
+     "say": "Tear old newspaper into long strips. Rrrip!",
+     "demo": {
+      "frames": [
+       "📰",
+       "〰〰"
+      ],
+      "motion": "show"
+     },
+     "stuck": [
+      {
+       "pic": "👐",
+       "text": "Pinch and pull down",
+       "say": "Hold the top with both hands. Pull one hand down, slowly. Rrrip!"
+      }
+     ]
+    },
+    {
+     "pic": "🛣️",
+     "text": "Lay a track on the floor",
+     "say": "Lay the strips on the floor to make a long track. Make it turn!",
+     "demo": {
+      "frames": [
+       "〰",
+       "〰",
+       "〰"
+      ],
+      "motion": "line"
+     },
+     "stuck": [
+      {
+       "pic": "↪️",
+       "text": "Turn with a new strip",
+       "say": "To turn, start a new strip pointing a new way."
+      }
+     ]
+    },
+    {
+     "pic": "🏠",
+     "text": "Add houses with blocks",
+     "say": "Put blocks next to the track for houses and shops.",
+     "demo": {
+      "frames": [
+       "🏠",
+       "🏪",
+       "🌳"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🚗",
+     "text": "Drive your car home",
+     "say": "Drive your car along the track, all the way home.",
+     "demo": {
+      "frames": [
+       "🚗",
+       "🏠"
+      ],
+      "motion": "slide"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🌉",
+    "text": "Add a bridge",
+    "say": "Add a book bridge to your track. Up and over!"
+   },
+   "challenge": {
+    "pic": "🛑",
+    "text": "Add stop and go",
+    "say": "Make a stop sign and a go sign from paper. Stop, go, stop!",
+    "demo": {
+     "frames": [
+      "🛑",
+      "🚦"
+     ],
+     "motion": "show"
+    }
+   },
+   "show": "Give Amma or Appa a ride along your track!",
+   "done": "Wow! Tell me where your track goes.",
+   "why": "Tearing builds hand strength; planning a route builds spatial words like left, right and along (CG-2, CG-7)."
+  },
+  {
+   "id": "build-009",
+   "category": "build",
+   "title": "Teddy's box house",
+   "icon": "📦",
+   "sticker": "📦",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Teddy has no home! He's sleeping on the floor. Can you make him a house?",
+    "text": "Make teddy a house",
+    "scene": {
+     "frames": [
+      "🧸",
+      "💤",
+      "📦"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🏠",
+    "text": "Make a box house for teddy"
+   },
+   "fun": "A real cardboard house with a door he drew, and a story about who lives there.",
+   "word": {
+    "en": "house",
+    "kn": "ಮನೆ",
+    "kn_roman": "mane",
+    "hi": "घर",
+    "hi_roman": "ghar"
+   },
+   "materials": [
+    "📦",
+    "🖍️",
+    "🧸"
+   ],
+   "gather": [
+    {
+     "pic": "📦",
+     "name": "an empty box",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "grownup": false
+    },
+    {
+     "pic": "🧸",
+     "name": "teddy",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need an empty box, crayons and teddy.",
+   "steps": [
+    {
+     "pic": "📦",
+     "text": "Find an empty box",
+     "say": "Find an empty cardboard box.",
+     "demo": {
+      "frames": [
+       "📦"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🖍️",
+     "text": "Draw a door and windows",
+     "say": "Draw a door and windows on the box.",
+     "demo": {
+      "frames": [
+       "🖍️",
+       "🚪"
+      ],
+      "motion": "draw",
+      "path": "line"
+     },
+     "stuck": [
+      {
+       "pic": "🚪",
+       "text": "Door is a tall box",
+       "say": "A door is a tall rectangle. Windows are small squares."
+      }
+     ]
+    },
+    {
+     "pic": "🧸",
+     "text": "Make a bed inside",
+     "say": "Fold a hanky to make a bed. Put your teddy inside.",
+     "demo": {
+      "frames": [
+       "🧣",
+       "🛏️"
+      ],
+      "motion": "fold"
+     },
+     "stuck": [
+      {
+       "pic": "🧣",
+       "text": "Fold the hanky twice",
+       "say": "Fold the hanky in half, then in half again. A soft little bed!"
+      }
+     ]
+    },
+    {
+     "pic": "🗣️",
+     "text": "Tell who lives there",
+     "say": "Who lives in your house? What do they do all day?",
+     "demo": {
+      "frames": [
+       "👉",
+       "🧸",
+       "📦"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🌳",
+    "text": "Draw a garden",
+    "say": "Draw a garden around teddy's house. Flowers? A tree?"
+   },
+   "challenge": {
+    "pic": "🏘️",
+    "text": "Build a house next door",
+    "say": "Teddy is lonely. Make a second house next door for a friend!",
+    "demo": {
+     "frames": [
+      "📦",
+      "📦"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Show Amma or Appa the house and its family!",
+   "done": "Wow! Tell me who lives in your box house.",
+   "why": "Building a home for a toy sparks pretend play and storytelling, key for language at this age (CG-9, CG-12)."
+  },
+  {
+   "id": "build-010",
+   "category": "build",
+   "title": "A cosy nest",
+   "icon": "🐦",
+   "sticker": "🐦",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Rain came and my nest got wet! Can you make me a soft new nest?",
+    "text": "Make me a new nest",
+    "scene": {
+     "frames": [
+      "🌧️",
+      "🐦",
+      "💧"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🐦",
+    "text": "Make a soft nest for me"
+   },
+   "fun": "He builds a home for the buddy, then compares it with real bird nests.",
+   "word": {
+    "en": "nest",
+    "kn": "ಗೂಡು",
+    "kn_roman": "gūḍu",
+    "hi": "घोंसला",
+    "hi_roman": "ghõslā"
+   },
+   "materials": [
+    "🧦",
+    "📰"
+   ],
+   "gather": [
+    {
+     "pic": "🧦",
+     "name": "old socks",
+     "grownup": false
+    },
+    {
+     "pic": "🧣",
+     "name": "a hanky",
+     "grownup": false
+    },
+    {
+     "pic": "📰",
+     "name": "newspaper",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need old socks, a hanky and newspaper.",
+   "steps": [
+    {
+     "pic": "🧺",
+     "text": "Find soft things",
+     "say": "Find soft things: a hanky, old socks, bits of newspaper.",
+     "demo": {
+      "frames": [
+       "🧦",
+       "🧣",
+       "📰"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🌀",
+     "text": "Shape a round nest",
+     "say": "Shape them into a round nest, like a little basket.",
+     "demo": {
+      "frames": [
+       "🌀"
+      ],
+      "motion": "spin"
+     },
+     "stuck": [
+      {
+       "pic": "⭕",
+       "text": "Make a ring first",
+       "say": "Make a ring with a sock first. Then fill the middle with soft things."
+      },
+      {
+       "pic": "✊",
+       "text": "Press the middle down",
+       "say": "Press the middle down with your fist to make a hollow."
+      }
+     ]
+    },
+    {
+     "pic": "🧸",
+     "text": "Put a small toy in",
+     "say": "Put a small toy inside. Is it cosy?",
+     "demo": {
+      "frames": [
+       "🧸"
+      ],
+      "motion": "drop"
+     }
+    },
+    {
+     "pic": "🐦",
+     "text": "How do birds do it?",
+     "say": "Birds build nests with just their beaks and feet! What did you use?",
+     "demo": {
+      "frames": [
+       "🐦"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🥚",
+    "text": "Add paper eggs",
+    "say": "Scrunch some paper into little eggs for your nest."
+   },
+   "challenge": {
+    "pic": "🧸",
+    "text": "Hold a bigger toy",
+    "say": "Can your nest hold a bigger toy? Make the walls higher!",
+    "demo": {
+     "frames": [
+      "🧸"
+     ],
+     "motion": "drop"
+    }
+   },
+   "show": "Show Amma or Appa your nest!",
+   "done": "Wow! Tell me what you used for your nest.",
+   "why": "Making a nest helps him wonder how animals build homes and compare that with his hands (CG-6, CG-7)."
+  },
+  {
+   "id": "build-011",
+   "category": "build",
+   "title": "Newspaper tent tower",
+   "icon": "⛺",
+   "sticker": "⛺",
+   "level": 3,
+   "time": "15 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "All the blocks are hiding! Can we build a tall tower from just newspaper?",
+    "text": "Build a paper tower",
+    "scene": {
+     "frames": [
+      "📰",
+      "❓"
+     ],
+     "motion": "pulse"
+    }
+   },
+   "mission": {
+    "pic": "⛺",
+    "text": "Build a newspaper tower"
+   },
+   "fun": "Paper is floppy until you fold it: a real engineering surprise.",
+   "word": {
+    "en": "paper",
+    "kn": "ಕಾಗದ",
+    "kn_roman": "kāgada",
+    "hi": "काग़ज़",
+    "hi_roman": "kāġaz"
+   },
+   "materials": [
+    "📰"
+   ],
+   "gather": [
+    {
+     "pic": "📰",
+     "name": "old newspaper",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need old newspaper.",
+   "steps": [
+    {
+     "pic": "⛺",
+     "text": "Fold it like a tent",
+     "say": "Fold a sheet in half and stand it up, like a little tent.",
+     "demo": {
+      "frames": [
+       "📰",
+       "⛺"
+      ],
+      "motion": "fold"
+     },
+     "stuck": [
+      {
+       "pic": "📖",
+       "text": "Open it like a book",
+       "say": "Open the fold a little, like a book standing up."
+      },
+      {
+       "pic": "📰",
+       "text": "Use half a sheet",
+       "say": "Too floppy? Fold the sheet in half first, then make the tent."
+      }
+     ]
+    },
+    {
+     "pic": "⛺⛺",
+     "text": "Make a row of tents",
+     "say": "Make three tents and stand them in a row.",
+     "demo": {
+      "frames": [
+       "⛺",
+       "⛺",
+       "⛺"
+      ],
+      "motion": "line"
+     }
+    },
+    {
+     "pic": "📰",
+     "text": "Put a flat paper on top",
+     "say": "Lay a flat newspaper on top. That's the first floor!",
+     "demo": {
+      "frames": [
+       "⛺⛺⛺",
+       "📰"
+      ],
+      "motion": "stack"
+     }
+    },
+    {
+     "pic": "⬆️",
+     "text": "Add another floor",
+     "say": "Add more tents and another floor. How tall can it go?",
+     "demo": {
+      "frames": [
+       "⛺⛺⛺",
+       "📰",
+       "⛺⛺⛺",
+       "📰"
+      ],
+      "motion": "stack"
+     },
+     "stuck": [
+      {
+       "pic": "🎯",
+       "text": "Tents under the corners",
+       "say": "Put the tents right under the corners of the floor paper."
+      }
+     ]
+    }
+   ],
+   "twist": {
+    "pic": "🧸",
+    "text": "Put a toy on top",
+    "say": "Can your paper tower hold a small toy on top?"
+   },
+   "challenge": {
+    "pic": "📏",
+    "text": "As tall as a chair seat",
+    "say": "Can your paper tower be as tall as a chair seat?",
+    "demo": {
+     "frames": [
+      "⛺⛺⛺",
+      "📰",
+      "⛺⛺⛺",
+      "📰",
+      "⛺⛺⛺"
+     ],
+     "motion": "stack"
+    }
+   },
+   "show": "Show Amma or Appa your paper tower!",
+   "done": "Wow! Tell me how many floors your paper tower has.",
+   "why": "Discovering that a fold makes flat paper strong is real engineering, done with trial and error (CG-7, CG-13)."
+  },
+  {
+   "id": "build-012",
+   "category": "build",
+   "title": "Cushion fort",
+   "icon": "🏰",
+   "sticker": "🏰",
+   "level": 3,
+   "time": "15 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Let's pretend we are explorers in the jungle! We need a cosy fort for the night. Will you build one?",
+    "text": "Build an explorer's fort",
+    "scene": {
+     "frames": [
+      "🌴",
+      "🌙",
+      "🏰"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🏰",
+    "text": "Build a cushion fort"
+   },
+   "fun": "Pretend play with real building, then a cosy reading den.",
+   "word": {
+    "en": "fort",
+    "kn": "ಕೋಟೆ",
+    "kn_roman": "kōṭe",
+    "hi": "क़िला",
+    "hi_roman": "qilā"
+   },
+   "materials": [
+    "🛋️",
+    "🛏️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🛋️",
+     "name": "cushions and pillows",
+     "grownup": true
+    },
+    {
+     "pic": "🛏️",
+     "name": "a bedsheet",
+     "grownup": true
+    },
+    {
+     "pic": "📚",
+     "name": "a book",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need cushions and pillows, a bedsheet and a book.",
+   "steps": [
+    {
+     "pic": "🏰",
+     "text": "Make four walls",
+     "say": "Stand them up on the floor to make walls.",
+     "demo": {
+      "frames": [
+       "🛋️",
+       "🛋️",
+       "🛋️"
+      ],
+      "motion": "line"
+     },
+     "stuck": [
+      {
+       "pic": "📐",
+       "text": "Lean them together",
+       "say": "Lean two cushions against each other, like a tent. They hold each other up."
+      },
+      {
+       "pic": "🛋️",
+       "text": "The sofa is a wall",
+       "say": "Use the sofa as one big wall. Ask Appa first!"
+      }
+     ]
+    },
+    {
+     "pic": "🛏️",
+     "text": "Appa adds a bedsheet roof",
+     "say": "Ask Appa to put a bedsheet on top for a roof.",
+     "demo": {
+      "frames": [
+       "🛏️"
+      ],
+      "motion": "drop"
+     }
+    },
+    {
+     "pic": "📚",
+     "text": "Crawl in with a book",
+     "say": "Crawl inside with a book or your teddy. So cosy!",
+     "demo": {
+      "frames": [
+       "🧒",
+       "🏰"
+      ],
+      "motion": "slide"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🚪",
+    "text": "Make a door",
+    "say": "Make a door for your fort that opens and closes."
+   },
+   "challenge": {
+    "pic": "🤫",
+    "text": "Make a secret password",
+    "say": "Make a secret password. Only people who say it can come in!",
+    "demo": {
+     "frames": [
+      "🤫",
+      "🏰"
+     ],
+     "motion": "pulse"
+    }
+   },
+   "show": "Invite Amma or Appa into your fort!",
+   "done": "Wow! Tell me what is inside your fort.",
+   "why": "Planning a space and working with a grown-up builds problem-solving and cooperation (CG-4, CG-7)."
+  },
+  {
+   "id": "build-013",
+   "category": "build",
+   "title": "Paper lantern",
+   "icon": "🏮",
+   "sticker": "🏮",
+   "level": 3,
+   "time": "15 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Deepavali is here! Every window has a lantern, but my nest has none. Will you make me one?",
+    "text": "Make me a lantern",
+    "scene": {
+     "frames": [
+      "🏮",
+      "✨",
+      "🏮"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🏮",
+    "text": "Make a lantern with Appa"
+   },
+   "fun": "A real festival craft with Appa, cutting with child scissors side by side.",
+   "word": {
+    "en": "lantern",
+    "kn": "ಆಕಾಶಬುಟ್ಟಿ",
+    "kn_roman": "ākāśabuṭṭi",
+    "hi": "कंदील",
+    "hi_roman": "kandīl"
+   },
+   "materials": [
+    "📄",
+    "✂️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "📄",
+     "name": "coloured paper",
+     "grownup": false
+    },
+    {
+     "pic": "✂️",
+     "name": "child scissors",
+     "grownup": true
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need coloured paper and child scissors.",
+   "steps": [
+    {
+     "pic": "📄",
+     "text": "Fold paper in half",
+     "say": "Fold a paper in half, the long way. Press it flat.",
+     "demo": {
+      "frames": [
+       "📄",
+       "📄"
+      ],
+      "motion": "fold"
+     }
+    },
+    {
+     "pic": "✂️",
+     "text": "Cut lines with Appa",
+     "say": "With Appa, use child scissors. Cut lines from the fold, but stop before the end.",
+     "demo": {
+      "frames": [
+       "✂️",
+       "〰"
+      ],
+      "motion": "draw",
+      "path": "line"
+     },
+     "stuck": [
+      {
+       "pic": "✋",
+       "text": "Stop before the edge",
+       "say": "Stop cutting one finger before the edge. Appa can draw a stop line."
+      },
+      {
+       "pic": "👨",
+       "text": "Appa holds, you cut",
+       "say": "Appa holds the paper. You cut slowly, eyes on the scissors."
+      }
+     ]
+    },
+    {
+     "pic": "🔄",
+     "text": "Roll it round",
+     "say": "Open it up. Roll it round, and Appa joins the ends.",
+     "demo": {
+      "frames": [
+       "📄",
+       "🏮"
+      ],
+      "motion": "fold"
+     },
+     "stuck": [
+      {
+       "pic": "👨",
+       "text": "Appa joins the ends",
+       "say": "Roll it gently. Appa joins the ends with tape or glue."
+      }
+     ]
+    },
+    {
+     "pic": "🏮",
+     "text": "Hang it up",
+     "say": "Ask Appa to hang your lantern up high. Just paper, just for looking.",
+     "demo": {
+      "frames": [
+       "🏮"
+      ],
+      "motion": "drop"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🌈",
+    "text": "Colour the paper first",
+    "say": "Colour the paper first. A rainbow lantern!"
+   },
+   "challenge": {
+    "pic": "🌈",
+    "text": "Make a lantern chain",
+    "say": "Make three lanterns in different colours. Hang them in a row!",
+    "demo": {
+     "frames": [
+      "🏮",
+      "🏮",
+      "🏮"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Show everyone your lantern!",
+   "done": "Wow! Tell me where your lantern is hanging.",
+   "why": "Cutting with child scissors is a named UKG fine-motor goal; here it makes a festival decoration (CG-2, CG-12)."
+  },
+  {
+   "id": "build-014",
+   "category": "build",
+   "title": "Build your letter",
+   "icon": "🔤",
+   "sticker": "🔤",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I want to put your name on my nest! Which letter does your name start with? Let's build it!",
+    "text": "Build your name's letter",
+    "scene": {
+     "frames": [
+      "🔤",
+      "🐦"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🔤",
+    "text": "Build your letter on the floor"
+   },
+   "fun": "His own letter, big enough to walk around, made from socks and pencils.",
+   "word": {
+    "en": "letter",
+    "kn": "ಅಕ್ಷರ",
+    "kn_roman": "akṣara",
+    "hi": "अक्षर",
+    "hi_roman": "akṣar"
+   },
+   "materials": [
+    "🧱",
+    "🧦",
+    "✏️"
+   ],
+   "gather": [
+    {
+     "pic": "🧱",
+     "name": "blocks",
+     "grownup": false
+    },
+    {
+     "pic": "🧦",
+     "name": "socks",
+     "grownup": false
+    },
+    {
+     "pic": "✏️",
+     "name": "pencils",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need blocks, socks and pencils.",
+   "steps": [
+    {
+     "pic": "🔤",
+     "text": "Think of your name's letter",
+     "say": "Your name starts with a letter. Do you remember which one?",
+     "demo": {
+      "frames": [
+       "🔤"
+      ],
+      "motion": "pulse"
+     },
+     "stuck": [
+      {
+       "pic": "🎒",
+       "text": "Look at your name",
+       "say": "Look at your name on your school bag or book. The first letter is the big one!"
+      }
+     ]
+    },
+    {
+     "pic": "🧱",
+     "text": "Make it on the floor",
+     "say": "Make that letter on the floor with blocks, pencils, or socks.",
+     "demo": {
+      "frames": [
+       "✏️",
+       "🧦",
+       "🧱"
+      ],
+      "motion": "line"
+     },
+     "stuck": [
+      {
+       "pic": "📏",
+       "text": "Straight lines first",
+       "say": "Make the straight lines first. Then add the curvy parts with socks."
+      }
+     ]
+    },
+    {
+     "pic": "👩",
+     "text": "Make Amma's letter too",
+     "say": "Now ask Amma: which letter does her name start with? Make that one too!",
+     "demo": {
+      "frames": [
+       "👩",
+       "🔤"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "twist": {
+    "pic": "🧦",
+    "text": "Make it with socks",
+    "say": "Now make your letter with only socks. Or with chappals!"
+   },
+   "challenge": {
+    "pic": "👨",
+    "text": "Build Appa's letter too",
+    "say": "Now build the first letter of Appa's name, and Ajji's too!",
+    "demo": {
+     "frames": [
+      "🔤",
+      "🔤"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Show Amma or Appa your letters!",
+   "done": "Wow! Tell me which letters you built.",
+   "why": "Building a letter with objects gives its shape a body memory, with no writing pressure (CG-10)."
+  },
+  {
+   "id": "find-001",
+   "category": "find",
+   "title": "Red things hunt",
+   "icon": "❤️",
+   "sticker": "❤️",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "My favourite colour is red, like a tomato! Can you find three red things to show me?",
+    "text": "Find red things for me",
+    "scene": {
+     "frames": [
+      "🍅",
+      "🌶️",
+      "❤️"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "❤️",
+    "text": "Find three red things"
+   },
+   "fun": "A colour hunt round the house, with counting at the end.",
+   "word": {
+    "en": "red",
+    "kn": "ಕೆಂಪು",
+    "kn_roman": "kempu",
+    "hi": "लाल",
+    "hi_roman": "lāl"
+   },
+   "materials": [
+    "👀"
+   ],
+   "gather": [
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need sharp eyes.",
+   "steps": [
+    {
+     "pic": "👀",
+     "text": "Look all around",
+     "say": "Look all around the room with your sharp eyes.",
+     "demo": {
+      "frames": [
+       "👀"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "❤️",
+     "text": "Find three red things",
+     "say": "Can you find three red things?",
+     "demo": {
+      "frames": [
+       "🔍",
+       "📕",
+       "🧸",
+       "🍅"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "🍅",
+       "text": "Tomato, toy, or bindi",
+       "say": "Red can be a tomato, a toy, a book, or Amma's bindi!"
+      },
+      {
+       "pic": "👕",
+       "text": "Check your clothes",
+       "say": "Look at your clothes and your toys. Anything red?"
+      }
+     ]
+    },
+    {
+     "pic": "🖐️",
+     "text": "Bring them to one place",
+     "say": "Bring them all to one place.",
+     "demo": {
+      "frames": [
+       "🍅",
+       "📕",
+       "🚗"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🔢",
+     "text": "Count your red things",
+     "say": "Count them. One, two, three!",
+     "demo": {
+      "frames": [
+       "🍅",
+       "📕",
+       "🚗"
+      ],
+      "motion": "count"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🧡",
+    "text": "Now find orange things",
+    "say": "Now find three orange things. Is a carrot orange? Is a marigold?",
+    "demo": {
+     "frames": [
+      "🔍",
+      "🥕",
+      "🍊",
+      "🌼"
+     ],
+     "motion": "point"
+    }
+   },
+   "show": "Show Amma or Appa your red treasures!",
+   "done": "Wow! Tell me what red things you found.",
+   "why": "Sorting by colour is the first step of classifying, and counting the haul is one-to-one counting (CG-2, CG-8)."
+  },
+  {
+   "id": "find-002",
+   "category": "find",
+   "title": "Round things hunt",
+   "icon": "⭕",
+   "sticker": "⭕",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I love round things: round eggs, round eyes, round me! Can you find three round things?",
+    "text": "Find round things for me",
+    "scene": {
+     "frames": [
+      "🥚",
+      "🐦",
+      "⚽"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "⭕",
+    "text": "Find three round things"
+   },
+   "fun": "Shape-spotting in real life: a plate, a clock, a ball.",
+   "word": {
+    "en": "round",
+    "kn": "ದುಂಡು",
+    "kn_roman": "duṇḍu",
+    "hi": "गोल",
+    "hi_roman": "gol"
+   },
+   "materials": [
+    "👀"
+   ],
+   "gather": [
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need sharp eyes.",
+   "steps": [
+    {
+     "pic": "⭕",
+     "text": "Look for round things",
+     "say": "Let's look for round things!",
+     "demo": {
+      "frames": [
+       "⭕"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🍽️",
+     "text": "A plate? A clock?",
+     "say": "A plate is round. A clock is round. What else is round?",
+     "demo": {
+      "frames": [
+       "🍽️",
+       "🕒",
+       "⚽"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🖐️",
+     "text": "Find three round things",
+     "say": "Find three round things. Bring the small ones, point to the big ones.",
+     "demo": {
+      "frames": [
+       "🔍",
+       "⚽",
+       "📚",
+       "🍽️"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "👆",
+       "text": "Trace it with a finger",
+       "say": "Run your finger around the edge. No corners? Then it's round!"
+      }
+     ]
+    },
+    {
+     "pic": "🗣️",
+     "text": "Say where each was",
+     "say": "Tell where you found each one.",
+     "demo": {
+      "frames": [
+       "👉",
+       "⚽",
+       "🍽️",
+       "🕒"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🔲",
+    "text": "Now find square things",
+    "say": "Find three square things. Square things have four corners!",
+    "demo": {
+     "frames": [
+      "🔍",
+      "🖼️",
+      "📦",
+      "🔲"
+     ],
+     "motion": "point"
+    }
+   },
+   "show": "Show Amma or Appa your round things!",
+   "done": "Wow! Tell me what round things you found.",
+   "why": "Spotting a shape in real objects shows he understands the shape, not just its picture (CG-8)."
+  },
+  {
+   "id": "find-003",
+   "category": "find",
+   "title": "Soft and rough",
+   "icon": "🧸",
+   "sticker": "🧸",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "My feathers are very soft. What else is soft? And what feels rough and scratchy? Let's find out!",
+    "text": "Find soft and rough",
+    "scene": {
+     "frames": [
+      "🧸",
+      "🥥"
+     ],
+     "motion": "pair"
+    }
+   },
+   "mission": {
+    "pic": "🖐️",
+    "text": "Find soft and rough things"
+   },
+   "fun": "Hands-on describing words: soft, rough, smooth, bumpy.",
+   "word": {
+    "en": "soft",
+    "kn": "ಮೆತ್ತಗೆ",
+    "kn_roman": "mettage",
+    "hi": "नरम",
+    "hi_roman": "naram"
+   },
+   "materials": [
+    "✋"
+   ],
+   "gather": [
+    {
+     "pic": "✋",
+     "name": "your fingers",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need your fingers.",
+   "steps": [
+    {
+     "pic": "✋",
+     "text": "Use your fingers",
+     "say": "Use your fingers like a scientist. Touch gently.",
+     "demo": {
+      "frames": [
+       "✋"
+      ],
+      "motion": "shake"
+     }
+    },
+    {
+     "pic": "🧸",
+     "text": "Find something soft",
+     "say": "Find something soft. A pillow? A teddy?",
+     "demo": {
+      "frames": [
+       "✋",
+       "🧸",
+       "🛋️"
+      ],
+      "motion": "point"
+     }
+    },
+    {
+     "pic": "🥥",
+     "text": "Find something rough",
+     "say": "Now find something rough. A coconut shell? A doormat?",
+     "demo": {
+      "frames": [
+       "✋",
+       "🥥",
+       "🧹"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "🥥",
+       "text": "Try the doormat",
+       "say": "Rough feels scratchy. Try the doormat, a coconut shell, or the broom."
+      }
+     ]
+    },
+    {
+     "pic": "🗣️",
+     "text": "Tell how they feel",
+     "say": "Tell how each one feels. Soft? Rough? Smooth? Bumpy?",
+     "demo": {
+      "frames": [
+       "🧸",
+       "🥥"
+      ],
+      "motion": "pair"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🙈",
+    "text": "Eyes closed: soft or rough?",
+    "say": "Close your eyes. Amma gives you something to touch. Is it soft or rough?",
+    "demo": {
+     "frames": [
+      "🙈",
+      "✋"
+     ],
+     "motion": "pulse"
+    }
+   },
+   "show": "Let Amma or Appa feel your soft and rough things!",
+   "done": "Wow! Tell me something soft and something rough.",
+   "why": "Touch words like rough, smooth and bumpy sharpen the senses and add describing words (CG-2, CG-9)."
+  },
+  {
+   "id": "find-004",
+   "category": "find",
+   "title": "Sock pairs",
+   "icon": "🧦",
+   "sticker": "🧦",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "The socks had a party and got all mixed up! Can you help each sock find its friend?",
+    "text": "Help socks find friends",
+    "scene": {
+     "frames": [
+      "🧦",
+      "🧦",
+      "🧦"
+     ],
+     "motion": "shake"
+    }
+   },
+   "mission": {
+    "pic": "🧦",
+    "text": "Match all the sock pairs"
+   },
+   "fun": "A real household job that is a matching puzzle, and Amma gets help.",
+   "word": {
+    "en": "sock",
+    "kn": "ಕಾಲುಚೀಲ",
+    "kn_roman": "kālucīla",
+    "hi": "मोज़ा",
+    "hi_roman": "mozā"
+   },
+   "materials": [
+    "🧦",
+    "🧺"
+   ],
+   "gather": [
+    {
+     "pic": "🧺",
+     "name": "clean sock basket",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need clean sock basket.",
+   "steps": [
+    {
+     "pic": "🧦",
+     "text": "Find two that match",
+     "say": "Find two socks that look the same. A pair!",
+     "demo": {
+      "frames": [
+       "🧦",
+       "🧦",
+       "💞"
+      ],
+      "motion": "pair"
+     },
+     "stuck": [
+      {
+       "pic": "🎨",
+       "text": "Same colour first",
+       "say": "First find socks with the same colour. Then check the pattern."
+      },
+      {
+       "pic": "📏",
+       "text": "Hold them side by side",
+       "say": "Hold two socks side by side. Same size? Same stripes? A pair!"
+      }
+     ]
+    },
+    {
+     "pic": "🧦🧦",
+     "text": "Make all the pairs",
+     "say": "Now make all the pairs you can.",
+     "demo": {
+      "frames": [
+       "🧦🧦",
+       "🧦🧦",
+       "🧦🧦"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🔢",
+     "text": "Count the pairs",
+     "say": "Count your pairs. Is any sock left without a friend?",
+     "demo": {
+      "frames": [
+       "🧦🧦",
+       "🧦🧦",
+       "🧦🧦"
+      ],
+      "motion": "count"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "📏",
+    "text": "Line them up big to small",
+    "say": "Line up the pairs: Appa's biggest socks first, your tiny socks last!",
+    "demo": {
+     "frames": [
+      "🧦",
+      "🧦",
+      "🧦"
+     ],
+     "motion": "line"
+    }
+   },
+   "show": "Show Amma or Appa how many pairs you made!",
+   "done": "Wow! Tell me how many pairs you found.",
+   "why": "Matching is early logic, and helping with laundry is real seva at home (CG-5, CG-8)."
+  },
+  {
+   "id": "find-005",
+   "category": "find",
+   "title": "Tidy-up treasure hunt",
+   "icon": "🧹",
+   "sticker": "🧹",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Oh no, the toys forgot their way home! Can you find five lost toys and take them home?",
+    "text": "Take the lost toys home",
+    "scene": {
+     "frames": [
+      "🧸",
+      "🚗",
+      "⚽",
+      "❓"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🧺",
+    "text": "Take five toys back home"
+   },
+   "fun": "Tidying turned into a rescue mission, with counting to five.",
+   "word": {
+    "en": "tidy",
+    "kn": "ಅಚ್ಚುಕಟ್ಟು",
+    "kn_roman": "accukaṭṭu",
+    "hi": "साफ़",
+    "hi_roman": "sāf"
+   },
+   "materials": [
+    "🧸",
+    "🧺"
+   ],
+   "gather": [
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    },
+    {
+     "pic": "🖐️",
+     "name": "two hands",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need sharp eyes and two hands.",
+   "steps": [
+    {
+     "pic": "🧸",
+     "text": "Find five toys out",
+     "say": "Find five toys that are not in their home.",
+     "demo": {
+      "frames": [
+       "🧸",
+       "🚗",
+       "⚽",
+       "🧩",
+       "📚"
+      ],
+      "motion": "count"
+     }
+    },
+    {
+     "pic": "🧺",
+     "text": "Put them back home",
+     "say": "Put each one back where it lives.",
+     "demo": {
+      "frames": [
+       "🧸",
+       "🧺"
+      ],
+      "motion": "slide"
+     },
+     "stuck": [
+      {
+       "pic": "🏠",
+       "text": "Same toys live together",
+       "say": "Cars live with cars. Books live with books. Where do the others live?"
+      }
+     ]
+    },
+    {
+     "pic": "✨",
+     "text": "Look! A tidy room",
+     "say": "Look around. Wow, what a tidy room!",
+     "demo": {
+      "frames": [
+       "✨"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🔟",
+    "text": "Find ten lost toys",
+    "say": "Can you find ten lost things and take them all home? Count as you go!",
+    "demo": {
+     "frames": [
+      "🧸",
+      "🚗",
+      "⚽",
+      "🧩",
+      "📚"
+     ],
+     "motion": "count"
+    }
+   },
+   "show": "Show Amma or Appa your tidy room!",
+   "done": "Wow! Tell me which toys you put back.",
+   "why": "Tidying is framed as a hunt so that helping feels like play: seva and self-care (CG-1, CG-5)."
+  },
+  {
+   "id": "find-006",
+   "category": "find",
+   "title": "Things that roll",
+   "icon": "⚽",
+   "sticker": "⚽",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I tried to roll a book down a hill. It didn't roll! What things can roll? Let's test!",
+    "text": "Find what can roll",
+    "scene": {
+     "frames": [
+      "⚽",
+      "📕",
+      "❓"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "⚽",
+    "text": "Find things that roll"
+   },
+   "fun": "Guess, test, sort: his first fair test, with a ball and a book.",
+   "word": {
+    "en": "roll",
+    "kn": "ಉರುಳು",
+    "kn_roman": "uruḷu",
+    "hi": "लुढ़कना",
+    "hi_roman": "luṛhaknā"
+   },
+   "materials": [
+    "⚽",
+    "📚"
+   ],
+   "gather": [
+    {
+     "pic": "⚽",
+     "name": "a ball",
+     "grownup": false
+    },
+    {
+     "pic": "📕",
+     "name": "a book",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "a crayon",
+     "grownup": false
+    },
+    {
+     "pic": "🧱",
+     "name": "a block",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need a ball, a book, a crayon and a block.",
+   "steps": [
+    {
+     "pic": "🤔",
+     "text": "Guess what will roll",
+     "say": "Some things roll and some things don't. What do you think will roll?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🖐️",
+     "text": "Find four things",
+     "say": "Find four things: a ball, a book, a crayon, a block.",
+     "demo": {
+      "frames": [
+       "⚽",
+       "📕",
+       "🖍️",
+       "🧱"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "⚽",
+     "text": "Try rolling each one",
+     "say": "Push each one gently on the floor. Does it roll?",
+     "demo": {
+      "frames": [
+       "⚽"
+      ],
+      "motion": "spin"
+     },
+     "stuck": [
+      {
+       "pic": "👉",
+       "text": "One gentle push",
+       "say": "Give each one gentle push. Did it roll, or just slide?"
+      }
+     ]
+    },
+    {
+     "pic": "🗣️",
+     "text": "Which ones rolled?",
+     "say": "Which ones rolled? What shape are they?",
+     "demo": {
+      "frames": [
+       "👉",
+       "⚽",
+       "🖍️"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🍋",
+    "text": "Find three more rollers",
+    "say": "Can you find three more things that roll? A lemon? A round pencil?",
+    "demo": {
+     "frames": [
+      "🍋"
+     ],
+     "motion": "spin"
+    }
+   },
+   "show": "Show Amma or Appa what rolls and what doesn't!",
+   "done": "Wow! Tell me what rolled and what did not.",
+   "why": "Guess-then-check is the predict and test habit, and it links rolling to round shapes (CG-7, CG-8)."
+  },
+  {
+   "id": "find-007",
+   "category": "find",
+   "title": "Rainbow hunt",
+   "icon": "🌈",
+   "sticker": "🌈",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "After the rain, I saw a rainbow over Bangalore! Can you make one with things from home?",
+    "text": "Make me a rainbow",
+    "scene": {
+     "frames": [
+      "❤️",
+      "🧡",
+      "💛",
+      "💚",
+      "💙",
+      "💜"
+     ],
+     "motion": "line"
+    }
+   },
+   "mission": {
+    "pic": "🌈",
+    "text": "Make a rainbow from toys"
+   },
+   "fun": "Six colours in order: a hunt, then a beautiful line on the floor.",
+   "word": {
+    "en": "rainbow",
+    "kn": "ಕಾಮನಬಿಲ್ಲು",
+    "kn_roman": "kāmanabillu",
+    "hi": "इंद्रधनुष",
+    "hi_roman": "indradhanuṣ"
+   },
+   "materials": [
+    "👀"
+   ],
+   "gather": [
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need sharp eyes.",
+   "steps": [
+    {
+     "pic": "❤️🧡💛",
+     "text": "Find red, orange, yellow",
+     "say": "Find something red, something orange, and something yellow.",
+     "demo": {
+      "frames": [
+       "🔍",
+       "🍅",
+       "🍊",
+       "🍌"
+      ],
+      "motion": "point"
+     }
+    },
+    {
+     "pic": "💚💙💜",
+     "text": "Then green, blue, purple",
+     "say": "Now find something green, something blue, and something purple.",
+     "demo": {
+      "frames": [
+       "🔍",
+       "🍃",
+       "🧢",
+       "🍇"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "💜",
+       "text": "Purple is tricky",
+       "say": "Purple is tricky! Look at flowers, clothes, or crayons."
+      },
+      {
+       "pic": "🧢",
+       "text": "Blue can be clothes",
+       "say": "Blue might be on clothes, a toy, or a book cover."
+      }
+     ]
+    },
+    {
+     "pic": "🌈",
+     "text": "Line them up",
+     "say": "Line them up on the floor, like a rainbow.",
+     "demo": {
+      "frames": [
+       "❤️",
+       "🧡",
+       "💛",
+       "💚",
+       "💙",
+       "💜"
+      ],
+      "motion": "line"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Name each colour",
+     "say": "Point to each one and say its colour.",
+     "demo": {
+      "frames": [
+       "👉",
+       "❤️",
+       "🧡",
+       "💛"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🔀",
+    "text": "Make it backwards",
+    "say": "Now make it backwards: purple first, red last!",
+    "demo": {
+     "frames": [
+      "💜",
+      "💙",
+      "💚",
+      "💛",
+      "🧡",
+      "❤️"
+     ],
+     "motion": "line"
+    }
+   },
+   "show": "Show Amma or Appa your rainbow line!",
+   "done": "Wow! Tell me your rainbow colours.",
+   "why": "Collecting and ordering colours practises colour names, sequence and memory (CG-2, CG-9)."
+  },
+  {
+   "id": "find-008",
+   "category": "find",
+   "title": "Buh sound hunt",
+   "icon": "🅱️",
+   "sticker": "🅱️",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "My favourite sound is buh! Like ball, book and banana. Can you find buh things for me?",
+    "text": "Find buh things for me",
+    "scene": {
+     "frames": [
+      "⚽",
+      "📕",
+      "🍌"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🅱️",
+    "text": "Find things starting with buh"
+   },
+   "fun": "Hearing first sounds in real objects: the root of reading.",
+   "word": {
+    "en": "box",
+    "kn": "ಪೆಟ್ಟಿಗೆ",
+    "kn_roman": "peṭṭige",
+    "hi": "डिब्बा",
+    "hi_roman": "ḍibbā"
+   },
+   "materials": [
+    "👂"
+   ],
+   "gather": [
+    {
+     "pic": "👂",
+     "name": "big ears",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need big ears.",
+   "steps": [
+    {
+     "pic": "👂",
+     "text": "Listen: buh, buh, ball",
+     "say": "Listen. Buh, buh, ball. Buh, buh, book. Can you hear the buh sound?",
+     "demo": {
+      "frames": [
+       "👂"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🏠",
+     "text": "Find buh things",
+     "say": "Find things that start with buh. A book? A box? A banana?",
+     "demo": {
+      "frames": [
+       "🔍",
+       "📕",
+       "📦",
+       "🍌"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "📦",
+       "text": "Box, bag, bottle!",
+       "say": "Try these: box, bag, bottle, bed, banana. Do they start with buh?"
+      }
+     ]
+    },
+    {
+     "pic": "🖐️",
+     "text": "Bring two or three",
+     "say": "Bring two or three buh things.",
+     "demo": {
+      "frames": [
+       "📕",
+       "📦"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Say each one slowly",
+     "say": "Say each name slowly. Buh, buh, book!",
+     "demo": {
+      "frames": [
+       "🗣️",
+       "📕"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🏏",
+    "text": "Find five buh things",
+    "say": "Can you find five buh things? A bat? A bangle? A brush?",
+    "demo": {
+     "frames": [
+      "🏏",
+      "📕",
+      "🍌",
+      "📦",
+      "👜"
+     ],
+     "motion": "count"
+    }
+   },
+   "show": "Tell Amma or Appa your buh words!",
+   "done": "Wow! Tell me your buh words.",
+   "why": "Hearing the first sound of a word (phonemic awareness) comes before reading in the UKG phonics path (CG-10)."
+  },
+  {
+   "id": "find-009",
+   "category": "find",
+   "title": "Sss sound hunt",
+   "icon": "🐍",
+   "sticker": "🐍",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "A friendly snake taught me his sound: sss! Can you find things that start with sss?",
+    "text": "Find sss things",
+    "scene": {
+     "frames": [
+      "🐍"
+     ],
+     "motion": "slide"
+    }
+   },
+   "mission": {
+    "pic": "🐍",
+    "text": "Find things starting with sss"
+   },
+   "fun": "A snake sound hunt: sock, spoon, sofa, sun.",
+   "word": {
+    "en": "snake",
+    "kn": "ಹಾವು",
+    "kn_roman": "hāvu",
+    "hi": "साँप",
+    "hi_roman": "sā̃p"
+   },
+   "materials": [
+    "👂"
+   ],
+   "gather": [
+    {
+     "pic": "👂",
+     "name": "big ears",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need big ears.",
+   "steps": [
+    {
+     "pic": "🐍",
+     "text": "Listen: sss, sock",
+     "say": "Listen. Sss, sock. Sss, spoon. Like a snake: sss!",
+     "demo": {
+      "frames": [
+       "🐍"
+      ],
+      "motion": "slide"
+     }
+    },
+    {
+     "pic": "🏠",
+     "text": "Find s things",
+     "say": "Find things that start with sss. A sock? A spoon? A slipper?",
+     "demo": {
+      "frames": [
+       "🔍",
+       "🧦",
+       "🥄",
+       "☀️"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "🥄",
+       "text": "Sock, spoon, sofa!",
+       "say": "Try these: sock, spoon, sofa, star, sun. Hear the snake sound?"
+      }
+     ]
+    },
+    {
+     "pic": "🖐️",
+     "text": "Bring two or three",
+     "say": "Bring two or three sss things.",
+     "demo": {
+      "frames": [
+       "🧦",
+       "🥄"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Say each one slowly",
+     "say": "Say each name slowly, with a long snake sound.",
+     "demo": {
+      "frames": [
+       "🐍",
+       "🧦"
+      ],
+      "motion": "slide"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🐍",
+    "text": "Make a snake line",
+    "say": "Line up all your sss things in a long snake line. Sss!",
+    "demo": {
+     "frames": [
+      "🧦",
+      "🥄",
+      "⭐",
+      "🛋️"
+     ],
+     "motion": "line"
+    }
+   },
+   "show": "Tell Amma or Appa your sss words!",
+   "done": "Wow! Tell me your sss words.",
+   "why": "Stretching the first sound of a word trains the ear for phonics without any writing (CG-10)."
+  },
+  {
+   "id": "find-010",
+   "category": "find",
+   "title": "Sound hunt",
+   "icon": "👂",
+   "sticker": "👂",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I'm starting a band in my nest! I need things that shake, scrunch and clap. Can you find some?",
+    "text": "Find sounds for my band",
+    "scene": {
+     "frames": [
+      "🔔",
+      "🥁"
+     ],
+     "motion": "shake"
+    }
+   },
+   "mission": {
+    "pic": "🎵",
+    "text": "Find sounds for a band"
+   },
+   "fun": "Becoming a sound detective, then a one-boy band.",
+   "word": {
+    "en": "sound",
+    "kn": "ಶಬ್ದ",
+    "kn_roman": "śabda",
+    "hi": "आवाज़",
+    "hi_roman": "āvāz"
+   },
+   "materials": [
+    "👂",
+    "🔑"
+   ],
+   "gather": [
+    {
+     "pic": "👂",
+     "name": "big ears",
+     "grownup": false
+    },
+    {
+     "pic": "🔑",
+     "name": "keys",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need big ears and keys.",
+   "steps": [
+    {
+     "pic": "👂",
+     "text": "Listen with big ears",
+     "say": "Put on your big listening ears.",
+     "demo": {
+      "frames": [
+       "👂"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🔔",
+     "text": "Find things that make sounds",
+     "say": "Find things that make a sound. Keys? Paper? A book closing?",
+     "demo": {
+      "frames": [
+       "🔍",
+       "🔑",
+       "📰",
+       "📕"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "🔑",
+       "text": "Keys, paper, plates",
+       "say": "Shake the keys. Scrunch a paper. Tap a steel plate with a spoon."
+      }
+     ]
+    },
+    {
+     "pic": "🎵",
+     "text": "Make each one sing",
+     "say": "Make each one make its sound. Shake! Scrunch! Clap!",
+     "demo": {
+      "frames": [
+       "🔑",
+       "📰"
+      ],
+      "motion": "shake"
+     }
+    },
+    {
+     "pic": "🔊",
+     "text": "Loud or soft?",
+     "say": "Which one is loud? Which one is soft?",
+     "demo": {
+      "frames": [
+       "🔊",
+       "🔈"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🥁",
+    "text": "Play a pattern",
+    "say": "Play a pattern: shake, shake, clap! Can Amma copy you?",
+    "demo": {
+     "frames": [
+      "🔑",
+      "👏",
+      "🔑"
+     ],
+     "motion": "shake"
+    }
+   },
+   "show": "Play your sounds for Amma or Appa. Can they guess with closed eyes?",
+   "done": "Wow! Tell me the loudest sound you found.",
+   "why": "Comparing loud and soft trains careful listening and describing words (CG-2, CG-12)."
+  },
+  {
+   "id": "find-011",
+   "category": "find",
+   "title": "Heavy or light?",
+   "icon": "⚖️",
+   "sticker": "⚖️",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "I can carry a leaf, but not a book. Which things are heavy and which are light? Let's test!",
+    "text": "Find heavy and light",
+    "scene": {
+     "frames": [
+      "🍃",
+      "📚"
+     ],
+     "motion": "pair"
+    }
+   },
+   "mission": {
+    "pic": "⚖️",
+    "text": "Find heavy and light things"
+   },
+   "fun": "He is the weighing machine: two hands, two piles.",
+   "word": {
+    "en": "heavy",
+    "kn": "ಭಾರ",
+    "kn_roman": "bhāra",
+    "hi": "भारी",
+    "hi_roman": "bhārī"
+   },
+   "materials": [
+    "🖐️"
+   ],
+   "gather": [
+    {
+     "pic": "🖐️",
+     "name": "two hands",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need two hands.",
+   "steps": [
+    {
+     "pic": "🖐️🖐️",
+     "text": "Hold one in each hand",
+     "say": "Hold one thing in each hand. A book and a sock.",
+     "demo": {
+      "frames": [
+       "📕",
+       "🧦"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Which one is heavier?",
+     "say": "Which one pulls your hand down more? That one is heavier.",
+     "demo": {
+      "frames": [
+       "⚖️"
+      ],
+      "motion": "shake"
+     },
+     "stuck": [
+      {
+       "pic": "💪",
+       "text": "Close your eyes, feel",
+       "say": "Close your eyes. Which hand feels pulled down? That one is heavy."
+      }
+     ]
+    },
+    {
+     "pic": "📚🧦",
+     "text": "Try more things",
+     "say": "Try more pairs. A cushion and a ball. A shoe and a spoon.",
+     "demo": {
+      "frames": [
+       "👟",
+       "🥄"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "↔️",
+     "text": "Make a heavy and light pile",
+     "say": "Make a heavy pile and a light pile.",
+     "demo": {
+      "frames": [
+       "📚👟",
+       "🧦🥄"
+      ],
+      "motion": "pop"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "📏",
+    "text": "Line up three by weight",
+    "say": "Line up three things: the lightest, the middle, and the heaviest!",
+    "demo": {
+     "frames": [
+      "🧦",
+      "👟",
+      "📚"
+     ],
+     "motion": "line"
+    }
+   },
+   "show": "Show Amma or Appa your heavy pile and light pile!",
+   "done": "Wow! Tell me what was heavy and what was light.",
+   "why": "Comparing weight with his own hands is early measurement, before any scale (CG-8)."
+  },
+  {
+   "id": "find-012",
+   "category": "find",
+   "title": "Shiny things in the kitchen",
+   "icon": "✨",
+   "sticker": "🥄",
+   "level": 2,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "away",
+   "hook": {
+    "say": "I saw a little bird inside a steel plate! Was it me? Let's find more shiny mirrors!",
+    "text": "Find shiny mirrors",
+    "scene": {
+     "frames": [
+      "🍽️",
+      "🐦",
+      "✨"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🥄",
+    "text": "Find your face in shiny things"
+   },
+   "fun": "Steel plates and spoons as mirrors, and the upside-down spoon surprise.",
+   "word": {
+    "en": "shiny",
+    "kn": "ಹೊಳೆಯುವ",
+    "kn_roman": "hoḷeyuva",
+    "hi": "चमकीला",
+    "hi_roman": "camkīlā"
+   },
+   "materials": [
+    "🥄",
+    "🍽️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need sharp eyes.",
+   "steps": [
+    {
+     "pic": "👩",
+     "text": "Go with Amma to the kitchen",
+     "say": "Go with Amma to the kitchen. Stay with her.",
+     "demo": {
+      "frames": [
+       "🧒",
+       "👩"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "✨",
+     "text": "Find shiny things",
+     "say": "Find shiny things. A steel plate? A spoon? A katori?",
+     "demo": {
+      "frames": [
+       "🔍",
+       "🍽️",
+       "🥄",
+       "🥣"
+      ],
+      "motion": "point"
+     }
+    },
+    {
+     "pic": "😀",
+     "text": "Can you see your face?",
+     "say": "Look into each one. Can you see your face?",
+     "demo": {
+      "frames": [
+       "🥄",
+       "😀"
+      ],
+      "motion": "show"
+     }
+    },
+    {
+     "pic": "🥄",
+     "text": "Spoon: face upside down!",
+     "say": "Look in the inside of a spoon. Your face is upside down!",
+     "demo": {
+      "frames": [
+       "😀",
+       "🙃"
+      ],
+      "motion": "fold"
+     },
+     "stuck": [
+      {
+       "pic": "🥄",
+       "text": "Look in the hollow side",
+       "say": "Look into the hollow side of the spoon. Hold it a little far from your face."
+      }
+     ]
+    }
+   ],
+   "challenge": {
+    "pic": "🔄",
+    "text": "Turn the spoon around",
+    "say": "Now look at the back of the spoon. Is your face still upside down?",
+    "demo": {
+     "frames": [
+      "🙃",
+      "😀"
+     ],
+     "motion": "fold"
+    }
+   },
+   "show": "Tell Amma or Appa about the upside-down face!",
+   "done": "Wow! Tell me where you saw your face.",
+   "why": "Noticing reflections is real physics he can see for himself, in a safe, supervised kitchen (CG-7)."
+  },
+  {
+   "id": "find-013",
+   "category": "find",
+   "title": "Window watch with Appa",
+   "icon": "🐦",
+   "sticker": "🕊️",
+   "level": 2,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "away",
+   "hook": {
+    "say": "My cousins live near your window! Can you sit with Appa and spot my bird friends?",
+    "text": "Spot my bird friends",
+    "scene": {
+     "frames": [
+      "🐦",
+      "🐦",
+      "🛵"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🐦",
+    "text": "Spot birds from the window"
+   },
+   "fun": "Quiet watching with Appa: crows, pigeons, mynas, and counting scooters.",
+   "word": {
+    "en": "window",
+    "kn": "ಕಿಟಕಿ",
+    "kn_roman": "kiṭaki",
+    "hi": "खिड़की",
+    "hi_roman": "khiṛkī"
+   },
+   "materials": [
+    "👀"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need sharp eyes.",
+   "steps": [
+    {
+     "pic": "🏠",
+     "text": "Sit by the window with Appa",
+     "say": "Sit by the window with Appa. Get comfy.",
+     "demo": {
+      "frames": [
+       "🧒",
+       "👨"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "🐦",
+     "text": "Spot a bird",
+     "say": "Look for a bird. A crow? A pigeon? A myna? Just watch quietly.",
+     "demo": {
+      "frames": [
+       "👀",
+       "🐦",
+       "🌳",
+       "🐦"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "🌳",
+       "text": "Trees, wires and walls",
+       "say": "Birds sit on trees, wires and walls. Look there, very quietly."
+      },
+      {
+       "pic": "🤫",
+       "text": "Still like a statue",
+       "say": "Birds fly away from noise. Sit still like a statue."
+      }
+     ]
+    },
+    {
+     "pic": "🛵",
+     "text": "Count the scooters",
+     "say": "Now count the scooters that go by.",
+     "demo": {
+      "frames": [
+       "🛵",
+       "🛵",
+       "🛵"
+      ],
+      "motion": "count"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Tell what you saw",
+     "say": "What did you see? Tell Appa one thing.",
+     "demo": {
+      "frames": [
+       "🗣️"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🦜",
+    "text": "Find three kinds of birds",
+    "say": "Can you spot three different birds? A crow, a pigeon and a myna?",
+    "demo": {
+     "frames": [
+      "🐦",
+      "🕊️",
+      "🦜"
+     ],
+     "motion": "pop"
+    }
+   },
+   "show": "Tell Amma what you and Appa saw!",
+   "done": "Wow! Tell me what you saw from the window.",
+   "why": "Quiet watching builds attention and nature awareness, safely from inside with a grown-up (CG-6, CG-13)."
+  },
+  {
+   "id": "find-014",
+   "category": "find",
+   "title": "Number hunt",
+   "icon": "🔢",
+   "sticker": "🔢",
+   "level": 3,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "The numbers are playing hide and seek! They hide on books, remotes and calendars. Can you find them?",
+    "text": "Find the hiding numbers",
+    "scene": {
+     "frames": [
+      "🔍",
+      "📅",
+      "📺",
+      "📕"
+     ],
+     "motion": "point"
+    }
+   },
+   "mission": {
+    "pic": "🔢",
+    "text": "Find hiding numbers"
+   },
+   "fun": "Numbers out in the wild: on the remote, a calendar, page numbers.",
+   "word": {
+    "en": "number",
+    "kn": "ಸಂಖ್ಯೆ",
+    "kn_roman": "saṅkhye",
+    "hi": "संख्या",
+    "hi_roman": "saṅkhyā"
+   },
+   "materials": [
+    "👀"
+   ],
+   "gather": [
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need sharp eyes.",
+   "steps": [
+    {
+     "pic": "🔢",
+     "text": "Numbers hide everywhere",
+     "say": "Numbers hide everywhere! Look where you can reach: the remote, a calendar, a book.",
+     "demo": {
+      "frames": [
+       "🔢"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "📅",
+     "text": "Find a number",
+     "say": "Find one number. What number is it?",
+     "demo": {
+      "frames": [
+       "🔍",
+       "📅",
+       "📕"
+      ],
+      "motion": "point"
+     }
+    },
+    {
+     "pic": "🔍",
+     "text": "Find your age number",
+     "say": "Can you find the number of your age? How old are you?",
+     "demo": {
+      "frames": [
+       "🎂",
+       "🔢"
+      ],
+      "motion": "pulse"
+     },
+     "stuck": [
+      {
+       "pic": "✋",
+       "text": "Show your age on fingers",
+       "say": "Show your age on your fingers. Now find that number shape!"
+      }
+     ]
+    },
+    {
+     "pic": "🗣️",
+     "text": "Read numbers to Appa",
+     "say": "Read the numbers you found to Appa.",
+     "demo": {
+      "frames": [
+       "🧒",
+       "👨"
+      ],
+      "motion": "pair"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🔢",
+    "text": "Find one, two, three",
+    "say": "Can you find the number one, then two, then three, in order?",
+    "demo": {
+     "frames": [
+      "🔍",
+      "🔍",
+      "🔍"
+     ],
+     "motion": "count"
+    }
+   },
+   "show": "Show Appa where the numbers were hiding!",
+   "done": "Wow! Tell me which numbers you found.",
+   "why": "Finding numerals in the real world builds recognition of 1 to 20 and shows what numbers are for (CG-8)."
+  },
+  {
+   "id": "find-015",
+   "category": "find",
+   "title": "Leaf shapes walk",
+   "icon": "🍃",
+   "sticker": "🍃",
+   "level": 3,
+   "time": "15 min",
+   "grownup": true,
+   "mode": "away",
+   "hook": {
+    "say": "The trees in Lalbagh have so many kinds of leaves! Can you and Appa find three kinds near home?",
+    "text": "Find three kinds of leaves",
+    "scene": {
+     "frames": [
+      "🍃",
+      "🌿",
+      "🍂"
+     ],
+     "motion": "pop"
+    }
+   },
+   "mission": {
+    "pic": "🍃",
+    "text": "Find three kinds of leaves"
+   },
+   "fun": "A nature walk with Appa that trains careful looking: long, many-part, dry.",
+   "word": {
+    "en": "leaf",
+    "kn": "ಎಲೆ",
+    "kn_roman": "ele",
+    "hi": "पत्ता",
+    "hi_roman": "pattā"
+   },
+   "materials": [
+    "👀"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "👀",
+     "name": "sharp eyes",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need sharp eyes.",
+   "steps": [
+    {
+     "pic": "👨",
+     "text": "Go out with Appa",
+     "say": "Go out with Appa, to the park or near home. Hold hands.",
+     "demo": {
+      "frames": [
+       "🧒",
+       "👨"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "🍃",
+     "text": "Find a long thin leaf",
+     "say": "Look for a long, thin leaf. Just look, and point!",
+     "demo": {
+      "frames": [
+       "👉",
+       "🍃"
+      ],
+      "motion": "point"
+     }
+    },
+    {
+     "pic": "🌿",
+     "text": "Find a leaf with many parts",
+     "say": "Now find a leaf with many little parts.",
+     "demo": {
+      "frames": [
+       "👉",
+       "🌿"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "🌿",
+       "text": "Look at a neem tree",
+       "say": "A neem tree or a curry leaf plant has many little leaves on one stem."
+      }
+     ]
+    },
+    {
+     "pic": "🍂",
+     "text": "Find a brown leaf",
+     "say": "Can you see a brown, dry leaf on the ground?",
+     "demo": {
+      "frames": [
+       "🍂"
+      ],
+      "motion": "drop"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "How many shapes?",
+     "say": "How many kinds of leaves did you see?",
+     "demo": {
+      "frames": [
+       "🍃",
+       "🌿",
+       "🍂"
+      ],
+      "motion": "count"
+     }
+    }
+   ],
+   "challenge": {
+    "pic": "🍁",
+    "text": "Leaf as big as your hand",
+    "say": "Can you find a leaf as big as your hand? Hold your hand near it. Just look!",
+    "demo": {
+     "frames": [
+      "✋",
+      "🍁"
+     ],
+     "motion": "pair"
+    }
+   },
+   "show": "Tell Amma about the leaves you and Appa found!",
+   "done": "Wow! Tell me about the leaves you saw.",
+   "why": "Looking closely at leaves builds observation and respect for plants: look, don't pick (CG-6, CG-7)."
+  },
+  {
+   "id": "experiment-001",
+   "category": "experiment",
+   "title": "Fast fall, slow fall",
+   "icon": "📄",
+   "sticker": "📄",
+   "level": 1,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "When I drop a leaf, it floats down slowly. When I drop a pebble, it falls fast! Why? Let's test!",
+    "text": "Which paper falls faster?",
+    "scene": {
+     "frames": [
+      "🍃",
+      "🌰",
+      "❓"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "📄",
+    "text": "Race paper ball and flat paper"
+   },
+   "fun": "Same paper, different shape, different fall: a real air-resistance surprise.",
+   "word": {
+    "en": "fall",
+    "kn": "ಬೀಳು",
+    "kn_roman": "bīḷu",
+    "hi": "गिरना",
+    "hi_roman": "girnā"
+   },
+   "materials": [
+    "📄"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "two same papers",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need two same papers.",
+   "steps": [
+    {
+     "pic": "✊",
+     "text": "Scrunch one into a ball",
+     "say": "Scrunch one paper into a tight ball. Keep the other flat.",
+     "demo": {
+      "frames": [
+       "📄",
+       "⚪"
+      ],
+      "motion": "fold"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Which lands first?",
+     "say": "Guess! If you drop them together, which will land first?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🙌",
+     "text": "Drop them together",
+     "say": "Stand on the floor. Hold both up high, and let go together!",
+     "demo": {
+      "frames": [
+       "⚪",
+       "📄"
+      ],
+      "motion": "drop"
+     },
+     "stuck": [
+      {
+       "pic": "🙌",
+       "text": "Let go together",
+       "say": "Hold both at the same height. Say one, two, three, and open both hands together!"
+      }
+     ]
+    },
+    {
+     "pic": "🗣️",
+     "text": "What did you see?",
+     "say": "Which one was slow? Why do you think so?",
+     "demo": {
+      "frames": [
+       "🗣️"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "guess_step": 1,
+   "guess_choices": [
+    {
+     "pic": "✊",
+     "say": "The paper ball lands first."
+    },
+    {
+     "pic": "📄",
+     "say": "The flat paper lands first."
+    },
+    {
+     "pic": "🤝",
+     "say": "They land together."
+    }
+   ],
+   "guess_back": "Were you right? Which paper landed first?",
+   "challenge": {
+    "pic": "📄",
+    "text": "Fold one in four",
+    "say": "Try a flat paper and a paper folded in four. Which lands first now?",
+    "demo": {
+     "frames": [
+      "📄",
+      "📄"
+     ],
+     "motion": "drop"
+    }
+   },
+   "show": "Show Amma or Appa, and ask them to guess first!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Predict, try, notice, tell: the whole science cycle with two sheets of paper (CG-7)."
+  },
+  {
+   "id": "experiment-002",
+   "category": "experiment",
+   "title": "Float or sink",
+   "icon": "🥥",
+   "sticker": "🥥",
+   "level": 1,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "My friend the duck says everything floats. I think some things sink! Who is right? Let's test!",
+    "text": "Does it float or sink?",
+    "scene": {
+     "frames": [
+      "🥥",
+      "🥄"
+     ],
+     "motion": "float",
+     "sink": [
+      1
+     ]
+    }
+   },
+   "mission": {
+    "pic": "🥥",
+    "text": "Test float or sink"
+   },
+   "fun": "Splashy guessing with kitchen things: the coconut shell is the star.",
+   "word": {
+    "en": "float",
+    "kn": "ತೇಲು",
+    "kn_roman": "tēlu",
+    "hi": "तैरना",
+    "hi_roman": "tairnā"
+   },
+   "materials": [
+    "🥣",
+    "💧",
+    "🥥"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🥣",
+     "name": "a big bowl",
+     "grownup": true
+    },
+    {
+     "pic": "💧",
+     "name": "water",
+     "grownup": true
+    },
+    {
+     "pic": "🥄",
+     "name": "a spoon",
+     "grownup": false
+    },
+    {
+     "pic": "🥥",
+     "name": "a coconut shell",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need a big bowl, water, a spoon and a coconut shell.",
+   "steps": [
+    {
+     "pic": "🥣💧",
+     "text": "Bowl of water with Amma",
+     "say": "With Amma, put water in a big bowl or a bucket.",
+     "demo": {
+      "frames": [
+       "🥣",
+       "💧"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🥄🥥",
+     "text": "Collect a few things",
+     "say": "Find a spoon, a leaf, a coconut shell, a steel katori, and a crayon.",
+     "demo": {
+      "frames": [
+       "🥄",
+       "🍃",
+       "🥥",
+       "🖍️"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Guess: float or sink?",
+     "say": "Hold up the coconut shell. Will it float or sink? Guess for each thing.",
+     "demo": {
+      "frames": [
+       "🤔",
+       "🥥"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "💧",
+     "text": "Put them in one by one",
+     "say": "Put them in, one by one. Watch carefully.",
+     "demo": {
+      "frames": [
+       "🥥",
+       "🥄"
+      ],
+      "motion": "float",
+      "sink": [
+       1
+      ]
+     },
+     "stuck": [
+      {
+       "pic": "🐢",
+       "text": "One thing at a time",
+       "say": "Put in one thing, then watch. Wait. Then the next one."
+      }
+     ]
+    },
+    {
+     "pic": "👀",
+     "text": "What floated? What sank?",
+     "say": "What floated? What sank? Were your guesses right?",
+     "demo": {
+      "frames": [
+       "👀",
+       "🥥",
+       "🥄"
+      ],
+      "motion": "point"
+     }
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "⛵",
+     "say": "The coconut shell floats."
+    },
+    {
+     "pic": "⬇️",
+     "say": "The coconut shell sinks."
+    }
+   ],
+   "guess_back": "Were you right? Did the coconut shell float or sink?",
+   "challenge": {
+    "pic": "🥣",
+    "text": "Load the katori boat",
+    "say": "Float a steel katori. How many crayons can it carry before it sinks?",
+    "demo": {
+     "frames": [
+      "🥣"
+     ],
+     "motion": "float"
+    }
+   },
+   "show": "Tell Amma or Appa which surprised you!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Float and sink is the classic first experiment: he learns to guess, test and change his mind (CG-7)."
+  },
+  {
+   "id": "experiment-003",
+   "category": "experiment",
+   "title": "Hand shadows",
+   "icon": "🔦",
+   "sticker": "🔦",
+   "level": 1,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "A big dark bird is on the wall! Is it me? Let's make shadow animals with a torch!",
+    "text": "Make shadow animals",
+    "scene": {
+     "frames": [
+      "🔦",
+      "✋",
+      "🐦"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🔦",
+    "text": "Make a bird shadow"
+   },
+   "fun": "Shadow puppets in a dark room: magic that is really light science.",
+   "word": {
+    "en": "shadow",
+    "kn": "ನೆರಳು",
+    "kn_roman": "neraḷu",
+    "hi": "परछाईं",
+    "hi_roman": "parchāī̃"
+   },
+   "materials": [
+    "🔦"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🔦",
+     "name": "a torch",
+     "grownup": true
+    },
+    {
+     "pic": "🧱",
+     "name": "a wall",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need a torch and a wall.",
+   "steps": [
+    {
+     "pic": "🔦",
+     "text": "Get a torch with Appa",
+     "say": "Ask Appa for a torch, and close the curtains together.",
+     "demo": {
+      "frames": [
+       "🔦"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "✋",
+     "text": "Hand between torch and wall",
+     "say": "Appa shines the torch on the wall. Put your hand in the light.",
+     "demo": {
+      "frames": [
+       "🔦",
+       "✋"
+      ],
+      "motion": "show"
+     }
+    },
+    {
+     "pic": "🐦",
+     "text": "Make a bird shadow",
+     "say": "Hook your thumbs together and flap. A bird!",
+     "demo": {
+      "frames": [
+       "🐦"
+      ],
+      "motion": "shake"
+     },
+     "stuck": [
+      {
+       "pic": "👐",
+       "text": "Hook your thumbs",
+       "say": "Cross your hands, hook your thumbs, spread your fingers wide, and flap!"
+      },
+      {
+       "pic": "👨",
+       "text": "Copy Appa's hands",
+       "say": "Ask Appa to make the bird first. Then copy his hands."
+      }
+     ]
+    },
+    {
+     "pic": "↔️",
+     "text": "Guess, then move closer",
+     "say": "Guess: will the shadow grow or shrink? Now move your hand near the torch.",
+     "demo": {
+      "frames": [
+       "✋"
+      ],
+      "motion": "grow"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Tell what you noticed",
+     "say": "What made the shadow bigger? Tell Appa.",
+     "demo": {
+      "frames": [
+       "🗣️"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "guess_step": 3,
+   "guess_choices": [
+    {
+     "pic": "🐘",
+     "say": "The shadow gets bigger."
+    },
+    {
+     "pic": "🐜",
+     "say": "The shadow gets smaller."
+    }
+   ],
+   "guess_back": "Were you right? What did the shadow do?",
+   "challenge": {
+    "pic": "🐰",
+    "text": "Make a rabbit shadow",
+    "say": "Make a rabbit: two fingers up for ears. Can it hop?",
+    "demo": {
+     "frames": [
+      "🐰"
+     ],
+     "motion": "shake"
+    }
+   },
+   "show": "Do a shadow show for Amma!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Shadows show that light travels in straight lines and gets blocked: real physics in play (CG-7)."
+  },
+  {
+   "id": "experiment-004",
+   "category": "experiment",
+   "title": "Ice melting race",
+   "icon": "❄️",
+   "sticker": "❄️",
+   "level": 2,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Two ice cubes want a race! One sits in the sun, one in the shade. Which melts first?",
+    "text": "Which ice melts first?",
+    "scene": {
+     "frames": [
+      "☀️",
+      "❄️"
+     ],
+     "motion": "pair"
+    }
+   },
+   "mission": {
+    "pic": "❄️",
+    "text": "Watch two ice cubes melt"
+   },
+   "fun": "Peeking again and again at sun versus shade: patience plus a clear result.",
+   "word": {
+    "en": "ice",
+    "kn": "ಮಂಜುಗಡ್ಡೆ",
+    "kn_roman": "mañjugaḍḍe",
+    "hi": "बर्फ़",
+    "hi_roman": "barf"
+   },
+   "materials": [
+    "❄️",
+    "🍽️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "❄️",
+     "name": "two ice cubes",
+     "grownup": true
+    },
+    {
+     "pic": "🍽️",
+     "name": "two plates",
+     "grownup": true
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need two ice cubes and two plates.",
+   "steps": [
+    {
+     "pic": "❄️",
+     "text": "Ask Amma for ice",
+     "say": "Ask Amma for two ice cubes from the fridge, on two plates.",
+     "demo": {
+      "frames": [
+       "❄️",
+       "❄️"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "☀️🌳",
+     "text": "One in sun, one in shade",
+     "say": "Put one plate in the sun and one plate in the shade.",
+     "demo": {
+      "frames": [
+       "☀️",
+       "🌳"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Which melts first?",
+     "say": "Guess! Which ice will melt first?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "👀",
+     "text": "Peek again and again",
+     "say": "Go and play a little. Then peek at the ice again. And again!",
+     "demo": {
+      "frames": [
+       "❄️",
+       "💧"
+      ],
+      "motion": "show"
+     },
+     "stuck": [
+      {
+       "pic": "🔁",
+       "text": "Play, then peek again",
+       "say": "Play something, then peek again. Ice melts slowly. Peek, play, peek!"
+      }
+     ]
+    },
+    {
+     "pic": "💧",
+     "text": "Tell what happened",
+     "say": "Which one became water first? Why?",
+     "demo": {
+      "frames": [
+       "💧"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "☀️",
+     "say": "The one in the sun."
+    },
+    {
+     "pic": "🌳",
+     "say": "The one in the shade."
+    }
+   ],
+   "guess_back": "Were you right? Which ice melted first?",
+   "challenge": {
+    "pic": "🧣",
+    "text": "Wrap one in a hanky",
+    "say": "Try again, but wrap one ice cube in a hanky. Does it melt slower or faster?",
+    "demo": {
+     "frames": [
+      "🧣",
+      "❄️"
+     ],
+     "motion": "show"
+    }
+   },
+   "show": "Tell Amma or Appa which ice melted first!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Watching ice turn to water shows heat changing a material, a UKG melt-and-freeze idea (CG-7)."
+  },
+  {
+   "id": "experiment-005",
+   "category": "experiment",
+   "title": "Colour magic water",
+   "icon": "🎨",
+   "sticker": "🎨",
+   "level": 2,
+   "time": "15 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "I want to paint my nest a new colour! Amma has magic yellow and pink in the kitchen. Let's mix!",
+    "text": "Make a new colour",
+    "scene": {
+     "frames": [
+      "💛",
+      "💗",
+      "🧡"
+     ],
+     "motion": "pair"
+    }
+   },
+   "mission": {
+    "pic": "🎨",
+    "text": "Mix a brand new colour"
+   },
+   "fun": "Turmeric and beetroot become paint: colour mixing with real food colours.",
+   "word": {
+    "en": "colour",
+    "kn": "ಬಣ್ಣ",
+    "kn_roman": "baṇṇa",
+    "hi": "रंग",
+    "hi_roman": "raṅg"
+   },
+   "materials": [
+    "🥣",
+    "💧",
+    "🥄"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🥣",
+     "name": "two katoris",
+     "grownup": false
+    },
+    {
+     "pic": "💧",
+     "name": "water",
+     "grownup": true
+    },
+    {
+     "pic": "🥄",
+     "name": "a spoon",
+     "grownup": false
+    },
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need two katoris, water, a spoon and paper.",
+   "steps": [
+    {
+     "pic": "🥣💛",
+     "text": "Yellow turmeric water",
+     "say": "Ask Amma to mix a pinch of turmeric into a katori of water. Yellow!",
+     "demo": {
+      "frames": [
+       "🥣",
+       "💛"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🥣❤️",
+     "text": "Pink beetroot water",
+     "say": "Amma makes pink water with a piece of beetroot. Pink!",
+     "demo": {
+      "frames": [
+       "🥣",
+       "💗"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Guess the new colour",
+     "say": "Guess! If we mix yellow and pink, what colour will we get?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🥄",
+     "text": "Mix a spoon of each",
+     "say": "Put one spoon of each into a new katori. Stir!",
+     "demo": {
+      "frames": [
+       "💛",
+       "💗",
+       "🧡"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "🖐️",
+     "text": "Paint with your finger",
+     "say": "Dip your finger and paint on paper. What colour is it?",
+     "demo": {
+      "frames": [
+       "👆",
+       "🧡"
+      ],
+      "motion": "draw",
+      "path": "wave"
+     },
+     "stuck": [
+      {
+       "pic": "👆",
+       "text": "Just one fingertip",
+       "say": "Dip just one fingertip. Then draw slowly on the paper."
+      }
+     ]
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "🧡",
+     "say": "Orange!"
+    },
+    {
+     "pic": "💚",
+     "say": "Green!"
+    },
+    {
+     "pic": "💜",
+     "say": "Purple!"
+    }
+   ],
+   "guess_back": "Were you right? What colour did you make?",
+   "challenge": {
+    "pic": "💧",
+    "text": "Make it lighter",
+    "say": "Add more water to your colour. Does it get lighter or darker?",
+    "demo": {
+     "frames": [
+      "🧡",
+      "💧"
+     ],
+     "motion": "pair"
+    }
+   },
+   "show": "Show Amma or Appa your colour painting!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Mixing kitchen colours shows that two colours make a new one, with nothing bought (CG-7, CG-12)."
+  },
+  {
+   "id": "experiment-006",
+   "category": "experiment",
+   "title": "Sprouting seeds",
+   "icon": "🌱",
+   "sticker": "🌱",
+   "level": 2,
+   "time": "5 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "I found some tiny green moong seeds. Are they asleep? Can we wake them up with water?",
+    "text": "Wake up the seeds",
+    "scene": {
+     "frames": [
+      "🌱"
+     ],
+     "motion": "grow"
+    }
+   },
+   "mission": {
+    "pic": "🌱",
+    "text": "Grow moong sprouts"
+   },
+   "fun": "A slow story over a few days: watching for the tiny white root.",
+   "word": {
+    "en": "seed",
+    "kn": "ಬೀಜ",
+    "kn_roman": "bīja",
+    "hi": "बीज",
+    "hi_roman": "bīj"
+   },
+   "materials": [
+    "🥣",
+    "🌱",
+    "💧"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🥣",
+     "name": "a katori",
+     "grownup": true
+    },
+    {
+     "pic": "☁️",
+     "name": "cotton",
+     "grownup": false
+    },
+    {
+     "pic": "🌱",
+     "name": "moong seeds",
+     "grownup": true
+    },
+    {
+     "pic": "💧",
+     "name": "water",
+     "grownup": true
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need a katori, cotton, moong seeds and water.",
+   "steps": [
+    {
+     "pic": "🥣",
+     "text": "Wet cotton in a katori",
+     "say": "With Amma, put some wet cotton in a katori.",
+     "demo": {
+      "frames": [
+       "🥣",
+       "💧"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🌱",
+     "text": "Place a few moong seeds",
+     "say": "Amma gives you a few green moong seeds. Place them on the cotton.",
+     "demo": {
+      "frames": [
+       "🌰",
+       "🌰"
+      ],
+      "motion": "drop"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "What will happen?",
+     "say": "What do you think the seeds will do?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "💧",
+     "text": "Sprinkle water each morning",
+     "say": "Each morning, sprinkle a little water with Amma.",
+     "demo": {
+      "frames": [
+       "💧"
+      ],
+      "motion": "drop"
+     },
+     "stuck": [
+      {
+       "pic": "🌅",
+       "text": "Every morning, after brushing",
+       "say": "Water them every morning, after you brush your teeth."
+      },
+      {
+       "pic": "💧",
+       "text": "Just a few drops",
+       "say": "Only a few drops. With too much water, the seeds can't breathe."
+      }
+     ]
+    },
+    {
+     "pic": "👀",
+     "text": "Look every day",
+     "say": "Look every day. Do you see a tiny white tail? That's a root!",
+     "demo": {
+      "frames": [
+       "🌱"
+      ],
+      "motion": "grow"
+     }
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "🌱",
+     "say": "The seeds will grow."
+    },
+    {
+     "pic": "😴",
+     "say": "Nothing will happen."
+    }
+   ],
+   "guess_back": "Were you right? What are your seeds doing?",
+   "challenge": {
+    "pic": "🌑",
+    "text": "One katori in the dark",
+    "say": "Put a second katori in a dark cupboard. Do those seeds grow differently?",
+    "demo": {
+     "frames": [
+      "🌱",
+      "🌑"
+     ],
+     "motion": "pair"
+    }
+   },
+   "later": {
+    "after": "days",
+    "days": 5,
+    "say": "How are your seeds? Show me!",
+    "choices": [
+     {
+      "pic": "😴",
+      "say": "Still sleeping."
+     },
+     {
+      "pic": "🌱",
+      "say": "A tiny root!"
+     },
+     {
+      "pic": "🌿",
+      "say": "Little leaves!"
+     }
+    ]
+   },
+   "show": "Show Amma or Appa your seeds every morning!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Seeds sprouting over days teaches what plants need and builds patient observation (CG-6, CG-7)."
+  },
+  {
+   "id": "experiment-007",
+   "category": "experiment",
+   "title": "Ramp race",
+   "icon": "📚",
+   "sticker": "🏁",
+   "level": 2,
+   "time": "10 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Ready, steady, go! The ball and the car want to race down a hill. Which goes further?",
+    "text": "Race down a book hill",
+    "scene": {
+     "frames": [
+      "⚽",
+      "🚙"
+     ],
+     "motion": "slide",
+     "tilt": 15
+    }
+   },
+   "mission": {
+    "pic": "🏁",
+    "text": "Make a ramp and race"
+   },
+   "fun": "A fair race: same start, no pushing, then make the hill steeper.",
+   "word": {
+    "en": "slope",
+    "kn": "ಇಳಿಜಾರು",
+    "kn_roman": "iḷijāru",
+    "hi": "ढलान",
+    "hi_roman": "ḍhalān"
+   },
+   "materials": [
+    "📚",
+    "⚽",
+    "🚙"
+   ],
+   "gather": [
+    {
+     "pic": "📚",
+     "name": "books",
+     "grownup": false
+    },
+    {
+     "pic": "⚽",
+     "name": "a ball",
+     "grownup": false
+    },
+    {
+     "pic": "🚙",
+     "name": "a toy car",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need books, a ball and a toy car.",
+   "steps": [
+    {
+     "pic": "📚",
+     "text": "Make a book ramp",
+     "say": "Put one end of a big book on a pile of small books. A slope!",
+     "demo": {
+      "frames": [
+       "📚",
+       "📕"
+      ],
+      "motion": "stack"
+     }
+    },
+    {
+     "pic": "⚽🚙",
+     "text": "Choose two racers",
+     "say": "Choose two racers. A cricket ball and a toy car?",
+     "demo": {
+      "frames": [
+       "⚽",
+       "🚙"
+      ],
+      "motion": "pair"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Which goes further?",
+     "say": "Guess! Which one will go further?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🏁",
+     "text": "Let go together",
+     "say": "Hold them at the top. Ready, steady, let go!",
+     "demo": {
+      "frames": [
+       "🚙"
+      ],
+      "motion": "slide",
+      "tilt": 15
+     },
+     "stuck": [
+      {
+       "pic": "✋",
+       "text": "Let go, don't push",
+       "say": "Just open your hands and let go. No pushing! Then it's fair."
+      }
+     ]
+    },
+    {
+     "pic": "⬆️",
+     "text": "Make it steeper",
+     "say": "Add one more book. Make it steeper. What changes?",
+     "demo": {
+      "frames": [
+       "📚",
+       "📚"
+      ],
+      "motion": "stack"
+     }
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "⚽",
+     "say": "The ball goes further."
+    },
+    {
+     "pic": "🚙",
+     "say": "The car goes further."
+    }
+   ],
+   "guess_back": "Were you right? Which racer went further?",
+   "challenge": {
+    "pic": "🧦",
+    "text": "Mark where they stop",
+    "say": "Put a sock where each racer stops. Which one went further?",
+    "demo": {
+     "frames": [
+      "⚽",
+      "🧦"
+     ],
+     "motion": "slide"
+    }
+   },
+   "show": "Race your racers for Amma or Appa!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Changing one thing (the slope) and seeing what happens is the heart of a fair test (CG-7, CG-8)."
+  },
+  {
+   "id": "experiment-008",
+   "category": "experiment",
+   "title": "Comb magic",
+   "icon": "⚡",
+   "sticker": "⚡",
+   "level": 2,
+   "time": "5 min",
+   "grownup": false,
+   "mode": "along",
+   "hook": {
+    "say": "Can a comb do magic? I heard it can make paper jump! Let's find out!",
+    "text": "Make paper jump",
+    "scene": {
+     "frames": [
+      "📄",
+      "⬆️",
+      "✨"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "⚡",
+    "text": "Make paper bits jump"
+   },
+   "fun": "Static electricity that looks like magic, using only a comb and paper.",
+   "word": {
+    "en": "magic",
+    "kn": "ಜಾದೂ",
+    "kn_roman": "jādū",
+    "hi": "जादू",
+    "hi_roman": "jādū"
+   },
+   "materials": [
+    "📄"
+   ],
+   "gather": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "grownup": false
+    },
+    {
+     "pic": "💇",
+     "name": "a plastic comb",
+     "grownup": false
+    }
+   ],
+   "gather_say": "You need paper and a plastic comb.",
+   "steps": [
+    {
+     "pic": "📄",
+     "text": "Tear tiny paper bits",
+     "say": "Tear some tiny bits of paper. Put them on the table.",
+     "demo": {
+      "frames": [
+       "🔸",
+       "🔸",
+       "🔸"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "⚡",
+     "text": "Rub a comb in your hair",
+     "say": "Rub a plastic comb in your dry hair. Fast, ten times!",
+     "demo": {
+      "frames": [
+       "🧒",
+       "⚡"
+      ],
+      "motion": "shake"
+     },
+     "stuck": [
+      {
+       "pic": "💨",
+       "text": "Dry hair works best",
+       "say": "Your hair must be dry. Rub fast, ten times, one way."
+      },
+      {
+       "pic": "📄",
+       "text": "Make the bits tiny",
+       "say": "Tear the bits tiny, smaller than your fingernail."
+      }
+     ]
+    },
+    {
+     "pic": "🤔",
+     "text": "What will the comb do?",
+     "say": "Guess! What will the comb do to the paper?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "✨",
+     "text": "Bring the comb near paper",
+     "say": "Hold the comb just above the paper bits. Whoa! They jump up!",
+     "demo": {
+      "frames": [
+       "🔸🔸",
+       "⚡"
+      ],
+      "motion": "show"
+     }
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "⬆️",
+     "say": "The paper jumps up."
+    },
+    {
+     "pic": "😐",
+     "say": "Nothing happens."
+    }
+   ],
+   "guess_back": "Were you right? What did the paper do?",
+   "challenge": {
+    "pic": "🧻",
+    "text": "Try a thin tissue",
+    "say": "Try a tiny piece of tissue paper. Does it jump higher?",
+    "demo": {
+     "frames": [
+      "⚡",
+      "🧻"
+     ],
+     "motion": "show"
+    }
+   },
+   "show": "Show Amma or Appa your comb magic!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Static is invisible but its effect is clear, so he learns that not everything that works can be seen (CG-7)."
+  },
+  {
+   "id": "experiment-009",
+   "category": "experiment",
+   "title": "Tumbler music",
+   "icon": "🎵",
+   "sticker": "🎵",
+   "level": 2,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "I love to sing! Can steel tumblers sing too? Let's make tumbler music!",
+    "text": "Make tumblers sing",
+    "scene": {
+     "frames": [
+      "🥛",
+      "🎵"
+     ],
+     "motion": "shake"
+    }
+   },
+   "mission": {
+    "pic": "🎵",
+    "text": "Make tumbler music"
+   },
+   "fun": "Ting, ting, tong: hearing high and low notes he made with water.",
+   "word": {
+    "en": "song",
+    "kn": "ಹಾಡು",
+    "kn_roman": "hāḍu",
+    "hi": "गाना",
+    "hi_roman": "gānā"
+   },
+   "materials": [
+    "🥛",
+    "💧",
+    "🥄"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🥛",
+     "name": "three steel tumblers",
+     "grownup": true
+    },
+    {
+     "pic": "💧",
+     "name": "water",
+     "grownup": true
+    },
+    {
+     "pic": "🥄",
+     "name": "a spoon",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need three steel tumblers, water and a spoon.",
+   "steps": [
+    {
+     "pic": "💧",
+     "text": "Different water in each",
+     "say": "With Amma, pour a little water in one, more in the next, lots in the last.",
+     "demo": {
+      "frames": [
+       "🥛",
+       "🥛💧",
+       "🥛💧💧"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🥄",
+     "text": "Guess, then tap each one",
+     "say": "Guess which will sound high. Now tap each tumbler gently with a spoon. Ting!",
+     "demo": {
+      "frames": [
+       "🥄",
+       "🥛"
+      ],
+      "motion": "shake"
+     },
+     "stuck": [
+      {
+       "pic": "🥄",
+       "text": "Tap gently on the side",
+       "say": "Tap the side of the tumbler gently, near the top. Ting!"
+      }
+     ]
+    },
+    {
+     "pic": "🤔",
+     "text": "Which sound is highest?",
+     "say": "Which one sounds high? Which one sounds low?",
+     "demo": {
+      "frames": [
+       "🎵",
+       "🎶"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🎶",
+     "text": "Play a little tune",
+     "say": "Play a little tune. Ting, ting, tong!",
+     "demo": {
+      "frames": [
+       "🎶"
+      ],
+      "motion": "shake"
+     }
+    }
+   ],
+   "guess_step": 1,
+   "guess_choices": [
+    {
+     "pic": "💧",
+     "say": "The one with a little water."
+    },
+    {
+     "pic": "💧💧💧",
+     "say": "The one with lots of water."
+    }
+   ],
+   "guess_back": "Were you right? Which tumbler sang the highest?",
+   "challenge": {
+    "pic": "🎶",
+    "text": "Play Twinkle Twinkle",
+    "say": "Can you play the start of Twinkle Twinkle? Low, low, high, high!",
+    "demo": {
+     "frames": [
+      "🥛",
+      "🥛",
+      "🥛"
+     ],
+     "motion": "shake"
+    }
+   },
+   "show": "Play your tumbler tune for everyone!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Hearing how water changes a note links sound, music and comparing amounts (CG-7, CG-12)."
+  },
+  {
+   "id": "experiment-010",
+   "category": "experiment",
+   "title": "Soak it up",
+   "icon": "🧽",
+   "sticker": "🧽",
+   "level": 2,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Oops! I spilled water in my nest. Which thing will drink it up best? Let's test!",
+    "text": "Which drinks up water?",
+    "scene": {
+     "frames": [
+      "💧",
+      "🐦",
+      "❓"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🧽",
+    "text": "Find the best water-drinker"
+   },
+   "fun": "Cloth, paper or plastic: finding out what soaks, the reason towels work.",
+   "word": {
+    "en": "wet",
+    "kn": "ಒದ್ದೆ",
+    "kn_roman": "odde",
+    "hi": "गीला",
+    "hi_roman": "gīlā"
+   },
+   "materials": [
+    "💧",
+    "📰",
+    "🍽️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "💧",
+     "name": "a little water",
+     "grownup": true
+    },
+    {
+     "pic": "🍽️",
+     "name": "a plate",
+     "grownup": true
+    },
+    {
+     "pic": "👕",
+     "name": "a cloth",
+     "grownup": false
+    },
+    {
+     "pic": "📰",
+     "name": "newspaper",
+     "grownup": false
+    },
+    {
+     "pic": "🥤",
+     "name": "a plastic cup",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need a little water, a plate, a cloth, newspaper and a plastic cup.",
+   "steps": [
+    {
+     "pic": "💧🍽️",
+     "text": "A little water on a plate",
+     "say": "With Amma, put a spoon of water on a plate.",
+     "demo": {
+      "frames": [
+       "💧"
+      ],
+      "motion": "drop"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Which will drink water?",
+     "say": "Guess! Which will soak up the water: cloth, newspaper, or a plastic cup?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "📰",
+     "text": "Try each one",
+     "say": "Try each one on the water. Press gently. Use the bottom of the cup.",
+     "demo": {
+      "frames": [
+       "👆",
+       "👕",
+       "📰",
+       "🥤"
+      ],
+      "motion": "point"
+     },
+     "stuck": [
+      {
+       "pic": "👆",
+       "text": "Press, count three, lift",
+       "say": "Press it on the water. Count one, two, three. Then lift it up and look."
+      }
+     ]
+    },
+    {
+     "pic": "👀",
+     "text": "Which one soaked it up?",
+     "say": "Which one drank the water? Which one did not?",
+     "demo": {
+      "frames": [
+       "👕"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "guess_step": 1,
+   "guess_choices": [
+    {
+     "pic": "👕",
+     "say": "The cloth."
+    },
+    {
+     "pic": "📰",
+     "say": "The newspaper."
+    },
+    {
+     "pic": "🥤",
+     "say": "The plastic cup."
+    }
+   ],
+   "guess_back": "Were you right? Which one drank the water?",
+   "challenge": {
+    "pic": "🧻",
+    "text": "Test a tissue too",
+    "say": "Test a tissue and a leaf too. Which one is the best drinker now?",
+    "demo": {
+     "frames": [
+      "👆",
+      "🧻",
+      "🍃"
+     ],
+     "motion": "point"
+    }
+   },
+   "show": "Tell Amma or Appa the best water-drinker!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Testing materials shows that things are chosen for a job: why towels are cloth, not plastic (CG-7)."
+  },
+  {
+   "id": "experiment-011",
+   "category": "experiment",
+   "title": "Water up, water over",
+   "icon": "🥄",
+   "sticker": "💦",
+   "level": 3,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "I dropped a pebble into my water bowl, and the water spilled out! Will a spoon do that too?",
+    "text": "Where does the water go?",
+    "scene": {
+     "frames": [
+      "🥣",
+      "⬆️",
+      "💧"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🥄",
+    "text": "Make the water spill over"
+   },
+   "fun": "Watching water climb as spoons go in: the start of volume.",
+   "word": {
+    "en": "water",
+    "kn": "ನೀರು",
+    "kn_roman": "nīru",
+    "hi": "पानी",
+    "hi_roman": "pānī"
+   },
+   "materials": [
+    "🥛",
+    "💧",
+    "🥄",
+    "🍽️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🥛",
+     "name": "a steel tumbler",
+     "grownup": true
+    },
+    {
+     "pic": "🍽️",
+     "name": "a plate",
+     "grownup": true
+    },
+    {
+     "pic": "💧",
+     "name": "water",
+     "grownup": true
+    },
+    {
+     "pic": "🥄",
+     "name": "spoons",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need a steel tumbler, a plate, water and spoons.",
+   "steps": [
+    {
+     "pic": "🥛🍽️",
+     "text": "Tumbler on a plate",
+     "say": "Put a steel tumbler on a plate.",
+     "demo": {
+      "frames": [
+       "🍽️",
+       "🥛"
+      ],
+      "motion": "stack"
+     }
+    },
+    {
+     "pic": "💧",
+     "text": "Fill it to the top",
+     "say": "With Amma, fill the tumbler with water, right to the top.",
+     "demo": {
+      "frames": [
+       "🥛",
+       "💧"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "🤔",
+     "text": "Guess: what will happen?",
+     "say": "Guess! If we drop a spoon in, what will the water do?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🥄",
+     "text": "Drop in one spoon",
+     "say": "Drop in one spoon, slowly. Then another. Watch the top!",
+     "demo": {
+      "frames": [
+       "🥄"
+      ],
+      "motion": "drop"
+     },
+     "stuck": [
+      {
+       "pic": "🐢",
+       "text": "Slide it in slowly",
+       "say": "Hold the spoon at the top and let it slide in slowly. Watch the top of the water!"
+      }
+     ]
+    },
+    {
+     "pic": "💧",
+     "text": "Where did the water go?",
+     "say": "Look at the plate. Where did the water come from?",
+     "demo": {
+      "frames": [
+       "💧",
+       "💧"
+      ],
+      "motion": "drop"
+     }
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "⬆️",
+     "say": "The water goes up and spills."
+    },
+    {
+     "pic": "⬇️",
+     "say": "The water goes down."
+    },
+    {
+     "pic": "😐",
+     "say": "Nothing happens."
+    }
+   ],
+   "guess_back": "Were you right? What did the water do?",
+   "challenge": {
+    "pic": "🥄",
+    "text": "How many spoons?",
+    "say": "Fill it again. How many spoons can go in before the water spills?",
+    "demo": {
+     "frames": [
+      "🥄",
+      "🥄",
+      "🥄"
+     ],
+     "motion": "count"
+    }
+   },
+   "show": "Show Amma or Appa the water on the plate!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Seeing objects push water up and over is a first feel for volume, the idea behind Archimedes' bath (CG-7, CG-8)."
+  },
+  {
+   "id": "experiment-012",
+   "category": "experiment",
+   "title": "Paper boat",
+   "icon": "⛵",
+   "sticker": "⛵",
+   "level": 3,
+   "time": "15 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Thatha told me about paper boats in the rain! Can you and Appa make one and make it sail?",
+    "text": "Make a boat that sails",
+    "scene": {
+     "frames": [
+      "⛵"
+     ],
+     "motion": "float"
+    }
+   },
+   "mission": {
+    "pic": "⛵",
+    "text": "Make a paper boat with Appa"
+   },
+   "fun": "The classic monsoon craft, folded with Appa, then a real sail across the bowl.",
+   "word": {
+    "en": "boat",
+    "kn": "ದೋಣಿ",
+    "kn_roman": "dōṇi",
+    "hi": "नाव",
+    "hi_roman": "nāv"
+   },
+   "materials": [
+    "📰",
+    "🥣",
+    "💧"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "📰",
+     "name": "newspaper",
+     "grownup": false
+    },
+    {
+     "pic": "🥣",
+     "name": "a big bowl",
+     "grownup": true
+    },
+    {
+     "pic": "💧",
+     "name": "water",
+     "grownup": true
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need newspaper, a big bowl and water.",
+   "steps": [
+    {
+     "pic": "📐",
+     "text": "Fold it with Appa",
+     "say": "Appa looks at the folding pictures. Fold together, step by step. Press each fold flat.",
+     "demo": {
+      "frames": [
+       "📰",
+       "🎩",
+       "⛵"
+      ],
+      "motion": "fold"
+     },
+     "stuck": [
+      {
+       "pic": "📐",
+       "text": "Appa reads the pictures",
+       "say": "Ask Appa to open the folding pictures. Fold one step, press it flat, then the next."
+      }
+     ]
+    },
+    {
+     "pic": "⛵",
+     "text": "Open it into a boat",
+     "say": "Open it up. It's a boat! Guess: will it float?",
+     "demo": {
+      "frames": [
+       "⛵",
+       "❓"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🥣💧",
+     "text": "Float it in a bucket",
+     "say": "With Appa, put water in a bucket or a big bowl. Float your boat!",
+     "demo": {
+      "frames": [
+       "⛵"
+      ],
+      "motion": "float"
+     }
+    },
+    {
+     "pic": "🌬️",
+     "text": "Blow gently. It sails!",
+     "say": "Blow gently behind the boat. It sails! What happens when the paper gets wet?",
+     "demo": {
+      "frames": [
+       "⛵"
+      ],
+      "motion": "slide"
+     },
+     "stuck": [
+      {
+       "pic": "🌬️",
+       "text": "Blow softly, low down",
+       "say": "Bend down low and blow softly behind the boat. Not too hard!"
+      }
+     ]
+    }
+   ],
+   "guess_step": 1,
+   "guess_choices": [
+    {
+     "pic": "⛵",
+     "say": "It will float."
+    },
+    {
+     "pic": "⬇️",
+     "say": "It will sink."
+    }
+   ],
+   "guess_back": "Were you right? Did your boat float?",
+   "challenge": {
+    "pic": "🖍️",
+    "text": "Give it a passenger",
+    "say": "Can your boat carry one crayon? Or two?",
+    "demo": {
+     "frames": [
+      "⛵"
+     ],
+     "motion": "float"
+    }
+   },
+   "grownup_steps": [
+    {
+     "pic": "📰✂️📄",
+     "text": "Start with a rectangle: half a newspaper sheet (Appa tears or cuts it)."
+    },
+    {
+     "pic": "📄⬇️",
+     "text": "Fold it in half, top edge down to the bottom edge. Fold at the top."
+    },
+    {
+     "pic": "📐🏠",
+     "text": "Fold both top corners down to meet in the middle. It looks like a house."
+    },
+    {
+     "pic": "⬆️🎩",
+     "text": "Fold the bottom strip up on the front. Turn over, fold the back strip up. A hat!"
+    },
+    {
+     "pic": "👐🔷",
+     "text": "Open the hat from the bottom, bring the two ends together, press flat: a diamond."
+    },
+    {
+     "pic": "⬆️🔺",
+     "text": "Fold the bottom point up to the top, front and back. A triangle."
+    },
+    {
+     "pic": "👐🔷",
+     "text": "Open it from the bottom again and press flat into a smaller diamond."
+    },
+    {
+     "pic": "↔️⛵",
+     "text": "Gently pull the two top points apart. The boat pops open. Shape it with your fingers."
+    }
+   ],
+   "show": "Show Amma your boat sailing!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Folding along steps builds sequencing, and a soggy boat starts a talk about why paper soaks water (CG-7, CG-12)."
+  },
+  {
+   "id": "experiment-013",
+   "category": "experiment",
+   "title": "Which hanky dries first?",
+   "icon": "👕",
+   "sticker": "👕",
+   "level": 3,
+   "time": "5 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Amma hangs clothes out to dry, all spread out. Why not scrunched up? Let's find out!",
+    "text": "Which hanky dries first?",
+    "scene": {
+     "frames": [
+      "👐",
+      "✊"
+     ],
+     "motion": "pair"
+    }
+   },
+   "mission": {
+    "pic": "👕",
+    "text": "Which hanky dries first?"
+   },
+   "fun": "Explains why we spread clothes to dry; the result comes after lunch.",
+   "word": {
+    "en": "dry",
+    "kn": "ಒಣ",
+    "kn_roman": "oṇa",
+    "hi": "सूखा",
+    "hi_roman": "sūkhā"
+   },
+   "materials": [
+    "💧",
+    "👕"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "👕",
+     "name": "two hankies",
+     "grownup": false
+    },
+    {
+     "pic": "💧",
+     "name": "water",
+     "grownup": true
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need two hankies and water.",
+   "steps": [
+    {
+     "pic": "💧",
+     "text": "Wet two hankies with Amma",
+     "say": "With Amma, wet two hankies and squeeze them out.",
+     "demo": {
+      "frames": [
+       "💧",
+       "🧣🧣"
+      ],
+      "motion": "pop"
+     }
+    },
+    {
+     "pic": "👐",
+     "text": "Spread one, scrunch one",
+     "say": "Spread one hanky out flat. Scrunch the other into a ball.",
+     "demo": {
+      "frames": [
+       "👐",
+       "✊"
+      ],
+      "motion": "pair"
+     },
+     "stuck": [
+      {
+       "pic": "👐",
+       "text": "Flat like a chapati",
+       "say": "Spread one flat like a chapati. Squeeze the other into a tight ball."
+      }
+     ]
+    },
+    {
+     "pic": "🤔",
+     "text": "Which will dry first?",
+     "say": "Guess! Which one will dry first?",
+     "demo": {
+      "frames": [
+       "🤔"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "✋",
+     "text": "Touch them later",
+     "say": "After lunch, touch both. Which one is dry?",
+     "demo": {
+      "frames": [
+       "✋"
+      ],
+      "motion": "shake"
+     }
+    },
+    {
+     "pic": "🗣️",
+     "text": "Why do you think?",
+     "say": "Why did that one dry first? Tell Amma your idea.",
+     "demo": {
+      "frames": [
+       "🗣️"
+      ],
+      "motion": "pulse"
+     }
+    }
+   ],
+   "guess_step": 2,
+   "guess_choices": [
+    {
+     "pic": "👐",
+     "say": "The flat one."
+    },
+    {
+     "pic": "✊",
+     "say": "The scrunched one."
+    }
+   ],
+   "guess_back": "Were you right? Which hanky dried first?",
+   "challenge": {
+    "pic": "🌬️",
+    "text": "One under the fan",
+    "say": "Wet two hankies again. Put one under the fan. Which dries first now?",
+    "demo": {
+     "frames": [
+      "🌬️",
+      "🧣"
+     ],
+     "motion": "pair"
+    }
+   },
+   "later": {
+    "after": "next_visit",
+    "say": "Did you touch the two hankies? Which one is dry?"
+   },
+   "show": "Tell Amma or Appa why we spread clothes to dry!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "Links an experiment to a daily chore: spreading out helps water go into the air (CG-5, CG-7)."
+  },
+  {
+   "id": "experiment-014",
+   "category": "experiment",
+   "title": "Day and night",
+   "icon": "🌍",
+   "sticker": "🌍",
+   "level": 3,
+   "time": "10 min",
+   "grownup": true,
+   "mode": "along",
+   "hook": {
+    "say": "Every evening the sun goes away. Where does it go? Let's find out with a torch!",
+    "text": "Where does the sun go?",
+    "scene": {
+     "frames": [
+      "🌞",
+      "🌙"
+     ],
+     "motion": "show"
+    }
+   },
+   "mission": {
+    "pic": "🌍",
+    "text": "Make day and night"
+   },
+   "fun": "A torch sun and a ball Earth: he turns the world himself.",
+   "word": {
+    "en": "night",
+    "kn": "ರಾತ್ರಿ",
+    "kn_roman": "rātri",
+    "hi": "रात",
+    "hi_roman": "rāt"
+   },
+   "materials": [
+    "🔦",
+    "⚽",
+    "🖍️"
+   ],
+   "gather": [
+    {
+     "pic": "👩👨",
+     "name": "Amma or Appa",
+     "grownup": true
+    },
+    {
+     "pic": "🔦",
+     "name": "a torch",
+     "grownup": true
+    },
+    {
+     "pic": "⚽",
+     "name": "a ball",
+     "grownup": false
+    },
+    {
+     "pic": "🖍️",
+     "name": "a crayon",
+     "grownup": false
+    }
+   ],
+   "gather_say": "Ask Amma or Appa to help. You need a torch, a ball and a crayon.",
+   "steps": [
+    {
+     "pic": "🔦",
+     "text": "The torch is the Sun",
+     "say": "Appa holds the torch. The torch is the Sun!",
+     "demo": {
+      "frames": [
+       "🔦",
+       "🌞"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "⚽",
+     "text": "A ball is the Earth",
+     "say": "A ball is our Earth. Hold it up in the light.",
+     "demo": {
+      "frames": [
+       "⚽",
+       "🌍"
+      ],
+      "motion": "pulse"
+     }
+    },
+    {
+     "pic": "🖍️",
+     "text": "Draw a dot for home",
+     "say": "Draw a small dot on the ball. That's our home, Bangalore!",
+     "demo": {
+      "frames": [
+       "🖍️",
+       "⚽"
+      ],
+      "motion": "draw",
+      "path": "dots"
+     }
+    },
+    {
+     "pic": "🔄",
+     "text": "Guess, then turn the ball",
+     "say": "Guess: what happens to our home as it turns? Turn the ball slowly.",
+     "demo": {
+      "frames": [
+       "🌍"
+      ],
+      "motion": "spin"
+     },
+     "stuck": [
+      {
+       "pic": "🐢",
+       "text": "Turn it very slowly",
+       "say": "Turn the ball very slowly. Keep your eyes on the dot."
+      }
+     ]
+    },
+    {
+     "pic": "🌞🌙",
+     "text": "Day or night?",
+     "say": "When the dot faces the torch, it's day. Turned away, it's night!",
+     "demo": {
+      "frames": [
+       "🌞",
+       "🌙"
+      ],
+      "motion": "show"
+     }
+    }
+   ],
+   "guess_step": 3,
+   "guess_choices": [
+    {
+     "pic": "🌞🌙",
+     "say": "Day, then night."
+    },
+    {
+     "pic": "🌞",
+     "say": "Always day."
+    }
+   ],
+   "guess_back": "Were you right? What happened to our home?",
+   "challenge": {
+    "pic": "📍",
+    "text": "Add Ajji's town",
+    "say": "Draw a dot for Ajji's town too. Is it day there when it's day here?",
+    "demo": {
+     "frames": [
+      "🖍️",
+      "⚽"
+     ],
+     "motion": "draw",
+     "path": "dots"
+    }
+   },
+   "show": "Show Amma how day and night happen!",
+   "done": "Wow! Tell me what you discovered.",
+   "why": "A torch and a ball make day and night something he can act out and explain (CG-7)."
+  }
+ ]
+}

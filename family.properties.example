@@ -1,0 +1,33 @@
+# Copy to family.properties (it is git-ignored) and change the names. Rebuild with tools/build-install.sh.
+# app_title   = the name on the TV's home screen tile
+# buddy_name  = the friendly guide's name, used in sentences like "<buddy> picked a 15-minute adventure"
+# warmup_title = title of the warm-up game (defaults to "<buddy_name>'s Warm-up")
+app_title=Wonder Window
+buddy_name=Gubbi
+# voice = macOS voice used to record the spoken lines (say -v ? lists them; Rishi = Indian English)
+voice=Rishi
+voice_rate=150
+# About Me warm-up (stays on this laptop and the TV; never committed):
+# child_name  = the first name he is learning to spell, e.g. Cherry
+# child_birth = birth year and month, YYYY-MM
+# aboutme_unlock_all = true shows all About Me question types at once (for testing)
+child_name=
+child_birth=
+aboutme_unlock_all=false
+# Phone practice (All About Me game): a 10-digit number he should learn, e.g. Amma's mobile.
+# Only salted hashes of its 3-3-4 parts go into the app; the TV never shows or stores the digits.
+parent_phone=
+
+# Daily screen-time limit in minutes, shared by Watch, Play and Try together (30-180; 120 = 2 h, 180 = 3 h)
+daily_limit_min=120
+
+# TRY (Do, Explore & Experience)
+# try_enabled=false hides the Try door; try_v3=false brings back the older Try (rollback)
+try_enabled=true
+try_v3=true
+# comma list of families to show (empty = all): move_and_play,create_and_make,nature_and_notice,think_and_discover,help_and_everyday,family_and_connect,calm_and_mindful
+try_families=
+# age band of the child: 3-4, 5-6, 7-8 or 9-10
+try_age_band=5-6
+# show activities that need a grown-up's supervision
+try_allow_supervised=true

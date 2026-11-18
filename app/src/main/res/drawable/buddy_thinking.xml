@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="200dp"
+    android:viewportWidth="200" android:viewportHeight="200">
+    <path android:name="tail" android:pathData="M44,122 L10,104 Q4,122 16,132 L8,146 Q30,154 50,138 Z" android:fillColor="#7E4B2A"/>
+    <path android:name="feet" android:pathData="M88,166 L86,184 M78,185 L94,185 M114,166 L116,184 M108,185 L124,185" android:strokeColor="#E8892B" android:strokeWidth="5" android:strokeLineCap="round" android:strokeLineJoin="round"/>
+    <path android:name="body" android:pathData="M34,106 a66,66 0 1,0 132,0 a66,66 0 1,0 -132,0 Z" android:fillColor="#C98A55"/>
+    <path android:name="cap" android:pathData="M39.3,80 A66,66 0 0,1 160.7,80 C130,64 70,64 39.3,80 Z" android:fillColor="#7E4B2A"/>
+    <path android:name="tuft" android:pathData="M94,44 C86,26 98,12 114,18 C104,22 102,32 108,42 Z M86,47 C78,38 82,28 92,28 C88,34 90,40 96,46 Z" android:fillColor="#7E4B2A"/>
+    <path android:name="face" android:pathData="M72,98 a40,26 0 1,0 80,0 a40,26 0 1,0 -80,0 Z" android:fillColor="#FBE3C4"/>
+    <path android:name="belly" android:pathData="M62,136 a44,32 0 1,0 88,0 a44,32 0 1,0 -88,0 Z" android:fillColor="#FFF4E2"/>
+    <path android:name="cheekL" android:pathData="M78,110 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 Z" android:fillColor="#BFF59AA0"/>
+    <path android:name="cheekR" android:pathData="M133,108 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0 Z" android:fillColor="#BFF59AA0"/>
+    <path android:name="leaf" android:pathData="M112,46 Q124,38 130,46 Q122,52 112,46 Z" android:fillColor="#4FA36B"/>
+    <path android:name="marigold" android:pathData="M110,40 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 Z" android:fillColor="#FFB020"/>
+    <path android:name="marigoldCore" android:pathData="M115,40 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 Z" android:fillColor="#D9822B"/>
+    <path android:name="wing" android:pathData="M50,112 C50,92 78,92 86,110 C92,128 76,150 56,146 C46,140 46,124 50,112 Z" android:fillColor="#A5683B"/>
+    <path android:name="wingDots" android:pathData="M59,118 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 Z M68,128 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 Z M59,137 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 Z" android:fillColor="#FFF4E2"/>
+    <path android:name="beak" android:pathData="M146,92 L170,101 L146,110 Q141,101 146,92 Z" android:fillColor="#F2A33A"/>
+    <path android:name="eyeL" android:pathData="M91,92 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0 Z" android:fillColor="#2B1A12"/>
+    <path android:name="eyeR" android:pathData="M119,90 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0 Z" android:fillColor="#2B1A12"/>
+    <path android:name="glint" android:pathData="M99.6,87 a3.4,3.4 0 1,0 6.8,0 a3.4,3.4 0 1,0 -6.8,0 Z M127.6,85 a3.4,3.4 0 1,0 6.8,0 a3.4,3.4 0 1,0 -6.8,0 Z" android:fillColor="#FFFFFF"/>
+    <path android:name="wingChin" android:pathData="M116,150 C122,132 138,118 150,110 C160,116 156,138 134,152 C126,156 118,156 116,150 Z" android:fillColor="#A5683B"/>
+    <path android:name="thought" android:pathData="M156,62 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 Z M166,46 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z M178,26 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 Z" android:fillColor="#FFFFFF" android:strokeColor="#9DB4D3" android:strokeWidth="2" android:strokeLineCap="round" android:strokeLineJoin="round"/>
+</vector>

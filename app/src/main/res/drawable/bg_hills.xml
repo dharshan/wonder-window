@@ -1,0 +1,8 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1920dp" android:height="1080dp"
+    android:viewportWidth="1920" android:viewportHeight="1080">
+    <path android:name="hillFar" android:pathData="M0,850 C320,760 640,790 940,846 C1240,902 1540,770 1920,812 L1920,1080 L0,1080 Z" android:fillColor="#B5E3C0"/>
+    <path android:name="hillMid" android:pathData="M0,938 C380,858 760,896 1100,956 C1400,1008 1660,898 1920,918 L1920,1080 L0,1080 Z" android:fillColor="#8ED1A0"/>
+    <path android:name="hillNear" android:pathData="M0,1012 C500,968 900,998 1300,1040 C1600,1070 1800,1032 1920,1022 L1920,1080 L0,1080 Z" android:fillColor="#6CBF85"/>
+    <path android:name="flowers" android:pathData="M210,1000 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0 Z M520,986 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z M1460,1046 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0 Z M1730,1030 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z" android:fillColor="#FFB020"/>
+</vector>

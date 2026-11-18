@@ -1,0 +1,4502 @@
+[
+{
+"id": "WW-001",
+"name": "Colour Nest",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-4",
+"family": "place",
+"dup": null,
+"objective": "Sort objects by a single visual attribute (colour)"
+},
+{
+"id": "WW-002",
+"name": "Shape Echo",
+"category": "B. Memory & Concentration",
+"primary_age": "3-4",
+"family": "echo",
+"dup": null,
+"objective": "Remember and reproduce a short visual sequence of shapes"
+},
+{
+"id": "WW-003",
+"name": "Count the Friends",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-4",
+"family": "place",
+"dup": null,
+"objective": "Accurate one-to-one counting and understanding of cardinality"
+},
+{
+"id": "WW-004",
+"name": "Letter Garden",
+"category": "D. Language & Literacy",
+"primary_age": "4-5",
+"family": "pick",
+"dup": null,
+"objective": "Match a target letter (spoken and/or shown) to its visual form"
+},
+{
+"id": "WW-005",
+"name": "Build-a-Path",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "5-6",
+"family": "grid_path",
+"dup": null,
+"objective": "Plan and execute a simple path from start to goal while avoiding obstacles"
+},
+{
+"id": "WW-006",
+"name": "Feeling Faces",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Recognise basic facial expressions and match them to emotion labels"
+},
+{
+"id": "WW-007",
+"name": "Pattern Bridge",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "5-7",
+"family": "echo",
+"dup": null,
+"objective": "Identify and continue a visual repeating pattern"
+},
+{
+"id": "WW-008",
+"name": "What Comes Next?",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Predict the logical next step in a simple everyday sequence"
+},
+{
+"id": "WW-009",
+"name": "Shadow Match",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Match an object to its correct silhouette"
+},
+{
+"id": "WW-010",
+"name": "Kind Choice",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Select a kind or helpful response in a simple social situation"
+},
+{
+"id": "WW-011",
+"name": "Number Train",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-6",
+"family": "order",
+"dup": null,
+"objective": "Place numbers in correct ascending order"
+},
+{
+"id": "WW-012",
+"name": "Animal Homes",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Match animals to their appropriate habitats"
+},
+{
+"id": "WW-013",
+"name": "Rhyme Time",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Identify words that rhyme"
+},
+{
+"id": "WW-014",
+"name": "Same or Different",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Decide whether two objects are the same or different on a given attribute"
+},
+{
+"id": "WW-015",
+"name": "Memory Tray",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Notice what has changed in a small set of objects"
+},
+{
+"id": "WW-016",
+"name": "Size Sort",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-5",
+"family": "order",
+"dup": null,
+"objective": "Order objects by size (smallest to largest or vice versa)"
+},
+{
+"id": "WW-017",
+"name": "Story Steps",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "order",
+"dup": null,
+"objective": "Put simple story events into the correct chronological order"
+},
+{
+"id": "WW-018",
+"name": "Weather Watch",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Match weather conditions to appropriate clothing or activities"
+},
+{
+"id": "WW-019",
+"name": "Symmetry Butterfly",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Complete a symmetrical pattern"
+},
+{
+"id": "WW-020",
+"name": "Safe Crossing",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Identify safe behaviours when crossing a road or moving near traffic"
+},
+{
+"id": "WW-021",
+"name": "Odd One Out",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "5-6",
+"family": "place",
+"dup": null,
+"objective": "Identify the item that does not belong in a group based on a shared attribute"
+},
+{
+"id": "WW-022",
+"name": "Sound Sequence",
+"category": "B. Memory & Concentration",
+"primary_age": "5-6",
+"family": "echo",
+"dup": null,
+"objective": "Remember and repeat a short sequence of distinct sounds"
+},
+{
+"id": "WW-023",
+"name": "Add the Animals",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-7",
+"family": "place",
+"dup": null,
+"objective": "Solve simple concrete addition problems (sums to 10)"
+},
+{
+"id": "WW-024",
+"name": "Word Builder",
+"category": "D. Language & Literacy",
+"primary_age": "6-7",
+"family": "order",
+"dup": null,
+"objective": "Build simple CVC or familiar words by selecting letters in order"
+},
+{
+"id": "WW-025",
+"name": "Create a Creature",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "place",
+"dup": null,
+"objective": "Combine body parts to create an original creature and optionally name or describe it"
+},
+{
+"id": "WW-026",
+"name": "Sink or Float",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Predict whether common objects will sink or float and observe the result"
+},
+{
+"id": "WW-027",
+"name": "Direction Path",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-7",
+"family": "grid_path",
+"dup": null,
+"objective": "Follow or give simple directional instructions (forward, left, right) to reach a goal"
+},
+{
+"id": "WW-028",
+"name": "Best Tool",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose the most appropriate tool or object for a simple everyday task"
+},
+{
+"id": "WW-029",
+"name": "Emotion Stories",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Match an appropriate emotional response or supportive action to a short social scenario"
+},
+{
+"id": "WW-030",
+"name": "Healthy Plate",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "place",
+"dup": null,
+"objective": "Identify foods that belong on a healthy plate or sort foods into simple groups"
+},
+{
+"id": "WW-031",
+"name": "Rule Switch",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "place",
+"dup": null,
+"objective": "Sort the same set of objects by different rules in succession"
+},
+{
+"id": "WW-032",
+"name": "Missing Number",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-7",
+"family": "pick",
+"dup": null,
+"objective": "Identify the missing number in a simple sequence"
+},
+{
+"id": "WW-033",
+"name": "Picture Story",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-8",
+"family": "order",
+"dup": null,
+"objective": "Arrange picture cards to create a simple original story and optionally choose a title or ending"
+},
+{
+"id": "WW-034",
+"name": "Plant Helper",
+"category": "F. Science & Discovery",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Identify what a plant needs to grow (water, light, soil) and avoid harmful actions"
+},
+{
+"id": "WW-035",
+"name": "Find the Pair",
+"category": "B. Memory & Concentration",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Find matching pairs by remembering locations of hidden cards"
+},
+{
+"id": "WW-036",
+"name": "Shape Builder",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-7",
+"family": "place",
+"dup": null,
+"objective": "Combine simple shapes to form a target larger shape or picture"
+},
+{
+"id": "WW-037",
+"name": "Time of Day",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Match daily activities to appropriate times of day (morning, afternoon, night)"
+},
+{
+"id": "WW-038",
+"name": "Cause and Effect Chain",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "6-7",
+"family": "pick",
+"dup": null,
+"objective": "Predict or complete a simple cause-effect chain"
+},
+{
+"id": "WW-039",
+"name": "Letter Sound Match",
+"category": "D. Language & Literacy",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Match a letter to the sound it makes or to a picture that starts with that sound"
+},
+{
+"id": "WW-040",
+"name": "Balance the Scale",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-7",
+"family": "pick",
+"dup": null,
+"objective": "Make two sides of a simple scale balance by adding or removing objects"
+},
+{
+"id": "WW-041",
+"name": "Pattern Trail",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Continue a visual pattern by selecting the next element"
+},
+{
+"id": "WW-042",
+"name": "Rule Finder",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-9",
+"family": "place",
+"dup": null,
+"objective": "Observe examples and discover the hidden sorting or matching rule, then apply it"
+},
+{
+"id": "WW-043",
+"name": "Logic Path",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-9",
+"family": "grid_path",
+"dup": null,
+"objective": "Use given clues to decide which path or door is correct"
+},
+{
+"id": "WW-044",
+"name": "Attribute Switch",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-9",
+"family": "place",
+"dup": null,
+"objective": "Sort objects by one attribute, then immediately by a different attribute"
+},
+{
+"id": "WW-045",
+"name": "Match the Rule",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Find which item follows the same rule as the example pair"
+},
+{
+"id": "WW-046",
+"name": "Hidden Friends",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Remember where friendly characters are hiding and find them after a short delay"
+},
+{
+"id": "WW-047",
+"name": "Echo Clap",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "echo",
+"dup": null,
+"objective": "Listen to a short rhythm or sound pattern and repeat it by selecting icons"
+},
+{
+"id": "WW-048",
+"name": "What Changed?",
+"category": "B. Memory & Concentration",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Study a scene, then identify what object was added, removed, or moved"
+},
+{
+"id": "WW-049",
+"name": "Order Please",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "order",
+"dup": null,
+"objective": "Remember the order in which items appeared and recreate it"
+},
+{
+"id": "WW-050",
+"name": "Focus Finder",
+"category": "B. Memory & Concentration",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Find a specific target object among similar distractors within a calm scene"
+},
+{
+"id": "WW-051",
+"name": "Number Neighbours",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Find the number that comes before or after a given number"
+},
+{
+"id": "WW-052",
+"name": "Make Ten",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Find pairs of numbers that add up to 10 (or other target)"
+},
+{
+"id": "WW-053",
+"name": "Take Away",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-7",
+"family": "place",
+"dup": null,
+"objective": "Start with a group of objects and remove the correct amount"
+},
+{
+"id": "WW-054",
+"name": "Shape Count",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Count the number of a specific shape in a mixed collection"
+},
+{
+"id": "WW-055",
+"name": "Bigger Smaller",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "place",
+"dup": null,
+"objective": "Choose which group or number is bigger / smaller"
+},
+{
+"id": "WW-056",
+"name": "Measure Up",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose which object is longer, taller, or holds more"
+},
+{
+"id": "WW-057",
+"name": "Equal Shares",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-8",
+"family": "place",
+"dup": null,
+"objective": "Divide a small set of objects into equal groups"
+},
+{
+"id": "WW-058",
+"name": "Letter Trail",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "order",
+"dup": null,
+"objective": "Put mixed-up letters into alphabetical order or complete the sequence"
+},
+{
+"id": "WW-059",
+"name": "Word Family",
+"category": "D. Language & Literacy",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Find words that belong to the same word family (e.g. cat, hat, mat)"
+},
+{
+"id": "WW-060",
+"name": "Opposite Match",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Match words or pictures that are opposites"
+},
+{
+"id": "WW-061",
+"name": "Category Sort",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "place",
+"dup": null,
+"objective": "Sort words or pictures into the correct category (animals, food, vehicles...)"
+},
+{
+"id": "WW-062",
+"name": "Rhyme Finder",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Select all the words that rhyme with the target word"
+},
+{
+"id": "WW-063",
+"name": "Listen & Choose",
+"category": "D. Language & Literacy",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Listen to a short description and choose the matching picture"
+},
+{
+"id": "WW-064",
+"name": "Colour Mix",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "create",
+"dup": null,
+"objective": "Mix two colours to create a target colour"
+},
+{
+"id": "WW-065",
+"name": "Build Tower",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "create",
+"dup": null,
+"objective": "Stack shapes or blocks to reach a target height or match a silhouette"
+},
+{
+"id": "WW-066",
+"name": "Story Starter",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-9",
+"family": "create",
+"dup": null,
+"objective": "Choose characters, setting, and problem to create a simple story outline"
+},
+{
+"id": "WW-067",
+"name": "Pattern Maker",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "create",
+"dup": null,
+"objective": "Create your own repeating pattern using a palette of shapes and colours"
+},
+{
+"id": "WW-068",
+"name": "Design Flag",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "create",
+"dup": null,
+"objective": "Create a simple flag or badge using shapes and colours within soft constraints"
+},
+{
+"id": "WW-069",
+"name": "Habitat Match",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Match animals to the habitat where they live"
+},
+{
+"id": "WW-070",
+"name": "What Do Plants Need?",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Choose the things a plant needs to grow healthily"
+},
+{
+"id": "WW-071",
+"name": "Season Sort",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "place",
+"dup": null,
+"objective": "Sort activities or clothing into the correct season"
+},
+{
+"id": "WW-072",
+"name": "Push or Pull",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Decide whether an action is a push or a pull"
+},
+{
+"id": "WW-073",
+"name": "Day and Night",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "place",
+"dup": null,
+"objective": "Sort activities or sky features into day or night"
+},
+{
+"id": "WW-074",
+"name": "What Happens Next?",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Predict the result of a simple science action (e.g. ice in sun)"
+},
+{
+"id": "WW-075",
+"name": "Rotate to Fit",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Rotate a shape so it fits into a matching hole or outline"
+},
+{
+"id": "WW-076",
+"name": "Complete the Picture",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Choose the missing piece that completes a simple picture"
+},
+{
+"id": "WW-077",
+"name": "Position Words",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Place an object in the correct position (on, under, next to, between)"
+},
+{
+"id": "WW-078",
+"name": "Mirror Match",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "create",
+"dup": null,
+"objective": "Complete the other half of a symmetrical design"
+},
+{
+"id": "WW-079",
+"name": "Obstacle Course",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Guide a character through a simple obstacle course using directions"
+},
+{
+"id": "WW-080",
+"name": "Best Choice",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose the most suitable item or action for a given situation"
+},
+{
+"id": "WW-081",
+"name": "Spot the Mistake",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Find what is wrong or out of place in a scene"
+},
+{
+"id": "WW-082",
+"name": "What Would Happen?",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Predict the likely result of a simple action or choice"
+},
+{
+"id": "WW-083",
+"name": "Solve It",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Choose a solution that fixes a simple everyday problem"
+},
+{
+"id": "WW-084",
+"name": "How Do They Feel?",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Look at a face or situation and choose the matching emotion"
+},
+{
+"id": "WW-085",
+"name": "Kind Action",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose the kind action in a social situation"
+},
+{
+"id": "WW-086",
+"name": "Help a Friend",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose a helpful response when a character is upset or stuck"
+},
+{
+"id": "WW-087",
+"name": "Share Fairly",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Decide how to share a set of items fairly between characters"
+},
+{
+"id": "WW-088",
+"name": "Safe or Not Safe",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Decide whether a street-crossing or road situation is safe"
+},
+{
+"id": "WW-089",
+"name": "Healthy Choice",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose the healthier option between two activities or foods"
+},
+{
+"id": "WW-090",
+"name": "What Time Is It For?",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Match an activity to morning, afternoon, evening, or night"
+},
+{
+"id": "WW-091",
+"name": "Care for Nature",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose actions that help take care of plants, animals, or the environment"
+},
+{
+"id": "WW-092",
+"name": "Get Ready",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "4-6",
+"family": "order",
+"dup": null,
+"objective": "Put the steps of a daily routine (getting ready for school/bed) in the correct order"
+},
+{
+"id": "WW-093",
+"name": "Colour Code",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-9",
+"family": "place",
+"dup": null,
+"objective": "Sort objects first by colour then by a second attribute"
+},
+{
+"id": "WW-094",
+"name": "Sequence Builder",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "6-8",
+"family": "order",
+"dup": null,
+"objective": "Complete a logical sequence of actions or events"
+},
+{
+"id": "WW-095",
+"name": "Same Difference",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Decide if two items are the same or different on a highlighted attribute"
+},
+{
+"id": "WW-096",
+"name": "Memory Grid",
+"category": "B. Memory & Concentration",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Remember the positions of several objects on a small grid after they are hidden"
+},
+{
+"id": "WW-097",
+"name": "Sound Match",
+"category": "B. Memory & Concentration",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Listen to a sound and choose the matching picture or icon"
+},
+{
+"id": "WW-098",
+"name": "Count On",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Start from a given number and count on a small amount"
+},
+{
+"id": "WW-099",
+"name": "Number Bonds",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Find all pairs that make a target number"
+},
+{
+"id": "WW-100",
+"name": "Shape Hunt",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Find all examples of a target shape in a scene"
+},
+{
+"id": "WW-101",
+"name": "How Many More",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-8",
+"family": "place",
+"dup": null,
+"objective": "Work out how many more objects are needed to match another group"
+},
+{
+"id": "WW-102",
+"name": "Letter Sound",
+"category": "D. Language & Literacy",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Match a letter to pictures that start with that sound"
+},
+{
+"id": "WW-103",
+"name": "Build the Word",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "order",
+"dup": null,
+"objective": "Select letters in the correct order to build a simple word from a picture"
+},
+{
+"id": "WW-104",
+"name": "Story Order",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "order",
+"dup": null,
+"objective": "Put mixed-up story pictures into the correct order"
+},
+{
+"id": "WW-105",
+"name": "Word Pairs",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "create",
+"dup": null,
+"objective": "Match words or pictures that go together (e.g. shoe-sock, brush-paint)"
+},
+{
+"id": "WW-106",
+"name": "Create Scene",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-8",
+"family": "create",
+"dup": null,
+"objective": "Place characters and objects onto a background to create a scene"
+},
+{
+"id": "WW-107",
+"name": "Colour Story",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Choose colours that match a feeling or a simple story mood"
+},
+{
+"id": "WW-108",
+"name": "Finish the Drawing",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "create",
+"dup": null,
+"objective": "Add missing parts to complete a simple drawing in a creative way"
+},
+{
+"id": "WW-109",
+"name": "Animal Needs",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Choose what an animal needs (food, water, shelter)"
+},
+{
+"id": "WW-110",
+"name": "Weather Clothes",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Dress a character appropriately for the shown weather"
+},
+{
+"id": "WW-111",
+"name": "Float or Sink Predict",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Predict and then observe whether objects sink or float"
+},
+{
+"id": "WW-112",
+"name": "Grow the Plant",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Provide the correct sequence of care for a plant to grow"
+},
+{
+"id": "WW-113",
+"name": "Find the Way",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "5-7",
+"family": "grid_path",
+"dup": null,
+"objective": "Guide a character through a simple maze to the goal"
+},
+{
+"id": "WW-114",
+"name": "Fit the Shape",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Choose which shape piece completes a puzzle outline"
+},
+{
+"id": "WW-115",
+"name": "Where Is It?",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Follow positional instructions to find or place an object"
+},
+{
+"id": "WW-116",
+"name": "Turn the Shape",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Rotate pieces so they match a target orientation"
+},
+{
+"id": "WW-117",
+"name": "Choose Wisely",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Select the best action in a short everyday scenario"
+},
+{
+"id": "WW-118",
+"name": "Fix the Problem",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Choose a solution that solves a simple illustrated problem"
+},
+{
+"id": "WW-119",
+"name": "What Is Wrong?",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Spot the thing that does not belong or is incorrect in a scene"
+},
+{
+"id": "WW-120",
+"name": "Emotion Match",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Match facial expressions to emotion words or situations"
+},
+{
+"id": "WW-121",
+"name": "Be a Friend",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose a friendly and supportive response to a peer situation"
+},
+{
+"id": "WW-122",
+"name": "Take Turns",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Decide the fair way to take turns or share a resource"
+},
+{
+"id": "WW-123",
+"name": "Crossing Safely",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Choose the safe way to cross a street in different situations"
+},
+{
+"id": "WW-124",
+"name": "Healthy Day",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Select activities that make a healthy day (sleep, move, eat well)"
+},
+{
+"id": "WW-125",
+"name": "Money Match",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-9",
+"family": "pick",
+"dup": null,
+"objective": "Match coins or simple amounts to prices of small items"
+},
+{
+"id": "WW-126",
+"name": "Clean Up",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "6-8",
+"family": "place",
+"dup": null,
+"objective": "Sort items into recycling, compost, or general waste"
+},
+{
+"id": "WW-127",
+"name": "Routine Order",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "4-6",
+"family": "order",
+"dup": null,
+"objective": "Put the steps of brushing teeth or getting dressed in order"
+},
+{
+"id": "WW-128",
+"name": "Focus Land",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-001",
+"objective": "Remember visual information after a short delay"
+},
+{
+"id": "WW-129",
+"name": "Hide Quest",
+"category": "B. Memory & Concentration",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-002",
+"objective": "Remember which items were paired together"
+},
+{
+"id": "WW-130",
+"name": "Watch Choice",
+"category": "B. Memory & Concentration",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Identify and select a previously shown object"
+},
+{
+"id": "WW-131",
+"name": "Emotion Land",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-003",
+"objective": "Practise fair sharing and turn-taking"
+},
+{
+"id": "WW-132",
+"name": "Time Finder",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-004",
+"objective": "Match simple prices and coin values"
+},
+{
+"id": "WW-133",
+"name": "Make Game",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-6",
+"family": "create",
+"dup": "WW-DUP-005",
+"objective": "Build a structure or design by placing components"
+},
+{
+"id": "WW-134",
+"name": "Fit Choice",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-006",
+"objective": "Rotate shapes to match a target orientation"
+},
+{
+"id": "WW-135",
+"name": "Group Game",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-9",
+"family": "order",
+"dup": "WW-DUP-007",
+"objective": "Arrange items in order by size, length, or other attribute"
+},
+{
+"id": "WW-136",
+"name": "Echo Path",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "grid_path",
+"dup": "WW-DUP-002",
+"objective": "Remember which items were paired together"
+},
+{
+"id": "WW-137",
+"name": "Attention Challenge",
+"category": "B. Memory & Concentration",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-001",
+"objective": "Remember visual information after a short delay"
+},
+{
+"id": "WW-138",
+"name": "Seek Sort",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "place",
+"dup": "WW-DUP-008",
+"objective": "Notice what has changed in a scene"
+},
+{
+"id": "WW-139",
+"name": "Science Challenge",
+"category": "F. Science & Discovery",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Make a prediction and observe the outcome"
+},
+{
+"id": "WW-140",
+"name": "Add Helper",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-009",
+"objective": "Understand that the last number counted represents the total"
+},
+{
+"id": "WW-141",
+"name": "Make Quest",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-6",
+"family": "create",
+"dup": null,
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-142",
+"name": "Match Challenge",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-010",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-143",
+"name": "Ready Builder",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-6",
+"family": "create",
+"dup": "WW-DUP-011",
+"objective": "Choose actions that care for the environment"
+},
+{
+"id": "WW-144",
+"name": "Solve Land",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-012",
+"objective": "Spot what is wrong or out of place"
+},
+{
+"id": "WW-145",
+"name": "Emotion Path",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "grid_path",
+"dup": "WW-DUP-013",
+"objective": "Practise behaviours that support friendship"
+},
+{
+"id": "WW-146",
+"name": "Grow Explorer",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-014",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-147",
+"name": "Rule Finder 153",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-015",
+"objective": "Complete a logical sequence of events or items"
+},
+{
+"id": "WW-148",
+"name": "Map Maker",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "9-10",
+"family": "create",
+"dup": "WW-DUP-016",
+"objective": "Complete or create symmetrical designs"
+},
+{
+"id": "WW-149",
+"name": "Friend Match",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-017",
+"objective": "Recognise emotions from faces or situations"
+},
+{
+"id": "WW-150",
+"name": "Invent Adventure",
+"category": "E. Creativity & Imagination",
+"primary_age": "4-6",
+"family": "create",
+"dup": "WW-DUP-018",
+"objective": "Explore imaginative scenarios and make creative choices"
+},
+{
+"id": "WW-151",
+"name": "Art Game",
+"category": "E. Creativity & Imagination",
+"primary_age": "4-6",
+"family": "create",
+"dup": "WW-DUP-019",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-152",
+"name": "Imagine Fun",
+"category": "E. Creativity & Imagination",
+"primary_age": "9-10",
+"family": "create",
+"dup": "WW-DUP-020",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-153",
+"name": "Number Choice",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-009",
+"objective": "Understand that the last number counted represents the total"
+},
+{
+"id": "WW-154",
+"name": "Fix Puzzle",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Choose the best action in a short everyday scenario"
+},
+{
+"id": "WW-155",
+"name": "Pattern Challenge",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "9-10",
+"family": "grid_path",
+"dup": "WW-DUP-021",
+"objective": "Use clues to determine the correct answer or path"
+},
+{
+"id": "WW-156",
+"name": "Solve Fun",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-022",
+"objective": "Select a solution that solves a presented problem"
+},
+{
+"id": "WW-157",
+"name": "Best Maker",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-023",
+"objective": "Consider simple advantages of different choices"
+},
+{
+"id": "WW-158",
+"name": "Move Puzzle",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-024",
+"objective": "Place objects in specific positions relative to others"
+},
+{
+"id": "WW-159",
+"name": "Observe Game",
+"category": "F. Science & Discovery",
+"primary_age": "8-10",
+"family": "place",
+"dup": "WW-DUP-025",
+"objective": "Sort natural objects or living things into groups"
+},
+{
+"id": "WW-160",
+"name": "Letter Path",
+"category": "D. Language & Literacy",
+"primary_age": "6-8",
+"family": "grid_path",
+"dup": "WW-DUP-026",
+"objective": "Put letters in the correct alphabetical order"
+},
+{
+"id": "WW-161",
+"name": "Letter Challenge",
+"category": "D. Language & Literacy",
+"primary_age": "5-6",
+"family": "place",
+"dup": "WW-DUP-027",
+"objective": "Sort items into semantic categories"
+},
+{
+"id": "WW-162",
+"name": "Logic Match",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-5",
+"family": "grid_path",
+"dup": null,
+"objective": "Use clues to determine the correct answer or path"
+},
+{
+"id": "WW-163",
+"name": "Heart World",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Practise fair sharing and turn-taking"
+},
+{
+"id": "WW-164",
+"name": "More Land",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "9-10",
+"family": "pick",
+"dup": null,
+"objective": "Find pairs of numbers that make a target total"
+},
+{
+"id": "WW-165",
+"name": "Path Finder",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-5",
+"family": "grid_path",
+"dup": "WW-DUP-024",
+"objective": "Place objects in specific positions relative to others"
+},
+{
+"id": "WW-166",
+"name": "Space Game",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "7-9",
+"family": "create",
+"dup": "WW-DUP-028",
+"objective": "Complete or create symmetrical designs"
+},
+{
+"id": "WW-167",
+"name": "Move World",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-029",
+"objective": "Follow or give simple directional instructions"
+},
+{
+"id": "WW-168",
+"name": "Emotion Time",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-030",
+"objective": "Consider how another character might feel or think"
+},
+{
+"id": "WW-169",
+"name": "Judge Story",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Compare two or more options and choose the better one"
+},
+{
+"id": "WW-170",
+"name": "Logic Challenge",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "8-10",
+"family": "pick",
+"dup": null,
+"objective": "Complete simple analogies by finding the matching relationship"
+},
+{
+"id": "WW-171",
+"name": "More World",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-031",
+"objective": "Compare sizes, lengths, or quantities"
+},
+{
+"id": "WW-172",
+"name": "Logic Builder",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "place",
+"dup": null,
+"objective": "Sort items into groups based on shared attributes"
+},
+{
+"id": "WW-173",
+"name": "Judge Fun",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-032",
+"objective": "Predict what is likely to happen next"
+},
+{
+"id": "WW-174",
+"name": "Art Quest",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-4",
+"family": "create",
+"dup": "WW-DUP-033",
+"objective": "Create a simple original story using picture prompts"
+},
+{
+"id": "WW-175",
+"name": "Observe Maker",
+"category": "F. Science & Discovery",
+"primary_age": "3-4",
+"family": "pick",
+"dup": null,
+"objective": "Match animals to their habitats or needs"
+},
+{
+"id": "WW-176",
+"name": "Count Time",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-034",
+"objective": "Identify and select spoken or written numbers"
+},
+{
+"id": "WW-177",
+"name": "Clean Game",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-035",
+"objective": "Choose actions and options that support health"
+},
+{
+"id": "WW-178",
+"name": "Letter Choice",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "place",
+"dup": "WW-DUP-036",
+"objective": "Sort items into semantic categories"
+},
+{
+"id": "WW-179",
+"name": "Turn World",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-037",
+"objective": "Understand simple different viewpoints"
+},
+{
+"id": "WW-180",
+"name": "Explore Fun",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-038",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-181",
+"name": "Build Adventure",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "create",
+"dup": "WW-DUP-039",
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-182",
+"name": "Healthy Story",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-040",
+"objective": "Sequence or choose good hygiene practices"
+},
+{
+"id": "WW-183",
+"name": "Care Challenge",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-041",
+"objective": "Select kind and helpful actions"
+},
+{
+"id": "WW-184",
+"name": "Observe Story",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-042",
+"objective": "Learn simple facts about the sun, moon, stars, and day/night"
+},
+{
+"id": "WW-185",
+"name": "Art Puzzle",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-4",
+"family": "create",
+"dup": "WW-DUP-019",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-186",
+"name": "Recall Game",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "order",
+"dup": "WW-DUP-043",
+"objective": "Recall and reproduce the order of items or events"
+},
+{
+"id": "WW-187",
+"name": "Friend Choice",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Practise cooperative choices in simple scenarios"
+},
+{
+"id": "WW-188",
+"name": "Grow Explorer 65",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-014",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-189",
+"name": "Memory Adventure",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Notice what has changed in a scene"
+},
+{
+"id": "WW-190",
+"name": "Add Helper 142",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-044",
+"objective": "Solve very simple addition or subtraction word problems with pictures"
+},
+{
+"id": "WW-191",
+"name": "Path Challenge",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-4",
+"family": "grid_path",
+"dup": "WW-DUP-037",
+"objective": "Understand simple different viewpoints"
+},
+{
+"id": "WW-192",
+"name": "Measure Path",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-4",
+"family": "grid_path",
+"dup": "WW-DUP-045",
+"objective": "Understand that the last number counted represents the total"
+},
+{
+"id": "WW-193",
+"name": "Number Puzzle",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-031",
+"objective": "Compare sizes, lengths, or quantities"
+},
+{
+"id": "WW-194",
+"name": "Sort Game",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "5-6",
+"family": "place",
+"dup": "WW-DUP-046",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-195",
+"name": "Help Land",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-047",
+"objective": "Make considerate choices that affect others"
+},
+{
+"id": "WW-196",
+"name": "Add Match",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-031",
+"objective": "Compare sizes, lengths, or quantities"
+},
+{
+"id": "WW-197",
+"name": "Word Builder 10",
+"category": "D. Language & Literacy",
+"primary_age": "4-6",
+"family": "create",
+"dup": null,
+"objective": "Identify words that rhyme"
+},
+{
+"id": "WW-198",
+"name": "Read Puzzle",
+"category": "D. Language & Literacy",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-048",
+"objective": "Expand and practise word meanings and associations"
+},
+{
+"id": "WW-199",
+"name": "Speak Match",
+"category": "D. Language & Literacy",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-049",
+"objective": "Recognise and match letters of the alphabet"
+},
+{
+"id": "WW-200",
+"name": "Watch Builder",
+"category": "B. Memory & Concentration",
+"primary_age": "6-8",
+"family": "create",
+"dup": "WW-DUP-050",
+"objective": "Carefully observe a scene to find a target or difference"
+},
+{
+"id": "WW-201",
+"name": "Kind Trail",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-4",
+"family": "pick",
+"dup": null,
+"objective": "Navigate simple social situations thoughtfully"
+},
+{
+"id": "WW-202",
+"name": "Healthy Choice 112",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-004",
+"objective": "Match simple prices and coin values"
+},
+{
+"id": "WW-203",
+"name": "Grow Game",
+"category": "F. Science & Discovery",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-051",
+"objective": "Explore simple cause-and-effect relationships in nature or everyday life"
+},
+{
+"id": "WW-204",
+"name": "Safe Finder",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-052",
+"objective": "Understand basic concepts of time, routines, and sequence of the day"
+},
+{
+"id": "WW-205",
+"name": "Care Finder",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Practise behaviours that support friendship"
+},
+{
+"id": "WW-206",
+"name": "Animal Puzzle",
+"category": "F. Science & Discovery",
+"primary_age": "6-8",
+"family": "order",
+"dup": "WW-DUP-053",
+"objective": "Put the stages of a simple life cycle in order"
+},
+{
+"id": "WW-207",
+"name": "Dream Puzzle",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-018",
+"objective": "Explore imaginative scenarios and make creative choices"
+},
+{
+"id": "WW-208",
+"name": "Equal Time",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-054",
+"objective": "Solve simple subtraction problems with concrete objects"
+},
+{
+"id": "WW-209",
+"name": "Protect Adventure",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-004",
+"objective": "Match simple prices and coin values"
+},
+{
+"id": "WW-210",
+"name": "Make Helper",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-8",
+"family": "create",
+"dup": null,
+"objective": "Create a simple original story using picture prompts"
+},
+{
+"id": "WW-211",
+"name": "Judge Time",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-055",
+"objective": "Compare two or more options and choose the better one"
+},
+{
+"id": "WW-212",
+"name": "Echo Challenge",
+"category": "B. Memory & Concentration",
+"primary_age": "8-10",
+"family": "echo",
+"dup": null,
+"objective": "Carefully observe a scene to find a target or difference"
+},
+{
+"id": "WW-213",
+"name": "Design Adventure",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-6",
+"family": "create",
+"dup": "WW-DUP-056",
+"objective": "Create a simple original story using picture prompts"
+},
+{
+"id": "WW-214",
+"name": "Word Helper",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-057",
+"objective": "Connect letters with the sounds they represent"
+},
+{
+"id": "WW-215",
+"name": "Ready Builder 63",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-8",
+"family": "create",
+"dup": "WW-DUP-052",
+"objective": "Understand basic concepts of time, routines, and sequence of the day"
+},
+{
+"id": "WW-216",
+"name": "Sort Time",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "place",
+"dup": "WW-DUP-058",
+"objective": "Complete a logical sequence of events or items"
+},
+{
+"id": "WW-217",
+"name": "Share Game",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-030",
+"objective": "Consider how another character might feel or think"
+},
+{
+"id": "WW-218",
+"name": "Less Choice",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "pick",
+"dup": null,
+"objective": "Decide which is more, less, bigger, or smaller"
+},
+{
+"id": "WW-219",
+"name": "Judge Time 191",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-059",
+"objective": "Consider simple advantages of different choices"
+},
+{
+"id": "WW-220",
+"name": "Best Maker 125",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-060",
+"objective": "Predict what is likely to happen next"
+},
+{
+"id": "WW-221",
+"name": "Word Puzzle",
+"category": "D. Language & Literacy",
+"primary_age": "7-9",
+"family": "pick",
+"dup": null,
+"objective": "Identify words that rhyme"
+},
+{
+"id": "WW-222",
+"name": "Art Challenge",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "create",
+"dup": "WW-DUP-061",
+"objective": "Design something within given soft constraints"
+},
+{
+"id": "WW-223",
+"name": "Add World",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-062",
+"objective": "Solve simple subtraction problems with concrete objects"
+},
+{
+"id": "WW-224",
+"name": "Direction Helper",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "create",
+"dup": "WW-DUP-016",
+"objective": "Complete or create symmetrical designs"
+},
+{
+"id": "WW-225",
+"name": "Link Path",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "grid_path",
+"dup": "WW-DUP-021",
+"objective": "Use clues to determine the correct answer or path"
+},
+{
+"id": "WW-226",
+"name": "Order Adventure",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "order",
+"dup": null,
+"objective": "Switch between different sorting or matching rules"
+},
+{
+"id": "WW-227",
+"name": "Art Story",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-018",
+"objective": "Explore imaginative scenarios and make creative choices"
+},
+{
+"id": "WW-228",
+"name": "Story Finder",
+"category": "D. Language & Literacy",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-057",
+"objective": "Connect letters with the sounds they represent"
+},
+{
+"id": "WW-229",
+"name": "Link Time",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-063",
+"objective": "Identify what caused an effect or predict an effect from a cause"
+},
+{
+"id": "WW-230",
+"name": "Number Builder",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "create",
+"dup": "WW-DUP-064",
+"objective": "Find pairs of numbers that make a target total"
+},
+{
+"id": "WW-231",
+"name": "Clean Fun",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-065",
+"objective": "Identify safe behaviours near roads and traffic"
+},
+{
+"id": "WW-232",
+"name": "Equal Match",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-034",
+"objective": "Identify and select spoken or written numbers"
+},
+{
+"id": "WW-233",
+"name": "Reason Trail",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-066",
+"objective": "Apply simple reasoning to everyday situations"
+},
+{
+"id": "WW-234",
+"name": "Create Story",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-9",
+"family": "place",
+"dup": null,
+"objective": "Experiment with and choose effective colour combinations"
+},
+{
+"id": "WW-235",
+"name": "Nature Adventure",
+"category": "F. Science & Discovery",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-014",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-236",
+"name": "Sound Land",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-067",
+"objective": "Recognise and match letters of the alphabet"
+},
+{
+"id": "WW-237",
+"name": "Think Helper",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-022",
+"objective": "Select a solution that solves a presented problem"
+},
+{
+"id": "WW-238",
+"name": "Build Time",
+"category": "E. Creativity & Imagination",
+"primary_age": "4-6",
+"family": "create",
+"dup": null,
+"objective": "Design something within given soft constraints"
+},
+{
+"id": "WW-239",
+"name": "Hide Builder",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "create",
+"dup": null,
+"objective": "Remember visual information after a short delay"
+},
+{
+"id": "WW-240",
+"name": "Rhyme Game",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "order",
+"dup": "WW-DUP-026",
+"objective": "Put letters in the correct alphabetical order"
+},
+{
+"id": "WW-241",
+"name": "Create Sort",
+"category": "E. Creativity & Imagination",
+"primary_age": "9-10",
+"family": "place",
+"dup": "WW-DUP-068",
+"objective": "Experiment with and choose effective colour combinations"
+},
+{
+"id": "WW-242",
+"name": "Direction Match",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-029",
+"objective": "Follow or give simple directional instructions"
+},
+{
+"id": "WW-243",
+"name": "Place Sort",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-5",
+"family": "place",
+"dup": "WW-DUP-069",
+"objective": "Assemble parts to form a complete whole"
+},
+{
+"id": "WW-244",
+"name": "Solve Maker",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-012",
+"objective": "Spot what is wrong or out of place"
+},
+{
+"id": "WW-245",
+"name": "Invent Finder",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-9",
+"family": "create",
+"dup": "WW-DUP-019",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-246",
+"name": "Care Challenge 72",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-004",
+"objective": "Match simple prices and coin values"
+},
+{
+"id": "WW-247",
+"name": "Speak Match 8",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-057",
+"objective": "Connect letters with the sounds they represent"
+},
+{
+"id": "WW-248",
+"name": "Weather Sort",
+"category": "F. Science & Discovery",
+"primary_age": "7-9",
+"family": "place",
+"dup": "WW-DUP-070",
+"objective": "Connect weather and seasonal concepts to clothing or activities"
+},
+{
+"id": "WW-249",
+"name": "Science Story",
+"category": "F. Science & Discovery",
+"primary_age": "9-10",
+"family": "pick",
+"dup": null,
+"objective": "Learn simple facts about the sun, moon, stars, and day/night"
+},
+{
+"id": "WW-250",
+"name": "Share Finder",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-003",
+"objective": "Practise fair sharing and turn-taking"
+},
+{
+"id": "WW-251",
+"name": "Heart Helper",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "7-9",
+"family": "pick",
+"dup": null,
+"objective": "Practise fair sharing and turn-taking"
+},
+{
+"id": "WW-252",
+"name": "Hide Land",
+"category": "B. Memory & Concentration",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Carefully observe a scene to find a target or difference"
+},
+{
+"id": "WW-253",
+"name": "Protect Maker",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-9",
+"family": "pick",
+"dup": null,
+"objective": "Choose actions that care for the environment"
+},
+{
+"id": "WW-254",
+"name": "Fit Helper",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-071",
+"objective": "Understand simple different viewpoints"
+},
+{
+"id": "WW-255",
+"name": "Build World",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-6",
+"family": "create",
+"dup": "WW-DUP-072",
+"objective": "Solve or complete puzzles that allow multiple approaches"
+},
+{
+"id": "WW-256",
+"name": "Focus World",
+"category": "B. Memory & Concentration",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Remember which items were paired together"
+},
+{
+"id": "WW-257",
+"name": "Best Game",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-032",
+"objective": "Predict what is likely to happen next"
+},
+{
+"id": "WW-258",
+"name": "Design Puzzle",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "create",
+"dup": "WW-DUP-056",
+"objective": "Create a simple original story using picture prompts"
+},
+{
+"id": "WW-259",
+"name": "Feel Quest",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-073",
+"objective": "Practise cooperative choices in simple scenarios"
+},
+{
+"id": "WW-260",
+"name": "Build Adventure 147",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-9",
+"family": "create",
+"dup": "WW-DUP-074",
+"objective": "Build a structure or design by placing components"
+},
+{
+"id": "WW-261",
+"name": "Fix Time",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-010",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-262",
+"name": "Build Builder",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-039",
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-263",
+"name": "Remember Path",
+"category": "B. Memory & Concentration",
+"primary_age": "4-6",
+"family": "grid_path",
+"dup": "WW-DUP-075",
+"objective": "Remember visual information after a short delay"
+},
+{
+"id": "WW-264",
+"name": "Watch Finder",
+"category": "B. Memory & Concentration",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Identify and select a previously shown object"
+},
+{
+"id": "WW-265",
+"name": "Protect Builder",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-6",
+"family": "create",
+"dup": "WW-DUP-076",
+"objective": "Sequence or choose good hygiene practices"
+},
+{
+"id": "WW-266",
+"name": "Reason Puzzle",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-060",
+"objective": "Predict what is likely to happen next"
+},
+{
+"id": "WW-267",
+"name": "Healthy World",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-077",
+"objective": "Identify safe behaviours near roads and traffic"
+},
+{
+"id": "WW-268",
+"name": "Sound Land 45",
+"category": "D. Language & Literacy",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Identify words that rhyme"
+},
+{
+"id": "WW-269",
+"name": "Hide Helper",
+"category": "B. Memory & Concentration",
+"primary_age": "3-4",
+"family": "order",
+"dup": "WW-DUP-043",
+"objective": "Recall and reproduce the order of items or events"
+},
+{
+"id": "WW-270",
+"name": "Safe Land",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-078",
+"objective": "Solve simple practical everyday problems"
+},
+{
+"id": "WW-271",
+"name": "Imagine Trail",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-079",
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-272",
+"name": "Healthy Story 58",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-080",
+"objective": "Understand basic concepts of time, routines, and sequence of the day"
+},
+{
+"id": "WW-273",
+"name": "Count Quest",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-081",
+"objective": "Complete or continue a number sequence"
+},
+{
+"id": "WW-274",
+"name": "Build Helper",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-9",
+"family": "create",
+"dup": "WW-DUP-082",
+"objective": "Solve or complete puzzles that allow multiple approaches"
+},
+{
+"id": "WW-275",
+"name": "Art Story 127",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-083",
+"objective": "Explore imaginative scenarios and make creative choices"
+},
+{
+"id": "WW-276",
+"name": "Echo Choice",
+"category": "B. Memory & Concentration",
+"primary_age": "7-8",
+"family": "echo",
+"dup": "WW-DUP-075",
+"objective": "Remember visual information after a short delay"
+},
+{
+"id": "WW-277",
+"name": "Find Path",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "5-6",
+"family": "grid_path",
+"dup": "WW-DUP-015",
+"objective": "Complete a logical sequence of events or items"
+},
+{
+"id": "WW-278",
+"name": "Invent Maker",
+"category": "E. Creativity & Imagination",
+"primary_age": "4-6",
+"family": "create",
+"dup": "WW-DUP-084",
+"objective": "Create an original visual composition from provided elements"
+},
+{
+"id": "WW-279",
+"name": "Reason Explorer",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-032",
+"objective": "Predict what is likely to happen next"
+},
+{
+"id": "WW-280",
+"name": "Fix Match",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-085",
+"objective": "Apply simple reasoning to everyday situations"
+},
+{
+"id": "WW-281",
+"name": "Hide Explorer",
+"category": "B. Memory & Concentration",
+"primary_age": "6-8",
+"family": "order",
+"dup": null,
+"objective": "Recall and reproduce the order of items or events"
+},
+{
+"id": "WW-282",
+"name": "Map Challenge",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-071",
+"objective": "Understand simple different viewpoints"
+},
+{
+"id": "WW-283",
+"name": "Dream Maker",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-061",
+"objective": "Design something within given soft constraints"
+},
+{
+"id": "WW-284",
+"name": "Feel World",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "7-8",
+"family": "pick",
+"dup": null,
+"objective": "Consider how another character might feel or think"
+},
+{
+"id": "WW-285",
+"name": "Observe Quest",
+"category": "F. Science & Discovery",
+"primary_age": "7-9",
+"family": "order",
+"dup": null,
+"objective": "Put the stages of a simple life cycle in order"
+},
+{
+"id": "WW-286",
+"name": "Colour Helper",
+"category": "E. Creativity & Imagination",
+"primary_age": "4-6",
+"family": "create",
+"dup": "WW-DUP-019",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-287",
+"name": "Think Time",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-086",
+"objective": "Select a solution that solves a presented problem"
+},
+{
+"id": "WW-288",
+"name": "Emotion Challenge",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-017",
+"objective": "Recognise emotions from faces or situations"
+},
+{
+"id": "WW-289",
+"name": "Remember Explorer",
+"category": "B. Memory & Concentration",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-087",
+"objective": "Remember the locations of hidden objects"
+},
+{
+"id": "WW-290",
+"name": "Dream Explorer",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "create",
+"dup": "WW-DUP-020",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-291",
+"name": "Sound Builder",
+"category": "D. Language & Literacy",
+"primary_age": "8-10",
+"family": "create",
+"dup": "WW-DUP-088",
+"objective": "Connect letters with the sounds they represent"
+},
+{
+"id": "WW-292",
+"name": "Healthy Trail",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Identify safe and unsafe situations in everyday contexts"
+},
+{
+"id": "WW-293",
+"name": "Nature Puzzle",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-089",
+"objective": "Identify which sense is being used in different situations"
+},
+{
+"id": "WW-294",
+"name": "Invent Story",
+"category": "E. Creativity & Imagination",
+"primary_age": "4-6",
+"family": "create",
+"dup": "WW-DUP-039",
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-295",
+"name": "Grow Builder",
+"category": "F. Science & Discovery",
+"primary_age": "8-10",
+"family": "create",
+"dup": null,
+"objective": "Make a prediction and observe the outcome"
+},
+{
+"id": "WW-296",
+"name": "Explore Land",
+"category": "F. Science & Discovery",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-090",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-297",
+"name": "Link Builder",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-9",
+"family": "create",
+"dup": "WW-DUP-091",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-298",
+"name": "Add Maker",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-4",
+"family": "pick",
+"dup": null,
+"objective": "Decide which is more, less, bigger, or smaller"
+},
+{
+"id": "WW-299",
+"name": "Animal Maker",
+"category": "F. Science & Discovery",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-092",
+"objective": "Understand what plants need and how they grow"
+},
+{
+"id": "WW-300",
+"name": "Link Fun",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "4-6",
+"family": "order",
+"dup": null,
+"objective": "Arrange items in order by size, length, or other attribute"
+},
+{
+"id": "WW-301",
+"name": "Reason Challenge",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Predict what is likely to happen next"
+},
+{
+"id": "WW-302",
+"name": "Heart Story",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-047",
+"objective": "Make considerate choices that affect others"
+},
+{
+"id": "WW-303",
+"name": "Daily Land",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-035",
+"objective": "Choose actions and options that support health"
+},
+{
+"id": "WW-304",
+"name": "Recall Helper",
+"category": "B. Memory & Concentration",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-008",
+"objective": "Notice what has changed in a scene"
+},
+{
+"id": "WW-305",
+"name": "Make Quest 76",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-4",
+"family": "create",
+"dup": null,
+"objective": "Create an original visual composition from provided elements"
+},
+{
+"id": "WW-306",
+"name": "Weather Maker",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-051",
+"objective": "Explore simple cause-and-effect relationships in nature or everyday life"
+},
+{
+"id": "WW-307",
+"name": "Time Challenge",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "4-6",
+"family": "place",
+"dup": "WW-DUP-093",
+"objective": "Identify healthy food choices and simple food groups"
+},
+{
+"id": "WW-308",
+"name": "Shape Land",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-024",
+"objective": "Place objects in specific positions relative to others"
+},
+{
+"id": "WW-309",
+"name": "Create Helper",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "create",
+"dup": "WW-DUP-039",
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-310",
+"name": "Heart Sort",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-5",
+"family": "place",
+"dup": "WW-DUP-073",
+"objective": "Practise cooperative choices in simple scenarios"
+},
+{
+"id": "WW-311",
+"name": "Invent Puzzle",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "create",
+"dup": "WW-DUP-094",
+"objective": "Explore imaginative scenarios and make creative choices"
+},
+{
+"id": "WW-312",
+"name": "Move Builder",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-069",
+"objective": "Assemble parts to form a complete whole"
+},
+{
+"id": "WW-313",
+"name": "Science Adventure",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "order",
+"dup": "WW-DUP-053",
+"objective": "Put the stages of a simple life cycle in order"
+},
+{
+"id": "WW-314",
+"name": "Space Choice",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-4",
+"family": "pick",
+"dup": null,
+"objective": "Understand and use positional words and relationships"
+},
+{
+"id": "WW-315",
+"name": "Fix Land",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-060",
+"objective": "Predict what is likely to happen next"
+},
+{
+"id": "WW-316",
+"name": "Sound Game",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "place",
+"dup": "WW-DUP-027",
+"objective": "Sort items into semantic categories"
+},
+{
+"id": "WW-317",
+"name": "Logic Path 94",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-9",
+"family": "grid_path",
+"dup": "WW-DUP-095",
+"objective": "Match items that go together or share a relationship"
+},
+{
+"id": "WW-318",
+"name": "Measure Finder",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Count objects accurately using one-to-one correspondence"
+},
+{
+"id": "WW-319",
+"name": "Read Maker",
+"category": "D. Language & Literacy",
+"primary_age": "8-10",
+"family": "order",
+"dup": "WW-DUP-096",
+"objective": "Build simple words by selecting letters in order"
+},
+{
+"id": "WW-320",
+"name": "Invent Puzzle 192",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-7",
+"family": "create",
+"dup": "WW-DUP-074",
+"objective": "Build a structure or design by placing components"
+},
+{
+"id": "WW-321",
+"name": "Remember Land",
+"category": "B. Memory & Concentration",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-087",
+"objective": "Remember the locations of hidden objects"
+},
+{
+"id": "WW-322",
+"name": "Path Builder",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "grid_path",
+"dup": "WW-DUP-097",
+"objective": "Understand simple different viewpoints"
+},
+{
+"id": "WW-323",
+"name": "Invent Sort",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "place",
+"dup": "WW-DUP-019",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-324",
+"name": "Build Land",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "create",
+"dup": "WW-DUP-083",
+"objective": "Explore imaginative scenarios and make creative choices"
+},
+{
+"id": "WW-325",
+"name": "Think Choice",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "8-10",
+"family": "place",
+"dup": null,
+"objective": "Switch between different sorting or matching rules"
+},
+{
+"id": "WW-326",
+"name": "Hide Game",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-098",
+"objective": "Remember the locations of hidden objects"
+},
+{
+"id": "WW-327",
+"name": "Order Game",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "5-7",
+"family": "order",
+"dup": "WW-DUP-099",
+"objective": "Identify and continue a visual or logical pattern"
+},
+{
+"id": "WW-328",
+"name": "Speak Helper",
+"category": "D. Language & Literacy",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-100",
+"objective": "Match words or pictures that are opposites"
+},
+{
+"id": "WW-329",
+"name": "Help Finder",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "9-10",
+"family": "pick",
+"dup": null,
+"objective": "Make considerate choices that affect others"
+},
+{
+"id": "WW-330",
+"name": "Hide Trail",
+"category": "B. Memory & Concentration",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-098",
+"objective": "Remember the locations of hidden objects"
+},
+{
+"id": "WW-331",
+"name": "Observe Land",
+"category": "F. Science & Discovery",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-090",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-332",
+"name": "Echo Quest",
+"category": "B. Memory & Concentration",
+"primary_age": "8-10",
+"family": "echo",
+"dup": "WW-DUP-101",
+"objective": "Hold and use information while performing a task"
+},
+{
+"id": "WW-333",
+"name": "Invent Challenge",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-033",
+"objective": "Create a simple original story using picture prompts"
+},
+{
+"id": "WW-334",
+"name": "Letter Quest",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "pick",
+"dup": null,
+"objective": "Identify the beginning sound of words"
+},
+{
+"id": "WW-335",
+"name": "Rhyme Challenge",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "order",
+"dup": "WW-DUP-096",
+"objective": "Build simple words by selecting letters in order"
+},
+{
+"id": "WW-336",
+"name": "Rhyme Match",
+"category": "D. Language & Literacy",
+"primary_age": "5-6",
+"family": "place",
+"dup": "WW-DUP-036",
+"objective": "Sort items into semantic categories"
+},
+{
+"id": "WW-337",
+"name": "Time Fun",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-077",
+"objective": "Identify safe behaviours near roads and traffic"
+},
+{
+"id": "WW-338",
+"name": "Create Fun",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-005",
+"objective": "Build a structure or design by placing components"
+},
+{
+"id": "WW-339",
+"name": "Discover Adventure",
+"category": "F. Science & Discovery",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-014",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-340",
+"name": "Dream Maker 30",
+"category": "E. Creativity & Imagination",
+"primary_age": "4-6",
+"family": "create",
+"dup": "WW-DUP-084",
+"objective": "Create an original visual composition from provided elements"
+},
+{
+"id": "WW-341",
+"name": "Echo Maker",
+"category": "B. Memory & Concentration",
+"primary_age": "7-9",
+"family": "echo",
+"dup": "WW-DUP-087",
+"objective": "Remember the locations of hidden objects"
+},
+{
+"id": "WW-342",
+"name": "Focus Choice",
+"category": "B. Memory & Concentration",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-098",
+"objective": "Remember the locations of hidden objects"
+},
+{
+"id": "WW-343",
+"name": "Feel Quest 123",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-102",
+"objective": "Select kind and helpful actions"
+},
+{
+"id": "WW-344",
+"name": "Map Challenge 21",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-006",
+"objective": "Rotate shapes to match a target orientation"
+},
+{
+"id": "WW-345",
+"name": "Time Trail",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-5",
+"family": "place",
+"dup": "WW-DUP-093",
+"objective": "Identify healthy food choices and simple food groups"
+},
+{
+"id": "WW-346",
+"name": "Clean Choice",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Identify safe and unsafe situations in everyday contexts"
+},
+{
+"id": "WW-347",
+"name": "Dream Game",
+"category": "E. Creativity & Imagination",
+"primary_age": "8-10",
+"family": "create",
+"dup": "WW-DUP-079",
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-348",
+"name": "Hide Helper 59",
+"category": "B. Memory & Concentration",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-103",
+"objective": "Remember which items were paired together"
+},
+{
+"id": "WW-349",
+"name": "Explore Game",
+"category": "F. Science & Discovery",
+"primary_age": "7-8",
+"family": "place",
+"dup": null,
+"objective": "Sort natural objects or living things into groups"
+},
+{
+"id": "WW-350",
+"name": "Fit Fun",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Follow or give simple directional instructions"
+},
+{
+"id": "WW-351",
+"name": "Decide Challenge",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-086",
+"objective": "Select a solution that solves a presented problem"
+},
+{
+"id": "WW-352",
+"name": "Watch Quest",
+"category": "B. Memory & Concentration",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-104",
+"objective": "Hold and use information while performing a task"
+},
+{
+"id": "WW-353",
+"name": "Kind Finder",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-013",
+"objective": "Practise behaviours that support friendship"
+},
+{
+"id": "WW-354",
+"name": "Turn Sort",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "5-7",
+"family": "grid_path",
+"dup": "WW-DUP-105",
+"objective": "Navigate a character through a path or maze to a goal"
+},
+{
+"id": "WW-355",
+"name": "Time Explorer",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-106",
+"objective": "Identify safe and unsafe situations in everyday contexts"
+},
+{
+"id": "WW-356",
+"name": "Echo Game",
+"category": "B. Memory & Concentration",
+"primary_age": "8-10",
+"family": "echo",
+"dup": "WW-DUP-101",
+"objective": "Hold and use information while performing a task"
+},
+{
+"id": "WW-357",
+"name": "Protect Choice",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-080",
+"objective": "Understand basic concepts of time, routines, and sequence of the day"
+},
+{
+"id": "WW-358",
+"name": "Friend Adventure",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-017",
+"objective": "Recognise emotions from faces or situations"
+},
+{
+"id": "WW-359",
+"name": "Make Adventure",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Solve or complete puzzles that allow multiple approaches"
+},
+{
+"id": "WW-360",
+"name": "Count Fun",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-064",
+"objective": "Find pairs of numbers that make a target total"
+},
+{
+"id": "WW-361",
+"name": "Sort Builder",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "8-10",
+"family": "place",
+"dup": null,
+"objective": "Complete a logical sequence of events or items"
+},
+{
+"id": "WW-362",
+"name": "Fix Puzzle 185",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-066",
+"objective": "Apply simple reasoning to everyday situations"
+},
+{
+"id": "WW-363",
+"name": "Safe Fun",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-040",
+"objective": "Sequence or choose good hygiene practices"
+},
+{
+"id": "WW-364",
+"name": "Daily Helper",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-077",
+"objective": "Identify safe behaviours near roads and traffic"
+},
+{
+"id": "WW-365",
+"name": "Map Finder",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "9-10",
+"family": "pick",
+"dup": null,
+"objective": "Assemble parts to form a complete whole"
+},
+{
+"id": "WW-366",
+"name": "Read Finder",
+"category": "D. Language & Literacy",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Match words or pictures that are opposites"
+},
+{
+"id": "WW-367",
+"name": "Colour Quest",
+"category": "E. Creativity & Imagination",
+"primary_age": "8-10",
+"family": "create",
+"dup": null,
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-368",
+"name": "Move Puzzle 55",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-4",
+"family": "grid_path",
+"dup": "WW-DUP-105",
+"objective": "Navigate a character through a path or maze to a goal"
+},
+{
+"id": "WW-369",
+"name": "Build Adventure 128",
+"category": "E. Creativity & Imagination",
+"primary_age": "6-8",
+"family": "create",
+"dup": "WW-DUP-082",
+"objective": "Solve or complete puzzles that allow multiple approaches"
+},
+{
+"id": "WW-370",
+"name": "Place Story",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Complete a visual puzzle by selecting the correct piece"
+},
+{
+"id": "WW-371",
+"name": "Read Challenge",
+"category": "D. Language & Literacy",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-100",
+"objective": "Match words or pictures that are opposites"
+},
+{
+"id": "WW-372",
+"name": "Order Challenge",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-4",
+"family": "order",
+"dup": "WW-DUP-063",
+"objective": "Identify what caused an effect or predict an effect from a cause"
+},
+{
+"id": "WW-373",
+"name": "Clean Finder",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "9-10",
+"family": "pick",
+"dup": null,
+"objective": "Sequence the steps of everyday routines"
+},
+{
+"id": "WW-374",
+"name": "Echo Time",
+"category": "B. Memory & Concentration",
+"primary_age": "3-4",
+"family": "echo",
+"dup": null,
+"objective": "Notice what has changed in a scene"
+},
+{
+"id": "WW-375",
+"name": "Reason Game",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Apply simple reasoning to everyday situations"
+},
+{
+"id": "WW-376",
+"name": "Path Builder 80",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "8-10",
+"family": "grid_path",
+"dup": null,
+"objective": "Complete or create symmetrical designs"
+},
+{
+"id": "WW-377",
+"name": "Plant Challenge",
+"category": "F. Science & Discovery",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-038",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-378",
+"name": "Focus Sort",
+"category": "B. Memory & Concentration",
+"primary_age": "8-10",
+"family": "place",
+"dup": "WW-DUP-103",
+"objective": "Remember which items were paired together"
+},
+{
+"id": "WW-379",
+"name": "Add Trail",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-062",
+"objective": "Solve simple subtraction problems with concrete objects"
+},
+{
+"id": "WW-380",
+"name": "Count Time 198",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-064",
+"objective": "Find pairs of numbers that make a target total"
+},
+{
+"id": "WW-381",
+"name": "Judge Path",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "9-10",
+"family": "grid_path",
+"dup": "WW-DUP-091",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-382",
+"name": "Time Helper",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Choose actions that care for the environment"
+},
+{
+"id": "WW-383",
+"name": "Best Path",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-7",
+"family": "grid_path",
+"dup": "WW-DUP-010",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-384",
+"name": "Science Helper",
+"category": "F. Science & Discovery",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-107",
+"objective": "Identify which sense is being used in different situations"
+},
+{
+"id": "WW-385",
+"name": "Match Challenge 166",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-099",
+"objective": "Identify and continue a visual or logical pattern"
+},
+{
+"id": "WW-386",
+"name": "Clean Helper",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "8-10",
+"family": "pick",
+"dup": null,
+"objective": "Sequence or choose good hygiene practices"
+},
+{
+"id": "WW-387",
+"name": "Share Match",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "7-9",
+"family": "pick",
+"dup": null,
+"objective": "Recognise emotions from faces or situations"
+},
+{
+"id": "WW-388",
+"name": "Choose Helper",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Consider simple advantages of different choices"
+},
+{
+"id": "WW-389",
+"name": "Plant Quest",
+"category": "F. Science & Discovery",
+"primary_age": "8-10",
+"family": "pick",
+"dup": null,
+"objective": "Understand what plants need and how they grow"
+},
+{
+"id": "WW-390",
+"name": "Solve Sort",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "8-10",
+"family": "place",
+"dup": "WW-DUP-046",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-391",
+"name": "Make Choice",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-094",
+"objective": "Explore imaginative scenarios and make creative choices"
+},
+{
+"id": "WW-392",
+"name": "Animal Story",
+"category": "F. Science & Discovery",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Understand what plants need and how they grow"
+},
+{
+"id": "WW-393",
+"name": "Shape Match",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-108",
+"objective": "Understand and use positional words and relationships"
+},
+{
+"id": "WW-394",
+"name": "Daily Builder",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "6-8",
+"family": "place",
+"dup": "WW-DUP-109",
+"objective": "Identify healthy food choices and simple food groups"
+},
+{
+"id": "WW-395",
+"name": "Protect Builder 165",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "create",
+"dup": null,
+"objective": "Choose actions and options that support health"
+},
+{
+"id": "WW-396",
+"name": "Count Finder",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-044",
+"objective": "Solve very simple addition or subtraction word problems with pictures"
+},
+{
+"id": "WW-397",
+"name": "Science Time",
+"category": "F. Science & Discovery",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Match animals to their habitats or needs"
+},
+{
+"id": "WW-398",
+"name": "Weather Fun",
+"category": "F. Science & Discovery",
+"primary_age": "5-6",
+"family": "place",
+"dup": "WW-DUP-025",
+"objective": "Sort natural objects or living things into groups"
+},
+{
+"id": "WW-399",
+"name": "Watch Story",
+"category": "B. Memory & Concentration",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-050",
+"objective": "Carefully observe a scene to find a target or difference"
+},
+{
+"id": "WW-400",
+"name": "Help Choice",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-110",
+"objective": "Recognise emotions from faces or situations"
+},
+{
+"id": "WW-401",
+"name": "Total Time",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Solve simple addition problems with visual support"
+},
+{
+"id": "WW-402",
+"name": "Fix Land 114",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-8",
+"family": "pick",
+"dup": null,
+"objective": "Choose the best action in a short everyday scenario"
+},
+{
+"id": "WW-403",
+"name": "Art Land",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-6",
+"family": "create",
+"dup": "WW-DUP-039",
+"objective": "Create original repeating or growing patterns"
+},
+{
+"id": "WW-404",
+"name": "Judge Helper",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-111",
+"objective": "Compare two or more options and choose the better one"
+},
+{
+"id": "WW-405",
+"name": "Place Time",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-097",
+"objective": "Understand simple different viewpoints"
+},
+{
+"id": "WW-406",
+"name": "Safe Explorer",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "place",
+"dup": "WW-DUP-112",
+"objective": "Identify healthy food choices and simple food groups"
+},
+{
+"id": "WW-407",
+"name": "Kind Puzzle",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "8-10",
+"family": "pick",
+"dup": null,
+"objective": "Choose a response that shows understanding of another's feelings"
+},
+{
+"id": "WW-408",
+"name": "Less Fun",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "7-9",
+"family": "pick",
+"dup": null,
+"objective": "Complete or continue a number sequence"
+},
+{
+"id": "WW-409",
+"name": "Echo Adventure",
+"category": "B. Memory & Concentration",
+"primary_age": "7-9",
+"family": "echo",
+"dup": null,
+"objective": "Identify and select a previously shown object"
+},
+{
+"id": "WW-410",
+"name": "Think Land",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-063",
+"objective": "Identify what caused an effect or predict an effect from a cause"
+},
+{
+"id": "WW-411",
+"name": "Memory Match",
+"category": "B. Memory & Concentration",
+"primary_age": "5-6",
+"family": "pick",
+"dup": null,
+"objective": "Hold and use information while performing a task"
+},
+{
+"id": "WW-412",
+"name": "Nature Puzzle 121",
+"category": "F. Science & Discovery",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Connect weather and seasonal concepts to clothing or activities"
+},
+{
+"id": "WW-413",
+"name": "Total Adventure",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-113",
+"objective": "Decide which is more, less, bigger, or smaller"
+},
+{
+"id": "WW-414",
+"name": "Rule Story",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-095",
+"objective": "Match items that go together or share a relationship"
+},
+{
+"id": "WW-415",
+"name": "Healthy Puzzle",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-106",
+"objective": "Identify safe and unsafe situations in everyday contexts"
+},
+{
+"id": "WW-416",
+"name": "Imagine Finder",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-4",
+"family": "place",
+"dup": "WW-DUP-068",
+"objective": "Experiment with and choose effective colour combinations"
+},
+{
+"id": "WW-417",
+"name": "Healthy Explorer",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Solve simple practical everyday problems"
+},
+{
+"id": "WW-418",
+"name": "Share Fun",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-110",
+"objective": "Recognise emotions from faces or situations"
+},
+{
+"id": "WW-419",
+"name": "Fit Land",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "9-10",
+"family": "grid_path",
+"dup": null,
+"objective": "Navigate a character through a path or maze to a goal"
+},
+{
+"id": "WW-420",
+"name": "Direction Sort",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "3-5",
+"family": "place",
+"dup": null,
+"objective": "Complete a visual puzzle by selecting the correct piece"
+},
+{
+"id": "WW-421",
+"name": "Feel Builder",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "8-10",
+"family": "create",
+"dup": "WW-DUP-013",
+"objective": "Practise behaviours that support friendship"
+},
+{
+"id": "WW-422",
+"name": "Think Trail",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "pick",
+"dup": null,
+"objective": "Complete simple analogies by finding the matching relationship"
+},
+{
+"id": "WW-423",
+"name": "Think Land 188",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-091",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-424",
+"name": "Memory Sort",
+"category": "B. Memory & Concentration",
+"primary_age": "4-6",
+"family": "place",
+"dup": "WW-DUP-104",
+"objective": "Hold and use information while performing a task"
+},
+{
+"id": "WW-425",
+"name": "Observe Time",
+"category": "F. Science & Discovery",
+"primary_age": "7-9",
+"family": "pick",
+"dup": null,
+"objective": "Connect weather and seasonal concepts to clothing or activities"
+},
+{
+"id": "WW-426",
+"name": "Attention World",
+"category": "B. Memory & Concentration",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-098",
+"objective": "Remember the locations of hidden objects"
+},
+{
+"id": "WW-427",
+"name": "Story Maker",
+"category": "D. Language & Literacy",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-049",
+"objective": "Recognise and match letters of the alphabet"
+},
+{
+"id": "WW-428",
+"name": "Feel World 74",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-030",
+"objective": "Consider how another character might feel or think"
+},
+{
+"id": "WW-429",
+"name": "Match Game",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Complete simple analogies by finding the matching relationship"
+},
+{
+"id": "WW-430",
+"name": "Place Match",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "7-9",
+"family": "create",
+"dup": "WW-DUP-028",
+"objective": "Complete or create symmetrical designs"
+},
+{
+"id": "WW-431",
+"name": "Best Challenge",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-091",
+"objective": "Find a solution to a simple illustrated problem"
+},
+{
+"id": "WW-432",
+"name": "Shape Story",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-006",
+"objective": "Rotate shapes to match a target orientation"
+},
+{
+"id": "WW-433",
+"name": "Discover Puzzle",
+"category": "F. Science & Discovery",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-092",
+"objective": "Understand what plants need and how they grow"
+},
+{
+"id": "WW-434",
+"name": "Judge Sort",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "4-6",
+"family": "place",
+"dup": "WW-DUP-114",
+"objective": "Select the most appropriate item or action for a purpose"
+},
+{
+"id": "WW-435",
+"name": "Find Finder",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "6-8",
+"family": "order",
+"dup": "WW-DUP-007",
+"objective": "Arrange items in order by size, length, or other attribute"
+},
+{
+"id": "WW-436",
+"name": "Think Maker",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-058",
+"objective": "Complete a logical sequence of events or items"
+},
+{
+"id": "WW-437",
+"name": "Total Helper",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-034",
+"objective": "Identify and select spoken or written numbers"
+},
+{
+"id": "WW-438",
+"name": "Measure Sort",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-6",
+"family": "place",
+"dup": "WW-DUP-115",
+"objective": "Count objects accurately using one-to-one correspondence"
+},
+{
+"id": "WW-439",
+"name": "Time Helper 95",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-065",
+"objective": "Identify safe behaviours near roads and traffic"
+},
+{
+"id": "WW-440",
+"name": "Solve Maker 94",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-086",
+"objective": "Select a solution that solves a presented problem"
+},
+{
+"id": "WW-441",
+"name": "Animal Adventure",
+"category": "F. Science & Discovery",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-042",
+"objective": "Learn simple facts about the sun, moon, stars, and day/night"
+},
+{
+"id": "WW-442",
+"name": "Equal Story",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "pick",
+"dup": "WW-DUP-113",
+"objective": "Decide which is more, less, bigger, or smaller"
+},
+{
+"id": "WW-443",
+"name": "Imagine Choice",
+"category": "E. Creativity & Imagination",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-072",
+"objective": "Solve or complete puzzles that allow multiple approaches"
+},
+{
+"id": "WW-444",
+"name": "Solve Challenge",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-111",
+"objective": "Compare two or more options and choose the better one"
+},
+{
+"id": "WW-445",
+"name": "Measure Sort 182",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-5",
+"family": "place",
+"dup": "WW-DUP-113",
+"objective": "Decide which is more, less, bigger, or smaller"
+},
+{
+"id": "WW-446",
+"name": "Friend Time",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Practise behaviours that support friendship"
+},
+{
+"id": "WW-447",
+"name": "Math Game",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "create",
+"dup": null,
+"objective": "Identify, match, or compose basic shapes"
+},
+{
+"id": "WW-448",
+"name": "Number Sort",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "7-9",
+"family": "place",
+"dup": "WW-DUP-054",
+"objective": "Solve simple subtraction problems with concrete objects"
+},
+{
+"id": "WW-449",
+"name": "Protect Fun",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-011",
+"objective": "Choose actions that care for the environment"
+},
+{
+"id": "WW-450",
+"name": "Hide Explorer 135",
+"category": "B. Memory & Concentration",
+"primary_age": "5-7",
+"family": "echo",
+"dup": null,
+"objective": "Remember and respond to a sequence of sounds"
+},
+{
+"id": "WW-451",
+"name": "Fit Challenge",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-006",
+"objective": "Rotate shapes to match a target orientation"
+},
+{
+"id": "WW-452",
+"name": "Solve Story",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-023",
+"objective": "Consider simple advantages of different choices"
+},
+{
+"id": "WW-453",
+"name": "Clean Maker",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "4-6",
+"family": "place",
+"dup": "WW-DUP-109",
+"objective": "Identify healthy food choices and simple food groups"
+},
+{
+"id": "WW-454",
+"name": "Attention Time",
+"category": "B. Memory & Concentration",
+"primary_age": "4-6",
+"family": "pick",
+"dup": "WW-DUP-002",
+"objective": "Remember which items were paired together"
+},
+{
+"id": "WW-455",
+"name": "Grow Puzzle",
+"category": "F. Science & Discovery",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-014",
+"objective": "Explore basic concepts such as push, pull, sink, and float"
+},
+{
+"id": "WW-456",
+"name": "Colour Fun",
+"category": "E. Creativity & Imagination",
+"primary_age": "8-10",
+"family": "create",
+"dup": "WW-DUP-033",
+"objective": "Create a simple original story using picture prompts"
+},
+{
+"id": "WW-457",
+"name": "Art Time",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-019",
+"objective": "Design an original character from modular parts"
+},
+{
+"id": "WW-458",
+"name": "Life Path",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "4-6",
+"family": "grid_path",
+"dup": "WW-DUP-109",
+"objective": "Identify healthy food choices and simple food groups"
+},
+{
+"id": "WW-459",
+"name": "Find Trail",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-4",
+"family": "pick",
+"dup": "WW-DUP-058",
+"objective": "Complete a logical sequence of events or items"
+},
+{
+"id": "WW-460",
+"name": "Letter Explorer",
+"category": "D. Language & Literacy",
+"primary_age": "7-8",
+"family": "place",
+"dup": "WW-DUP-027",
+"objective": "Sort items into semantic categories"
+},
+{
+"id": "WW-461",
+"name": "Heart Land",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-7",
+"family": "pick",
+"dup": null,
+"objective": "Select kind and helpful actions"
+},
+{
+"id": "WW-462",
+"name": "Path Quest",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "7-9",
+"family": "grid_path",
+"dup": "WW-DUP-108",
+"objective": "Understand and use positional words and relationships"
+},
+{
+"id": "WW-463",
+"name": "Judge World",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-114",
+"objective": "Select the most appropriate item or action for a purpose"
+},
+{
+"id": "WW-464",
+"name": "Life Sort",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "6-8",
+"family": "place",
+"dup": "WW-DUP-112",
+"objective": "Identify healthy food choices and simple food groups"
+},
+{
+"id": "WW-465",
+"name": "Less Game",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "8-10",
+"family": "create",
+"dup": null,
+"objective": "Identify, match, or compose basic shapes"
+},
+{
+"id": "WW-466",
+"name": "Story Helper",
+"category": "D. Language & Literacy",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-088",
+"objective": "Connect letters with the sounds they represent"
+},
+{
+"id": "WW-467",
+"name": "Shape Builder 158",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "3-4",
+"family": "create",
+"dup": "WW-DUP-115",
+"objective": "Count objects accurately using one-to-one correspondence"
+},
+{
+"id": "WW-468",
+"name": "Read World",
+"category": "D. Language & Literacy",
+"primary_age": "6-8",
+"family": "order",
+"dup": null,
+"objective": "Build simple words by selecting letters in order"
+},
+{
+"id": "WW-469",
+"name": "Judge Puzzle",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-9",
+"family": "pick",
+"dup": "WW-DUP-059",
+"objective": "Consider simple advantages of different choices"
+},
+{
+"id": "WW-470",
+"name": "Group Helper",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "7-8",
+"family": "place",
+"dup": "WW-DUP-015",
+"objective": "Complete a logical sequence of events or items"
+},
+{
+"id": "WW-471",
+"name": "Letter Quest 73",
+"category": "D. Language & Literacy",
+"primary_age": "6-8",
+"family": "place",
+"dup": null,
+"objective": "Sort items into semantic categories"
+},
+{
+"id": "WW-472",
+"name": "Protect Adventure 28",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-078",
+"objective": "Solve simple practical everyday problems"
+},
+{
+"id": "WW-473",
+"name": "Equal Sort",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "6-8",
+"family": "place",
+"dup": "WW-DUP-081",
+"objective": "Complete or continue a number sequence"
+},
+{
+"id": "WW-474",
+"name": "Direction World",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "9-10",
+"family": "grid_path",
+"dup": null,
+"objective": "Navigate a character through a path or maze to a goal"
+},
+{
+"id": "WW-475",
+"name": "Emotion Maker",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "3-5",
+"family": "pick",
+"dup": "WW-DUP-102",
+"objective": "Select kind and helpful actions"
+},
+{
+"id": "WW-476",
+"name": "Kind Fun",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-041",
+"objective": "Select kind and helpful actions"
+},
+{
+"id": "WW-477",
+"name": "Direction Sort 194",
+"category": "G. Spatial Awareness & Visual Intelligence",
+"primary_age": "6-8",
+"family": "place",
+"dup": "WW-DUP-029",
+"objective": "Follow or give simple directional instructions"
+},
+{
+"id": "WW-478",
+"name": "Speak Maker",
+"category": "D. Language & Literacy",
+"primary_age": "8-10",
+"family": "place",
+"dup": "WW-DUP-036",
+"objective": "Sort items into semantic categories"
+},
+{
+"id": "WW-479",
+"name": "Think Explorer",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "4-6",
+"family": "pick",
+"dup": null,
+"objective": "Identify and continue a visual or logical pattern"
+},
+{
+"id": "WW-480",
+"name": "Solve Match",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-012",
+"objective": "Spot what is wrong or out of place"
+},
+{
+"id": "WW-481",
+"name": "Science Path",
+"category": "F. Science & Discovery",
+"primary_age": "7-8",
+"family": "grid_path",
+"dup": "WW-DUP-070",
+"objective": "Connect weather and seasonal concepts to clothing or activities"
+},
+{
+"id": "WW-482",
+"name": "Heart Path",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "8-10",
+"family": "grid_path",
+"dup": "WW-DUP-013",
+"objective": "Practise behaviours that support friendship"
+},
+{
+"id": "WW-483",
+"name": "Fix Game",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "6-8",
+"family": "pick",
+"dup": null,
+"objective": "Choose the best action in a short everyday scenario"
+},
+{
+"id": "WW-484",
+"name": "Ready Trail",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "3-4",
+"family": "pick",
+"dup": null,
+"objective": "Match simple prices and coin values"
+},
+{
+"id": "WW-485",
+"name": "Safe Path",
+"category": "J. Real-World Knowledge & Life Skills",
+"primary_age": "5-6",
+"family": "grid_path",
+"dup": "WW-DUP-076",
+"objective": "Sequence or choose good hygiene practices"
+},
+{
+"id": "WW-486",
+"name": "Equal Fun",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-045",
+"objective": "Understand that the last number counted represents the total"
+},
+{
+"id": "WW-487",
+"name": "Word World",
+"category": "D. Language & Literacy",
+"primary_age": "9-10",
+"family": "pick",
+"dup": "WW-DUP-067",
+"objective": "Recognise and match letters of the alphabet"
+},
+{
+"id": "WW-488",
+"name": "Solve Finder",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-085",
+"objective": "Apply simple reasoning to everyday situations"
+},
+{
+"id": "WW-489",
+"name": "Listen Quest",
+"category": "D. Language & Literacy",
+"primary_age": "8-10",
+"family": "pick",
+"dup": null,
+"objective": "Listen to information and choose the matching response"
+},
+{
+"id": "WW-490",
+"name": "Less Match",
+"category": "C. Mathematics & Numerical Thinking",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-045",
+"objective": "Understand that the last number counted represents the total"
+},
+{
+"id": "WW-491",
+"name": "Fix Time 118",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "7-8",
+"family": "pick",
+"dup": "WW-DUP-023",
+"objective": "Consider simple advantages of different choices"
+},
+{
+"id": "WW-492",
+"name": "Science Choice",
+"category": "F. Science & Discovery",
+"primary_age": "6-8",
+"family": "pick",
+"dup": "WW-DUP-107",
+"objective": "Identify which sense is being used in different situations"
+},
+{
+"id": "WW-493",
+"name": "Name Puzzle",
+"category": "D. Language & Literacy",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-048",
+"objective": "Expand and practise word meanings and associations"
+},
+{
+"id": "WW-494",
+"name": "Invent Match",
+"category": "E. Creativity & Imagination",
+"primary_age": "5-6",
+"family": "create",
+"dup": "WW-DUP-072",
+"objective": "Solve or complete puzzles that allow multiple approaches"
+},
+{
+"id": "WW-495",
+"name": "Science Game",
+"category": "F. Science & Discovery",
+"primary_age": "5-7",
+"family": "pick",
+"dup": "WW-DUP-089",
+"objective": "Identify which sense is being used in different situations"
+},
+{
+"id": "WW-496",
+"name": "Care Fun",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "7-8",
+"family": "pick",
+"dup": null,
+"objective": "Make considerate choices that affect others"
+},
+{
+"id": "WW-497",
+"name": "Think Helper 168",
+"category": "A. Cognitive & Logical Thinking",
+"primary_age": "3-5",
+"family": "pick",
+"dup": null,
+"objective": "Match items that go together or share a relationship"
+},
+{
+"id": "WW-498",
+"name": "Best Story",
+"category": "H. Critical Thinking & Decision-Making",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-055",
+"objective": "Compare two or more options and choose the better one"
+},
+{
+"id": "WW-499",
+"name": "Imagine Land",
+"category": "E. Creativity & Imagination",
+"primary_age": "3-5",
+"family": "create",
+"dup": "WW-DUP-005",
+"objective": "Build a structure or design by placing components"
+},
+{
+"id": "WW-500",
+"name": "Feel Game",
+"category": "I. Emotional Intelligence & Social Learning",
+"primary_age": "5-6",
+"family": "pick",
+"dup": "WW-DUP-003",
+"objective": "Practise fair sharing and turn-taking"
+}
+]

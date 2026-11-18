@@ -1,0 +1,2102 @@
+[
+ {
+  "id": "think-001",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which one can't fly?",
+  "say": "Look at these. Bird, butterfly, elephant. Which one can NOT fly?",
+  "big": "",
+  "choices": [
+   "🦋",
+   "🐘",
+   "🐦"
+  ],
+  "answer": 1,
+  "why": "An elephant is too heavy to fly; birds and butterflies have wings."
+ },
+ {
+  "id": "think-002",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which one lives in water?",
+  "say": "Cow, fish, hen. Which one lives in the water?",
+  "big": "",
+  "choices": [
+   "🐓",
+   "🐄",
+   "🐟"
+  ],
+  "answer": 2,
+  "why": "A fish has fins and gills, so it lives in water."
+ },
+ {
+  "id": "think-003",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one is not a fruit?",
+  "say": "Mango, banana, carrot. Two are fruits. Which one is NOT a fruit?",
+  "big": "",
+  "choices": [
+   "🥭",
+   "🍌",
+   "🥕"
+  ],
+  "answer": 2,
+  "why": "A carrot is a vegetable; it grows under the ground."
+ },
+ {
+  "id": "think-004",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which one has wheels?",
+  "say": "Bus, boat, horse. Which one rolls on wheels?",
+  "big": "",
+  "choices": [
+   "⛵",
+   "🐎",
+   "🚌"
+  ],
+  "answer": 2,
+  "why": "A bus has wheels; a boat floats and a horse has legs."
+ },
+ {
+  "id": "think-005",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one doesn't belong in a kitchen?",
+  "say": "Pan, spoon, bed. Which one does NOT belong in the kitchen?",
+  "big": "",
+  "choices": [
+   "🛏️",
+   "🍳",
+   "🥄"
+  ],
+  "answer": 0,
+  "why": "A bed belongs in the bedroom; we cook with pans and spoons."
+ },
+ {
+  "id": "think-006",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one is not an animal?",
+  "say": "Monkey, tree, squirrel. Which one is NOT an animal?",
+  "big": "",
+  "choices": [
+   "🐒",
+   "🌳",
+   "🐿️"
+  ],
+  "answer": 1,
+  "why": "A tree is a plant; monkeys and squirrels are animals."
+ },
+ {
+  "id": "think-007",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which one goes on our feet?",
+  "say": "Socks, cap, gloves. Which one do we wear on our feet?",
+  "big": "",
+  "choices": [
+   "🧢",
+   "🧤",
+   "🧦"
+  ],
+  "answer": 2,
+  "why": "Socks go on feet; a cap goes on the head and gloves on hands."
+ },
+ {
+  "id": "think-008",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "Which one can't swim?",
+  "say": "Duck, fish, cat. Which one does not like to swim at all?",
+  "big": "",
+  "choices": [
+   "🐈",
+   "🦆",
+   "🐟"
+  ],
+  "answer": 0,
+  "why": "Most cats stay away from water; ducks and fish are great swimmers."
+ },
+ {
+  "id": "think-009",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one is not a vehicle?",
+  "say": "Car, bicycle, tree. Which one can NOT take you somewhere?",
+  "big": "",
+  "choices": [
+   "🚗",
+   "🚲",
+   "🌳"
+  ],
+  "answer": 2,
+  "why": "A tree stays in one place; cars and bicycles carry us."
+ },
+ {
+  "id": "think-010",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "These go together. Which one too?",
+  "say": "Apple, strawberry, cherry. What is the same about them? Which one belongs with them?",
+  "big": "🍎 🍓 🍒",
+  "choices": [
+   "🥦",
+   "🍌",
+   "🌹"
+  ],
+  "answer": 2,
+  "why": "They are all red, and the rose is red too!"
+ },
+ {
+  "id": "think-011",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one joins this group?",
+  "say": "Car, bus, bicycle. They all go on the road. Which one also goes on the road?",
+  "big": "🚗 🚌 🚲",
+  "choices": [
+   "✈️",
+   "🚚",
+   "⛵"
+  ],
+  "answer": 1,
+  "why": "A truck drives on the road; a boat sails and a plane flies."
+ },
+ {
+  "id": "think-012",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one joins the sea friends?",
+  "say": "Fish, octopus, dolphin. They all live in the sea. Who else lives there?",
+  "big": "🐟 🐙 🐬",
+  "choices": [
+   "🦀",
+   "🐄",
+   "🐓"
+  ],
+  "answer": 0,
+  "why": "A crab lives in the sea too."
+ },
+ {
+  "id": "think-013",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one belongs in the sky?",
+  "say": "Sun, star, moon. Where do we see them? Which one also belongs up there?",
+  "big": "☀️ ⭐ 🌙",
+  "choices": [
+   "🐟",
+   "🚗",
+   "☁️"
+  ],
+  "answer": 2,
+  "why": "Clouds are up in the sky with the sun, moon and stars."
+ },
+ {
+  "id": "think-014",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one is also yellow?",
+  "say": "Banana, corn, lemon. What colour are they all? Pick one more of that colour.",
+  "big": "🍌 🌽 🍋",
+  "choices": [
+   "🍇",
+   "🌻",
+   "🍅"
+  ],
+  "answer": 1,
+  "why": "A sunflower is yellow, just like the banana, corn and lemon."
+ },
+ {
+  "id": "think-015",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one is also for sport?",
+  "say": "Football, cricket bat, basketball. We play games with them. Which one too?",
+  "big": "⚽ 🏏 🏀",
+  "choices": [
+   "🎾",
+   "🍞",
+   "🛏️"
+  ],
+  "answer": 0,
+  "why": "A tennis ball is for playing a sport too."
+ },
+ {
+  "id": "think-016",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "What is the secret rule?",
+  "say": "Cow, goat, sheep. They all live on a farm. Which one also lives on a farm?",
+  "big": "🐄 🐐 🐑",
+  "choices": [
+   "🐬",
+   "🦋",
+   "🐖"
+  ],
+  "answer": 2,
+  "why": "A pig lives on a farm too; a dolphin lives in the sea."
+ },
+ {
+  "id": "think-017",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "What is the opposite of big?",
+  "say": "An elephant is big. Which animal is SMALL?",
+  "big": "🐘",
+  "choices": [
+   "🐳",
+   "🐜",
+   "🦒"
+  ],
+  "answer": 1,
+  "why": "An ant is tiny, the opposite of a big elephant."
+ },
+ {
+  "id": "think-018",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "What is the opposite of day?",
+  "say": "The sun shines in the day. What do we see at NIGHT?",
+  "big": "☀️",
+  "choices": [
+   "🌙",
+   "🌈",
+   "⛅"
+  ],
+  "answer": 0,
+  "why": "Night is the opposite of day; the moon comes out at night."
+ },
+ {
+  "id": "think-019",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "What is the opposite of happy?",
+  "say": "This face is happy. Which face is the opposite?",
+  "big": "😀",
+  "choices": [
+   "😄",
+   "😊",
+   "😢"
+  ],
+  "answer": 2,
+  "why": "Sad is the opposite of happy."
+ },
+ {
+  "id": "think-020",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "What is the opposite of hot?",
+  "say": "Fire is very hot. Which one is very COLD?",
+  "big": "🔥",
+  "choices": [
+   "🌶️",
+   "❄️",
+   "☕"
+  ],
+  "answer": 1,
+  "why": "Snow is cold, the opposite of hot fire."
+ },
+ {
+  "id": "think-021",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "What is the opposite of up?",
+  "say": "This arrow points up. Which arrow points the opposite way?",
+  "big": "⬆️",
+  "choices": [
+   "⬇️",
+   "➡️",
+   "⬆️"
+  ],
+  "answer": 0,
+  "why": "Down is the opposite of up."
+ },
+ {
+  "id": "think-022",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "What is the opposite of open?",
+  "say": "This lock is open. Which one is the opposite?",
+  "big": "🔓",
+  "choices": [
+   "🔑",
+   "🚪",
+   "🔒"
+  ],
+  "answer": 2,
+  "why": "A closed lock is the opposite of an open lock."
+ },
+ {
+  "id": "think-023",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "What is the opposite of fast?",
+  "say": "An aeroplane is very fast. Which one is SLOW?",
+  "big": "✈️",
+  "choices": [
+   "🐆",
+   "🐢",
+   "🚀"
+  ],
+  "answer": 1,
+  "why": "A tortoise walks slowly, the opposite of fast."
+ },
+ {
+  "id": "think-024",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "What comes out of the egg?",
+  "say": "A hen sat on this egg. Crack! What comes out?",
+  "big": "🥚",
+  "choices": [
+   "🐣",
+   "🐄",
+   "🐟"
+  ],
+  "answer": 0,
+  "why": "A baby chick hatches from a hen's egg."
+ },
+ {
+  "id": "think-025",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "What happens to ice cream in sun?",
+  "say": "The ice cream sits in the hot sun for a long time. What happens to it?",
+  "big": "🍦 ☀️",
+  "choices": [
+   "⛄",
+   "🍦",
+   "💧"
+  ],
+  "answer": 2,
+  "why": "The sun's heat melts ice cream into a drippy puddle."
+ },
+ {
+  "id": "think-026",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "We forgot to water it. What happens?",
+  "say": "We forgot to water this flower for many days. What will it look like?",
+  "big": "🌻",
+  "choices": [
+   "🍎",
+   "🥀",
+   "🌳"
+  ],
+  "answer": 1,
+  "why": "Plants droop and dry up without water."
+ },
+ {
+  "id": "think-027",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Dark clouds! What should we carry?",
+  "say": "Big dark clouds are in the sky. What should we take outside?",
+  "big": "☁️ ☁️",
+  "choices": [
+   "☂️",
+   "🕶️",
+   "🏖️"
+  ],
+  "answer": 0,
+  "why": "Dark clouds often bring rain, so an umbrella keeps us dry."
+ },
+ {
+  "id": "think-028",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "What will the caterpillar become?",
+  "say": "This little caterpillar eats and eats, then sleeps in a cocoon. What does it become?",
+  "big": "🐛",
+  "choices": [
+   "🐦",
+   "🐝",
+   "🦋"
+  ],
+  "answer": 2,
+  "why": "A caterpillar changes into a butterfly."
+ },
+ {
+  "id": "think-029",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "The ball falls. Which way?",
+  "say": "You let go of a ball up high. Which way does it go?",
+  "big": "⚽",
+  "choices": [
+   "➡️",
+   "⬇️",
+   "⬆️"
+  ],
+  "answer": 1,
+  "why": "Things fall down to the ground; that pull is called gravity."
+ },
+ {
+  "id": "think-030",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Why is the umbrella open?",
+  "say": "Someone opened an umbrella. Why do you think they did that?",
+  "big": "☂️",
+  "choices": [
+   "🌧️",
+   "🌙",
+   "🍕"
+  ],
+  "answer": 0,
+  "why": "We open an umbrella when it rains."
+ },
+ {
+  "id": "think-031",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "What will the mango seed grow into?",
+  "say": "We plant a mango seed in the soil and water it for a long, long time. What grows?",
+  "big": "🥭 🌱",
+  "choices": [
+   "🌵",
+   "🌽",
+   "🌳"
+  ],
+  "answer": 2,
+  "why": "A mango seed grows into a big mango tree."
+ },
+ {
+  "id": "think-032",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "The glass falls. What happens?",
+  "say": "Oops! A glass falls on a hard floor. What might happen?",
+  "big": "🥛 ⬇️",
+  "choices": [
+   "🌸",
+   "💥",
+   "🎈"
+  ],
+  "answer": 1,
+  "why": "Glass can break when it falls, so we hold it with two hands."
+ },
+ {
+  "id": "think-033",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "The dog is hungry. What does it want?",
+  "say": "What if the dog is very hungry? What would it want?",
+  "big": "🐶",
+  "choices": [
+   "🦴",
+   "🧦",
+   "📚"
+  ],
+  "answer": 0,
+  "why": "A hungry dog wants food, like a bone."
+ },
+ {
+  "id": "think-034",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "The car has no petrol. Now what?",
+  "say": "What if the car has no petrol? Where should it go?",
+  "big": "🚗",
+  "choices": [
+   "🍔",
+   "🛏️",
+   "⛽"
+  ],
+  "answer": 2,
+  "why": "A car needs petrol from the petrol pump to move."
+ },
+ {
+  "id": "think-035",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "It's very cold. What do we wear?",
+  "say": "What if it is very, very cold outside? What should we wear?",
+  "big": "❄️",
+  "choices": [
+   "🏖️",
+   "🧥",
+   "🕶️"
+  ],
+  "answer": 1,
+  "why": "A warm jacket keeps our body warm."
+ },
+ {
+  "id": "think-036",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "It's night time. What do we do?",
+  "say": "The moon is out and it is late at night. What should we do?",
+  "big": "🌙",
+  "choices": [
+   "🛌",
+   "🏏",
+   "🏫"
+  ],
+  "answer": 0,
+  "why": "Night is for sleeping so our body can rest and grow."
+ },
+ {
+  "id": "think-037",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "What if there was no water?",
+  "say": "What if there was no water at all? Who would be in trouble?",
+  "big": "💧",
+  "choices": [
+   "⭐",
+   "🚗",
+   "🌻"
+  ],
+  "answer": 2,
+  "why": "Plants, animals and people all need water to live."
+ },
+ {
+  "id": "think-038",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which jar has more sweets?",
+  "say": "Look carefully. Which one has the MOST sweets?",
+  "big": "",
+  "choices": [
+   "🍬🍬",
+   "🍬",
+   "🍬🍬🍬"
+  ],
+  "answer": 2,
+  "why": "Three sweets is more than one or two."
+ },
+ {
+  "id": "think-039",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which one is heaviest?",
+  "say": "Elephant, mouse, bird. Which one is the heaviest?",
+  "big": "",
+  "choices": [
+   "🐘",
+   "🐁",
+   "🐦"
+  ],
+  "answer": 0,
+  "why": "An elephant is the heaviest land animal of all."
+ },
+ {
+  "id": "think-040",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which one is tallest?",
+  "say": "Giraffe, dog, cat. Which animal is the tallest?",
+  "big": "",
+  "choices": [
+   "🐕",
+   "🐈",
+   "🦒"
+  ],
+  "answer": 2,
+  "why": "A giraffe's long neck makes it very tall."
+ },
+ {
+  "id": "think-041",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which one holds the most water?",
+  "say": "Bathtub, glass, spoon. Which one holds the MOST water?",
+  "big": "",
+  "choices": [
+   "🥄",
+   "🛁",
+   "🥛"
+  ],
+  "answer": 1,
+  "why": "A bathtub is much bigger, so it holds the most water."
+ },
+ {
+  "id": "think-042",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which one is fastest?",
+  "say": "Aeroplane, bicycle, tortoise. Which one is the fastest?",
+  "big": "",
+  "choices": [
+   "✈️",
+   "🚲",
+   "🐢"
+  ],
+  "answer": 0,
+  "why": "An aeroplane zooms through the sky faster than all of them."
+ },
+ {
+  "id": "think-043",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which fruit is biggest?",
+  "say": "Watermelon, grapes, cherry. Which fruit is the biggest?",
+  "big": "",
+  "choices": [
+   "🍇",
+   "🍒",
+   "🍉"
+  ],
+  "answer": 2,
+  "why": "A watermelon is much bigger than grapes or cherries."
+ },
+ {
+  "id": "think-044",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "Which one is longest?",
+  "say": "Snake, caterpillar, ant. Which one is the longest?",
+  "big": "",
+  "choices": [
+   "🐜",
+   "🐍",
+   "🐛"
+  ],
+  "answer": 1,
+  "why": "A snake is much longer than a caterpillar or an ant."
+ },
+ {
+  "id": "think-045",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Which shape fits the round hole?",
+  "say": "Here is a round hole. Which shape would fit inside it?",
+  "big": "⭕",
+  "choices": [
+   "🔺",
+   "🔵",
+   "⬛"
+  ],
+  "answer": 1,
+  "why": "A circle fits a round hole; corners would get stuck."
+ },
+ {
+  "id": "think-046",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Which arrow points up?",
+  "say": "Which arrow points UP to the sky?",
+  "big": "",
+  "choices": [
+   "⬆️",
+   "➡️",
+   "⬅️"
+  ],
+  "answer": 0,
+  "why": "This arrow points up, towards the sky."
+ },
+ {
+  "id": "think-047",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "Put these together. What shape?",
+  "say": "Put one triangle on top of the other, flat sides touching. What shape do they make?",
+  "big": "🔺 🔻",
+  "choices": [
+   "⭐",
+   "🔷",
+   "⚪"
+  ],
+  "answer": 1,
+  "why": "Two triangles joined at their flat sides make a diamond."
+ },
+ {
+  "id": "think-048",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "What comes next?",
+  "say": "Apple, banana, apple, banana, apple. What comes next?",
+  "big": "🍎 🍌 🍎 🍌 🍎",
+  "choices": [
+   "🍌",
+   "🍎",
+   "🍇"
+  ],
+  "answer": 0,
+  "why": "The pattern goes apple, banana, so banana comes next."
+ },
+ {
+  "id": "think-049",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "What comes next?",
+  "say": "Sun, moon, sun, moon, sun. What comes next?",
+  "big": "☀️ 🌙 ☀️ 🌙 ☀️",
+  "choices": [
+   "☀️",
+   "⭐",
+   "🌙"
+  ],
+  "answer": 2,
+  "why": "Day and night take turns, so the moon comes next."
+ },
+ {
+  "id": "think-050",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "What comes next?",
+  "say": "Star, star, moon. Star, star. What comes next?",
+  "big": "⭐ ⭐ 🌙 ⭐ ⭐",
+  "choices": [
+   "☀️",
+   "🌙",
+   "⭐"
+  ],
+  "answer": 1,
+  "why": "The pattern is star, star, moon, so the moon comes next."
+ },
+ {
+  "id": "think-051",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "What comes next?",
+  "say": "Dog, cat, cat. Dog, cat. What comes next?",
+  "big": "🐶 🐱 🐱 🐶 🐱",
+  "choices": [
+   "🐱",
+   "🐶",
+   "🐭"
+  ],
+  "answer": 0,
+  "why": "The pattern is dog, cat, cat, so another cat comes next."
+ },
+ {
+  "id": "think-052",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "What comes next?",
+  "say": "Red, blue, blue. Red, blue. Listen to the pattern. What comes next?",
+  "big": "🔴 🔵 🔵 🔴 🔵",
+  "choices": [
+   "🔴",
+   "⚪",
+   "🔵"
+  ],
+  "answer": 2,
+  "why": "The pattern is red, blue, blue, so blue comes next."
+ },
+ {
+  "id": "think-053",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Riddle: I have a trunk!",
+  "say": "I have a long trunk, but I am not a tree. Who am I?",
+  "big": "",
+  "choices": [
+   "🐒",
+   "🐘",
+   "🌳"
+  ],
+  "answer": 1,
+  "why": "An elephant's nose is called a trunk."
+ },
+ {
+  "id": "think-054",
+  "domain": "thinking",
+  "level": 1,
+  "prompt": "Riddle: I say moo!",
+  "say": "I say moo, and I give you milk. Who am I?",
+  "big": "",
+  "choices": [
+   "🐄",
+   "🐐",
+   "🐓"
+  ],
+  "answer": 0,
+  "why": "A cow says moo and gives us milk."
+ },
+ {
+  "id": "think-055",
+  "domain": "thinking",
+  "level": 2,
+  "prompt": "Riddle: I shine in the sky",
+  "say": "I am yellow, I am hot, and I shine up in the sky. What am I?",
+  "big": "",
+  "choices": [
+   "🍋",
+   "🌻",
+   "☀️"
+  ],
+  "answer": 2,
+  "why": "The sun is hot and shines in the sky."
+ },
+ {
+  "id": "think-056",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "Riddle: I have hands, no fingers",
+  "say": "I have two hands but no fingers, and I tell you the time. What am I?",
+  "big": "",
+  "choices": [
+   "🧒",
+   "⏰",
+   "🧤"
+  ],
+  "answer": 1,
+  "why": "A clock has hands that point to the time."
+ },
+ {
+  "id": "think-057",
+  "domain": "thinking",
+  "level": 3,
+  "prompt": "Riddle: up when rain comes down",
+  "say": "I go UP when the rain comes DOWN. What am I?",
+  "big": "",
+  "choices": [
+   "☂️",
+   "🎈",
+   "🚀"
+  ],
+  "answer": 0,
+  "why": "We put an umbrella up when the rain comes down."
+ },
+ {
+  "id": "think-058",
+  "domain": "numbers",
+  "level": 1,
+  "prompt": "How many mangoes?",
+  "say": "Let's count the mangoes together. How many?",
+  "big": "🥭🥭🥭",
+  "choices": [
+   "3",
+   "4",
+   "2"
+  ],
+  "answer": 0,
+  "why": "One, two, three. Three mangoes!"
+ },
+ {
+  "id": "think-059",
+  "domain": "numbers",
+  "level": 1,
+  "prompt": "How many stars?",
+  "say": "Count the stars. Touch each one with your eyes.",
+  "big": "⭐⭐⭐⭐⭐",
+  "choices": [
+   "6",
+   "4",
+   "5"
+  ],
+  "answer": 2,
+  "why": "One, two, three, four, five. Five stars!"
+ },
+ {
+  "id": "think-060",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "Count the Diwali lamps",
+  "say": "It's Diwali! Count the lamps. How many?",
+  "big": "🕯️🕯️🕯️🕯️",
+  "choices": [
+   "3",
+   "4",
+   "5"
+  ],
+  "answer": 1,
+  "why": "One, two, three, four. Four lamps!"
+ },
+ {
+  "id": "think-061",
+  "domain": "numbers",
+  "level": 1,
+  "prompt": "Which plate has fewer?",
+  "say": "Which one has the FEWEST cookies?",
+  "big": "",
+  "choices": [
+   "🍪",
+   "🍪🍪",
+   "🍪🍪🍪"
+  ],
+  "answer": 0,
+  "why": "One cookie is fewer than two or three."
+ },
+ {
+  "id": "think-062",
+  "domain": "numbers",
+  "level": 1,
+  "prompt": "Two bananas and one more?",
+  "say": "Two bananas, and one more banana. How many now?",
+  "big": "🍌🍌 ➕ 🍌",
+  "choices": [
+   "4",
+   "2",
+   "3"
+  ],
+  "answer": 2,
+  "why": "Two and one more makes three."
+ },
+ {
+  "id": "think-063",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "One bird flies away. How many?",
+  "say": "Three birds sit on a branch. One flies away. How many are left?",
+  "big": "🐦🐦🐦",
+  "choices": [
+   "2",
+   "3",
+   "4"
+  ],
+  "answer": 0,
+  "why": "Three take away one leaves two."
+ },
+ {
+  "id": "think-064",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "Four runs and one more?",
+  "say": "In cricket you hit a four! Then one more run. How many runs?",
+  "big": "🏏 4 ➕ 1",
+  "choices": [
+   "4",
+   "6",
+   "5"
+  ],
+  "answer": 2,
+  "why": "Four and one more makes five runs."
+ },
+ {
+  "id": "think-065",
+  "domain": "numbers",
+  "level": 3,
+  "prompt": "Count by tens. What's next?",
+  "say": "Let's count by tens: ten, twenty, thirty... What comes next?",
+  "big": "10 20 30 ?",
+  "choices": [
+   "50",
+   "40",
+   "31"
+  ],
+  "answer": 1,
+  "why": "Counting by tens: 10, 20, 30, 40!"
+ },
+ {
+  "id": "think-066",
+  "domain": "numbers",
+  "level": 3,
+  "prompt": "Which ten is missing?",
+  "say": "Ten, twenty, something, forty. Which number is missing?",
+  "big": "10 20 ? 40",
+  "choices": [
+   "30",
+   "25",
+   "50"
+  ],
+  "answer": 0,
+  "why": "10, 20, 30, 40. Thirty was missing."
+ },
+ {
+  "id": "think-067",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "What comes after 19?",
+  "say": "Eighteen, nineteen... what comes next?",
+  "big": "18 19 ?",
+  "choices": [
+   "17",
+   "91",
+   "20"
+  ],
+  "answer": 2,
+  "why": "After nineteen comes twenty."
+ },
+ {
+  "id": "think-068",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "Which number is biggest?",
+  "say": "Seven, three, five. Which number is the biggest?",
+  "big": "",
+  "choices": [
+   "5",
+   "7",
+   "3"
+  ],
+  "answer": 1,
+  "why": "Seven is more than five and three."
+ },
+ {
+  "id": "think-069",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "One less than ten?",
+  "say": "What number is one LESS than ten?",
+  "big": "10",
+  "choices": [
+   "9",
+   "11",
+   "8"
+  ],
+  "answer": 0,
+  "why": "Count back from ten: nine is one less."
+ },
+ {
+  "id": "think-070",
+  "domain": "numbers",
+  "level": 1,
+  "prompt": "How many legs does a dog have?",
+  "say": "How many legs does a dog walk on?",
+  "big": "🐶",
+  "choices": [
+   "2",
+   "6",
+   "4"
+  ],
+  "answer": 2,
+  "why": "A dog has four legs."
+ },
+ {
+  "id": "think-071",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "How many wheels on a bicycle?",
+  "say": "An auto-rickshaw has three wheels. How many wheels does a bicycle have?",
+  "big": "🚲",
+  "choices": [
+   "4",
+   "2",
+   "3"
+  ],
+  "answer": 1,
+  "why": "A bicycle has two wheels; 'bi' means two."
+ },
+ {
+  "id": "think-072",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "Which hand shows five?",
+  "say": "Which hand shows FIVE fingers?",
+  "big": "",
+  "choices": [
+   "✋",
+   "✌️",
+   "☝️"
+  ],
+  "answer": 0,
+  "why": "An open hand shows five fingers."
+ },
+ {
+  "id": "think-073",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "Which group has the same?",
+  "say": "Three fish. Which group has the SAME number?",
+  "big": "🐟🐟🐟",
+  "choices": [
+   "🍎🍎",
+   "🍎",
+   "🍎🍎🍎"
+  ],
+  "answer": 2,
+  "why": "Three apples and three fish: the same number!"
+ },
+ {
+  "id": "think-074",
+  "domain": "numbers",
+  "level": 2,
+  "prompt": "How many on the empty plate?",
+  "say": "Look at this empty plate. How many sweets are on it?",
+  "big": "🍽️",
+  "choices": [
+   "2",
+   "0",
+   "1"
+  ],
+  "answer": 1,
+  "why": "Nothing on the plate means zero."
+ },
+ {
+  "id": "think-075",
+  "domain": "numbers",
+  "level": 3,
+  "prompt": "Share four sweets with two friends",
+  "say": "Four sweets, shared fairly between two friends. How many does each friend get?",
+  "big": "🍬🍬🍬🍬",
+  "choices": [
+   "2",
+   "4",
+   "1"
+  ],
+  "answer": 0,
+  "why": "Two for you and two for me: that's fair sharing."
+ },
+ {
+  "id": "think-076",
+  "domain": "letters",
+  "level": 1,
+  "prompt": "Which starts like ball?",
+  "say": "Ball starts with /b/. Bee, fish, apple. Which one starts like ball?",
+  "big": "⚽",
+  "choices": [
+   "🐟",
+   "🍎",
+   "🐝"
+  ],
+  "answer": 2,
+  "why": "Bee and ball both start with /b/."
+ },
+ {
+  "id": "think-077",
+  "domain": "letters",
+  "level": 1,
+  "prompt": "Which starts like mango?",
+  "say": "Mango starts with /m/. Monkey, dog, cat. Which starts like mango?",
+  "big": "🥭",
+  "choices": [
+   "🐱",
+   "🐒",
+   "🐶"
+  ],
+  "answer": 1,
+  "why": "Monkey and mango both start with /m/."
+ },
+ {
+  "id": "think-078",
+  "domain": "letters",
+  "level": 1,
+  "prompt": "Which starts like sun?",
+  "say": "Sun starts with /s/. Snake, cow, moon. Which starts like sun?",
+  "big": "☀️",
+  "choices": [
+   "🐍",
+   "🐄",
+   "🌙"
+  ],
+  "answer": 0,
+  "why": "Snake and sun both start with /s/."
+ },
+ {
+  "id": "think-079",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Which starts like cat?",
+  "say": "Cat starts with /k/. Car, dog, fish. Which starts like cat?",
+  "big": "🐱",
+  "choices": [
+   "🐶",
+   "🐟",
+   "🚗"
+  ],
+  "answer": 2,
+  "why": "Car and cat both start with /k/."
+ },
+ {
+  "id": "think-080",
+  "domain": "letters",
+  "level": 1,
+  "prompt": "Which starts like dog?",
+  "say": "Dog starts with /d/. Duck, cat, banana. Which starts like dog?",
+  "big": "🐶",
+  "choices": [
+   "🍌",
+   "🦆",
+   "🐈"
+  ],
+  "answer": 1,
+  "why": "Duck and dog both start with /d/."
+ },
+ {
+  "id": "think-081",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Which starts like fish?",
+  "say": "Fish starts with /f/. Frog, bee, egg. Which starts like fish?",
+  "big": "🐟",
+  "choices": [
+   "🐸",
+   "🐝",
+   "🥚"
+  ],
+  "answer": 0,
+  "why": "Frog and fish both start with /f/."
+ },
+ {
+  "id": "think-082",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Which starts like pen?",
+  "say": "Pen starts with /p/. Pig, cow, apple. Which starts like pen?",
+  "big": "🖊️",
+  "choices": [
+   "🐄",
+   "🍎",
+   "🐖"
+  ],
+  "answer": 2,
+  "why": "Pig and pen both start with /p/."
+ },
+ {
+  "id": "think-083",
+  "domain": "letters",
+  "level": 1,
+  "prompt": "Which one starts with A?",
+  "say": "A says /a/. Apple, banana, mango. Which starts with A?",
+  "big": "A",
+  "choices": [
+   "🥭",
+   "🍎",
+   "🍌"
+  ],
+  "answer": 1,
+  "why": "Apple starts with A, /a/ /a/ apple."
+ },
+ {
+  "id": "think-084",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Which one starts with T?",
+  "say": "T says /t/. Tiger, dog, elephant. Which starts with T?",
+  "big": "T",
+  "choices": [
+   "🐯",
+   "🐶",
+   "🐘"
+  ],
+  "answer": 0,
+  "why": "Tiger starts with T, /t/ /t/ tiger."
+ },
+ {
+  "id": "think-085",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Egg starts with which letter?",
+  "say": "Egg. /e/ /e/ egg. Which letter does egg start with?",
+  "big": "🥚",
+  "choices": [
+   "o",
+   "a",
+   "e"
+  ],
+  "answer": 2,
+  "why": "Egg starts with the letter e."
+ },
+ {
+  "id": "think-086",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Which rhymes with cat?",
+  "say": "Cat... hat, dog, sun. Which one rhymes with cat?",
+  "big": "🐱",
+  "choices": [
+   "☀️",
+   "🎩",
+   "🐶"
+  ],
+  "answer": 1,
+  "why": "Cat and hat rhyme: they both end in -at."
+ },
+ {
+  "id": "think-087",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Which rhymes with bee?",
+  "say": "Bee... tree, fish, car. Which one rhymes with bee?",
+  "big": "🐝",
+  "choices": [
+   "🌳",
+   "🐟",
+   "🚗"
+  ],
+  "answer": 0,
+  "why": "Bee and tree rhyme: they both end in -ee."
+ },
+ {
+  "id": "think-088",
+  "domain": "letters",
+  "level": 2,
+  "prompt": "Which rhymes with star?",
+  "say": "Star... car, moon, fish. Which one rhymes with star?",
+  "big": "⭐",
+  "choices": [
+   "🌙",
+   "🐟",
+   "🚗"
+  ],
+  "answer": 2,
+  "why": "Star and car rhyme: they both end in -ar."
+ },
+ {
+  "id": "think-089",
+  "domain": "letters",
+  "level": 3,
+  "prompt": "Which rhymes with mouse?",
+  "say": "Mouse... house, cow, banana. Which one rhymes with mouse?",
+  "big": "🐭",
+  "choices": [
+   "🍌",
+   "🏠",
+   "🐄"
+  ],
+  "answer": 1,
+  "why": "Mouse and house rhyme: they both end in -ouse."
+ },
+ {
+  "id": "think-090",
+  "domain": "letters",
+  "level": 3,
+  "prompt": "Which ends like dog?",
+  "say": "Dog ends with /g/. Frog, cat, sun. Which one ends like dog?",
+  "big": "🐶",
+  "choices": [
+   "🐸",
+   "🐱",
+   "☀️"
+  ],
+  "answer": 0,
+  "why": "Frog and dog both end with /g/."
+ },
+ {
+  "id": "think-091",
+  "domain": "science",
+  "level": 1,
+  "prompt": "What does a seed need to grow?",
+  "say": "A tiny seed wants to grow big. What does it need?",
+  "big": "🌱",
+  "choices": [
+   "🍬",
+   "📺",
+   "💧"
+  ],
+  "answer": 2,
+  "why": "Seeds need water, sunlight and soil to grow."
+ },
+ {
+  "id": "think-092",
+  "domain": "science",
+  "level": 2,
+  "prompt": "Which one will float?",
+  "say": "We drop these in a bucket of water. Leaf, hammer, key. Which one floats?",
+  "big": "",
+  "choices": [
+   "🔑",
+   "🍃",
+   "🔨"
+  ],
+  "answer": 1,
+  "why": "A leaf is light, so it floats; metal things sink."
+ },
+ {
+  "id": "think-093",
+  "domain": "science",
+  "level": 1,
+  "prompt": "Where does rain come from?",
+  "say": "Pitter patter! Where does rain fall from?",
+  "big": "🌧️",
+  "choices": [
+   "☁️",
+   "🌳",
+   "🏠"
+  ],
+  "answer": 0,
+  "why": "Rain falls from clouds full of tiny water drops."
+ },
+ {
+  "id": "think-094",
+  "domain": "science",
+  "level": 1,
+  "prompt": "What do bees make?",
+  "say": "Bees buzz from flower to flower. What yummy thing do they make?",
+  "big": "🐝",
+  "choices": [
+   "🥛",
+   "🍞",
+   "🍯"
+  ],
+  "answer": 2,
+  "why": "Bees make honey from flower nectar."
+ },
+ {
+  "id": "think-095",
+  "domain": "science",
+  "level": 2,
+  "prompt": "Which animal lays eggs?",
+  "say": "Hen, cow, dog. Which one lays eggs?",
+  "big": "",
+  "choices": [
+   "🐕",
+   "🐔",
+   "🐄"
+  ],
+  "answer": 1,
+  "why": "Hens lay eggs; cows and dogs have babies that drink milk."
+ },
+ {
+  "id": "think-096",
+  "domain": "science",
+  "level": 2,
+  "prompt": "What will melt in the sun?",
+  "say": "Snowman, tree, car. Which one melts in the hot sun?",
+  "big": "☀️",
+  "choices": [
+   "⛄",
+   "🌳",
+   "🚗"
+  ],
+  "answer": 0,
+  "why": "Snow is frozen water; heat turns it back to water."
+ },
+ {
+  "id": "think-097",
+  "domain": "science",
+  "level": 1,
+  "prompt": "Whose baby is this chick?",
+  "say": "A little chick says cheep cheep. Who is its mother?",
+  "big": "🐥",
+  "choices": [
+   "🐶",
+   "🐟",
+   "🐔"
+  ],
+  "answer": 2,
+  "why": "A chick is a baby hen."
+ },
+ {
+  "id": "think-098",
+  "domain": "science",
+  "level": 1,
+  "prompt": "What helps you smell a flower?",
+  "say": "Sniff sniff! What helps you smell this flower?",
+  "big": "🌸",
+  "choices": [
+   "✋",
+   "👃",
+   "👂"
+  ],
+  "answer": 1,
+  "why": "We smell with our nose."
+ },
+ {
+  "id": "think-099",
+  "domain": "science",
+  "level": 1,
+  "prompt": "What helps you hear music?",
+  "say": "La la la! What helps you hear music?",
+  "big": "🎵",
+  "choices": [
+   "👂",
+   "👀",
+   "👃"
+  ],
+  "answer": 0,
+  "why": "We hear with our ears."
+ },
+ {
+  "id": "think-100",
+  "domain": "science",
+  "level": 2,
+  "prompt": "What grows on a coconut tree?",
+  "say": "Look at this tall palm tree near the beach. What grows on it?",
+  "big": "🌴",
+  "choices": [
+   "🍎",
+   "🍇",
+   "🥥"
+  ],
+  "answer": 2,
+  "why": "Coconuts grow high up on coconut palm trees."
+ },
+ {
+  "id": "think-101",
+  "domain": "science",
+  "level": 3,
+  "prompt": "Which one will a magnet pull?",
+  "say": "A magnet pulls some metal things. Paper clip, banana, teddy. Which one?",
+  "big": "🧲",
+  "choices": [
+   "🧸",
+   "📎",
+   "🍌"
+  ],
+  "answer": 1,
+  "why": "A magnet pulls things made of iron, like a paper clip."
+ },
+ {
+  "id": "think-102",
+  "domain": "science",
+  "level": 2,
+  "prompt": "Which is India's national bird?",
+  "say": "India's national bird has beautiful long feathers. Which one is it?",
+  "big": "",
+  "choices": [
+   "🦚",
+   "🦆",
+   "🐓"
+  ],
+  "answer": 0,
+  "why": "The peacock is India's national bird."
+ },
+ {
+  "id": "think-103",
+  "domain": "science",
+  "level": 3,
+  "prompt": "Which one is alive?",
+  "say": "Tree, car, house. Which one is alive and grows?",
+  "big": "",
+  "choices": [
+   "🚗",
+   "🏠",
+   "🌳"
+  ],
+  "answer": 2,
+  "why": "A tree is alive: it drinks water, grows and makes seeds."
+ },
+ {
+  "id": "think-104",
+  "domain": "science",
+  "level": 2,
+  "prompt": "Which came first?",
+  "say": "Big tree, tiny sprout, small plant. Which one came FIRST?",
+  "big": "",
+  "choices": [
+   "🌿",
+   "🌳",
+   "🌱"
+  ],
+  "answer": 2,
+  "why": "Every tree starts as a tiny sprout from a seed."
+ },
+ {
+  "id": "think-105",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "Which is healthy for breakfast?",
+  "say": "Banana, lollipop, fizzy drink. Which one is healthy for breakfast?",
+  "big": "",
+  "choices": [
+   "🍌",
+   "🍭",
+   "🥤"
+  ],
+  "answer": 0,
+  "why": "Fruit gives our body energy and vitamins."
+ },
+ {
+  "id": "think-106",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "What do we use before eating?",
+  "say": "Before we eat, we wash our hands. What do we use?",
+  "big": "🍛",
+  "choices": [
+   "📱",
+   "🧸",
+   "🧼"
+  ],
+  "answer": 2,
+  "why": "Soap and water wash away germs before we eat."
+ },
+ {
+  "id": "think-107",
+  "domain": "safety",
+  "level": 2,
+  "prompt": "Which one is bad for teeth?",
+  "say": "Lollipop, carrot, milk. Which one can hurt our teeth if we eat too much?",
+  "big": "🦷",
+  "choices": [
+   "🥛",
+   "🍭",
+   "🥕"
+  ],
+  "answer": 1,
+  "why": "Sticky sweets stay on teeth, so we brush after eating them."
+ },
+ {
+  "id": "think-108",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "Which light says stop?",
+  "say": "At the traffic light, which colour says STOP?",
+  "big": "🚦",
+  "choices": [
+   "🔴",
+   "💚",
+   "💛"
+  ],
+  "answer": 0,
+  "why": "Red means stop; green means go."
+ },
+ {
+  "id": "think-109",
+  "domain": "safety",
+  "level": 2,
+  "prompt": "What do we wear on a bike?",
+  "say": "When we ride a bicycle, what do we wear on our head?",
+  "big": "🚲",
+  "choices": [
+   "🎩",
+   "👑",
+   "⛑️"
+  ],
+  "answer": 2,
+  "why": "A helmet keeps our head safe if we fall."
+ },
+ {
+  "id": "think-110",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "Which one is not safe to touch?",
+  "say": "Fire, teddy, book. Which one is NOT safe to touch?",
+  "big": "",
+  "choices": [
+   "📚",
+   "🔥",
+   "🧸"
+  ],
+  "answer": 1,
+  "why": "Fire is very hot and can burn; we stay away."
+ },
+ {
+  "id": "think-111",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "Which one is safe to play with?",
+  "say": "Ball, knife, plug socket. Which one is safe to play with?",
+  "big": "",
+  "choices": [
+   "⚽",
+   "🔪",
+   "🔌"
+  ],
+  "answer": 0,
+  "why": "A ball is safe; knives and plugs are only for grown-ups."
+ },
+ {
+  "id": "think-112",
+  "domain": "safety",
+  "level": 2,
+  "prompt": "Lost in a shop. Who do you ask?",
+  "say": "If you cannot find Amma or Appa in a shop, who can you ask for help?",
+  "big": "",
+  "choices": [
+   "🐕",
+   "🚗",
+   "👮"
+  ],
+  "answer": 2,
+  "why": "Stay where you are and ask a police officer, a shop worker or a mother with children."
+ },
+ {
+  "id": "think-113",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "Thirsty? Which drink is best?",
+  "say": "You are thirsty after playing. Which drink is best?",
+  "big": "",
+  "choices": [
+   "☕",
+   "💧",
+   "🥤"
+  ],
+  "answer": 1,
+  "why": "Water is the best drink for a thirsty body."
+ },
+ {
+  "id": "think-114",
+  "domain": "safety",
+  "level": 2,
+  "prompt": "Before crossing the road, we…?",
+  "say": "Before we cross the road with a grown-up, what do we do?",
+  "big": "🚗",
+  "choices": [
+   "👀",
+   "💤",
+   "🙈"
+  ],
+  "answer": 0,
+  "why": "We stop and look both ways for cars."
+ },
+ {
+  "id": "think-115",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "Which food helps you grow strong?",
+  "say": "Broccoli, doughnut, chips. Which one helps you grow strong?",
+  "big": "",
+  "choices": [
+   "🍩",
+   "🍟",
+   "🥦"
+  ],
+  "answer": 2,
+  "why": "Vegetables help our body grow strong."
+ },
+ {
+  "id": "think-116",
+  "domain": "safety",
+  "level": 2,
+  "prompt": "A stranger offers sweets. You…?",
+  "say": "Someone you do not know offers you sweets. What should you do?",
+  "big": "🍬",
+  "choices": [
+   "🚗",
+   "🙅",
+   "🍬"
+  ],
+  "answer": 1,
+  "why": "Say no, and go tell Amma, Appa or your teacher."
+ },
+ {
+  "id": "think-117",
+  "domain": "safety",
+  "level": 1,
+  "prompt": "What helps you sleep well?",
+  "say": "It's bedtime. What helps you sleep well?",
+  "big": "🌙",
+  "choices": [
+   "🛌",
+   "📱",
+   "🍭"
+  ],
+  "answer": 0,
+  "why": "A cosy bed, without screens or sweets, helps us sleep."
+ },
+ {
+  "id": "think-118",
+  "domain": "feelings",
+  "level": 1,
+  "prompt": "Which face is happy?",
+  "say": "Which face is HAPPY?",
+  "big": "",
+  "choices": [
+   "😢",
+   "😠",
+   "😀"
+  ],
+  "answer": 2,
+  "why": "A happy face has a big smile."
+ },
+ {
+  "id": "think-119",
+  "domain": "feelings",
+  "level": 1,
+  "prompt": "Which face is sleepy?",
+  "say": "Yawn! Which face is SLEEPY?",
+  "big": "",
+  "choices": [
+   "😠",
+   "😴",
+   "😄"
+  ],
+  "answer": 1,
+  "why": "A sleepy face has closed eyes, ready for bed."
+ },
+ {
+  "id": "think-120",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "Which face is surprised?",
+  "say": "Wow! Which face looks SURPRISED?",
+  "big": "",
+  "choices": [
+   "😮",
+   "😴",
+   "😊"
+  ],
+  "answer": 0,
+  "why": "A surprised face has big eyes and an open mouth."
+ },
+ {
+  "id": "think-121",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "How does the puppy feel?",
+  "say": "The little puppy is out in the rain, all wet and alone. How does the puppy feel?",
+  "big": "🐶 🌧️",
+  "choices": [
+   "😄",
+   "😎",
+   "😢"
+  ],
+  "answer": 2,
+  "why": "A cold, wet puppy feels sad; we can give it a dry towel."
+ },
+ {
+  "id": "think-122",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "Your friend fell. How do they feel?",
+  "say": "Your friend fell down and hurt their knee. How do they feel?",
+  "big": "🧒 🤕",
+  "choices": [
+   "😎",
+   "😢",
+   "😂"
+  ],
+  "answer": 1,
+  "why": "Falling hurts, so your friend may feel sad. We can help them up."
+ },
+ {
+  "id": "think-123",
+  "domain": "feelings",
+  "level": 1,
+  "prompt": "It's a birthday! How do they feel?",
+  "say": "It's your friend's birthday party! How does your friend feel?",
+  "big": "🎂 🎈",
+  "choices": [
+   "😄",
+   "😢",
+   "😠"
+  ],
+  "answer": 0,
+  "why": "Birthdays make us feel happy and excited."
+ },
+ {
+  "id": "think-124",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "Your friend is sad. What helps?",
+  "say": "Your friend is crying. What can you do to help?",
+  "big": "😢",
+  "choices": [
+   "😂",
+   "🏃",
+   "🤗"
+  ],
+  "answer": 2,
+  "why": "A kind hug or kind words help a sad friend feel better."
+ },
+ {
+  "id": "think-125",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "Feeling cross? What helps?",
+  "say": "When you feel angry, what can help your body calm down?",
+  "big": "😠",
+  "choices": [
+   "📺",
+   "🌬️",
+   "🍭"
+  ],
+  "answer": 1,
+  "why": "Slow, deep breaths help our body calm down."
+ },
+ {
+  "id": "think-126",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "Ajji gives you a mango. You say…?",
+  "say": "Ajji gives you a sweet mango. What do you say?",
+  "big": "👵 🥭",
+  "choices": [
+   "🙏",
+   "🙈",
+   "😴"
+  ],
+  "answer": 0,
+  "why": "We say thank you when someone is kind to us."
+ },
+ {
+  "id": "think-127",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "Grandma's bag is heavy. You…?",
+  "say": "Ajji's shopping bag is very heavy. What can you do?",
+  "big": "👵 👜",
+  "choices": [
+   "😴",
+   "📺",
+   "🤝"
+  ],
+  "answer": 2,
+  "why": "Helping someone carry a heavy bag is kind."
+ },
+ {
+  "id": "think-128",
+  "domain": "feelings",
+  "level": 1,
+  "prompt": "You shared your toy. Friend feels…?",
+  "say": "You shared your toy with your friend. How does your friend feel?",
+  "big": "🧸",
+  "choices": [
+   "😠",
+   "😄",
+   "😢"
+  ],
+  "answer": 1,
+  "why": "Sharing makes our friends feel happy."
+ },
+ {
+  "id": "think-129",
+  "domain": "feelings",
+  "level": 2,
+  "prompt": "The kitten is hungry. It wants…?",
+  "say": "The kitten is meowing. It is hungry. What does it want?",
+  "big": "🐱",
+  "choices": [
+   "🥛",
+   "⚽",
+   "📺"
+  ],
+  "answer": 0,
+  "why": "A hungry kitten wants food or milk; animals have feelings too."
+ },
+ {
+  "id": "think-130",
+  "domain": "feelings",
+  "level": 3,
+  "prompt": "Someone took your toy. You feel…?",
+  "say": "Someone took your toy without asking. How might you feel? There is no wrong answer.",
+  "big": "🧸",
+  "choices": [
+   "😢",
+   "😠",
+   "😮"
+  ],
+  "answer": -1,
+  "why": "It's okay to feel sad or cross; we use words to say how we feel."
+ },
+ {
+  "id": "think-131",
+  "domain": "imagination",
+  "level": 1,
+  "prompt": "If you could fly, where?",
+  "say": "If you could fly like a bird, where would you go? Pick any one!",
+  "big": "",
+  "choices": [
+   "🌙",
+   "🏔️",
+   "🌊"
+  ],
+  "answer": -1,
+  "why": "What a wonderful trip! Tell Amma or Appa what you'd see there."
+ },
+ {
+  "id": "think-132",
+  "domain": "imagination",
+  "level": 1,
+  "prompt": "Which pet would you choose?",
+  "say": "If you could have any pet, which one would you pick?",
+  "big": "",
+  "choices": [
+   "🐶",
+   "🐱",
+   "🐢"
+  ],
+  "answer": -1,
+  "why": "Great choice! Every pet needs love, food and water."
+ },
+ {
+  "id": "think-133",
+  "domain": "imagination",
+  "level": 1,
+  "prompt": "What would you build?",
+  "say": "If you had lots of blocks, what would you build?",
+  "big": "",
+  "choices": [
+   "🏠",
+   "🚀",
+   "🏰"
+  ],
+  "answer": -1,
+  "why": "Super builder! Maybe you can build it for real later."
+ },
+ {
+  "id": "think-134",
+  "domain": "imagination",
+  "level": 1,
+  "prompt": "Which animal would you be?",
+  "say": "If you could be an animal for one day, which one?",
+  "big": "",
+  "choices": [
+   "🦁",
+   "🐘",
+   "🦚"
+  ],
+  "answer": -1,
+  "why": "Can you move like that animal? Show Amma!"
+ },
+ {
+  "id": "think-135",
+  "domain": "imagination",
+  "level": 1,
+  "prompt": "Pick a colour for the rangoli",
+  "say": "We're making a Diwali rangoli! Which colour should we use first?",
+  "big": "",
+  "choices": [
+   "❤️",
+   "💙",
+   "💛"
+  ],
+  "answer": -1,
+  "why": "Beautiful! Every colour makes a rangoli bright."
+ },
+ {
+  "id": "think-136",
+  "domain": "imagination",
+  "level": 2,
+  "prompt": "What would you pack for the moon?",
+  "say": "You are going on a rocket to the moon! What would you take?",
+  "big": "🚀 🌙",
+  "choices": [
+   "🧸",
+   "🍌",
+   "🔦"
+  ],
+  "answer": -1,
+  "why": "Good packing! Astronauts take the things they need most."
+ },
+ {
+  "id": "think-137",
+  "domain": "imagination",
+  "level": 2,
+  "prompt": "Who is the hero of your story?",
+  "say": "Let's make up a story! Who should be the hero?",
+  "big": "",
+  "choices": [
+   "🐒",
+   "🐢",
+   "🐘"
+  ],
+  "answer": -1,
+  "why": "A great hero! What brave or kind thing do they do?"
+ },
+ {
+  "id": "think-138",
+  "domain": "imagination",
+  "level": 1,
+  "prompt": "What would a cloud taste like?",
+  "say": "If you could taste a fluffy cloud, what would it taste like?",
+  "big": "☁️",
+  "choices": [
+   "🍦",
+   "🍬",
+   "🍉"
+  ],
+  "answer": -1,
+  "why": "Yum! Real clouds are made of tiny water drops."
+ },
+ {
+  "id": "think-139",
+  "domain": "imagination",
+  "level": 2,
+  "prompt": "Where would a tiny ant live?",
+  "say": "If you were a tiny ant, where would you make your home?",
+  "big": "🐜",
+  "choices": [
+   "🍄",
+   "🌸",
+   "🍃"
+  ],
+  "answer": -1,
+  "why": "What a cosy home! Real ants live in tunnels under the ground."
+ },
+ {
+  "id": "think-140",
+  "domain": "imagination",
+  "level": 2,
+  "prompt": "Mix two fruits! How does it taste?",
+  "say": "Imagine a fruit that is half mango and half banana! How would it taste?",
+  "big": "🥭 ➕ 🍌",
+  "choices": [
+   "😋",
+   "🤩",
+   "🤔"
+  ],
+  "answer": -1,
+  "why": "Mango-nana! You just invented a new fruit."
+ }
+]

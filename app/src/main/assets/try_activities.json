@@ -1,0 +1,1042 @@
+{
+ "schema_version": 1,
+ "families": [
+  {
+   "id": "move_and_play",
+   "name": "Move & Play",
+   "icon": "🤸",
+   "color": "#E8590C"
+  },
+  {
+   "id": "create_and_make",
+   "name": "Create & Make",
+   "icon": "🎨",
+   "color": "#B23A86"
+  },
+  {
+   "id": "nature_and_notice",
+   "name": "Nature & Notice",
+   "icon": "🍃",
+   "color": "#2F7D4A"
+  },
+  {
+   "id": "think_and_discover",
+   "name": "Think & Discover",
+   "icon": "🔍",
+   "color": "#5B47C9"
+  },
+  {
+   "id": "help_and_everyday",
+   "name": "Help & Everyday",
+   "icon": "🧦",
+   "color": "#1D7468"
+  },
+  {
+   "id": "family_and_connect",
+   "name": "Family & Connect",
+   "icon": "👪",
+   "color": "#C9730A"
+  },
+  {
+   "id": "calm_and_mindful",
+   "name": "Calm Moments",
+   "icon": "🌙",
+   "color": "#2B6CC4"
+  }
+ ],
+ "lines": {
+  "home": "Let's do something in the real world!",
+  "away": "Now go and try it. You don't need to stay here.",
+  "notice": "What did you notice?",
+  "rest": "Time to rest."
+ },
+ "activities": [
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-MOVE-001",
+   "title": "Move Like an Animal",
+   "short_description": "Pick an animal and move like it.",
+   "say": "Pick an animal and move just like it!",
+   "pic": "🐘",
+   "category": "move_and_play",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 3,
+    "max": 5
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🐘",
+     "text": "Pick an animal",
+     "say": "Pick an animal. An elephant? A rabbit? A tortoise?"
+    },
+    {
+     "pic": "🐢",
+     "text": "Move slowly like it",
+     "say": "Move slowly, like a tortoise."
+    },
+    {
+     "pic": "🐇",
+     "text": "Now move fast",
+     "say": "Now hop quickly, like a rabbit!"
+    },
+    {
+     "pic": "🦁",
+     "text": "Make its sound, softly",
+     "say": "Make your animal's sound, softly. Roar!"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Clear a little floor space first.",
+    "Walk, don't run, near furniture. No jumping off things."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Copy one animal a grown-up shows.",
+    "5-6": "Pick and switch animals.",
+    "7-8": "Invent an animal and its move."
+   },
+   "accessibility_adaptations": [
+    "Seated: move arms, head and hands only.",
+    "Picture steps need no reading."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "animals",
+    "movement"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Move Like an Animal"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "mitigated",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-MOVE-002",
+   "title": "Loud Feet, Quiet Feet",
+   "short_description": "Walk like a giant, then like a mouse.",
+   "say": "Walk like a giant, then tiptoe like a mouse!",
+   "pic": "🐭",
+   "category": "move_and_play",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 2,
+    "max": 4
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🦶",
+     "text": "Stand in a clear spot",
+     "say": "Stand in a clear spot."
+    },
+    {
+     "pic": "🐘",
+     "text": "Giant steps, loud feet",
+     "say": "Giant steps! Stomp, stomp, stomp!"
+    },
+    {
+     "pic": "🐭",
+     "text": "Mouse steps, quiet feet",
+     "say": "Now mouse steps. Quiet, quiet feet."
+    },
+    {
+     "pic": "👏",
+     "text": "Swap when someone claps",
+     "say": "When someone claps, swap!"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Indoors on a dry floor; bare feet, not socks, on smooth tiles.",
+    "Stay away from stairs."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Giant and mouse only.",
+    "5-6": "Add tiptoe cat steps.",
+    "7-8": "Lead the claps for a younger child."
+   },
+   "accessibility_adaptations": [
+    "Seated: tap hands loud and quiet on the lap."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "animals",
+    "music",
+    "opposites"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Loud Feet, Quiet Feet"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "mitigated",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "mitigated",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-MOVE-003",
+   "title": "Mirror Me",
+   "short_description": "Face your partner and copy every move.",
+   "say": "Face your partner. Copy every move, like a mirror!",
+   "pic": "👯",
+   "category": "move_and_play",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8",
+    "9-10"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 3,
+    "max": 5
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "👫",
+     "name": "a partner",
+     "kind": "none"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "👫",
+     "text": "Stand face to face",
+     "say": "Stand face to face with your partner."
+    },
+    {
+     "pic": "🙋",
+     "text": "One moves slowly",
+     "say": "One person moves slowly."
+    },
+    {
+     "pic": "🔁",
+     "text": "The other copies",
+     "say": "The other copies, like a mirror."
+    },
+    {
+     "pic": "🔄",
+     "text": "Swap who leads",
+     "say": "Now swap who leads!"
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Slow moves only; stay an arm's length apart."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Arms and faces.",
+    "7-8": "Whole body, very slowly.",
+    "9-10": "Add a mystery move the mirror must guess."
+   },
+   "accessibility_adaptations": [
+    "Works fully seated.",
+    "The partner can be any family member, trusted adult or sibling."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "movement",
+    "body",
+    "family"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Mirror Me"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-CREATE-001",
+   "title": "A Creature Nobody Has Seen",
+   "short_description": "Draw a creature nobody has ever seen.",
+   "say": "Draw a creature that nobody has ever seen!",
+   "pic": "🐙",
+   "category": "create_and_make",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8",
+    "9-10"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "kind": "household"
+    },
+    {
+     "pic": "🖍️",
+     "name": "crayons",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "📄",
+     "text": "Get paper and crayons",
+     "say": "Get some paper and crayons."
+    },
+    {
+     "pic": "🐙",
+     "text": "Give it funny legs",
+     "say": "Give your creature some funny legs."
+    },
+    {
+     "pic": "👀",
+     "text": "How many eyes?",
+     "say": "How many eyes does it have?"
+    },
+    {
+     "pic": "🏷️",
+     "text": "Give it a name",
+     "say": "Now give your creature a name!"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Crayons rather than pens with small caps for under-4s."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Scribble a creature and say its name.",
+    "5-6": "Mix parts from three animals.",
+    "9-10": "Draw where it lives and what it eats."
+   },
+   "accessibility_adaptations": [
+    "Can be made from paper shapes a grown-up cuts.",
+    "Telling it aloud counts too."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "animals",
+    "imagination",
+    "art"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "A Creature Nobody Has Seen"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "mitigated",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-CREATE-002",
+   "title": "A Home for a Toy",
+   "short_description": "Your toy needs a house. Build one!",
+   "say": "Your toy needs a house. Can you build one?",
+   "pic": "🧸",
+   "category": "create_and_make",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 15
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🛋️",
+     "name": "cushions",
+     "kind": "household"
+    },
+    {
+     "pic": "📦",
+     "name": "boxes",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🧸",
+     "text": "Pick a toy",
+     "say": "Pick a toy that needs a home."
+    },
+    {
+     "pic": "🛋️",
+     "text": "Find cushions or boxes",
+     "say": "Find cushions or empty boxes."
+    },
+    {
+     "pic": "🏠",
+     "text": "Build walls and a roof",
+     "say": "Build walls and a roof."
+    },
+    {
+     "pic": "🚪",
+     "text": "Make a door",
+     "say": "Make a door so your toy can go in!"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Soft things and empty cardboard only; no stacking above shoulder height.",
+    "A grown-up checks boxes for staples."
+   ],
+   "adaptations_by_age": {
+    "3-4": "A cushion cave.",
+    "5-6": "Walls, a roof and a door.",
+    "7-8": "Add a garden or a second room."
+   },
+   "accessibility_adaptations": [
+    "Table-top version with blocks or folded paper."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "homes",
+    "building",
+    "animals"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "A Home for a Toy"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "mitigated",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "mitigated",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-NATURE-001",
+   "title": "Cloud Shapes",
+   "short_description": "Look at the sky. What shapes can you see?",
+   "say": "Look at the sky. What shapes can you see in the clouds?",
+   "pic": "☁️",
+   "category": "nature_and_notice",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8",
+    "9-10"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 3,
+    "max": 5
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🏠",
+     "text": "Go to a window",
+     "say": "Go to a window."
+    },
+    {
+     "pic": "☁️",
+     "text": "Find one big cloud",
+     "say": "Find one big cloud."
+    },
+    {
+     "pic": "🐑",
+     "text": "What does it look like?",
+     "say": "What does it look like? A sheep? A dragon?"
+    },
+    {
+     "pic": "👀",
+     "text": "Watch it change",
+     "say": "Watch it slowly change shape."
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Never look at the sun.",
+    "Stay inside at the window, or go out with a grown-up."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Find a cloud.",
+    "5-6": "Name its shape.",
+    "7-8": "Notice which way the clouds move."
+   },
+   "accessibility_adaptations": [
+    "If the sky is clear, notice birds, trees or the sky's colour instead.",
+    "Seated by the window works."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "weather",
+    "sky",
+    "space"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Cloud Shapes"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "mitigated",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-THINK-001",
+   "title": "Which Rolls Farther?",
+   "short_description": "Guess which one rolls the farthest!",
+   "say": "Guess which one will roll the farthest. Then try it!",
+   "pic": "⚽",
+   "category": "think_and_discover",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "⚽",
+     "name": "a ball",
+     "kind": "household"
+    },
+    {
+     "pic": "🍊",
+     "name": "an orange",
+     "kind": "household"
+    },
+    {
+     "pic": "🥛",
+     "name": "a steel tumbler",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "⚽",
+     "text": "Get three things",
+     "say": "Get a ball, an orange and a steel tumbler."
+    },
+    {
+     "pic": "🤔",
+     "text": "Guess the winner",
+     "say": "Which one will roll the farthest? Guess!"
+    },
+    {
+     "pic": "👉",
+     "text": "Roll each one gently",
+     "say": "Roll each one gently on the floor."
+    },
+    {
+     "pic": "👀",
+     "text": "Which went farthest?",
+     "say": "Which one went the farthest? Were you surprised?"
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Flat floor away from stairs and glass; steel tumbler, not glass.",
+    "No marbles or small balls."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Three things and a guess.",
+    "7-8": "Try a slope made from a book."
+   },
+   "accessibility_adaptations": [
+    "A grown-up can roll while the child guesses and watches.",
+    "Seated works."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "science",
+    "forces",
+    "toys"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Which Rolls Farther?"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "mitigated",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-HELP-001",
+   "title": "Sock Partners",
+   "short_description": "These socks lost their partners. Help them!",
+   "say": "These socks lost their partners. Can you help them?",
+   "pic": "🧦",
+   "category": "help_and_everyday",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 5
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🧦",
+     "name": "clean socks",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🧦",
+     "text": "Get clean socks",
+     "say": "Get a pile of clean socks."
+    },
+    {
+     "pic": "🔍",
+     "text": "Find two the same",
+     "say": "Find two that are the same."
+    },
+    {
+     "pic": "🤝",
+     "text": "Put partners together",
+     "say": "Put the partners together."
+    },
+    {
+     "pic": "🧺",
+     "text": "Put them in the basket",
+     "say": "Put them in the basket. All done!"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Clean, dry laundry only; keep away from detergent."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Match by colour.",
+    "5-6": "Match by colour and pattern.",
+    "7-8": "Sort them by who they belong to."
+   },
+   "accessibility_adaptations": [
+    "Works seated.",
+    "Match by touch for a child with low vision."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "home",
+    "sorting",
+    "matching"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Sock Partners"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "mitigated",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-FAMILY-001",
+   "title": "Story Chain",
+   "short_description": "Make a story together, one bit each.",
+   "say": "Make a story together. You say one bit, they say the next!",
+   "pic": "📖",
+   "category": "family_and_connect",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8",
+    "9-10"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "👪",
+     "name": "a family member",
+     "kind": "none"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "👪",
+     "text": "Sit with someone",
+     "say": "Sit with a family member or a grown-up you trust."
+    },
+    {
+     "pic": "🗣️",
+     "text": "You say the first bit",
+     "say": "You start: Once upon a time..."
+    },
+    {
+     "pic": "👂",
+     "text": "They add the next bit",
+     "say": "Now they add the next bit."
+    },
+    {
+     "pic": "🔁",
+     "text": "Take turns to the end",
+     "say": "Take turns until the story ends!"
+    }
+   ],
+   "adult_support": "required",
+   "safety_notes": [
+    "No personal questions or secrets."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Three turns each.",
+    "7-8": "Add a problem the hero must solve.",
+    "9-10": "The story must use three chosen objects."
+   },
+   "accessibility_adaptations": [
+    "A picture card like monkey, tree and bus can start it.",
+    "Signs and gestures count as turns."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "stories",
+    "family",
+    "language"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Story Chain"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-CALM-001",
+   "title": "Five Things I Can See",
+   "short_description": "Look around slowly. Find five things.",
+   "say": "Look around slowly. Can you find five things?",
+   "pic": "👀",
+   "category": "calm_and_mindful",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8",
+    "9-10"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 2,
+    "max": 3
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🛋️",
+     "text": "Sit comfortably",
+     "say": "Sit or stand comfortably."
+    },
+    {
+     "pic": "💙",
+     "text": "Find something blue",
+     "say": "Find something blue."
+    },
+    {
+     "pic": "⚽",
+     "text": "Find something round",
+     "say": "Find something round."
+    },
+    {
+     "pic": "✋",
+     "text": "Count five things",
+     "say": "Now count five things you can see!"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "No eyes-closed or breathing instructions; stop any time."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Find two things with a grown-up.",
+    "5-6": "Five things.",
+    "9-10": "Five things, then three sounds."
+   },
+   "accessibility_adaptations": [
+    "A child with low vision can find five things to touch or hear."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "calm",
+    "colours",
+    "shapes"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Five Things I Can See"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "approved",
+   "content_status": "reviewed",
+   "approved_by": "parent, 17 Nov 2026"
+  }
+ ]
+}

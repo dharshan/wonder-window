@@ -25,6 +25,12 @@ PLAY and TRY are first-party. WATCH is a third-party integration boundary and re
 
 Read `AGENTS.md`, then `PROMPT.md`, the product and architecture docs, and the task prompt matching your contribution. Inspect the existing Android project before making architectural changes. This repository is a contribution blueprint, not a replacement app or a mandate for a framework rewrite.
 
+## Current status (v0.9.0-test, Nov 2026)
+
+This repository now contains a working prototype, not only the blueprint: a single-activity Java Android TV app (`app/`, API 26–34, no AndroidX) tested on one OnePlus TV (Android 10). It has WATCH (parent-curated channel rows, YouTube IFrame player), PLAY (7 core games plus 65 catalogue games and 13 modes), TRY v3 (10 reviewed activities across 7 families) and one shared daily screen-time limit. Pre-recorded voice clips are generated locally with `tools/make_voice.py` and are not committed. Not yet done: parent settings screen on the TV, release signing, Android CI build, broad device testing. See open issues.
+
+Build: copy `family.properties.example` to `family.properties`, then run `tools/build-only.sh` (macOS; set `WW_TOOLCHAIN` to a folder with `jdk17/`, `android-sdk/`, `platform-tools/`, `python/`).
+
 ## Contribution areas
 
 - [PLAY](features/play/README.md)

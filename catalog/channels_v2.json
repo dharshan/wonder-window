@@ -1,0 +1,467 @@
+{
+ "version": "v2",
+ "generated": "2026-11-16",
+ "rules": {
+  "songs_cap_total": 0.12,
+  "min_videos_per_row": 20,
+  "no_repeat_days": 14
+ },
+ "rows": [
+  {
+   "id": "wonder",
+   "name": "Wonder Lab",
+   "color": "#2F6FD6",
+   "share": 0.1,
+   "target_videos": 40,
+   "covers": [
+    "2 Science & nature: animals/habitats, birds/insects/sea, solar system, weather, plants, human body, water cycle, environment"
+   ],
+   "channels": [
+    [
+     "UCRFIPG2u1DxKLNuE3y2SjHA",
+     "SciShow Kids"
+    ],
+    [
+     "UCQ0_JQL4wdQd-Xe5hC4PwTg",
+     "Maddie Moate"
+    ],
+    [
+     "UCxlJ45KjG4XVcQ_hd8j227A",
+     "Peekaboo Kidz (Dr. Binocs)"
+    ],
+    [
+     "UCXLLQkbYE-G9jYrra7R4Qsw",
+     "Octonauts"
+    ],
+    [
+     "UCrNnk0wFBnCS1awGjq_ijGQ",
+     "PBS KIDS (Wild Kratts, Nature Cat playlists)"
+    ],
+    [
+     "UCoookXUzPciGrEZEXmh4Jjg",
+     "Sesame Street (STEM clips)"
+    ]
+   ],
+   "pending": [
+    [
+     "@ScienceMax",
+     "Science Max",
+     "resolve UC id with channels.list"
+    ],
+    [
+     "youtube.com/user/NatGeoKids",
+     "Nat Geo Kids",
+     "resolve UC id"
+    ]
+   ],
+   "notes": "Animals now live here (the hidden Animals row is merged in). Peekaboo Kidz and PBS KIDS are Tier 2. Body topics go to H under R8."
+  },
+  {
+   "id": "animals",
+   "name": "Animal Safari",
+   "color": "#2F7D4A",
+   "share": 0.08,
+   "channels": [
+    [
+     "UCXVCgDuD_QCkI7gTKU7-tpg",
+     "Nat Geo Kids"
+    ],
+    [
+     "UCxEmDFo1yUbbxjEb9RjitVA",
+     "Wild Kratts"
+    ],
+    [
+     "UCC5NfQ6Mf0dq_eEwv4P_hWA",
+     "San Diego Zoo"
+    ],
+    [
+     "UCnM5iMGiKsZg-iOlIO2ZkdQ",
+     "Monterey Bay Aquarium"
+    ],
+    [
+     "UCO_DaPp4ifhMAmiyybSLx9w",
+     "BBC Earth Kids"
+    ],
+    [
+     "UCXLLQkbYE-G9jYrra7R4Qsw",
+     "Octonauts"
+    ]
+   ]
+  },
+  {
+   "id": "space",
+   "name": "Space Explorers",
+   "color": "#2B3A8C",
+   "share": 0.05,
+   "channels": [
+    [
+     "UCMRzqb0rmcil3OxeVFVRIMw",
+     "NASA Space Place"
+    ],
+    [
+     "UClsVJSqHbPpLB5fn2o4l8XQ",
+     "Ready Jet Go!"
+    ],
+    [
+     "UCk0KZYxaV59AeBVkGF9NiKw",
+     "Go Jetters"
+    ],
+    [
+     "UCRFIPG2u1DxKLNuE3y2SjHA",
+     "SciShow Kids"
+    ],
+    [
+     "UCxlJ45KjG4XVcQ_hd8j227A",
+     "Peekaboo Kidz"
+    ]
+   ]
+  },
+  {
+   "id": "history",
+   "name": "Long Long Ago",
+   "color": "#8C5A2B",
+   "share": 0.05,
+   "channels": [
+    [
+     "UCebMFnw6WxozGmqGekJHOJg",
+     "Free School"
+    ],
+    [
+     "UCfPyVJEBD7Di1YYjTdS2v8g",
+     "Homeschool Pop"
+    ],
+    [
+     "UCKCsVSA5THlkHbnkZTPm6-g",
+     "Learn Bright"
+    ],
+    [
+     "UCxlJ45KjG4XVcQ_hd8j227A",
+     "Peekaboo Kidz"
+    ],
+    [
+     "UCRFIPG2u1DxKLNuE3y2SjHA",
+     "SciShow Kids"
+    ]
+   ]
+  },
+  {
+   "id": "numbers",
+   "name": "Number Fun",
+   "color": "#F2A900",
+   "share": 0.12,
+   "target_videos": 30,
+   "covers": [
+    "1 Educational: numbers 1-100, shapes/colours, add/subtract, opposites",
+    "12 Brain development: puzzles, patterns, matching, sorting, reasoning, memory, spot the difference"
+   ],
+   "channels": [
+    [
+     "UCPlwvN0w4qFSP1FllALB92w",
+     "Numberblocks"
+    ],
+    [
+     "UCVcQH8A634mauPrGbWs7QlQ",
+     "Jack Hartmann (counting, skip-counting)"
+    ],
+    [
+     "UCoookXUzPciGrEZEXmh4Jjg",
+     "Sesame Street (numbers, shapes)"
+    ],
+    [
+     "UCxoDMG0tvaYO5Xobvtqw5nw",
+     "Smile and Learn - English (visual-attention, logic, patterns)"
+    ],
+    [
+     "UC4p_YSvJlJpEhAh5PMyhkiQ",
+     "Highlights Kids (Hidden Pictures puzzles)"
+    ]
+   ],
+   "notes": "Brain games share this row; the warm-up (§5A) already gives puzzle practice every session. Smile and Learn is Tier 2: its titles often carry emoji, so R9 will drop some videos, and it posts Shorts (R1). Highlights Kids targets ages 6-12; its ID came from a mirror site (medium confidence), and every video goes to H."
+  },
+  {
+   "id": "words",
+   "name": "Story & Word Corner",
+   "color": "#7A4FD0",
+   "share": 0.12,
+   "target_videos": 30,
+   "covers": [
+    "1 Educational: ABC, phonics, simple words, days/months/seasons",
+    "7 Language & communication: English vocabulary, listening, pronunciation, picture vocabulary, Q&A",
+    "4 Rhymes & music (part): alphabet and vocabulary songs, single songs only"
+   ],
+   "channels": [
+    [
+     "UC_qs3c0ehDvZkbiEbOj6Drg",
+     "Alphablocks"
+    ],
+    [
+     "UCBY9VtZ0aH6sf6gu5Q3Zwng",
+     "StoryWeaver English"
+    ],
+    [
+     "UCVcQH8A634mauPrGbWs7QlQ",
+     "Jack Hartmann (letter sounds)"
+    ],
+    [
+     "UCLsooMJoIpl_7ux2jvdPB-Q",
+     "Super Simple Songs (single learning songs only)"
+    ],
+    [
+     "UC6LKuH7RPkvRmzS9-8URtqA",
+     "Dream English Kids"
+    ]
+   ],
+   "pending": [
+    [
+     "@storylineonline",
+     "Storyline Online",
+     "resolve UC id"
+    ]
+   ],
+   "notes": "Super Simple Songs: only single songs of 5 min or less pass (R2/R10 drop the compilations). Dream English Kids' ID came from a mirror site (medium confidence) and it is Tier 2."
+  },
+  {
+   "id": "move",
+   "name": "Move & Sport",
+   "color": "#2E9E44",
+   "share": 0.18,
+   "target_videos": 45,
+   "covers": [
+    "9 Physical activity: kids yoga, exercises, dance, indoor movement games, brain breaks, animal moves, balance",
+    "Sport skills (father's request): football, cricket, throw-catch, running",
+    "4 Rhymes & music (part): action/dance songs"
+   ],
+   "channels": [
+    [
+     "UCVcQH8A634mauPrGbWs7QlQ",
+     "Jack Hartmann (exercise songs)"
+    ],
+    [
+     "UCLsooMJoIpl_7ux2jvdPB-Q",
+     "Super Simple Songs (action songs)"
+    ],
+    [
+     "UCoookXUzPciGrEZEXmh4Jjg",
+     "Sesame Street (sport clips)"
+    ],
+    [
+     "UC5uIZ2KOZZeQDQo_Gsi_qbQ",
+     "Cosmic Kids Yoga"
+    ],
+    [
+     "UC2YBT7HYqCbbvzu3kKZ3wnw",
+     "GoNoodle"
+    ]
+   ],
+   "pending": [
+    [
+     "@CosmicKidsYoga",
+     "Cosmic Kids Yoga",
+     "UC id not found by search; resolve with channels.list"
+    ],
+    [
+     "@gonoodle",
+     "GoNoodle",
+     "resolve UC id"
+    ],
+    [
+     "Prime Coaching Sport",
+     "Prime Coaching Sport (Coach Danny)",
+     "YouTube channel unconfirmed"
+    ]
+   ],
+   "notes": "At least 20 sport_skill videos before the sport slot rule switches on (D20/D30). Movement songs count here, not as a separate rhymes row."
+  },
+  {
+   "id": "values",
+   "name": "Kind Hearts Stories",
+   "color": "#0F7A80",
+   "share": 0.12,
+   "target_videos": 30,
+   "covers": [
+    "3 Moral stories & values: honesty, sharing, helping, respecting elders, friendship, kindness, problem-solving",
+    "8 Social & emotional: emotions, anger, fear, confidence, friends, turn-taking, teamwork, family"
+   ],
+   "channels": [
+    [
+     "UCDqgSnRMGVx3dP4sn3ATZMA",
+     "Daniel Tiger's Neighbourhood - Scholastic"
+    ],
+    [
+     "UCyG6ZCj6weaA2_JvnUWWlVA",
+     "Bing - Official Channel"
+    ],
+    [
+     "UCEPsNDUhUm-7yZhUjQQNqwQ",
+     "KidTimeStoryTime"
+    ],
+    [
+     "UCvQagFNHMrGgQpYunk4rHXg",
+     "Brightly Storytime"
+    ],
+    [
+     "UCoookXUzPciGrEZEXmh4Jjg",
+     "Sesame Street (feelings)"
+    ],
+    [
+     "UCVzLLZkDuFGAE2BGdBuBNBg",
+     "Bluey (clips of 8 min or less, at most 10% of the row)"
+    ]
+   ],
+   "notes": "The hidden Feelings row is merged in, which gives social-emotional learning a real share."
+  },
+  {
+   "id": "healthy",
+   "name": "Healthy Me",
+   "color": "#D6336C",
+   "share": 0.06,
+   "target_videos": 20,
+   "covers": [
+    "6 Life skills & habits: brushing, handwashing, hygiene, healthy food, dressing, tidying, road safety, manners"
+   ],
+   "channels": [
+    [
+     "UCoookXUzPciGrEZEXmh4Jjg",
+     "Sesame Street (healthy habits, Brushy Brush, handwashing)"
+    ],
+    [
+     "UCDqgSnRMGVx3dP4sn3ATZMA",
+     "Daniel Tiger - Scholastic (safety, potty, manners strategy songs)"
+    ],
+    [
+     "UCLsooMJoIpl_7ux2jvdPB-Q",
+     "Super Simple Songs (brush teeth, wash hands, clean up)"
+    ],
+    [
+     "UCxlJ45KjG4XVcQ_hd8j227A",
+     "Peekaboo Kidz (good habits)"
+    ],
+    [
+     "UCvCJazJG2uGQzyTrgswq2EQ",
+     "Sesame Workshop - India (Hindi; health and hygiene)"
+    ],
+    [
+     "UCyG6ZCj6weaA2_JvnUWWlVA",
+     "Bing (everyday routines)"
+    ]
+   ],
+   "notes": "Gap: no verified Indian road-safety channel. Hand-pick 5 road-safety videos (H). Western road clips show right-hand traffic, so prefer Indian ones."
+  },
+  {
+   "id": "india",
+   "name": "Stories from India",
+   "color": "#AD4646",
+   "share": 0.08,
+   "target_videos": 20,
+   "covers": [
+    "11 Indian culture & awareness: festivals, national symbols, community helpers, monuments, transport, geography, folk tales, diversity",
+    "7 Language (part): Hindi and Kannada (regional language)"
+   ],
+   "channels": [
+    [
+     "UCIPCWV2LAifpieVp4akjZ_A",
+     "Karadi Tales"
+    ],
+    [
+     "UCvCJazJG2uGQzyTrgswq2EQ",
+     "Sesame Workshop - India (Hindi)"
+    ],
+    [
+     "UCHD0-6opjI0paLJj6P-f2sA",
+     "BookBox (Indian folk tales)"
+    ],
+    [
+     "UCBY9VtZ0aH6sf6gu5Q3Zwng",
+     "StoryWeaver English"
+    ],
+    [
+     "UCTCTZp4FERdGvo5d2RIqzcg",
+     "StoryWeaver Hindi"
+    ],
+    [
+     "UCzKWILdrVl8ZEcDzaH4kl_A",
+     "infobells - Kannada (single concept songs of 5 min or less only)"
+    ],
+    [
+     "UC1ciY6kR3yj3kaKZ6R7ewAg",
+     "infobells - Hindi (single concept songs only)"
+    ],
+    [
+     "UCxlJ45KjG4XVcQ_hd8j227A",
+     "Peekaboo Kidz (festivals, monuments, India facts)"
+    ],
+    [
+     "PLHsI-OU8ljY9roF7k9iBemeYlpoF1UhNI",
+     "Murty Media - Story Time with Sudha Amma (playlist)"
+    ]
+   ],
+   "notes": "Merges the live 'Hindi stories' and 'Stories from India' rows. Kannada and Hindi are a property of each video (D7a/D37), with the English fallback. Myth items go to H for the first 10 (demon or battle scenes; fearTone of 2 or less)."
+  },
+  {
+   "id": "make",
+   "name": "Make & Draw",
+   "color": "#E67700",
+   "share": 0.08,
+   "target_videos": 20,
+   "covers": [
+    "5 Creativity & arts: drawing, colouring, painting, paper craft, origami, clay, DIY toys, creative storytelling",
+    "4 Rhymes & music (part): instruments"
+   ],
+   "channels": [
+    [
+     "UC5XMF3Inoi8R9nSI8ChOsdQ",
+     "Art for Kids Hub"
+    ],
+    [
+     "UC3hGM2kxOs8vRYCcvfH6vuw",
+     "Mister Maker"
+    ]
+   ],
+   "pending": [
+    [
+     "Crafty Carol / Easy Kids Craft / Mr. Schuette's Art Class",
+     "more craft channels",
+     "resolve UC ids; Common Sense Media lists them for ages 5-7"
+    ]
+   ],
+   "notes": "Recency check: only Art for Kids Hub is confirmed with recent long-form uploads (Nov 2026). Draw So Cute (Shorts-heavy risk) and Mister Maker (possibly back-catalogue only; ID came from a mirror site) need a Phase-0 feed check for at least 3 recent non-Short videos."
+  },
+  {
+   "id": "laugh",
+   "name": "Giggles",
+   "color": "#5C7CFA",
+   "share": 0.08,
+   "target_videos": 20,
+   "covers": [
+    "10 Entertainment & imagination: educational cartoons, puppets, fantasy, pretend play, animal adventures, riddles, gentle comedy"
+   ],
+   "channels": [
+    [
+     "UCS7H8U-n5mINVJjJsaRtGHg",
+     "Shaun the Sheep Official"
+    ],
+    [
+     "UCstNioB2LjSqABXd1b4EWvw",
+     "Timmy & Friends (Timmy Time)"
+    ],
+    [
+     "UCdknlZNiH-2VWrvjXkx9dJA",
+     "Pocoyo English - Official Channel"
+    ],
+    [
+     "UCj_mFUb-47d9QNiJ5556LjQ",
+     "Hey Duggee"
+    ],
+    [
+     "UCBx2mmZhRBkPC2MK4bqcSHQ",
+     "Puffin Rock"
+    ],
+    [
+     "UCH6vXjt-BA7QHl0KnfL-7RQ",
+     "Simon's Cat (Tier 2, H)"
+    ]
+   ],
+   "notes": "Laughter has value of its own. Every video still runs R2 (compilations)."
+  }
+ ]
+}

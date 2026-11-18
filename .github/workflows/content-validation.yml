@@ -1,9 +1,9 @@
 name: Content validation
 on:
   push:
-    paths: ["content/**", "examples/**", "tools/validate_content.py", ".github/workflows/content-validation.yml"]
+    paths: ["content/**", "examples/**", "app/src/main/assets/*.json", "tools/**", "pipeline/**", ".github/workflows/content-validation.yml"]
   pull_request:
-    paths: ["content/**", "examples/**", "tools/validate_content.py", ".github/workflows/content-validation.yml"]
+    paths: ["content/**", "examples/**", "app/src/main/assets/*.json", "tools/**", "pipeline/**", ".github/workflows/content-validation.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,3 +17,11 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install jsonschema
       - run: python tools/validate_content.py
+      - name: Validate app content (games, catalogue games, TRY activities)
+        run: |
+          python tools/content/validate_games.py
+          python tools/content/validate_try_activities.py app/src/main/assets/try_activities.json
+      - name: Pipeline unit tests
+        run: |
+          python -m pip install pytest
+          python -m pytest -q pipeline/tests
