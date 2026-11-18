@@ -78,12 +78,12 @@ export default function echo(ctx, r) {
     update(t, dt) {
       tw.update(t);
       pods.forEach((p, i) => {
-        const k = t - p.lit, on = k < Math.min(.6, ms * .8) || done, f = i === focus && !showing && !done;
+        const k = t - p.lit, on = k < Math.max(.5, ms * .72) || done, f = i === focus && !showing && !done;
         p.lift += ((f ? 1 : 0) - p.lift) * (CFG.reduced ? 1 : clamp(dt * 12));
         const pop = on && !CFG.reduced ? 1 + .3 * Math.sin(clamp(k / .45) * Math.PI) : 1;
         p.g.scale.setScalar(sc * pop * (1 + p.lift * .12));
         p.g.position.z = p.lift * .6; p.g.rotation.set(-.12 * p.lift, CFG.reduced ? 0 : Math.sin(t * .8 + i) * .1, wig(t, p.wig));
-        p.orb.material.emissiveIntensity = on ? 1.0 : (showing ? .05 : .15); p.orb.material.color.setHex(on ? 0xFFFFFF : p.col);
+        p.orb.material.emissiveIntensity = on ? .7 : (showing ? .05 : .15);
         p.face.material.opacity = on || !showing ? 1 : .55;
         p.gl.visible = on && !CFG.reduced;
         p.halo.material.color.setHex(t - p.wig < .6 ? 0xFFB347 : on ? 0xFFFFFF : f ? 0xFFE29A : (showing ? 0x3A2E80 : 0x8C7BFF));

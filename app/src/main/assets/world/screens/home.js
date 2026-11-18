@@ -85,5 +85,5 @@ export const HomeScreen = {
     const lk = clamp((t - this.labelT) / .35); this.pills.forEach((p, i) => { const on = i === this.cur && flyU >= 1 && diveU < 0; p.visible = on; p.material.opacity = on ? lk : 0; p.scale.setScalar(.9 + .1 * lk); });
   },
   resting() { bridge.sfx('bump'); this.tara.userData.setMood('think', time()); const p = this.pills[2]; p.material.map = pillTex('Videos are resting. Try Play or Try!', { w: 1520, h: 380, accent: WORLDS[2].color, font: 90 }); p.material.needsUpdate = true; this.labelT = time(); },
-  enterRealm(key) { if (key === 'play') router.go('playlist', {}); else bridge.open(key); setTimeout(() => { this.entered = false; this.diveT = -9; }, 600); },
+  enterRealm(key) { if (key === 'play') router.go('playlist', {}); else if (key === 'try' && bridge.get('try3', null)) router.go('try', {}); else bridge.open(key); setTimeout(() => { this.entered = false; this.diveT = -9; }, 600); },
 };

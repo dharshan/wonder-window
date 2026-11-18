@@ -18,8 +18,8 @@ export default function gridPath(ctx, r) {
   if (!Array.isArray(r.grid)) return compose(ctx, r);
   const g = r.grid.map(String), rows = g.length, cols = Math.max(1, ...g.map(l => l.length));
   const lg = r.legend || {}, hero = lg.S || '🚗', goal = lg.G || '🏫', wallE = lg['#'] || '🌳';
-  const s = Math.min(1.5, 7.2 / Math.max(rows, cols * .95));
-  const board = new THREE.Group(); board.position.set(.9, -.15 + (rows * s) * .0, -.4); board.rotation.x = TILT; ctx.root.add(board);
+  const s = Math.min(1.4, 6.2 / Math.max(rows, cols * .9));
+  const board = new THREE.Group(); board.position.set(.9, .75, -.8); board.rotation.x = TILT; ctx.root.add(board);
   const base = new THREE.Mesh(rbox(cols * s + .5, rows * s + .5, .4, .45), lam(0x3C2C8E)); base.rotation.x = -Math.PI / 2; base.position.y = -.28; board.add(base);
   const TILE = rbox(s * .92, s * .92, .22, s * .16), WALL = rbox(s * .86, s * .86, s * .32, s * .2);
   const pathM = lam(0xFFF3D6), wallM = lam(0x6FC48A), goalM = lam(0xFFE29A);
@@ -30,7 +30,7 @@ export default function gridPath(ctx, r) {
     const c = j < g[i].length ? g[i][j] : '#'; cell[i].push(c);
     const tile = new THREE.Mesh(TILE, c === '#' ? wallM : c === 'G' ? goalM : pathM); tile.rotation.x = -Math.PI / 2; pos(i, j, 0, tile.position); board.add(tile);
     if (c === '#') { const w = new THREE.Mesh(WALL, wallM); w.rotation.x = -Math.PI / 2; pos(i, j, s * .2, w.position); board.add(w); billboard(wallE, s * .85, i, j, s * .62); }
-    if (c === 'G') { goalObj = new THREE.Group(); pos(i, j, .14, goalObj.position); board.add(goalObj);
+    if (c === 'G') { goalObj = new THREE.Group(); pos(i, j, .26, goalObj.position); board.add(goalObj);
       const ring = new THREE.Mesh(RING_GEO, new THREE.MeshBasicMaterial({ color: 0xFFC94A })); ring.rotation.x = Math.PI / 2; ring.scale.setScalar(s * .42); goalObj.add(ring);
       goalObj.userData.f = billboard(goal, s * .9, i, j, s * .5); }
     if (c === '*') { starObj = new THREE.Mesh(STAR_GEO, lam(0xFFC233, { emissive: 0x7a3d00, emissiveIntensity: .5 })); starObj.scale.setScalar(s * .3); pos(i, j, s * .45, starObj.position); starObj.rotation.x = -TILT; board.add(starObj); starObj.userData.home = starObj.position.clone(); }
@@ -38,12 +38,12 @@ export default function gridPath(ctx, r) {
   // footprints (one small disc per path tile, shown once walked)
   const steps = []; const STEP = new THREE.CircleGeometry(s * .1, 12), stepM = new THREE.MeshBasicMaterial({ color: 0xE0B07A });
   for (let i = 0; i < rows; i++) { steps.push([]); for (let j = 0; j < cols; j++) { if (cell[i][j] === '#') { steps[i].push(null); continue; }
-    const d = new THREE.Group(); [-1, 1].forEach(k => { const m = new THREE.Mesh(STEP, stepM); m.rotation.x = -Math.PI / 2; m.position.set(k * s * .12, .13, k * s * .08); d.add(m); });
+    const d = new THREE.Group(); [-1, 1].forEach(k => { const m = new THREE.Mesh(STEP, stepM); m.rotation.x = -Math.PI / 2; m.position.set(k * s * .12, .25, k * s * .08); d.add(m); });
     pos(i, j, 0, d.position); d.visible = false; board.add(d); steps[i].push(d); } }
   // walker: the hero (legend S) riding along with a mini Tara
   const walker = new THREE.Group(); board.add(walker);
-  const heroF = face(hero, s * .78); heroF.rotation.x = -TILT; heroF.position.set(-s * .08, s * .42, s * .12); walker.add(heroF);
-  const pad = new THREE.Mesh(RING_GEO, new THREE.MeshBasicMaterial({ color: 0x7CF2B0 })); pad.rotation.x = Math.PI / 2; pad.scale.setScalar(s * .38); pad.position.y = .14; walker.add(pad);
+  const heroF = face(hero, s * .78); heroF.renderOrder = 4; heroF.rotation.x = -TILT; heroF.position.set(-s * .08, s * .42, s * .12); walker.add(heroF);
+  const pad = new THREE.Mesh(RING_GEO, new THREE.MeshBasicMaterial({ color: 0x7CF2B0 })); pad.rotation.x = Math.PI / 2; pad.scale.setScalar(s * .38); pad.position.y = .26; walker.add(pad);
   const arrow = new THREE.Mesh(new THREE.ConeGeometry(s * .16, s * .34, 12), new THREE.MeshBasicMaterial({ color: 0xFFC94A })); arrow.visible = false; board.add(arrow);
   const tara = ctx.tara, taraHome = { p: tara.position.clone(), s: tara.scale.x };
   let wr = sr, wc = sc, moveT = -9, bumpT = -9, bumpDir = [0, 0], bumps = 0, hasStar = false, starT = 0, won = 0, finished = false;

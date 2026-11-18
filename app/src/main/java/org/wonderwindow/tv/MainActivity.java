@@ -3791,6 +3791,7 @@ public class MainActivity extends Activity implements WorldView.Host {
         if (k.startsWith("glevel:")) return String.valueOf(prefs.getInt(k, 1));                 // shared with the classic shell
         if (k.startsWith("gseen:")) return JSONObject.quote(prefs.getString(k, ""));
         if ("watchResting".equals(k)) return String.valueOf(cooldownLeftMs() > 0 || minutesLeftToday() < 5);
+        if ("try3".equals(k)) return worldTry3();
         return prefs.getString("w:" + k, "");
     }
     @Override public void worldSet(String k, String v) {
@@ -3805,6 +3806,41 @@ public class MainActivity extends Activity implements WorldView.Host {
             if (minutesLeftToday() < 1) { hideWorld(); showResting("TV is resting now.", -1); return; }
             gameStart = SystemClock.elapsedRealtime();                 // same Play accounting as the classic shell
         } else if ("game_end".equals(name)) addPlayTime();
+        else if ("try_enter".equals(name) || "try_return".equals(name)) {          // TRY on the TV counts; time away does not
+            if (minutesLeftToday() < 1) { hideWorld(); showResting("TV is resting now.", -1); return; }
+            startMeter();
+        } else if ("try_away".equals(name) || "try_exit".equals(name)) stopMeter();
+        else if ("try_open".equals(name)) {
+            try {
+                String id = new JSONObject(json).optString("id");
+                String recent = prefs.getString("t3recent", "");                    // rotation only (same as showTryPreview3)
+                recent = (id + "," + recent.replace(id + ",", ""));
+                String[] parts = recent.split(",");
+                if (parts.length > 10) recent = TextUtils.join(",", Arrays.copyOf(parts, 10)) + ",";
+                prefs.edit().putString("t3recent", recent).apply();
+            } catch (Exception e) { Log.w(TAG, "try_open"); }
+        }
+    }
+
+    /** TRY v3 data for the world, already filtered here by safety status, supervision flag, families and age band (t3Visible). */
+    private String worldTry3() {
+        try {
+            if (try3 == null || !getResources().getBoolean(R.bool.try_enabled) || !getResources().getBoolean(R.bool.try_v3)) return "";
+            JSONArray fams = try3.optJSONArray("families"), out = new JSONArray();
+            for (int i = 0; fams != null && i < fams.length(); i++) {
+                JSONObject f = fams.optJSONObject(i);
+                List<JSONObject> acts = t3In(f.optString("id"));
+                if (acts.isEmpty()) continue;
+                JSONObject o = new JSONObject(f.toString());
+                o.put("acts", new JSONArray(acts));
+                out.put(o);
+            }
+            if (out.length() == 0) return "";
+            JSONObject r = new JSONObject();
+            r.put("families", out);
+            r.put("lines", try3.optJSONObject("lines") == null ? new JSONObject() : try3.optJSONObject("lines"));
+            return r.toString();
+        } catch (Exception e) { Log.w(TAG, "worldTry3 " + e); return ""; }
     }
     @Override public void worldBack() { /* Back never leaves the app from the home planets (same as the classic doors). */ }
     @Override public void worldOpen(String w) {
