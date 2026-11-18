@@ -9,3 +9,6 @@ Real captures from a OnePlus Android TV (Android 10, 1920×1080), taken 18 Nov 2
 - `13` WATCH stop sheet on the PR #12 base: still shows "Picked for you", because the base does not contain PR #7
 
 Capture script: `adb exec-out screencap -p` after `am start` and `input keyevent` steps, only while the TV was idle on its launcher.
+
+## `design-74458e5/`: PR #12 design-package SVGs rendered
+Rendered with headless Chrome and the app's own bundled Fredoka and Andika fonts at 1920×1080, plus the home concept at 1280×720. The SVG files are unchanged.
