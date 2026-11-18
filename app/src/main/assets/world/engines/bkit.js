@@ -74,3 +74,7 @@ export function gridStep(r, c, k, rows, cols) {
   const dr = k === 'up' ? -1 : k === 'down' ? 1 : 0, dc = k === 'left' ? -1 : k === 'right' ? 1 : 0;
   const nr = r + dr, nc = c + dc; if (nr < 0 || nc < 0 || nr >= rows || nc >= cols) return null; return [nr, nc];
 }
+
+/** Frame-clock timers (follow the world clock, so they pause with the WebView and stay deterministic in tests). */
+export function makeTimers() { const q = [];
+  return { after(sec, fn) { q.push([time() + sec, fn]); }, tick(t) { for (let i = 0; i < q.length; i++) if (t >= q[i][0]) { const f = q[i][1]; q.splice(i--, 1); f(); } }, clear() { q.length = 0; } }; }

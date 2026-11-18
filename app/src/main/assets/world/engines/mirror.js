@@ -6,10 +6,11 @@
 // 3D: a butterfly whose right wing is painted tile by tile (tiles fold over as they change); when both wings
 // match it flaps and flies a loop.
 import { THREE, CFG, time, clamp } from '../core/engine.js';
-import { rbox, lam, face, setFace, focusFrame, bigButton, wig, pop, prog, gridStep } from './bkit.js';
+import { rbox, lam, face, setFace, focusFrame, bigButton, wig, pop, prog, gridStep , makeTimers } from './bkit.js';
 
 const WING_GEO = new THREE.CircleGeometry(1, 40);
 export default function mirror(ctx, r) {
+  const TM = makeTimers();
   const rows = r.rows || 2, cols = r.cols || 1, left = r.left || [], pal = (r.palette || []).map(String);
   const T = Math.min(1.3, 4.4 / rows / 1.1, 3.6 / cols / 1.1), gap = T * 1.12, bodyW = .9;
   const fly = new THREE.Group(); fly.position.set(.8, 1.75, 0); ctx.root.add(fly);
@@ -46,13 +47,13 @@ export default function mirror(ctx, r) {
   let fr = 0, fc = 0, onDone = false, misses = 0, won = 0, finished = false;
 
   function cycle(t) { t.pick = (t.pick + 1) % pal.length; t.flipT = time(); ctx.sfx('pop');
-    setTimeout(() => { setFace(t.f, pal[t.pick]); t.body.material.color.setHex(0xFFF3D6); t.bad = false; }, CFG.reduced ? 0 : 130); }
+    TM.after((CFG.reduced ? 0 : 130) / 1000, () => { setFace(t.f, pal[t.pick]); t.body.material.color.setHex(0xFFF3D6); t.bad = false; }); }
   function check() {
     if (finished) return; let ok = true;
     tiles.forEach(row => row.forEach(t => { const want = String(((left[t.i] || [])[cols - 1 - t.j]) ?? ''); const got = t.pick < 0 ? '' : pal[t.pick];
       if (want !== got) { ok = false; t.wig = time(); t.bad = true; t.body.material.color.setHex(0xFFB347); } }));
     if (ok) { finished = true; won = time(); ctx.correct(fly.getWorldPosition(new THREE.Vector3())); ctx.sfx('twinkle');
-      setTimeout(() => ctx.finish({ firstTry: misses === 0, why: r.why }), CFG.reduced ? 600 : 2200); }
+      TM.after((CFG.reduced ? 600 : 2200) / 1000, () => ctx.finish({ firstTry: misses === 0, why: r.why })); }
     else { misses++; done.group.userData.wig = time(); ctx.wrong(r.hint); }
   }
   return {
@@ -69,7 +70,7 @@ export default function mirror(ctx, r) {
     },
     focusX() { return onDone ? .8 : .8 + tiles[fr][fc].g.position.x + bodyW / 2; },
     lookX() { return onDone ? 0 : clamp(.3 + fc * .3, -1, 1); },
-    update(t) {
+    update(t) { TM.tick(t);
       tiles.forEach(row => row.forEach(p => { const foc = !onDone && !finished && p.i === fr && p.j === fc;
         const u = prog(t, p.flipT, .26); p.inner.rotation.x = u < 1 ? Math.sin(u * Math.PI) * 1.4 : 0; p.inner.rotation.z = wig(t, p.wig);
         p.inner.position.z = foc ? .3 : 0; p.g.scale.setScalar(foc ? 1.1 : 1);
@@ -82,7 +83,7 @@ export default function mirror(ctx, r) {
       lw.rotation.y = flap; rw.rotation.y = -flap;
       body.rotation.z = CFG.reduced ? 0 : Math.sin(t * 1.4) * .03;
     },
-    dispose() {},
+    dispose() { TM.clear();},
   };
 }
 const SEG = new THREE.SphereGeometry(1, 18, 14), ANT = new THREE.CylinderGeometry(.03, .03, .9, 6);

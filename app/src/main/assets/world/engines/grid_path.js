@@ -9,12 +9,13 @@
 // 3D: a tilted tile maze on the planet surface; Tara hops tile to tile with the hero and collects the star.
 // Needs 'up' (wantsUp) and 'down' for movement.
 import { THREE, CFG, time, clamp } from '../core/engine.js';
-import { rbox, lam, face, STAR_GEO, RING_GEO, wig, prog } from './bkit.js';
+import { rbox, lam, face, STAR_GEO, RING_GEO, wig, prog , makeTimers } from './bkit.js';
 import compose from './compose.js';
 
 const TILT = .85;
 const DIRS = { up: [-1, 0], down: [1, 0], left: [0, -1], right: [0, 1] };
 export default function gridPath(ctx, r) {
+  const T = makeTimers();
   if (!Array.isArray(r.grid)) return compose(ctx, r);
   const g = r.grid.map(String), rows = g.length, cols = Math.max(1, ...g.map(l => l.length));
   const lg = r.legend || {}, hero = lg.S || '🚗', goal = lg.G || '🏫', wallE = lg['#'] || '🌳';
@@ -67,9 +68,9 @@ export default function gridPath(ctx, r) {
     if (steps[wr][wc]) steps[wr][wc].visible = true;
     if (cell[wr][wc] === '*' && !hasStar) { hasStar = true; starT = time() + .25; ctx.sfx('twinkle'); ctx.correct(board.localToWorld(tmp.copy(to).setY(s * .6))); }
     if (cell[wr][wc] === 'G') {
-      if (needStar && !hasStar) { setTimeout(() => ctx.bubble('⭐ Get the star first!', '#FFC94A'), 300); if (starObj) starObj.userData.nudge = time(); }
-      else { finished = true; won = time() + .3; setTimeout(() => { ctx.sfx('fanfare'); ctx.correct(board.localToWorld(tmp.copy(to).setY(s * .6))); goalObj && (goalObj.userData.pop = time()); }, 300);
-        setTimeout(() => ctx.finish({ firstTry: bumps <= 2, why: r.why || 'You made it!' }), CFG.reduced ? 700 : 1500); }
+      if (needStar && !hasStar) { T.after((300) / 1000, () => ctx.bubble('⭐ Get the star first!', '#FFC94A')); if (starObj) starObj.userData.nudge = time(); }
+      else { finished = true; won = time() + .3; T.after((300) / 1000, () => { ctx.sfx('fanfare'); ctx.correct(board.localToWorld(tmp.copy(to).setY(s * .6))); goalObj && (goalObj.userData.pop = time()); });
+        T.after((CFG.reduced ? 700 : 1500) / 1000, () => ctx.finish({ firstTry: bumps <= 2, why: r.why || 'You made it!' })); }
     }
   }
   function showArrow(k) { const [dr, dc] = DIRS[k]; arrow.visible = true; pos(sr + dr * .62, sc + dc * .62, s * .3, arrow.position);
@@ -83,7 +84,7 @@ export default function gridPath(ctx, r) {
     },
     focusX() { return board.position.x + cur.x; },
     lookX() { return clamp(cur.x / 4, -1, 1); },
-    update(t) {
+    update(t) { T.tick(t);
       const u = prog(t, moveT, .26); cur.lerpVectors(from, to, u);
       const hop = CFG.reduced ? 0 : Math.sin(u * Math.PI) * s * .45;
       const b = t - bumpT < .3 ? Math.sin((t - bumpT) / .3 * Math.PI) * s * .18 : 0;
@@ -101,6 +102,6 @@ export default function gridPath(ctx, r) {
       if (goalObj) { goalObj.children[0].rotation.z = t * .8; const p = goalObj.userData.pop ? clamp((t - goalObj.userData.pop) / .6) : 1; goalObj.userData.f.scale.setScalar(1 + Math.sin(p * Math.PI) * .3); }
       if (arrow.visible) { arrow.position.copy(arrow.userData.home); if (!CFG.reduced) arrow.position.y += Math.abs(Math.sin(t * 4)) * s * .15; }
     },
-    dispose() { tara.position.copy(taraHome.p); tara.scale.setScalar(taraHome.s); },
+    dispose() { T.clear(); tara.position.copy(taraHome.p); tara.scale.setScalar(taraHome.s); },
   };
 }

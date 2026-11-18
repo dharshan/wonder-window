@@ -5,9 +5,10 @@
 // Rules kept from native: ✅ always finishes the round as first try; 🔁 just shows/speaks practise_say and stays.
 // 3D: a little stage where Tara's sound rings pulse while he speaks; two big buttons (left/right + OK).
 import { THREE, CFG, time, clamp, bridge } from '../core/engine.js';
-import { lam, face, label3d, bigButton, wig } from './bkit.js';
+import { lam, face, label3d, bigButton, wig , makeTimers } from './bkit.js';
 
 export default function recite(ctx, r) {
+  const T = makeTimers();
   const bs = r.buttons || ['✅', '🔁'], ls = r.labels || ['Said it!', 'Practise more'];
   // stage: podium + speaking star + sound rings (opaque thin tori, no transparency)
   const stage = new THREE.Group(); stage.position.set(.6, 1.7, -.8); ctx.root.add(stage);
@@ -26,13 +27,13 @@ export default function recite(ctx, r) {
       if (k === 'left' || k === 'right') { const n = k === 'left' ? 0 : 1; if (n === focus) { (focus ? again : ok).group.userData.wig = time(); ctx.sfx('bump'); } focus = n; return true; }
       if (k !== 'ok') return false; if (finished) return true;
       if (focus === 0) { finished = true; ctx.correct(stage.getWorldPosition(new THREE.Vector3()).setY(2.5)); ctx.sfx('fanfare');
-        setTimeout(() => ctx.finish({ firstTry: true, why: r.why }), CFG.reduced ? 300 : 900); }
+        T.after((CFG.reduced ? 300 : 900) / 1000, () => ctx.finish({ firstTry: true, why: r.why })); }
       else { ctx.sfx('pop'); practiseT = time(); if (r.practise_say) { ctx.bubble('🔁 ' + r.practise_say, '#B49CFF'); if (bridge.get('autovoice', false)) ctx.say(r.practise_say); } }
       return true;
     },
     focusX() { return focus ? 3.0 : -1.8; },
     lookX() { return focus ? .5 : -.2; },
-    update(t) {
+    update(t) { T.tick(t);
       ok.set(focus === 0 && !finished, t); again.set(focus === 1 && !finished, t);
       [ok, again].forEach(b => { b.group.rotation.z = wig(t, b.group.userData.wig || -9, .1); });
       const talk = CFG.reduced ? .5 : .5 + .5 * Math.sin(t * 9) * Math.sin(t * 2.3);
@@ -41,6 +42,6 @@ export default function recite(ctx, r) {
       if (!CFG.reduced && t - practiseT < .8) stage.rotation.y = Math.sin((t - practiseT) * 12) * .08 * (1 - (t - practiseT) / .8); else stage.rotation.y = 0;
       if (finished && !CFG.reduced) stage.position.y = 1.7 + Math.abs(Math.sin(t * 6)) * .2;
     },
-    dispose() {},
+    dispose() { T.clear();},
   };
 }

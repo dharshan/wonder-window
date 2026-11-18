@@ -4,9 +4,10 @@
 // done when every pair is found; firstTry = misses <= number of pairs.
 // 3D: crater cards that flip in 3D; a matched pair turns into two little star creatures holding the picture.
 import { THREE, CFG, time, clamp, ease } from '../core/engine.js';
-import { rbox, lam, face, focusFrame, craterTexture, STAR_GEO, wig, pop, prog, plane, gridStep } from './bkit.js';
+import { rbox, lam, face, focusFrame, craterTexture, STAR_GEO, wig, pop, prog, plane, gridStep , makeTimers } from './bkit.js';
 
 export default function pairs(ctx, r) {
+  const T = makeTimers();
   const cards = (r.cards || []).map(String); const deck = [];
   cards.forEach(c => { deck.push(c); deck.push(c); });
   for (let i = deck.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [deck[i], deck[j]] = [deck[j], deck[i]]; }
@@ -49,8 +50,8 @@ export default function pairs(ctx, r) {
       if (found === cards.length) { finished = true; finishAt = t + 1.4; }
     } else {
       misses++; busyUntil = t + 1.1;
-      setTimeout(() => { a.wig = p.wig = time(); ctx.wrong(r.hint); }, 450);
-      setTimeout(() => { a.want = 0; p.want = 0; }, 1100);
+      T.after((450) / 1000, () => { a.wig = p.wig = time(); ctx.wrong(r.hint); });
+      T.after((1100) / 1000, () => { a.want = 0; p.want = 0; });
     }
   }
   return {
@@ -64,7 +65,7 @@ export default function pairs(ctx, r) {
     },
     focusX() { const p = cur(); return p ? p.slot.position.x + board.position.x : 0; },
     lookX() { return clamp((fc - (cols - 1) / 2) / 2, -1, 1); },
-    update(t, dt) {
+    update(t, dt) { T.tick(t);
       const f = cur();
       list.forEach(p => {
         const foc = p === f && !finished; const sp = CFG.reduced ? 1 : clamp(dt * 7);
@@ -86,7 +87,7 @@ export default function pairs(ctx, r) {
       });
       if (finished && finishAt && t > finishAt) { finishAt = 0; ctx.finish({ firstTry: misses <= cards.length, why: r.why }); }
     },
-    dispose() { backMat.dispose(); },
+    dispose() { T.clear(); backMat.dispose(); },
   };
 }
 const EYE = new THREE.SphereGeometry(.09, 10, 8), EYE_M = new THREE.MeshBasicMaterial({ color: 0x1F2547 });
