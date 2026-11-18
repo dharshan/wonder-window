@@ -84,6 +84,7 @@ public class MainActivity extends Activity {
     private boolean night;
     private ImageView hills;
     private final List<View> clouds = new ArrayList<>();
+    private final List<ValueAnimator> drifts = new ArrayList<>();
     private SharedPreferences prefs;
     private JSONArray rows;
 
@@ -124,6 +125,7 @@ public class MainActivity extends Activity {
         antiRepeat();                 // D8: purge history older than 14 days at every start, even if WATCH is never opened
         reconcileMeter();
         loadFonts();
+        reducedMotion = Motion.reduced(this);           // system animator scale 0 -> fully static UI
         outer = new FrameLayout(this);
         hills = new ImageView(this);
         hills.setImageResource(R.drawable.bg_hills);
@@ -137,7 +139,7 @@ public class MainActivity extends Activity {
             outer.addView(cv, rect(c[0], c[1], c[2], c[3]));
             clouds.add(cv);
             ValueAnimator drift = ValueAnimator.ofFloat(0, 1);
-            drift.setDuration(90_000 + rng.nextInt(30_000));
+            drift.setDuration(360_000 + rng.nextInt(60_000));          // ambient_world: about 8 px/s, never attention-seeking
             drift.setRepeatCount(ValueAnimator.INFINITE);
             drift.setInterpolator(new LinearInterpolator());
             final float startX = px(c[0]);
@@ -147,7 +149,8 @@ public class MainActivity extends Activity {
                 while (x < -px(c[2])) x += w;
                 cv.setX(x);
             });
-            drift.start();
+            drifts.add(drift);
+            if (!reducedMotion) drift.start();                          // reduced motion: clouds stay still
         }
         root = new FrameLayout(this);
         outer.addView(root, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
@@ -251,11 +254,12 @@ public class MainActivity extends Activity {
 
         void pose(int res) { pose = res; img.setImageResource(res); }
 
-        @Override protected void onAttachedToWindow() { super.onAttachedToWindow(); breathe.start(); ui.postDelayed(blink, 2000); }
+        @Override protected void onAttachedToWindow() { super.onAttachedToWindow(); ui.postDelayed(blink, 2000); }   // quiet hold, occasional blink
 
         @Override protected void onDetachedFromWindow() { breathe.cancel(); ui.removeCallbacks(blink); super.onDetachedFromWindow(); }
 
         void hop() {
+            if (reducedMotion) return;
             float h = img.getHeight() * 0.30f;
             img.animate().translationY(-h).setDuration(180).setInterpolator(new android.view.animation.DecelerateInterpolator())
                     .withEndAction(() -> img.animate().translationY(0).setDuration(140).setInterpolator(new android.view.animation.AccelerateInterpolator()).start()).start();
@@ -697,43 +701,87 @@ public class MainActivity extends Activity {
         LinearLayout col = column();
         LinearLayout greet = new LinearLayout(this);
         greet.setGravity(Gravity.CENTER_VERTICAL);
-        Buddy hb = new Buddy(px(200), R.drawable.buddy_happy_wave);
-        greet.addView(hb, new LinearLayout.LayoutParams(px(200), px(200)));
+        Buddy hb = new Buddy(px(190), R.drawable.buddy_happy_wave);
+        greet.addView(hb, new LinearLayout.LayoutParams(px(190), px(190)));
         String nm = childName().isEmpty() ? "friend" : childName();
         LinearLayout.LayoutParams bl = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         bl.setMargins(px(24), 0, 0, 0);
-        greet.addView(bubble("Hi " + nm + "! What shall we do?", 52), bl);
+        greet.addView(bubble("Hi " + nm + "! What shall we do?", Tokens.TYPE_GREETING - 4), bl);
         col.addView(greet);
-        col.addView(spacer(50));
+        col.addView(spacer(34));
         LinearLayout doors = new LinearLayout(this);
         doors.setGravity(Gravity.CENTER);
         long cd = cooldownLeftMs();
         boolean watchResting = cd > 0 || minutesLeftToday() < 5;
-        String watchSub = cd > 0 ? "🌙 Resting " + (int) Math.ceil(cd / 60000.0) + " min" : minutesLeftToday() < 5 ? "🌙 Resting till tomorrow" : "Videos & stories";
-        View w = door("🎬", "Watch", watchSub, 0xFF6553DB, v -> {
-            if (cooldownLeftMs() > 0 || minutesLeftToday() < 5) { whyHub.setText("Videos are resting. Try Play or Try!"); return; }
-            // Session length comes only from the parent's setting, capped by today's shared budget (issue #1, point 6).
-            beginSession(Math.max(1, Math.min(getResources().getInteger(R.integer.watch_session_min), minutesLeftToday())));
-        });
-        if (watchResting) w.setAlpha(0.55f);
-        View pl = door("🎲", "Play", "Games to think", 0xFFE8590C, v -> showPlayList());
-        View tr = door("🧪", "Try", "Make & discover", 0xFF2F7D4A, v -> {
+        String watchSub = cd > 0 ? "Resting · back in " + (int) Math.ceil(cd / 60000.0) + " min" : minutesLeftToday() < 5 ? "Resting till tomorrow" : "Stories at Story Hill";
+        View pl = realmDoor(R.drawable.door_play, "Play", "Puzzles in the grove", Tokens.PLAY, false, v -> showPlayList());
+        View tr = realmDoor(R.drawable.door_try, "Try", "Make, move & explore", Tokens.TRY, false, v -> {
             if (minutesLeftToday() < 1) { showResting("TV is resting now.", -1); return; }
             if (getResources().getBoolean(R.bool.try_v3)) showTryHome3(); else showTryCats();
         });
+        View w = realmDoor(watchResting ? R.drawable.door_watch_rest : R.drawable.door_watch, "Watch", watchSub, Tokens.WATCH, watchResting, v -> {
+            if (cooldownLeftMs() > 0 || minutesLeftToday() < 5) {         // resting: a picture answer, not only text
+                hb.pose(R.drawable.buddy_sleepy); whyHub.setText("Videos are resting. Try Play or Try!"); return;
+            }
+            // Session length comes only from the parent's setting, capped by today's shared budget (issue #1, point 6).
+            beginSession(Math.max(1, Math.min(getResources().getInteger(R.integer.watch_session_min), minutesLeftToday())));
+        });
         if (!getResources().getBoolean(R.bool.try_enabled)) tr.setVisibility(View.GONE);
+        pl.setId(View.generateViewId()); tr.setId(View.generateViewId()); w.setId(View.generateViewId());
+        boolean tryOn = getResources().getBoolean(R.bool.try_enabled);
+        pl.setNextFocusLeftId(pl.getId()); pl.setNextFocusRightId(tryOn ? tr.getId() : w.getId());
+        tr.setNextFocusLeftId(pl.getId()); tr.setNextFocusRightId(w.getId());
+        w.setNextFocusLeftId(tryOn ? tr.getId() : pl.getId()); w.setNextFocusRightId(w.getId());
         for (View d : new View[]{pl, tr, w}) {                       // home order PLAY → TRY → WATCH (docs/DECISIONS.md D1)
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(px(460), px(470));
-            lp.setMargins(px(30), 0, px(30), 0);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(px(520), ViewGroup.LayoutParams.WRAP_CONTENT);
+            lp.setMargins(px(18), 0, px(18), 0);
             doors.addView(d, lp);
         }
         col.addView(doors);
         whyHub = text("", 40, AMBER, true);
-        col.addView(spacer(30));
+        col.addView(spacer(18));
         col.addView(whyHub);
         center(col);
+        // Pip looks toward the focused door once (Wonder System: one quiet reaction, never a loop).
+        focusWatcher = v -> {
+            if (v != pl && v != tr && v != w) return;
+            hb.img.setScaleX(v == pl ? -1f : 1f);                     // face left toward PLAY, right otherwise
+            if (!reducedMotion) hb.img.animate().rotation(v == pl ? -6f : 6f).setDuration(Tokens.REACT_MS / 2)
+                    .withEndAction(() -> hb.img.animate().rotation(0f).setDuration(Tokens.REACT_MS / 2).start()).start();
+        };
         pl.requestFocus();
-        ui.postDelayed(() -> hb.pose(R.drawable.buddy_idle), 1800);
+        ui.postDelayed(() -> { if ("hub".equals(screen)) hb.pose(R.drawable.buddy_idle); }, 1800);
+    }
+
+    /** Realm door: illustrated window into a place, short sentence-case label, one support line; two-tone focus. */
+    private View realmDoor(int art, String name, String sub, int accent, boolean resting, View.OnClickListener onClick) {
+        LinearLayout d = new LinearLayout(this);
+        d.setOrientation(LinearLayout.VERTICAL);
+        d.setGravity(Gravity.CENTER_HORIZONTAL);
+        d.setPadding(px(18), px(18), px(18), px(26));
+        ImageView pic = new ImageView(this);
+        pic.setImageResource(art);
+        pic.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        GradientDrawable clip = new GradientDrawable(); clip.setCornerRadius(px(26)); clip.setColor(0xFFDDE3EE);
+        pic.setBackground(clip); pic.setClipToOutline(true);
+        d.addView(pic, new LinearLayout.LayoutParams(px(460), px(290)));
+        LinearLayout labels = new LinearLayout(this);
+        labels.setOrientation(LinearLayout.HORIZONTAL);
+        labels.setGravity(Gravity.CENTER_VERTICAL);
+        View dot = new View(this);
+        GradientDrawable dd = new GradientDrawable(); dd.setShape(GradientDrawable.OVAL); dd.setColor(accent);
+        dot.setBackground(dd);
+        LinearLayout.LayoutParams dl = new LinearLayout.LayoutParams(px(22), px(22)); dl.setMargins(0, 0, px(14), 0);
+        labels.addView(dot, dl);
+        labels.addView(text(name, 58, Tokens.INK, true));
+        LinearLayout.LayoutParams ll = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        ll.setMargins(0, px(14), 0, 0);
+        d.addView(labels, ll);
+        TextView sv = text(sub, Tokens.TYPE_SUPPORT, resting ? Tokens.AMBER : Tokens.INK_SOFT, true);
+        d.addView(sv);
+        styleFocusable(d, Color.WHITE, 0xFFD5DCEB, onClick);
+        d.setContentDescription(name + ". " + sub);
+        return d;
     }
 
     private TextView whyHub;
@@ -998,8 +1046,9 @@ public class MainActivity extends Activity {
         center(col);
         addBuddy(80, 800, 210, R.drawable.buddy_thinking);
         if (gLevelUp) levelUpBanner();
-        if (gVoice) { if (n > 0) btns[0].requestFocus(); ui.postDelayed(() -> sayRound(r), 400); }
-        else { hearBtn.requestFocus(); pulse(hearBtn); }
+        // #14: the first answer gets initial focus with or without voice; hear-again stays reachable, never pulses.
+        if (n > 0) btns[0].requestFocus(); else hearBtn.requestFocus();
+        if (gVoice) ui.postDelayed(() -> sayRound(r), 400);
         scheduleIdle(r);
     }
 
@@ -1074,16 +1123,18 @@ public class MainActivity extends Activity {
         ui.postDelayed(() -> b.animate().alpha(0f).setDuration(400).withEndAction(() -> root.removeView(b)).start(), 1800);
     }
 
+    /** One gentle cue (not a loop) that a control can help; nothing in reduced-motion mode. */
     private void pulse(View v) {
-        if (v == null) return;
-        ValueAnimator a = ValueAnimator.ofFloat(1f, 1.14f);
-        a.setDuration(700); a.setRepeatMode(ValueAnimator.REVERSE); a.setRepeatCount(5);
+        if (v == null || reducedMotion) return;
+        ValueAnimator a = ValueAnimator.ofFloat(1f, 1.08f);
+        a.setDuration(Tokens.REACT_MS); a.setRepeatMode(ValueAnimator.REVERSE); a.setRepeatCount(1);
         a.addUpdateListener(x -> { float f = (float) x.getAnimatedValue(); v.setScaleX(f); v.setScaleY(f); });
         a.addListener(new android.animation.AnimatorListenerAdapter() {
-            @Override public void onAnimationEnd(android.animation.Animator an) { v.setScaleX(v.hasFocus() ? 1.08f : 1f); v.setScaleY(v.hasFocus() ? 1.08f : 1f); }
+            @Override public void onAnimationEnd(android.animation.Animator an) { float f = Motion.focusScale(false, v.hasFocus()); v.setScaleX(f); v.setScaleY(f); }
         });
         a.start();
     }
+
 
     private void scheduleIdle(JSONObject r) {
         cancelIdle();
@@ -1372,7 +1423,8 @@ public class MainActivity extends Activity {
         row.addView(ok, lp); row.addView(again, lp);
         col.addView(row);
         addRoundFooter(col);
-        if (gVoice) { ok.requestFocus(); ui.postDelayed(() -> sayRound(r), 400); } else { hearBtn.requestFocus(); pulse(hearBtn); }
+        ok.requestFocus();                                          // #14: primary action first, voice on or off
+        if (gVoice) ui.postDelayed(() -> sayRound(r), 400);
     }
 
     // ------------------------------------------------------------------ catalogue variants: place / echo / order / peek / silhouette
@@ -3165,7 +3217,10 @@ public class MainActivity extends Activity {
         box.setOnClickListener(onClick);
         GradientDrawable card = new GradientDrawable();
         card.setColor(Color.WHITE); card.setCornerRadius(px(32));
-        box.setBackground(card);
+        GradientDrawable edge = new GradientDrawable(); edge.setCornerRadius(px(32) + px(Tokens.FOCUS_OUTER_PX)); edge.setColor(0x00000000);
+        LayerDrawable tileBg = new LayerDrawable(new android.graphics.drawable.Drawable[]{edge, card});
+        int eo = px(Tokens.FOCUS_OUTER_PX); tileBg.setLayerInset(1, eo, eo, eo, eo);
+        box.setBackground(tileBg);
         box.setPadding(px(14), px(14), px(14), px(10));
         box.setElevation(px(8));
         FrameLayout pic = new FrameLayout(this);
@@ -3186,9 +3241,12 @@ public class MainActivity extends Activity {
         title.setPadding(px(6), px(10), px(6), 0);
         box.addView(title, new LinearLayout.LayoutParams(px(412), px(92)));
         box.setOnFocusChangeListener((x, has) -> {
-            box.animate().scaleX(has ? 1.08f : 1f).scaleY(has ? 1.08f : 1f).setDuration(has ? 160 : 120)
-                    .setInterpolator(new OvershootInterpolator(1.5f)).start();
-            card.setStroke(has ? px(8) : 0, GLOW);
+            float f = Motion.focusScale(reducedMotion, has);
+            if (reducedMotion) { box.setScaleX(f); box.setScaleY(f); }
+            else box.animate().scaleX(f).scaleY(f).setDuration(has ? Tokens.FOCUS_MS : Tokens.FOCUS_EXIT_MS)
+                    .setInterpolator(new android.view.animation.DecelerateInterpolator()).start();
+            card.setStroke(has ? px(Tokens.FOCUS_INNER_PX) : 0, Tokens.SUN);                       // two-tone ring
+            edge.setStroke(has ? px(Tokens.FOCUS_OUTER_PX) : 0, Tokens.INK);
             box.setElevation(px(has ? 20 : 8));
             if (has && buddy != null && buddy.getTag() == "peek") perch(box);
         });
@@ -3670,6 +3728,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onStop() {
         super.onStop();
+        for (ValueAnimator d : drifts) d.pause();                  // ambient motion stops when the app is not visible
         stopMeter();
         if (sessionActive) endSessionQuiet();
     }
@@ -3679,6 +3738,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onRestart() {
         super.onRestart();
+        reducedMotion = Motion.reduced(this);
+        for (ValueAnimator d : drifts) { if (reducedMotion) d.cancel(); else if (d.isPaused()) d.resume(); else if (!d.isStarted()) d.start(); }
         warmItems = null; inItem = false;
         start();
     }
@@ -3738,38 +3799,58 @@ public class MainActivity extends Activity {
         boolean darkText = secondary || color == 0xFFF2B33D || color == SUN;
         TextView b = text(label, 48, darkText ? INK : Color.WHITE, true);
         b.setTextColor(darkText ? INK : Color.WHITE);
-        GradientDrawable glow = new GradientDrawable();
-        glow.setCornerRadius(px(40)); glow.setStroke(px(10), secondary ? 0xFFF59E0B : GLOW); glow.setColor(0x00000000);
-        GradientDrawable lipD = new GradientDrawable(); lipD.setColor(lip); lipD.setCornerRadius(px(32));
-        GradientDrawable faceD = new GradientDrawable(); faceD.setColor(face); faceD.setCornerRadius(px(32));
-        GradientDrawable shine = new GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, new int[]{0x2EFFFFFF, 0x00FFFFFF});
-        shine.setCornerRadius(px(32));
-        LayerDrawable ld = new LayerDrawable(new android.graphics.drawable.Drawable[]{glow, lipD, faceD, shine});
-        int g = px(8);
-        ld.setLayerInset(1, g, g, g, g);
-        ld.setLayerInset(2, g, g, g, g + px(8));
-        ld.setLayerInset(3, g, g, g, px(60));
-        glow.setAlpha(0);
-        b.setBackground(ld);
         b.setPadding(px(48), px(26), px(48), px(34));
-        b.setFocusable(true);
-        b.setClickable(true);
-        b.setOnClickListener(onClick == null ? null : v -> {
-            v.animate().translationY(px(6)).scaleX(0.97f).scaleY(0.97f).setDuration(60)
-                    .withEndAction(() -> v.animate().translationY(0).scaleX(1.08f).scaleY(1.08f).setDuration(160)
-                            .setInterpolator(new OvershootInterpolator()).start()).start();
-            onClick.onClick(v);
-        });
-        b.setOnFocusChangeListener((v, has) -> {
-            v.animate().scaleX(has ? 1.08f : 1f).scaleY(has ? 1.08f : 1f).setDuration(has ? 160 : 120)
-                    .setInterpolator(new OvershootInterpolator(1.5f)).start();
-            glow.setAlpha(has ? 255 : 0);
-            faceD.setStroke(has ? px(5) : 0, Color.WHITE);
-            v.setElevation(px(has ? 20 : 6));
-        });
+        styleFocusable(b, face, lip, onClick);
         b.setElevation(px(6));
         return b;
     }
+
+
+    /** Shared card/button surface: lip + face + two-tone focus ring, token motion, reduced-motion static. Used by button() and realm doors. */
+    private void styleFocusable(View b, int face, int lip, View.OnClickListener onClick) {
+        // Two-tone focus ring (Tokens): 4 px INK outer edge + 8 px SUN inner band, visible without any animation.
+        int ringOut = px(Tokens.FOCUS_OUTER_PX), ringIn = px(Tokens.FOCUS_INNER_PX), g = ringOut + ringIn;
+        GradientDrawable outerRing = new GradientDrawable();
+        outerRing.setCornerRadius(px(Tokens.RADIUS_CARD) + g); outerRing.setStroke(ringOut, Tokens.INK); outerRing.setColor(0x00000000);
+        GradientDrawable innerRing = new GradientDrawable();
+        innerRing.setCornerRadius(px(Tokens.RADIUS_CARD) + ringIn); innerRing.setStroke(ringIn, Tokens.SUN); innerRing.setColor(0x00000000);
+        GradientDrawable lipD = new GradientDrawable(); lipD.setColor(lip); lipD.setCornerRadius(px(Tokens.RADIUS_BUTTON));
+        GradientDrawable faceD = new GradientDrawable(); faceD.setColor(face); faceD.setCornerRadius(px(Tokens.RADIUS_BUTTON));
+        GradientDrawable shine = new GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, new int[]{0x24FFFFFF, 0x00FFFFFF});
+        shine.setCornerRadius(px(Tokens.RADIUS_BUTTON));
+        LayerDrawable ld = new LayerDrawable(new android.graphics.drawable.Drawable[]{outerRing, innerRing, lipD, faceD, shine});
+        ld.setLayerInset(1, ringOut, ringOut, ringOut, ringOut);
+        ld.setLayerInset(2, g, g, g, g);
+        ld.setLayerInset(3, g, g, g, g + px(8));
+        ld.setLayerInset(4, g, g, g, px(60));
+        outerRing.setAlpha(0); innerRing.setAlpha(0);
+        b.setBackground(ld);
+        b.setPadding(b.getPaddingLeft() + g, b.getPaddingTop() + g, b.getPaddingRight() + g, b.getPaddingBottom() + g);
+        b.setFocusable(true);
+        b.setClickable(true);
+        b.setOnClickListener(onClick == null ? null : v -> {
+            onClick.onClick(v);                                   // logical action first; the press is feedback only
+            if (reducedMotion) return;
+            v.animate().scaleX(Tokens.PRESS_SCALE).scaleY(Tokens.PRESS_SCALE).setDuration(Tokens.PRESS_MS)
+                    .setInterpolator(new android.view.animation.DecelerateInterpolator())
+                    .withEndAction(() -> { float f = Motion.focusScale(false, v.hasFocus()); v.animate().scaleX(f).scaleY(f).setDuration(Tokens.PRESS_MS).start(); }).start();
+        });
+        b.setOnFocusChangeListener((v, has) -> {
+            outerRing.setAlpha(has ? 255 : 0); innerRing.setAlpha(has ? 255 : 0);   // state change is immediate
+            v.setElevation(px(has ? 16 : 6));
+            float f = Motion.focusScale(reducedMotion, has);
+            if (reducedMotion) { v.setScaleX(f); v.setScaleY(f); return; }
+            v.animate().scaleX(f).scaleY(f).setDuration(has ? Tokens.FOCUS_MS : Tokens.FOCUS_EXIT_MS)
+                    .setInterpolator(new android.view.animation.DecelerateInterpolator()).start();
+            onFocusMoved(v, has);
+        });
+        b.setElevation(px(6));
+    }
+
+    /** Hook for Pip's single, quiet reaction to focus (home); no-op elsewhere. */
+    private void onFocusMoved(View v, boolean has) { if (has && focusWatcher != null && "hub".equals(screen)) focusWatcher.accept(v); }
+    private java.util.function.Consumer<View> focusWatcher;
+    private boolean reducedMotion;
 
     private static int darker(int c) {
         return Color.rgb((int) (Color.red(c) * 0.72), (int) (Color.green(c) * 0.72), (int) (Color.blue(c) * 0.72));
