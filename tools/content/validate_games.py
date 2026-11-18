@@ -365,7 +365,8 @@ def main():
             rs = lv["rounds"]
             per.append(len(rs))
             total += len(rs)
-            minimum = 6 if g["variant"] == "grid_path" else 12
+            # aboutme: the public build dropped the address/phone/recite rounds (issue #1, point 5), leaving 10-12 per level.
+            minimum = 6 if g["variant"] == "grid_path" else (10 if gid == "aboutme" else 12)
             if len(rs) < minimum:
                 errors.append(f"{gid} L{lv['level']}: only {len(rs)} rounds")
             sizes = []
@@ -413,19 +414,15 @@ def main():
                     continue
                 rv = r.get("variant", g["variant"])
                 if rv == "recite":
-                    for k in ("parent_prompt", "buttons", "labels"):
-                        if not r.get(k):
-                            errors.append(f"{w}: recite needs {k}")
-                    if r.get("store") != "nothing":
-                        errors.append(f"{w}: recite must store nothing")
+                    # Address / phone chants are excluded from public content (issue #1, point 5).
+                    errors.append(f"{w}: recite rounds are not allowed in public content")
                     continue
                 if rv == "keypad":
-                    if r.get("check") not in ("literal", "phone_hash", "none"):
-                        errors.append(f"{w}: keypad check must be literal, phone_hash or none")
-                    if r.get("check") == "literal" and not str(r.get("target", "")).isdigit():
+                    # Only public numbers (e.g. 112) may be typed; any personal-number check is forbidden.
+                    if r.get("check") != "literal":
+                        errors.append(f"{w}: keypad check must be 'literal' (no personal or phone_hash rounds)")
+                    if not str(r.get("target", "")).isdigit():
                         errors.append(f"{w}: literal keypad needs a digit target")
-                    if r.get("check") != "literal" and "target" in r:
-                        errors.append(f"{w}: personal keypad rounds must not carry a target")
                     continue
                 b, ch, a = r["board"], r["choices"], r["answer"]
                 dynamic = "dynamic" in r
@@ -486,7 +483,8 @@ def main():
         summary.append(f"{g['name']:<18} {g['variant']:<9} rounds per level {per} total {total} "
                        f"local {local}/{nrounds} ({100 * local // max(nrounds, 1)}%){overlap} "
                        f"silly {sum(1 for lv in g['levels'] for r in lv['rounds'] if r.get('silly'))}")
-        if total < (18 if g["variant"] == "grid_path" else 36) or (gid != "aboutme" and total < (30 if g["variant"] == "grid_path" else 62)):
+        # aboutme has 3 levels and no address/phone rounds in public content, so its floor is 30 (others 36/62).
+        if total < (18 if g["variant"] == "grid_path" else (30 if gid == "aboutme" else 36)) or (gid != "aboutme" and total < (30 if g["variant"] == "grid_path" else 62)):
             errors.append(f"{gid}: total {total} too few")
     validate_catalogue(CATALOGUE, summary)
     for s in summary:

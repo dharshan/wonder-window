@@ -1242,7 +1242,8 @@ public class MainActivity extends Activity {
         String dyn = r.optString("dynamic", "");
         if (dyn.startsWith("name") && childName().isEmpty()) return false;
         if (dyn.startsWith("age") && childAge() <= 0) return false;
-        if ("phone_hash".equals(r.optString("check")) && getString(R.string.phone_hash).isEmpty()) return false;
+        // Personal keypad rounds (phone numbers) are not supported: only literal public-number rounds (e.g. 112) are usable.
+        if ("keypad".equals(r.optString("variant")) && !"literal".equals(r.optString("check"))) return false;
         return true;
     }
 
@@ -1408,13 +1409,7 @@ public class MainActivity extends Activity {
         String check = r.optString("check", "none");
         String entry = typed.toString();
         typed.setLength(0);
-        if (check.equals("phone_hash")) {
-            whyText.setText("⏳");
-            new Thread(() -> {
-                boolean ok = phoneMatches(entry);
-                ui.post(() -> keypadResult(r, ok));
-            }).start();
-        } else keypadResult(r, check.equals("none") || entry.equals(r.optString("target")));
+        keypadResult(r, "literal".equals(check) && entry.equals(r.optString("target")));
     }
 
     private void keypadResult(JSONObject r, boolean ok) {
@@ -1432,18 +1427,6 @@ public class MainActivity extends Activity {
             if (gVoice) say(r.optString("hint")); else pulse(hearBtn);
         }
         if (keypadDots != null) keypadDots.setText(dotLine(r, 0));            // dots reset; the right digits are never shown
-    }
-
-    private boolean phoneMatches(String digits) {
-        try {
-            String want = getString(R.string.phone_hash);
-            javax.crypto.spec.PBEKeySpec spec = new javax.crypto.spec.PBEKeySpec(digits.toCharArray(),
-                    getString(R.string.phone_salt).getBytes(StandardCharsets.UTF_8), 200_000, 256);
-            byte[] h = javax.crypto.SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256").generateSecret(spec).getEncoded();
-            StringBuilder hex = new StringBuilder();
-            for (byte x : h) hex.append(String.format("%02x", x));
-            return java.security.MessageDigest.isEqual(hex.toString().getBytes(StandardCharsets.UTF_8), want.getBytes(StandardCharsets.UTF_8));
-        } catch (Exception e) { Log.w(TAG, "phone check " + e); return false; }
     }
 
     /** He says it aloud; a grown-up presses ✅ or 🔁. Nothing is recorded or stored. */

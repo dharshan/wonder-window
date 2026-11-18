@@ -1,6 +1,8 @@
 """Pre-render every spoken line into app assets (the TV has no text-to-speech engine).
 
-macOS only (uses `say` + `afconvert`). Reads the warm-up bank, the catalog titles and the fixed UI lines,
+LOCAL macOS HELPER (uses `say` + `afconvert`); optional, not used by CI. The app runs without voice clips.
+
+macOS only. Reads the warm-up bank, the catalog titles and the fixed UI lines,
 writes app/src/main/assets/voice/<sha1>.m4a and voice/index.json {text: file}. Re-runs only render new lines.
 Usage: python3 tools/make_voice.py   (voice from family.properties `voice=`, default Rishi)
 """

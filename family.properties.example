@@ -1,4 +1,6 @@
-# Copy to family.properties (it is git-ignored) and change the names. Rebuild with tools/build-install.sh.
+# Copy to family.properties (it is git-ignored) and change the names. Only the local `family` build reads this file
+# (./gradlew assembleFamilyDebug, or the macOS helper tools/build-install.sh). The `public` build ignores it.
+# Never upload a family APK. There is no phone-number setting: parent phone numbers are not supported.
 # app_title   = the name on the TV's home screen tile
 # buddy_name  = the friendly guide's name, used in sentences like "<buddy> picked a 15-minute adventure"
 # warmup_title = title of the warm-up game (defaults to "<buddy_name>'s Warm-up")
@@ -14,10 +16,6 @@ voice_rate=150
 child_name=
 child_birth=
 aboutme_unlock_all=false
-# Phone practice (All About Me game): a 10-digit number he should learn, e.g. Amma's mobile.
-# Only salted hashes of its 3-3-4 parts go into the app; the TV never shows or stores the digits.
-parent_phone=
-
 # Daily screen-time limit in minutes, shared by Watch, Play and Try together (30-180; 120 = 2 h, 180 = 3 h)
 daily_limit_min=120
 

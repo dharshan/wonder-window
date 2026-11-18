@@ -8139,7 +8139,7 @@
     "memory"
    ],
    "adaptive": false,
-   "privacy": "see games_design.md Round 3: no personal value is shown, spoken or stored, except the hashed phone number set by the parent.",
+   "privacy": "No personal value is shown, spoken or stored. The public build has no address, phone or recite rounds; the only keypad round is the public 112 help number (check: literal).",
    "cheers": [
     "That's you!",
     "Now I know more about you!",
@@ -8308,26 +8308,6 @@
        "why": "We live in Bengaluru, also called Bangalore!",
        "scene": "📇",
        "fade": 2
-      },
-      {
-       "id": "me-1-09",
-       "variant": "recite",
-       "prompt": "Let's chant like a phone number!",
-       "say": "Phone numbers have a rhythm. Clap with me: ta ta ta, ta ta ta, ta ta ta ta! Now say Amma's phone number with Amma, in the same rhythm.",
-       "parent_prompt": "Grown-up: say your phone number together in a 3-3-4 rhythm. Press ✅ when done.",
-       "buttons": [
-        "✅",
-        "🔁"
-       ],
-       "labels": [
-        "Said it!",
-        "Practise more"
-       ],
-       "why": "Super chanting! Numbers are easier to remember with a rhythm.",
-       "practise_say": "Let's try again with Amma, slowly.",
-       "hint": "Let's try again with Amma, slowly.",
-       "scene": "📇",
-       "store": "nothing"
       },
       {
        "id": "me-1-10",
@@ -8548,64 +8528,6 @@
        "fade": 0
       },
       {
-       "id": "me-2-09",
-       "variant": "keypad",
-       "prompt": "Type Amma's number with Amma!",
-       "say": "Let's type Amma's phone number together, with Amma helping. Ta ta ta, ta ta ta, ta ta ta ta!",
-       "check": "none",
-       "chunks": [
-        3,
-        3,
-        4
-       ],
-       "hint": "Amma will help you find each number.",
-       "why": "Super typing! You're learning Amma's number.",
-       "scene": "📇",
-       "max_tries": 2,
-       "on_miss_say": "Let's practise this with Amma.",
-       "parent_help": "Grown-up: sit with your child and practise the number together. It is never shown on screen."
-      },
-      {
-       "id": "me-2-10",
-       "variant": "recite",
-       "prompt": "Say Amma's number to Amma!",
-       "say": "Can you say Amma's phone number to Amma? Say it in the rhythm: ta ta ta, ta ta ta, ta ta ta ta!",
-       "parent_prompt": "Grown-up: did your child say your phone number? Press ✅ or 🔁. Nothing is saved.",
-       "buttons": [
-        "✅",
-        "🔁"
-       ],
-       "labels": [
-        "Said it!",
-        "Practise more"
-       ],
-       "why": "Wow! Now you know a very important number.",
-       "practise_say": "That's OK. Let's practise it with Amma again.",
-       "hint": "That's OK. Let's practise it with Amma again.",
-       "scene": "📇",
-       "store": "nothing"
-      },
-      {
-       "id": "me-2-11",
-       "variant": "recite",
-       "prompt": "Tell Amma your area's name!",
-       "say": "Can you tell Amma the name of the area where we live?",
-       "parent_prompt": "Grown-up: did your child say your area name? Press ✅ or 🔁. Nothing is saved.",
-       "buttons": [
-        "✅",
-        "🔁"
-       ],
-       "labels": [
-        "Said it!",
-        "Practise more"
-       ],
-       "why": "Super! Knowing where you live helps you stay safe.",
-       "practise_say": "Let's practise it with Amma.",
-       "hint": "Let's practise it with Amma.",
-       "scene": "📇",
-       "store": "nothing"
-      },
-      {
        "id": "me-2-12",
        "prompt": "{buddy} got it wrong! Can you fix it?",
        "say": "I think one hand has six fingers! Oops, is that right? How many fingers are there really?",
@@ -8648,44 +8570,6 @@
     {
      "level": 3,
      "rounds": [
-      {
-       "id": "me-3-01",
-       "variant": "keypad",
-       "prompt": "Type Amma's number by yourself!",
-       "say": "Can you type Amma's phone number all by yourself? Ta ta ta, ta ta ta, ta ta ta ta!",
-       "check": "phone_hash",
-       "chunks": [
-        3,
-        3,
-        4
-       ],
-       "hint": "Think of the rhythm: ta ta ta, ta ta ta, ta ta ta ta.",
-       "why": "You did it! You know Amma's phone number.",
-       "scene": "📇",
-       "max_tries": 2,
-       "on_miss_say": "Let's practise this with Amma.",
-       "parent_help": "Grown-up: sit with your child and practise the number together. It is never shown on screen."
-      },
-      {
-       "id": "me-3-02",
-       "variant": "recite",
-       "prompt": "Tell Amma your address!",
-       "say": "Can you tell Amma your house address? Say your house number, your street, and your area.",
-       "parent_prompt": "Grown-up: did your child say the house number, street and area? Press ✅ or 🔁. Nothing is saved.",
-       "buttons": [
-        "✅",
-        "🔁"
-       ],
-       "labels": [
-        "Said it!",
-        "Practise more"
-       ],
-       "why": "Wonderful! Your address helps people bring you home.",
-       "practise_say": "That's OK. Let's practise it with Amma, one part at a time.",
-       "hint": "That's OK. Let's practise it with Amma, one part at a time.",
-       "scene": "📇",
-       "store": "nothing"
-      },
       {
        "id": "me-3-03",
        "prompt": "{buddy} got it wrong! Can you fix it?",
@@ -8872,26 +8756,6 @@
        "hint": "Look at each letter of your name.",
        "why": "Yes! That letter is in your name.",
        "scene": "📇"
-      },
-      {
-       "id": "me-3-13",
-       "variant": "recite",
-       "prompt": "Say your full name to Amma!",
-       "say": "Can you tell Amma your full name, like you would tell a teacher?",
-       "parent_prompt": "Grown-up: did your child say their full name? Press ✅ or 🔁. Nothing is saved.",
-       "buttons": [
-        "✅",
-        "🔁"
-       ],
-       "labels": [
-        "Said it!",
-        "Practise more"
-       ],
-       "why": "Super! Now you can tell a helper who you are.",
-       "practise_say": "Let's practise with Amma.",
-       "hint": "Let's practise with Amma.",
-       "scene": "📇",
-       "store": "nothing"
       }
      ]
     }

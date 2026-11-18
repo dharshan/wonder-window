@@ -1,0 +1,36 @@
+name: Android build
+on:
+  push:
+    paths: ["app/**", "build.gradle", "settings.gradle", "gradle.properties", "gradle/**", "gradlew", "tools/check_public_apk.py", ".github/workflows/android-build.yml"]
+  pull_request:
+    paths: ["app/**", "build.gradle", "settings.gradle", "gradle.properties", "gradle/**", "gradlew", "tools/check_public_apk.py", ".github/workflows/android-build.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    # Linux, headless: no macOS, no connected TV, no generated voice clips (the app falls back silently).
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v3
+      - name: Build and lint the public edition
+        run: ./gradlew --no-daemon assemblePublicDebug lintPublicRelease
+      - name: Public build carries no family values
+        run: python3 tools/check_public_apk.py --apk app/build/outputs/apk/public/debug/app-public-debug.apk
+      - name: Public build ignores family.properties (fail-closed test)
+        run: |
+          printf 'child_name=SENTINEL_NAME\nchild_birth=2000-01\nparent_phone=0000000000\nbuddy_name=SentinelBuddy\n' > family.properties
+          ./gradlew --no-daemon assemblePublicDebug
+          python3 tools/check_public_apk.py --apk app/build/outputs/apk/public/debug/app-public-debug.apk
+          # And the check must catch a family build (negative control).
+          ./gradlew --no-daemon assembleFamilyDebug
+          if python3 tools/check_public_apk.py --apk app/build/outputs/apk/family/debug/app-family-debug.apk; then
+            echo "check_public_apk.py failed to flag a family build"; exit 1
+          fi
+          rm -f family.properties
