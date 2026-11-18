@@ -1,0 +1,625 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/dharshan/wonder-window/content/schemas/runtime/catalogue_games.v1.schema.json",
+ "title": "catalogue_games.json - catalogue games, merged modes and aliases (format version 1)",
+ "x-status": "current",
+ "x-file": "app/src/main/assets/catalogue_games.json",
+ "description": "Catalogue games (WW-xxx) shown next to the core games, modes merged into core games, and alias map. Deeper rules: tools/content/validate_games.py.",
+ "type": "object",
+ "required": [
+  "version",
+  "games",
+  "merged_modes",
+  "aliases"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "version": {
+   "const": 1
+  },
+  "games": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/game"
+   },
+   "minItems": 1
+  },
+  "merged_modes": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/mode"
+   }
+  },
+  "aliases": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "properties": {
+     "merged_into": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "required": [
+     "merged_into"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "$defs": {
+  "game": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "minLength": 1
+    },
+    "catalogue_id": {
+     "type": "string",
+     "pattern": "^WW-[0-9]{3}$"
+    },
+    "name": {
+     "type": "string",
+     "minLength": 1
+    },
+    "icon": {
+     "type": "string",
+     "minLength": 1
+    },
+    "color": {
+     "type": "string",
+     "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "tagline": {
+     "type": "string",
+     "minLength": 1
+    },
+    "category": {
+     "type": "string",
+     "minLength": 1
+    },
+    "section": {
+     "const": "play"
+    },
+    "variant": {
+     "enum": [
+      "pick",
+      "sort",
+      "grid_path",
+      "keypad",
+      "recite",
+      "place",
+      "echo",
+      "order",
+      "peek",
+      "mirror",
+      "pairs",
+      "compose",
+      "scene_canvas"
+     ]
+    },
+    "story": {
+     "type": "string",
+     "minLength": 1
+    },
+    "say_intro": {
+     "type": "string",
+     "minLength": 1
+    },
+    "cheers": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     },
+     "minItems": 6,
+     "maxItems": 6
+    },
+    "end_lines": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     },
+     "minItems": 4,
+     "maxItems": 4
+    },
+    "levels_info": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "level": {
+        "type": "integer"
+       },
+       "title": {
+        "type": "string",
+        "minLength": 1
+       },
+       "emoji": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "level",
+       "title",
+       "emoji"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 1
+    },
+    "levels": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "level": {
+        "type": "integer"
+       },
+       "rounds": {
+        "type": "array",
+        "items": {
+         "$ref": "#/$defs/round"
+        },
+        "minItems": 1
+       }
+      },
+      "required": [
+       "level",
+       "rounds"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 1
+    },
+    "letter_font": {
+     "type": "string",
+     "minLength": 1
+    },
+    "legacy_alias": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "rounds_per_session": {
+     "type": "integer"
+    },
+    "needs_variant": {
+     "enum": [
+      "pick",
+      "sort",
+      "grid_path",
+      "keypad",
+      "recite",
+      "place",
+      "echo",
+      "order",
+      "peek",
+      "mirror",
+      "pairs",
+      "compose",
+      "scene_canvas"
+     ]
+    }
+   },
+   "required": [
+    "id",
+    "catalogue_id",
+    "name",
+    "icon",
+    "color",
+    "tagline",
+    "category",
+    "section",
+    "variant",
+    "story",
+    "say_intro",
+    "cheers",
+    "end_lines",
+    "levels_info",
+    "levels"
+   ],
+   "additionalProperties": false
+  },
+  "mode": {
+   "type": "object",
+   "properties": {
+    "catalogue_id": {
+     "type": "string",
+     "pattern": "^WW-[0-9]{3}$"
+    },
+    "alias_of": {
+     "type": "string",
+     "minLength": 1
+    },
+    "mode_id": {
+     "type": "string",
+     "minLength": 1
+    },
+    "name": {
+     "type": "string",
+     "minLength": 1
+    },
+    "variant": {
+     "enum": [
+      "pick",
+      "sort",
+      "grid_path",
+      "keypad",
+      "recite",
+      "place",
+      "echo",
+      "order",
+      "peek",
+      "mirror",
+      "pairs",
+      "compose",
+      "scene_canvas"
+     ]
+    },
+    "rounds_per_session": {
+     "type": "integer"
+    },
+    "levels": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "level": {
+        "type": "integer"
+       },
+       "rounds": {
+        "type": "array",
+        "items": {
+         "$ref": "#/$defs/round"
+        },
+        "minItems": 1
+       }
+      },
+      "required": [
+       "level",
+       "rounds"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 1
+    },
+    "levels_info": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "level": {
+        "type": "integer"
+       },
+       "title": {
+        "type": "string",
+        "minLength": 1
+       },
+       "emoji": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "level",
+       "title",
+       "emoji"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 1
+    }
+   },
+   "required": [
+    "catalogue_id",
+    "alias_of",
+    "mode_id",
+    "name",
+    "variant",
+    "levels",
+    "levels_info"
+   ],
+   "additionalProperties": false
+  },
+  "round": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "minLength": 1
+    },
+    "prompt": {
+     "type": "string",
+     "minLength": 1
+    },
+    "say": {
+     "type": "string",
+     "minLength": 1
+    },
+    "hint": {
+     "type": "string",
+     "minLength": 1
+    },
+    "why": {
+     "type": "string",
+     "minLength": 1
+    },
+    "scene": {
+     "type": "string"
+    },
+    "variant": {
+     "enum": [
+      "pick",
+      "sort",
+      "grid_path",
+      "keypad",
+      "recite",
+      "place",
+      "echo",
+      "order",
+      "peek",
+      "mirror",
+      "pairs",
+      "compose",
+      "scene_canvas"
+     ]
+    },
+    "board": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "choices": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "answer": {
+     "type": "integer"
+    },
+    "fade": {
+     "type": "integer"
+    },
+    "labels": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "also_ok": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "any_ok": {
+     "type": "boolean"
+    },
+    "save_as": {
+     "type": "string",
+     "minLength": 1
+    },
+    "silly": {
+     "type": "boolean"
+    },
+    "oops": {
+     "type": "string",
+     "minLength": 1
+    },
+    "dynamic": {
+     "type": "string",
+     "minLength": 1
+    },
+    "shuffle": {
+     "type": "boolean"
+    },
+    "board_fade": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "count_with_me": {
+     "type": "boolean"
+    },
+    "count_item": {
+     "type": "string",
+     "minLength": 1
+    },
+    "pool": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "sequence": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "show_ms": {
+     "type": "integer"
+    },
+    "layout": {
+     "enum": [
+      "grid2x3"
+     ]
+    },
+    "case": {
+     "enum": [
+      "lower"
+     ]
+    },
+    "silhouette": {
+     "type": "boolean"
+    },
+    "choice_rotate": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "items": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "attribute": {
+     "type": "string",
+     "minLength": 1
+    },
+    "diff_hint": {
+     "type": "string",
+     "minLength": 1
+    },
+    "peek_board": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "peek_ms": {
+     "type": "integer"
+    },
+    "scales": {
+     "type": "array",
+     "items": {
+      "type": "number"
+     }
+    },
+    "direction": {
+     "type": "string",
+     "minLength": 1
+    },
+    "rows": {
+     "type": "integer"
+    },
+    "cols": {
+     "type": "integer"
+    },
+    "left": {
+     "type": "array"
+    },
+    "palette": {
+     "type": "array"
+    },
+    "bins": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": ["face", "label"],
+      "properties": {"face": {"type": "string", "minLength": 1}, "label": {"type": "string", "minLength": 1}}
+     }
+    },
+    "answers": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "cards": {
+     "type": "array"
+    },
+    "mode": {
+     "enum": [
+      "build",
+      "canvas",
+      "slots"
+     ]
+    },
+    "parts": {
+     "type": "array"
+    },
+    "target": {
+     "type": [
+      "array",
+      "null"
+     ]
+    },
+    "min_parts": {
+     "type": "integer"
+    },
+    "must_include": {
+     "type": "array"
+    },
+    "backdrop": {
+     "type": "string",
+     "minLength": 1
+    },
+    "grid": {
+     "type": [
+      "object",
+      "array"
+     ]
+    },
+    "min_items": {
+     "type": "integer"
+    },
+    "max_items": {
+     "type": "integer"
+    },
+    "finish": {
+     "type": "string",
+     "minLength": 1
+    },
+    "story_say": {
+     "type": "string",
+     "minLength": 1
+    },
+    "who": {
+     "type": "array"
+    },
+    "where": {
+     "type": "array"
+    },
+    "what": {
+     "type": "array"
+    },
+    "slots": {
+     "type": "array"
+    },
+    "legend": {
+     "type": "object",
+     "properties": {},
+     "required": [],
+     "additionalProperties": true
+    },
+    "need_star": {
+     "type": "boolean"
+    },
+    "hint_after_bumps": {
+     "type": "integer"
+    },
+    "first_move": {
+     "type": "string",
+     "minLength": 1
+    }
+   },
+   "required": [
+    "id",
+    "prompt",
+    "say",
+    "hint",
+    "why"
+   ],
+   "additionalProperties": false,
+   "description": "One round of a catalogue game or mode (catalogue_games.json v1)."
+  }
+ }
+}

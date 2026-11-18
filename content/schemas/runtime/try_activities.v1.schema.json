@@ -1,0 +1,507 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/dharshan/wonder-window/content/schemas/runtime/try_activities.v1.schema.json",
+ "title": "try_activities.json - TRY v3 reviewed activities (schema_version 1)",
+ "x-status": "current",
+ "x-file": "app/src/main/assets/try_activities.json",
+ "description": "Every activity needs safety_review, safety_notes, materials and a human approval record. Deeper rules: tools/content/validate_try_activities.py.",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "families",
+  "lines",
+  "activities"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1
+  },
+  "families": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "enum": [
+       "move_and_play",
+       "create_and_make",
+       "nature_and_notice",
+       "think_and_discover",
+       "help_and_everyday",
+       "family_and_connect",
+       "calm_and_mindful"
+      ]
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "icon": {
+      "type": "string",
+      "minLength": 1
+     },
+     "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     }
+    },
+    "required": [
+     "id",
+     "name",
+     "icon",
+     "color"
+    ],
+    "additionalProperties": false
+   },
+   "minItems": 1
+  },
+  "lines": {
+   "type": "object",
+   "properties": {
+    "home": {
+     "type": "string",
+     "minLength": 1
+    },
+    "away": {
+     "type": "string",
+     "minLength": 1
+    },
+    "notice": {
+     "type": "string",
+     "minLength": 1
+    },
+    "rest": {
+     "type": "string",
+     "minLength": 1
+    }
+   },
+   "required": [
+    "home",
+    "away",
+    "notice",
+    "rest"
+   ],
+   "additionalProperties": true
+  },
+  "activities": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/activity"
+   },
+   "minItems": 1
+  }
+ },
+ "$defs": {
+  "activity": {
+   "type": "object",
+   "properties": {
+    "schema_version": {
+     "const": 1
+    },
+    "activity_id": {
+     "type": "string",
+     "pattern": "^TRY-[A-Z]+-[0-9]{3}$"
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "short_description": {
+     "type": "string",
+     "minLength": 1
+    },
+    "say": {
+     "type": "string",
+     "minLength": 1
+    },
+    "pic": {
+     "type": "string",
+     "minLength": 1
+    },
+    "category": {
+     "enum": [
+      "move_and_play",
+      "create_and_make",
+      "nature_and_notice",
+      "think_and_discover",
+      "help_and_everyday",
+      "family_and_connect",
+      "calm_and_mindful"
+     ]
+    },
+    "subcategories": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "recommended_age_bands": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "3-4",
+       "5-6",
+       "7-8",
+       "9-10"
+      ]
+     },
+     "minItems": 1,
+     "uniqueItems": true
+    },
+    "difficulty": {
+     "enum": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "duration_minutes": {
+     "type": "object",
+     "properties": {
+      "min": {
+       "type": "integer"
+      },
+      "max": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "min",
+      "max"
+     ],
+     "additionalProperties": false
+    },
+    "screen_intro_seconds": {
+     "type": "integer"
+    },
+    "learning_intentions": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "materials": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "pic": {
+        "type": "string",
+        "minLength": 1
+       },
+       "name": {
+        "type": "string",
+        "minLength": 1
+       },
+       "kind": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "pic",
+       "name",
+       "kind"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "setup_steps": {
+     "type": "array"
+    },
+    "child_steps": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "pic": {
+        "type": "string",
+        "minLength": 1
+       },
+       "text": {
+        "type": "string",
+        "minLength": 1
+       },
+       "say": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "pic",
+       "text",
+       "say"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 3,
+     "maxItems": 5
+    },
+    "adult_support": {
+     "enum": [
+      "none",
+      "optional",
+      "recommended",
+      "required"
+     ]
+    },
+    "safety_notes": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "adaptations_by_age": {
+     "type": "object",
+     "properties": {
+      "3-4": {
+       "type": "string",
+       "minLength": 1
+      },
+      "5-6": {
+       "type": "string",
+       "minLength": 1
+      },
+      "7-8": {
+       "type": "string",
+       "minLength": 1
+      },
+      "9-10": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "required": [],
+     "additionalProperties": false
+    },
+    "accessibility_adaptations": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     },
+     "minItems": 1
+    },
+    "indoor_alternative": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "outdoor_alternative": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "video_topic_tags": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "language_variants": {
+     "type": "object",
+     "properties": {
+      "en": {
+       "type": "object",
+       "properties": {
+        "title": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "required": [
+        "title"
+       ],
+       "additionalProperties": false
+      },
+      "kn": {
+       "type": "object",
+       "properties": {},
+       "required": [],
+       "additionalProperties": true
+      },
+      "hi": {
+       "type": "object",
+       "properties": {},
+       "required": [],
+       "additionalProperties": true
+      }
+     },
+     "required": [
+      "en"
+     ],
+     "additionalProperties": false
+    },
+    "illustration_asset": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "audio_asset": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "parent_review_required": {
+     "type": "boolean"
+    },
+    "safety_review": {
+     "type": "object",
+     "properties": {
+      "choking_small_parts": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "sharp_tools": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "heat_fire": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "electricity": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "chemicals": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "food_allergy_choking": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "water_slip": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "outdoor_environment": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "animal_plant_insect": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "exertion_fall": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "privacy_disclosure": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      },
+      "adult_involvement": {
+       "enum": [
+        "none",
+        "mitigated",
+        "present"
+       ]
+      }
+     },
+     "required": [
+      "choking_small_parts",
+      "sharp_tools",
+      "heat_fire",
+      "electricity",
+      "chemicals",
+      "food_allergy_choking",
+      "water_slip",
+      "outdoor_environment",
+      "animal_plant_insect",
+      "exertion_fall",
+      "privacy_disclosure",
+      "adult_involvement"
+     ],
+     "additionalProperties": false
+    },
+    "safety_status": {
+     "enum": [
+      "approved",
+      "parent_supervision_required",
+      "needs_review",
+      "rejected"
+     ]
+    },
+    "content_status": {
+     "enum": [
+      "draft",
+      "needs_review",
+      "reviewed"
+     ]
+    },
+    "approved_by": {
+     "type": "string",
+     "minLength": 1
+    }
+   },
+   "required": [
+    "schema_version",
+    "activity_id",
+    "title",
+    "short_description",
+    "say",
+    "pic",
+    "category",
+    "recommended_age_bands",
+    "duration_minutes",
+    "screen_intro_seconds",
+    "materials",
+    "child_steps",
+    "adult_support",
+    "safety_notes",
+    "adaptations_by_age",
+    "accessibility_adaptations",
+    "video_topic_tags",
+    "safety_review",
+    "safety_status",
+    "content_status",
+    "parent_review_required"
+   ],
+   "additionalProperties": false
+  }
+ }
+}

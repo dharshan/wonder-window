@@ -2,7 +2,7 @@
 
 Child: 5½ y, UKG, Bangalore, Kannada at home (understands English/Hindi), cannot read, D-pad remote (UP DOWN LEFT RIGHT OK BACK).
 Voice plays only when he presses 🔊 (then stays on for that set). Short non-speech sfx are allowed.
-Graphics: emoji Unicode ≤ 11, no ZWJ sequences; Sky Garden design system (candy buttons, white cards, Cherry the sparrow).
+Graphics: emoji Unicode ≤ 11, no ZWJ sequences; Sky Garden design system (candy buttons, white cards, the buddy (Pip) the sparrow).
 Spoken lines are pre-recorded with macOS `say` (Rishi): never an isolated letter or vowel; write sounds as "buh", "sss".
 Prompts ≤ 8 words; sessions = 5 rounds ≈ 1.5–4 min; no timers, no streaks, no daily rewards, no FOMO, no punitive feedback.
 Shared screen-time budget is owned by the app shell; games never add time.

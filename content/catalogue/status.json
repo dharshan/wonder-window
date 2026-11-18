@@ -2221,7 +2221,7 @@
    "learning_objective_review",
    "design_spec"
   ],
-  "notes": "30 rounds, 3 levels. compose slots (who/where/what, any_ok). Also covers WW-210, WW-066, WW-174: same action, pick one per slot to make a story. No placeholder template is shipped; Cherry tells it from per-option label clips plus one generic story_say line.",
+  "notes": "30 rounds, 3 levels. compose slots (who/where/what, any_ok). Also covers WW-210, WW-066, WW-174: same action, pick one per slot to make a story. No placeholder template is shipped; the buddy (Pip) tells it from per-option label clips plus one generic story_say line.",
   "spec": "specs/WW-213.md"
  },
  "WW-214": {
@@ -5129,7 +5129,7 @@
    "catalogue_intake",
    "dedup_review"
   ],
-  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; Cherry tells it back). Same objective, same action. Cluster WW-DUP-056 (canonical WW-213)."
+  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; the buddy (Pip) tells it back). Same objective, same action. Cluster WW-DUP-056 (canonical WW-213)."
  },
  "WW-259": {
   "approval": "design_spec_draft",
@@ -6118,7 +6118,7 @@
    "catalogue_intake",
    "dedup_review"
   ],
-  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; Cherry tells it back). Same objective, same action. Cluster WW-DUP-033 (canonical WW-174)."
+  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; the buddy (Pip) tells it back). Same objective, same action. Cluster WW-DUP-033 (canonical WW-174)."
  },
  "WW-334": {
   "approval": "design_spec_draft",

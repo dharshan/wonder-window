@@ -5,12 +5,12 @@
 # buddy_name  = the friendly guide's name, used in sentences like "<buddy> picked a 15-minute adventure"
 # warmup_title = title of the warm-up game (defaults to "<buddy_name>'s Warm-up")
 app_title=Wonder Window
-buddy_name=Gubbi
+buddy_name=Pip
 # voice = macOS voice used to record the spoken lines (say -v ? lists them; Rishi = Indian English)
 voice=Rishi
 voice_rate=150
 # About Me warm-up (stays on this laptop and the TV; never committed):
-# child_name  = the first name he is learning to spell, e.g. Cherry
+# child_name  = the first name he is learning to spell, e.g. Asha (example only)
 # child_birth = birth year and month, YYYY-MM
 # aboutme_unlock_all = true shows all About Me question types at once (for testing)
 child_name=
