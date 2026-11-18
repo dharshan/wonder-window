@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Wonder Window motion grammar: focus, press, transition and static mode</title>
+<desc>Motion is shown as a purposeful change in interface state: focus, OK confirmation, a connected screen transition and an equivalent static reduced-motion state.</desc>
+<defs><filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#1F2547" flood-opacity=".12"/></filter></defs>
+<rect width="1920" height="1080" fill="#F8F3E8"/>
+<text x="80" y="100" font-family="Fredoka,Arial,sans-serif" font-size="52" font-weight="700" fill="#1F2547">Motion that explains, confirms and connects</text>
+<text x="82" y="150" font-family="Andika,Arial,sans-serif" font-size="25" fill="#46516B">The logical state changes immediately. Animation is feedback, never a gate to the next action.</text>
+<g filter="url(#shadow)">
+ <rect x="70" y="220" width="850" height="320" rx="28" fill="#FFFFFF"/>
+ <rect x="1000" y="220" width="850" height="320" rx="28" fill="#FFFFFF"/>
+ <rect x="70" y="590" width="850" height="320" rx="28" fill="#FFFFFF"/>
+ <rect x="1000" y="590" width="850" height="320" rx="28" fill="#FFFFFF"/>
+</g>
+<!-- focus -->
+<text x="110" y="275" font-family="Fredoka,Arial,sans-serif" font-size="31" font-weight="700" fill="#1F2547">1 · Focus — orient</text>
+<rect x="130" y="330" width="280" height="135" rx="24" fill="#D9EEE5" stroke="#1F2547" stroke-width="4"/>
+<text x="270" y="410" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="25" fill="#1F2547">Unfocused</text>
+<rect x="520" y="320" width="300" height="155" rx="27" fill="#D9EEE5" stroke="#1F2547" stroke-width="5"/>
+<rect x="529" y="329" width="282" height="137" rx="21" fill="none" stroke="#FFC94A" stroke-width="9"/>
+<text x="670" y="410" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="25" fill="#1F2547">Focused</text>
+<text x="460" y="410" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="35" fill="#B28D48">→</text>
+<!-- press -->
+<text x="1040" y="275" font-family="Fredoka,Arial,sans-serif" font-size="31" font-weight="700" fill="#1F2547">2 · Press — confirm OK</text>
+<rect x="1080" y="330" width="270" height="135" rx="24" fill="#5140B8"/>
+<text x="1215" y="410" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="27" font-weight="700" fill="#FFFFFF">Ready</text>
+<rect x="1510" y="345" width="270" height="105" rx="20" fill="#5140B8"/>
+<text x="1645" y="410" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="27" font-weight="700" fill="#FFFFFF">Pressed</text>
+<text x="1430" y="410" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="35" fill="#B28D48">→</text>
+<!-- transition -->
+<text x="110" y="645" font-family="Fredoka,Arial,sans-serif" font-size="31" font-weight="700" fill="#1F2547">3 · Scene link — connect</text>
+<rect x="130" y="700" width="280" height="150" rx="20" fill="#DCECF8"/>
+<path d="M170 815q80 -75 160 0" stroke="#6FB47C" stroke-width="18" fill="none"/>
+<path d="M520 700h280v150H520z" rx="20" fill="#E5F1D8"/>
+<path d="M560 815q80 -75 160 0" stroke="#6FB47C" stroke-width="18" fill="none"/>
+<path d="M430 770h55m-15 -15 15 15 -15 15" stroke="#B28D48" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="465" y="740" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="19" fill="#46516B">shared path</text>
+<!-- reduced -->
+<text x="1040" y="645" font-family="Fredoka,Arial,sans-serif" font-size="31" font-weight="700" fill="#1F2547">4 · Reduced motion — same meaning</text>
+<rect x="1080" y="700" width="300" height="150" rx="22" fill="#D9EEE5" stroke="#1F2547" stroke-width="5"/>
+<rect x="1089" y="709" width="282" height="132" rx="16" fill="none" stroke="#FFC94A" stroke-width="9"/>
+<text x="1230" y="785" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="24" fill="#1F2547">Focused</text>
+<rect x="1480" y="700" width="300" height="150" rx="22" fill="#D9EEE5" stroke="#1F2547" stroke-width="5"/>
+<rect x="1489" y="709" width="282" height="132" rx="16" fill="none" stroke="#FFC94A" stroke-width="9"/>
+<text x="1630" y="785" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="24" fill="#1F2547">Focused</text>
+<text x="1430" y="785" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="35" fill="#B28D48">=</text>
+<rect x="80" y="955" width="1760" height="75" rx="18" fill="#FFFFFF" stroke="#E6DDC9" stroke-width="3"/>
+<text x="110" y="1003" font-family="Andika,Arial,sans-serif" font-size="22" fill="#1F2547">Timing: focus 160 ms · press 80 ms · scene link 300 ms · character reaction 260 ms. OK never waits for the animation.</text>
+</svg>
