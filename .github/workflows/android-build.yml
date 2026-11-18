@@ -19,6 +19,9 @@ jobs:
           distribution: temurin
           java-version: "17"
       - uses: android-actions/setup-android@v3
+        with:
+          # The default 'tools' package no longer exists; AGP downloads platform 34 / build-tools itself once licences are accepted.
+          packages: ''
       - name: Build and lint the public edition
         run: ./gradlew --no-daemon assemblePublicDebug lintPublicRelease
       - name: Public build carries no family values
