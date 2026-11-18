@@ -9,6 +9,6 @@ cd "$R"
 echo "sdk.dir=$ANDROID_HOME" > local.properties
 cp catalog/catalog.json app/src/main/assets/catalog.json
 "${WW_PYTHON:-$M/python/bin/python3}" tools/make_voice.py
-./gradlew lintFamilyRelease assembleFamilyRelease -q --console=plain
+./gradlew -PwwFamily=true lintFamilyRelease assembleFamilyRelease -q --console=plain
 APK=app/build/outputs/apk/family/release/app-family-release.apk; ls -la "$APK"; shasum -a 256 "$APK"
 "$ADB" connect $S >/dev/null; "$ADB" -s $S install -r "$APK"

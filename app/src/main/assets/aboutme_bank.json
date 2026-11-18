@@ -923,37 +923,6 @@
   "success": "letters_light_fireworks"
  },
  {
-  "id": "me-020",
-  "domain": "aboutme",
-  "level": 4,
-  "format": "map_pin",
-  "prompt": "Where do you live?",
-  "say": "Where do you live? Find your home on the map.",
-  "big": "",
-  "choices": [],
-  "answer": null,
-  "source": "parent:city",
-  "check": "region",
-  "choices_from": "step 1: Karnataka + 2 other states; step 2: his city + 2 other Karnataka cities, each with a landmark icon. Cities not in the map pack fall back to say_aloud",
-  "save_as": null,
-  "tier": "me",
-  "counts": false,
-  "unlock": {
-   "after": [],
-   "mastered": false,
-   "min_days": 18,
-   "requires_fact": [
-    "city"
-   ]
-  },
-  "why": "Place identity from big to small (country, state, city); pictures only, no labels to read.",
-  "hint": "Our city has a big building called Vidhana Soudha.",
-  "say_ok": "That's where you live!",
-  "show_answer": true,
-  "passport_page": 7,
-  "success": "buddy_flies_pin_bounce"
- },
- {
   "id": "me-021",
   "domain": "aboutme",
   "level": 4,

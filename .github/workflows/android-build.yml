@@ -26,13 +26,15 @@ jobs:
         run: ./gradlew --no-daemon assemblePublicDebug lintPublicRelease
       - name: Public build carries no family values
         run: python3 tools/check_public_apk.py --apk app/build/outputs/apk/public/debug/app-public-debug.apk
-      - name: Public build ignores family.properties (fail-closed test)
+      - name: Public build never reads family.properties (fail-closed test)
         run: |
-          printf 'child_name=SENTINEL_NAME\nchild_birth=2000-01\nparent_phone=0000000000\nbuddy_name=SentinelBuddy\n' > family.properties
+          # Invalid and sentinel values: if the public build read this file, it would fail or leak them.
+          printf 'child_name=SENTINEL_NAME\nchild_birth=2000-01\nparent_phone=0000000000\nbuddy_name=SentinelBuddy\napp_title=SentinelTitle\nwarmup_title=SentinelWarm\ndaily_limit_min=not-a-number\n' > family.properties
           ./gradlew --no-daemon assemblePublicDebug
           python3 tools/check_public_apk.py --apk app/build/outputs/apk/public/debug/app-public-debug.apk
-          # And the check must catch a family build (negative control).
-          ./gradlew --no-daemon assembleFamilyDebug
+          # Negative control: an explicitly requested family build must be flagged by the checker.
+          printf 'child_name=SENTINEL_NAME\nbuddy_name=SentinelBuddy\ndaily_limit_min=90\n' > family.properties
+          ./gradlew --no-daemon -PwwFamily=true assembleFamilyDebug
           if python3 tools/check_public_apk.py --apk app/build/outputs/apk/family/debug/app-family-debug.apk; then
             echo "check_public_apk.py failed to flag a family build"; exit 1
           fi

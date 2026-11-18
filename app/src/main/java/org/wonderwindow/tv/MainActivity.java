@@ -120,6 +120,7 @@ public class MainActivity extends Activity {
         loadSfx();
         s = getResources().getDisplayMetrics().widthPixels / 1920f;
         prefs = getSharedPreferences("ww", MODE_PRIVATE);
+        dropLegacyRanking();
         reconcileMeter();
         loadFonts();
         outer = new FrameLayout(this);
@@ -349,99 +350,41 @@ public class MainActivity extends Activity {
         }
     }
 
-    // ------------------------------------------------------------------ self-learning ranking (on the TV only)
-    // Signals: finished a video +3, watched >= half +1, 👍 +4, 🙁 -3 (video hidden), left early -1.
-    // Scores per channel and per row decay 10% a day. Recently watched videos move to the back for 7 days.
-    private JSONObject rank;
+    // ------------------------------------------------------------------ anti-repeat rotation (docs/DECISIONS.md D8)
+    // The only WATCH history kept: IDs and launch times of videos actually started, used to avoid repeating them
+    // for 7 days and purged after 14. No progress, completion, feedback, channel scores or inferred interests.
+    private static final long REPEAT_MS = 7L * 24 * 3600_000, KEEP_MS = 14L * 24 * 3600_000;
 
-    private JSONObject rank() {
-        if (rank != null) return rank;
-        try { rank = new JSONObject(prefs.getString("rank", "{}")); } catch (Exception e) { rank = new JSONObject(); }
-        try {
-            if (!rank.has("ch")) rank.put("ch", new JSONObject());
-            if (!rank.has("row")) rank.put("row", new JSONObject());
-            if (!rank.has("seen")) rank.put("seen", new JSONObject());
-            String last = rank.optString("day", today());
-            if (!last.equals(today())) {                       // daily decay
-                for (String k : new String[]{"ch", "row"}) {
-                    JSONObject m = rank.getJSONObject(k);
-                    for (java.util.Iterator<String> it = m.keys(); it.hasNext(); ) { String key = it.next(); m.put(key, m.optDouble(key) * 0.9); }
-                }
-            }
-            rank.put("day", today());
-        } catch (Exception ignored) { }
-        return rank;
+    private JSONObject launched() {
+        JSONObject l;
+        try { l = new JSONObject(prefs.getString("launched", "{}")); } catch (Exception e) { l = new JSONObject(); }
+        long now = System.currentTimeMillis();
+        List<String> old = new ArrayList<>();
+        for (java.util.Iterator<String> it = l.keys(); it.hasNext(); ) { String k = it.next(); if (now - l.optLong(k) > KEEP_MS) old.add(k); }
+        for (String k : old) l.remove(k);
+        return l;
     }
 
-    private void signal(JSONObject v, double points) {
-        if (v == null) return;
-        try {
-            JSONObject r = rank();
-            JSONObject ch = r.getJSONObject("ch"), row = r.getJSONObject("row");
-            String c = v.optString("channel"), rw = v.optString("row");
-            ch.put(c, ch.optDouble(c, 0) + points);
-            if (!rw.isEmpty()) row.put(rw, row.optDouble(rw, 0) + points * 0.5);
-            prefs.edit().putString("rank", r.toString()).apply();
-        } catch (Exception e) { Log.w(TAG, "rank " + e); }
-    }
-
-    private void markSeen(JSONObject v) {
-        try { rank().getJSONObject("seen").put(v.optString("id"), System.currentTimeMillis()); prefs.edit().putString("rank", rank.toString()).apply(); }
+    private void markLaunched(JSONObject v) {
+        try { JSONObject l = launched(); l.put(v.optString("id"), System.currentTimeMillis()); prefs.edit().putString("launched", l.toString()).apply(); }
         catch (Exception ignored) { }
     }
 
-    private boolean seenRecently(String id) {
-        long t = rank().optJSONObject("seen") == null ? 0 : rank().optJSONObject("seen").optLong(id, 0);
-        return System.currentTimeMillis() - t < 7L * 24 * 3600_000;
+    private boolean seenRecently(String id) { return System.currentTimeMillis() - launched().optLong(id, 0) < REPEAT_MS; }
+
+    /** Removes the behavioural ranking state kept by v0.9 and earlier (scores, likes, dislikes). */
+    private void dropLegacyRanking() {
+        SharedPreferences.Editor ed = prefs.edit().remove("rank").remove("disliked");
+        for (String k : prefs.getAll().keySet()) if (k.startsWith("like:")) ed.remove(k);
+        ed.apply();
     }
 
-    private double videoScore(JSONObject v) {
-        double sc = rank().optJSONObject("ch").optDouble(v.optString("channel"), 0)
-                + rank().optJSONObject("row").optDouble(v.optString("row"), 0);
-        if (seenRecently(v.optString("id"))) sc -= 100;        // variety: watched ones go to the back
-        return sc + rng.nextDouble() * 0.5;                     // small shuffle so rows change every visit
-    }
-
-    // progress of the current video, reported when it ends or is left
     private double maxFrac;
 
     private void leaveVideo(boolean finished) {
         if (queue.isEmpty()) return;
-        JSONObject v = queue.get(qIndex);
-        if (finished || maxFrac >= 0.9) signal(v, 3);
-        else if (maxFrac >= 0.5) signal(v, 1);
-        else if (maxFrac < 0.2 && maxFrac > 0) signal(v, -1);
-        if (maxFrac > 0.05) markSeen(v);
+        markLaunched(queue.get(qIndex));
         maxFrac = 0;
-    }
-
-    // likes: per channel (boost) and per video (hide). Educator rule: likes reorder, never remove learning rows.
-    private Set<String> disliked() { return new HashSet<>(prefs.getStringSet("disliked", new HashSet<>())); }
-
-    private void dislike(String vid) { Set<String> d = disliked(); d.add(vid); prefs.edit().putStringSet("disliked", d).apply(); }
-
-    private void dislike(JSONObject v) { dislike(v.optString("id")); signal(v, -3); maxFrac = 0; }
-
-    private void like(JSONObject v) {
-        String ch = "like:" + v.optString("channel");
-        prefs.edit().putInt(ch, prefs.getInt(ch, 0) + 1).apply();
-        signal(v, 4);
-    }
-
-    private static boolean isPinned(JSONObject row) {
-        String id = row == null ? "" : row.optString("id");
-        return id.equals("wonder") || id.equals("move");
-    }
-
-    private int likeScore(JSONObject row) {
-        int sc = (int) Math.round(rank().optJSONObject("row").optDouble(row.optString("id"), 0));
-        JSONArray vids = row.optJSONArray("videos");
-        java.util.HashSet<String> seen = new java.util.HashSet<>();
-        for (int i = 0; vids != null && i < vids.length(); i++) {
-            String ch = vids.optJSONObject(i).optString("channel");
-            if (seen.add(ch)) sc += prefs.getInt("like:" + ch, 0);
-        }
-        return sc;
     }
 
     // ------------------------------------------------------------------ daily budget (shared for all kids, D43)
@@ -3120,60 +3063,23 @@ public class MainActivity extends Activity {
         col.addView(greet);
         ui.postDelayed(() -> hb.pose(R.drawable.buddy_idle), 1800);
         View first = null;
-        Set<String> hidden = disliked();
         List<Integer> order = new ArrayList<>();
-        for (int r = 0; r < rows.length(); r++) order.add(r);
-        final JSONArray rowsF = rows;
-        // Educator rule: learning rows Wonder Lab and Move & Sport stay pinned at the top; likes only reorder the rest.
-        Collections.sort(order, (a, b) -> {
-            boolean pa = isPinned(rowsF.optJSONObject(a)), pb = isPinned(rowsF.optJSONObject(b));
-            if (pa != pb) return pa ? -1 : 1;
-            if (pa) return a - b;
-            return likeScore(rowsF.optJSONObject(b)) - likeScore(rowsF.optJSONObject(a));
-        });
+        for (int r = 0; r < rows.length(); r++) order.add(r);          // parent-curated row order, unchanged
         try {
-            // tag every video with its row, collect candidates for "Picked for you"
-            List<JSONObject> all = new ArrayList<>();
             for (int r = 0; r < rows.length(); r++) {
                 JSONObject row = rows.getJSONObject(r);
                 JSONArray vids = row.getJSONArray("videos");
-                for (int i = 0; i < vids.length(); i++) {
-                    JSONObject v = vids.getJSONObject(i);
-                    v.put("row", row.optString("id"));
-                    v.put("rowColor", row.optString("color"));
-                    if (!hidden.contains(v.optString("id"))) all.add(v);
-                }
+                for (int i = 0; i < vids.length(); i++) { vids.getJSONObject(i).put("row", row.optString("id")); vids.getJSONObject(i).put("rowColor", row.optString("color")); }
             }
-            // "Picked for you": best-scoring unwatched videos, max 2 per channel, at least one from a learning row
-            List<JSONObject> picked = new ArrayList<>(all);
-            java.util.Map<JSONObject, Double> score = new java.util.HashMap<>();
-            for (JSONObject v : picked) score.put(v, videoScore(v));
-            Collections.sort(picked, (x, y) -> Double.compare(score.get(y), score.get(x)));
-            List<JSONObject> pickRow = new ArrayList<>();
-            java.util.Map<String, Integer> perCh = new java.util.HashMap<>();
-            boolean hasLearning = false;
-            for (JSONObject v : picked) {
-                if (pickRow.size() >= 8) break;
-                String ch = v.optString("channel");
-                if (perCh.getOrDefault(ch, 0) >= 2 || seenRecently(v.optString("id"))) continue;
-                perCh.put(ch, perCh.getOrDefault(ch, 0) + 1);
-                pickRow.add(v);
-                String rid = v.optString("row");
-                if (rid.equals("wonder") || rid.equals("numbers") || rid.equals("words") || rid.equals("move")) hasLearning = true;
-            }
-            if (!hasLearning) for (JSONObject v : picked) {
-                String rid = v.optString("row");
-                if ((rid.equals("wonder") || rid.equals("move")) && !pickRow.contains(v)) { pickRow.add(Math.min(2, pickRow.size()), v); break; }
-            }
-            first = addRow(col, "⭐ Picked for you", 0xFFFFB020, pickRow, first);
             for (int r : order) {
                 JSONObject row = rows.getJSONObject(r);
                 JSONArray vids = row.getJSONArray("videos");
                 List<JSONObject> list = new ArrayList<>();
-                for (int i = 0; i < vids.length(); i++) if (!hidden.contains(vids.getJSONObject(i).optString("id"))) list.add(vids.getJSONObject(i));
-                java.util.Map<JSONObject, Double> sc = new java.util.HashMap<>();
-                for (JSONObject v : list) sc.put(v, videoScore(v));
-                Collections.sort(list, (x, y) -> Double.compare(sc.get(y), sc.get(x)));
+                for (int i = 0; i < vids.length(); i++) list.add(vids.getJSONObject(i));
+                // stable curated order; videos started in the last 7 days move to the back (anti-repeat only)
+                List<JSONObject> fresh = new ArrayList<>(), recent = new ArrayList<>();
+                for (JSONObject v : list) (seenRecently(v.optString("id")) ? recent : fresh).add(v);
+                list = new ArrayList<>(fresh); list.addAll(recent);
                 first = addRow(col, row.getString("name"), Color.parseColor(row.getString("color")),
                         list.subList(0, Math.min(10, list.size())), first);
             }
@@ -3336,7 +3242,7 @@ public class MainActivity extends Activity {
             JSONArray vids = rows.getJSONObject(row).getJSONArray("videos");
             String rowId = rows.getJSONObject(row).optString("id");
             for (int i = 0; i < vids.length(); i++) vids.getJSONObject(i).put("row", rowId);
-            Set<String> hidden = disliked();
+            Set<String> hidden = new HashSet<>();
             for (int i = 0; i < vids.length(); i++) {
                 JSONObject v = vids.getJSONObject((index + i) % vids.length());
                 if (!hidden.contains(v.optString("id"))) queue.add(v);
@@ -3511,17 +3417,16 @@ public class MainActivity extends Activity {
         pauseSheet.setBackground(bg);
         pauseSheet.setElevation(px(24));
         TextView keep = button("▶\nKeep watching", 0xFF6553DB, v -> hidePause());
-        TextView likeB = button("👍\nI like this!", 0xFF3A3460, v -> { like(queue.get(qIndex)); hidePause(); });
-        TextView not = button("🙁\nNot this one", 0xFF3A3460, v -> {
-            if (skipsLeft > 0) { skipsLeft--; dislike(queue.get(qIndex)); hidePause(); nextVideo(false); }
+        TextView not = button("⏭\nNext video", 0xFF3A3460, v -> {
+            if (skipsLeft > 0) { skipsLeft--; hidePause(); nextVideo(false); }   // no feedback is stored
         });
         if (skipsLeft == 0) not.setAlpha(0.35f);
         TextView pick = button("▦\nPick another", 0xFF3A3460, v -> backToRows());
-        for (TextView t : new TextView[]{keep, likeB, not, pick}) {
+        for (TextView t : new TextView[]{keep, not, pick}) {
             t.setPadding(px(10), px(14), px(10), px(14));
             t.setLineSpacing(0, 1.1f);
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(px(258), px(210));
-            lp.setMargins(px(12), 0, px(12), 0);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(px(330), px(210));
+            lp.setMargins(px(18), 0, px(18), 0);
             fit(t, 38, 22);
             pauseSheet.addView(t, lp);
         }
@@ -3743,16 +3648,7 @@ public class MainActivity extends Activity {
             if (e.getAction() == KeyEvent.ACTION_UP) hidePause();
             return true;
         }
-        // Test-build parent reset on the resting screen: hold OK for 5 s (real PIN gate comes in the MVP).
-        if (web == null && (k == KeyEvent.KEYCODE_DPAD_CENTER || k == KeyEvent.KEYCODE_ENTER) && root.findFocus() == null) {
-            if (e.getAction() == KeyEvent.ACTION_DOWN && e.getRepeatCount() == 0) okDownAt = SystemClock.elapsedRealtime();
-            if (e.getAction() == KeyEvent.ACTION_DOWN && okDownAt > 0 && SystemClock.elapsedRealtime() - okDownAt > 5000) {
-                okDownAt = 0;
-                prefs.edit().putLong("cooldownUntil", 0).putLong("usedMs", 0).apply();
-                start();
-            }
-            return true;
-        }
+        // No child-reachable reset of the screen-time budget exists (issue #6). A parent-authenticated reset comes with the parent gate.
         if (sessionActive && web == null && k == KeyEvent.KEYCODE_BACK) {
             if (e.getAction() == KeyEvent.ACTION_UP && SystemClock.elapsedRealtime() - backDebounce > 500) {
                 backDebounce = SystemClock.elapsedRealtime();
