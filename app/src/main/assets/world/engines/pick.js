@@ -13,7 +13,7 @@ export default function pick(ctx, r) {
   // single target → a glowing Wonder Orb; several → a board tray
   if (boardItems.length === 1) {
     orb = new THREE.Group(); orb.position.set(0, 3.2, -1.5); root.add(orb);
-    orb.add(new THREE.Mesh(new THREE.SphereGeometry(1.45, 32, 24), new THREE.MeshLambertMaterial({ color: 0x5B3BC8, emissive: 0x2A1466, transparent: true, opacity: .8 })));
+    orb.add(new THREE.Mesh(new THREE.SphereGeometry(1.45, 32, 24), new THREE.MeshLambertMaterial({ color: 0x5B3BC8, emissive: 0x2A1466 })));
     const card = new THREE.Mesh(new THREE.PlaneGeometry(2.1, 2.1), new THREE.MeshBasicMaterial({ map: itemTex(boardItems[0], { fg: '#ffffff' }), transparent: true, depthTest: false })); card.renderOrder = 5; orb.add(card); orb.userData.card = card;
     [0, 1].forEach(i => { const ring = new THREE.Mesh(new THREE.TorusGeometry(1.8 + i * .28, .045, 6, 64), new THREE.MeshBasicMaterial({ color: i ? 0xFFC94A : 0x7CF2B0 })); ring.userData.ring = i; orb.add(ring); });
   } else if (boardItems.length) { board = makeBoard(boardItems); root.add(board); board.userData.fade(r.board_fade); }

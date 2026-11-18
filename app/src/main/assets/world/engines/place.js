@@ -24,7 +24,7 @@ export function placeCore(ctx, r, cfg) {
   // ---------- bins ----------
   const B = bins.map((b, i) => {
     const g = new THREE.Group(); g.position.set(BX(i), BY, BZ); g.scale.setScalar(bs); root.add(g);
-    const col = PALETTE[(i * 2 + 1) % PALETTE.length];
+    const col = i % 2 ? 0x9C8EEA : 0xB4A8F4;   // neutral: the badge carries the meaning (colour-sorting rounds!)
     const body = new THREE.Mesh(BUCKET_GEO, lam(col, { side: THREE.DoubleSide })); g.add(body);
     const inner = new THREE.Mesh(BOTTOM_GEO, basic(0x1A1150)); inner.rotation.x = -Math.PI / 2; inner.position.y = -.8; g.add(inner);
     const rim = new THREE.Mesh(RIM_GEO, lam(0xF4F0FF)); rim.rotation.x = Math.PI / 2; rim.position.y = .85; g.add(rim);
@@ -106,7 +106,7 @@ export function placeCore(ctx, r, cfg) {
       B.forEach((b, i) => {
         const f = i === focus && !done && !b.off;
         b.lift += ((f ? 1 : 0) - b.lift) * k;
-        const slam = t - b.slam < .35, cheer = t - b.cheer < .5 || (done && t - doneT < 1.2);
+        const slam = t - b.slam < .35, cheer = t - b.cheer < .5 || (done && !b.off && t - doneT < 1.2);
         const want = slam ? 0 : (heldMode === 'drop' && f) || cheer ? 1.25 : f ? .35 : 0;
         b.open += (want - b.open) * (CFG.reduced ? 1 : clamp(dt * (slam ? 30 : 9)));
         b.hinge.rotation.x = -b.open;
