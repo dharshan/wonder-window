@@ -3,7 +3,8 @@
 **Status:** Design proposal for owner and independent review; not an implementation claim.  
 **Baseline:** `main` at `2d3f89fabfb07b2211f938f8476f3d033d63f4a3`.  
 **Platform:** Native Android TV; standard remote only.  
-**Direction:** Sky Garden evolved — picture-led magical world with premium living-room clarity.
+**Direction:** Sky Garden evolved — picture-led magical world with premium living-room clarity.  
+**Reusable creative system:** [Wonder System](2026-wonder-system.md) defines the shared world grammar, three realm identities, illustration language, Pip acting states, motion tokens, animation arcs and discipline scorecards. The [direct screenshot audit](2026-ui-ux-audit.md) records what is visible in the current baseline captures.
 
 ## 1. Product and design constraints
 
