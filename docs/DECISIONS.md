@@ -11,5 +11,7 @@ Decisions made in issue #1 (scaffold review, 18 Nov 2026). Newest last. A change
 | D5 | Public content contains no address recital and no real-phone-number exercise; no phone value is read, hashed or embedded in any edition. The public 1-1-2 help-number round stays. | 18 Nov 2026 | #3 |
 | D6 | Quizzes and the warm-up never set, unlock or extend minutes. WATCH sessions use the parent's fixed length within the one shared daily budget; the warm-up is an optional PLAY activity. | 18 Nov 2026 | this PR |
 | D7 | macOS voice and TV-install helpers are local-only; CI builds on Linux without voice or a TV. | 18 Nov 2026 | #3 |
-| D8 | Local WATCH ranking from viewing behaviour: **pending** — recommended option (a) off by default, ID/date rotation only. | pending | — |
+| D8 | No behavioural ranking. Parent-curated channel and row order; no "Picked for you" row; no completion, half-watch, early-exit, 👍 or 👎 signals stored. Only IDs and launch times of started videos are kept, to avoid repeats for 7 days, purged after 14. Clearing it needs the parent-authenticated reset (not built yet). Any future thumbs-based personalisation needs a new decision. | 18 Nov 2026 | #7 |
+| D10 | No child-reachable reset of the screen-time budget (issue #6). Only the midnight roll-over clears it; a parent-authenticated reset comes with the parent gate. | 18 Nov 2026 | #7 |
+| D11 | No home-location learning: no rounds that ask or assume the child's city, state, country or area. Generic map and safety rounds only. | 18 Nov 2026 | #7 |
 | D9 | Two editions: `public` never reads family.properties and is the only release artifact; `family` is local-only; CI fails closed if a public APK carries family values. | 18 Nov 2026 | #3 |

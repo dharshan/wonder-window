@@ -63,9 +63,18 @@ android {
     flavorDimensions 'edition'
     productFlavors {
         create('public') { dimension 'edition'; addResValues(delegate, publicDefaults) }
-        create('family') { dimension 'edition'; addResValues(delegate, familyValues()) }
+        // The family edition exists only when asked for explicitly (-PwwFamily=true, used by tools/build-only.sh).
+        // Without it, Gradle never registers the flavour and never opens family.properties (D9).
+        if (project.findProperty('wwFamily') == 'true') {
+            create('family') { dimension 'edition'; addResValues(delegate, familyValues()) }
+        }
     }
     buildTypes { release { minifyEnabled false; signingConfig signingConfigs.debug } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
     lint { error 'NewApi'; abortOnError true; checkReleaseBuilds false }
+}
+
+dependencies {
+    // JVM unit tests only (app/src/test); nothing is added to the APK.
+    testImplementation 'junit:junit:4.13.2'
 }

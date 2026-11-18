@@ -20,6 +20,13 @@ import sys
 import xml.etree.ElementTree as ET
 
 MUST_BE_EMPTY = ("child_name", "child_birth")
+# Every family-controlled value must equal the public default in a public build.
+PUBLIC_DEFAULTS = {"app_name": "Wonder Window", "buddy_name": "Pip", "warmup_title": "Pip's Warm-up",
+                   "daily_limit_min": "120", "watch_session_min": "20", "try_families": "", "try_age_band": "5-6",
+                   # booleans that change what the child can reach (#10)
+                   "aboutme_unlock_all": "false", "try_v3": "true", "try_enabled": "true",
+                   "try_allow_supervised": "true"}
+SENTINEL = re.compile(r"SENTINEL", re.I)
 FORBIDDEN = re.compile(r"phone|salt|passcode", re.I)
 
 
@@ -67,9 +74,13 @@ def check(values):
         seen.add(name)
         if name in MUST_BE_EMPTY and text.strip():
             problems.append(f"{name} is not empty in a public build")
+        if name in PUBLIC_DEFAULTS and text.strip().strip('"').replace("\\'", "'") != PUBLIC_DEFAULTS[name]:
+            problems.append(f"{name}={text!r} differs from the public default {PUBLIC_DEFAULTS[name]!r}")
+        if SENTINEL.search(text):
+            problems.append(f"{name} carries a test sentinel value {text!r}")
         if FORBIDDEN.search(name):
             problems.append(f"phone/salt-like resource {name!r} must not exist in a public build")
-    for k in MUST_BE_EMPTY:
+    for k in list(MUST_BE_EMPTY) + list(PUBLIC_DEFAULTS):
         if k not in seen:
             problems.append(f"{k} not found: cannot prove the public build is clean (wrong path?)")
     return problems

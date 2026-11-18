@@ -8292,24 +8292,6 @@
        "save_as": "fav_colour"
       },
       {
-       "id": "me-1-08",
-       "prompt": "Which city do we live in?",
-       "say": "Which city do we live in? Bengaluru, Delhi, or Mumbai?",
-       "board": [
-        "🏙️"
-       ],
-       "choices": [
-        "Bengaluru",
-        "Delhi",
-        "Mumbai"
-       ],
-       "answer": 0,
-       "hint": "Our city is also called Bangalore.",
-       "why": "We live in Bengaluru, also called Bangalore!",
-       "scene": "📇",
-       "fade": 2
-      },
-      {
        "id": "me-1-10",
        "variant": "keypad",
        "prompt": "Press 1, 1, 2!",
@@ -8421,24 +8403,6 @@
        "hint": "Count your candles, then one more.",
        "why": "Yes! One more candle next birthday!",
        "scene": "📇"
-      },
-      {
-       "id": "me-2-03",
-       "prompt": "Which state do we live in?",
-       "say": "Bengaluru is in our state. Which one is it? Goa, Karnataka, or Kerala?",
-       "board": [
-        "🗺️"
-       ],
-       "choices": [
-        "Goa",
-        "Karnataka",
-        "Kerala"
-       ],
-       "answer": 1,
-       "hint": "We speak Kannada in our state.",
-       "why": "Bengaluru is in Karnataka!",
-       "scene": "📇",
-       "fade": 0
       },
       {
        "id": "me-2-04",
@@ -8564,50 +8528,27 @@
        "why": "A kind hug, or getting a grown-up, helps your friend.",
        "scene": "📇",
        "fade": 2
+      },
+      {
+       "id": "me-2-11",
+       "prompt": "Which one is a map?",
+       "say": "Which one is a map? A map shows places and roads.",
+       "board": [],
+       "choices": [
+        "🗺️",
+        "📖",
+        "🧸"
+       ],
+       "answer": 0,
+       "hint": "Look for lines and roads, like a picture of places.",
+       "why": "A map shows places and roads. Grown-ups use maps to find the way.",
+       "scene": "📇"
       }
      ]
     },
     {
      "level": 3,
      "rounds": [
-      {
-       "id": "me-3-03",
-       "prompt": "{buddy} got it wrong! Can you fix it?",
-       "say": "I think Bengaluru is in Japan! Oops, is that right? Which country do we really live in?",
-       "board": [
-        "🗺️"
-       ],
-       "choices": [
-        "Japan",
-        "India",
-        "Brazil"
-       ],
-       "answer": 1,
-       "hint": "Our flag is orange, white and green.",
-       "why": "We live in India!",
-       "scene": "📇",
-       "fade": 2,
-       "silly": true,
-       "oops": "Japan"
-      },
-      {
-       "id": "me-3-04",
-       "prompt": "Bengaluru is also called?",
-       "say": "Bengaluru has another name too. What is it? Chennai, Mysuru, or Bangalore?",
-       "board": [
-        "🏙️"
-       ],
-       "choices": [
-        "Chennai",
-        "Mysuru",
-        "Bangalore"
-       ],
-       "answer": 2,
-       "hint": "It sounds a lot like Bengaluru!",
-       "why": "Bengaluru is also called Bangalore!",
-       "scene": "📇",
-       "fade": 1
-      },
       {
        "id": "me-3-05",
        "prompt": "Which is the help number?",
@@ -8644,21 +8585,21 @@
       },
       {
        "id": "me-3-07",
-       "prompt": "What helps the police find Amma?",
-       "say": "You are lost. What can you tell a police officer to help find Amma?",
+       "prompt": "Lost in a busy place?",
+       "say": "You can't see your grown-up in a busy place. What is the safe thing to do?",
        "board": [
-        "👮"
+        "🧒",
+        "❓"
        ],
        "choices": [
-        "🧸",
-        "🍬",
-        "📞"
+        "👮",
+        "🏃",
+        "🍬"
        ],
-       "answer": 2,
-       "hint": "It's the number we practised!",
-       "why": "Amma's phone number helps the police call her.",
-       "scene": "📇",
-       "fade": 0
+       "answer": 0,
+       "hint": "Think: who wears a uniform and helps people?",
+       "why": "Stay right where you are, where people can see you. Ask a police officer or a shop worker behind the counter for help. Don't go off with anyone. Wait there for your grown-up.",
+       "scene": "📇"
       },
       {
        "id": "me-3-08",
@@ -8755,6 +8696,44 @@
        "shuffle": true,
        "hint": "Look at each letter of your name.",
        "why": "Yes! That letter is in your name.",
+       "scene": "📇"
+      },
+      {
+       "id": "me-3-21",
+       "prompt": "{buddy} got it wrong! Can you fix it?",
+       "say": "Oops! I said: take sweets from a stranger. Is that right?",
+       "board": [
+        "🙋",
+        "🍬"
+       ],
+       "oops": "👍",
+       "silly": true,
+       "choices": [
+        "🙅",
+        "👍"
+       ],
+       "answer": 0,
+       "hint": "Would your grown-up say yes or no?",
+       "why": "No! Never take sweets from a stranger. Say no and tell your grown-up.",
+       "scene": "📇"
+      },
+      {
+       "id": "me-3-22",
+       "prompt": "What shows where places are?",
+       "say": "What shows where places are? A map, an apple, or a ball?",
+       "board": [
+        "🏠",
+        "➡️",
+        "🏫"
+       ],
+       "choices": [
+        "🗺️",
+        "🍎",
+        "⚽"
+       ],
+       "answer": 0,
+       "hint": "It has roads and places drawn on it.",
+       "why": "A map shows where places are and how to get there.",
        "scene": "📇"
       }
      ]
