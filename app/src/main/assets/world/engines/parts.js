@@ -1,6 +1,6 @@
 // Shared bits for the place / sort / order / echo engines: cached geometries, face and label planes,
 // a tiny time-based tween runner (no setTimeout, so headless capture stays deterministic) and the wiggle curve.
-import { THREE, CFG, itemTex, pillTex, clamp } from '../core/engine.js';
+import { THREE, CFG, itemTex, canvasTex, FONT, clamp } from '../core/engine.js';
 import { roundedBox } from '../core/kit.js';
 
 export const CARD_GEO = roundedBox(2.0, 2.0, .42, .42);
@@ -20,9 +20,16 @@ export function faceMesh(txt, size, opts) {
 }
 /** Short word on a dark rounded pill (bin and card labels; big enough to read from the sofa). */
 export function labelMesh(text, w = 2.3, h = .62) {
-  const m = new THREE.Mesh(planeGeo(w, h), new THREE.MeshBasicMaterial({ map: pillTex(String(text), { w: 512, h: Math.round(512 * h / w), font: 58, ring: '#ffffff' }), transparent: true }));
+  const m = new THREE.Mesh(planeGeo(w, h), new THREE.MeshBasicMaterial({ map: labelTex(String(text), Math.round(512 * h / w)), transparent: true }));
   m.renderOrder = 2; return m;
 }
+const labCache = new Map();
+function labelTex(text, H) { const k = text + '|' + H; if (labCache.has(k)) return labCache.get(k);
+  const t = canvasTex(512, H, (g, w, h) => { g.fillStyle = '#ffffff'; g.beginPath(); g.roundRect(3, 3, w - 6, h - 6, h / 2 - 3); g.fill();
+    g.fillStyle = '#16113F'; g.beginPath(); g.roundRect(10, 10, w - 20, h - 20, h / 2 - 10); g.fill();
+    let fs = Math.round(h * .5); g.font = `600 ${fs}px ${FONT}`; while (g.measureText(text).width > w - 50 && fs > 20) { fs -= 2; g.font = `600 ${fs}px ${FONT}`; }
+    g.fillStyle = '#ffffff'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(text, w / 2, h / 2 + 2); });
+  labCache.set(k, t); return t; }
 export const lam = (color, extra) => new THREE.MeshLambertMaterial(Object.assign({ color }, extra || {}));
 export const basic = color => new THREE.MeshBasicMaterial({ color });
 

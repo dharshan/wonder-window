@@ -19,7 +19,8 @@ function bakeSky() {
 export function makeSpace({ stars = 900 } = {}) {
   const g = new THREE.Group();
   const sky = new THREE.Mesh(new THREE.SphereGeometry(300, 48, 32), new THREE.MeshBasicMaterial({ map: bakeSky(), side: THREE.BackSide, depthWrite: false }));
-  sky.renderOrder = -10; g.add(sky); g.userData.sky = sky;
+  // drawn after opaque objects: early-z skips every sky pixel hidden behind the ground/planets
+  sky.renderOrder = 10; g.add(sky); g.userData.sky = sky;
   if (stars) { reseed(9); const p = new Float32Array(stars * 3);
     for (let i = 0; i < stars; i++) { const u = rnd() * 2 - 1, th = rnd() * 6.283, r = 140 + rnd() * 120, s = Math.sqrt(1 - u * u); p[i * 3] = r * s * Math.cos(th); p[i * 3 + 1] = r * u; p[i * 3 + 2] = r * s * Math.sin(th); }
     const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(p, 3));
@@ -42,10 +43,11 @@ export function makeGround(hex = '#F08A3E', pattern = 'puzzle') {
     const t = canvasTex(1024, 512, (g, w, h) => { g.fillStyle = hex; g.fillRect(0, 0, w, h); const s = 64;
       for (let y = 0; y < h; y += s) for (let x = 0; x < w; x += s) { g.fillStyle = cols[((x / s) + (y / s) * 3) % 4]; g.fillRect(x + 2, y + 2, s - 4, s - 4);
         if (pattern === 'puzzle') { g.fillStyle = cols[((x / s) * 2 + (y / s)) % 4]; g.beginPath(); g.arc(x + s, y + s / 2, s * .16, 0, 6.3); g.fill(); g.beginPath(); g.arc(x + s / 2, y + s, s * .16, 0, 6.3); g.fill(); }
-        else if (pattern === 'craters') { g.fillStyle = 'rgba(0,0,0,.08)'; g.beginPath(); g.arc(x + s * .5, y + s * .5, s * .3 * ((x * 7 + y * 3) % 5) / 5 + 4, 0, 6.3); g.fill(); } } });
+        else if (pattern === 'craters') { g.fillStyle = 'rgba(0,0,0,.08)'; g.beginPath(); g.arc(x + s * .5, y + s * .5, s * .3 * ((x * 7 + y * 3) % 5) / 5 + 4, 0, 6.3); g.fill(); } }
+      const sh = g.createLinearGradient(0, 0, w, 0); sh.addColorStop(0, 'rgba(255,240,220,.18)'); sh.addColorStop(.5, 'rgba(0,0,0,0)'); sh.addColorStop(1, 'rgba(20,0,60,.25)'); g.fillStyle = sh; g.fillRect(0, 0, w, h); });
     t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(6, 3); t.generateMipmaps = true; t.minFilter = THREE.LinearMipmapLinearFilter; t.needsUpdate = true;
     groundCache[key] = t;
   }
-  const m = new THREE.Mesh(new THREE.SphereGeometry(60, 72, 36), new THREE.MeshLambertMaterial({ map: groundCache[key] }));
+  const m = new THREE.Mesh(new THREE.SphereGeometry(60, 72, 36), new THREE.MeshBasicMaterial({ map: groundCache[key], color: 0xd8d0f0 }));   // unlit: lighting is baked into the texture
   m.position.set(0, -61.6, -10); m.rotation.x = Math.PI / 2; return m;
 }

@@ -97,7 +97,7 @@ export const bridge = {
 window.WWWorld = { key, go: (n, p) => router.go(n, typeof p === 'string' ? JSON.parse(p) : p), pause() { paused = true; }, resume() { paused = false; lastMs = performance.now(); } };
 
 // ---------- frame loop (fixed render order, perf probe) ----------
-let T = 0, lastMs = 0, paused = false; const perf = []; let perfDone = false;
+let T = 0, lastMs = 0, paused = false; const perf = []; let perfDone = false, dynAcc = 0, dynN = 0, dynPR = CFG.pr;
 export const time = () => T;
 export function frame(dt) {
   T += dt;
@@ -109,6 +109,8 @@ export function start() {
   if (CFG.scripted) { window.step = n => { for (let i = 0; i < n; i++) frame(1 / 30); return T; }; window.ready = () => !!current; return; }
   lastMs = performance.now();
   (function loop(now) { requestAnimationFrame(loop); if (paused) return; const d = Math.min(.05, Math.max(0, (now - lastMs) / 1000)); lastMs = now; frame(d);
+    // safety net: if a screen goes over budget, render it at a lower internal resolution (0.75 measured smooth on the TV)
+    if (!Q.has('fixedpr')) { dynAcc += d; if (++dynN === 50) { const avg = dynAcc / dynN * 1000; dynAcc = dynN = 0; if (avg > 22.5 && dynPR > .76) { dynPR = Math.max(.75, dynPR - .1); renderer.setPixelRatio(dynPR); console.log('WWDYN pr=' + dynPR.toFixed(2)); } } }
     if (CFG.perf && T > 1.5) { perf.push(d * 1000); if (!perfDone && T > +(Q.get('secs') || 24)) { perfDone = true; const a = perf.slice().sort((x, y) => x - y), p = q => a[Math.floor(q * (a.length - 1))];
-      console.log(`WWPERF tag=world screen=${Q.get('screen') || ''} frames=${a.length} p50=${p(.5).toFixed(1)} p95=${p(.95).toFixed(1)} p99=${p(.99).toFixed(1)} jank=${a.filter(x => x > 30).length}`); } } })(lastMs);
+      console.log(`WWPERF tag=world pr=${dynPR.toFixed(2)} screen=${Q.get('screen') || ''} frames=${a.length} p50=${p(.5).toFixed(1)} p95=${p(.95).toFixed(1)} p99=${p(.99).toFixed(1)} jank=${a.filter(x => x > 30).length}`); } } })(lastMs);
 }
