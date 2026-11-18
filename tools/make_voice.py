@@ -90,7 +90,7 @@ def lines(p):
         for row in json.load(open(cat, encoding="utf-8"))["rows"]:
             out.append(row["name"])
             out += [v["title"] for v in row["videos"]]
-    return [x for x in dict.fromkeys(t.strip().replace("{buddy}", buddy) for t in out) if x]
+    return [x for x in dict.fromkeys(t.strip() for t in out) if x]
 
 
 def speakable(t):

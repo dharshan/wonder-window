@@ -792,8 +792,7 @@ public class MainActivity extends Activity {
         String watchSub = cd > 0 ? "🌙 Resting " + (int) Math.ceil(cd / 60000.0) + " min" : minutesLeftToday() < 5 ? "🌙 Resting till tomorrow" : "Videos & stories";
         View w = door("🎬", "Watch", watchSub, 0xFF6553DB, v -> {
             if (cooldownLeftMs() > 0 || minutesLeftToday() < 5) { whyHub.setText("Videos are resting. Try Play or Try!"); return; }
-            if (getResources().getBoolean(R.bool.watch_warmup_minutes)) showWarmup();
-            else beginSession(Math.max(1, Math.min(getResources().getInteger(R.integer.watch_session_min), minutesLeftToday())));
+            showWarmup();
         });
         if (watchResting) w.setAlpha(0.55f);
         View pl = door("🎲", "Play", "Games to think", 0xFFE8590C, v -> showPlayList());
@@ -802,7 +801,7 @@ public class MainActivity extends Activity {
             if (getResources().getBoolean(R.bool.try_v3)) showTryHome3(); else showTryCats();
         });
         if (!getResources().getBoolean(R.bool.try_enabled)) tr.setVisibility(View.GONE);
-        for (View d : new View[]{pl, tr, w}) {                       // home order: PLAY → TRY → WATCH
+        for (View d : new View[]{w, pl, tr}) {
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(px(460), px(470));
             lp.setMargins(px(30), 0, px(30), 0);
             doors.addView(d, lp);
@@ -812,7 +811,7 @@ public class MainActivity extends Activity {
         col.addView(spacer(30));
         col.addView(whyHub);
         center(col);
-        pl.requestFocus();
+        (watchResting ? pl : w).requestFocus();
         ui.postDelayed(() -> hb.pose(R.drawable.buddy_idle), 1800);
     }
 
@@ -1244,10 +1243,6 @@ public class MainActivity extends Activity {
         if (dyn.startsWith("name") && childName().isEmpty()) return false;
         if (dyn.startsWith("age") && childAge() <= 0) return false;
         if ("phone_hash".equals(r.optString("check")) && getString(R.string.phone_hash).isEmpty()) return false;
-        if (!getResources().getBoolean(R.bool.aboutme_phone_address)) {        // phone entry + address recital: off unless the parent opts in
-            if ("keypad".equals(r.optString("variant")) && !"literal".equals(r.optString("check"))) return false;
-            if ("recite".equals(r.optString("variant"))) return false;
-        }
         return true;
     }
 
@@ -3924,9 +3919,7 @@ public class MainActivity extends Activity {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             byte[] buf = new byte[8192];
             for (int n; (n = in.read(buf)) > 0; ) out.write(buf, 0, n);
-            String t = new String(out.toByteArray(), StandardCharsets.UTF_8);
-            return name.endsWith(".json") ? t.replace("{buddy}", getString(R.string.buddy_name)) : t;   // content uses {buddy}
+            return new String(out.toByteArray(), StandardCharsets.UTF_8);
         }
-    }
     }
 }
