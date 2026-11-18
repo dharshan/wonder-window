@@ -93,6 +93,7 @@ export const GameScreen = {
   },
   key(k) {
     if (k === 'back') { router.go('playlist', {}); return true; }
+    if (k === 'up' && this.phase === 'play' && this.engine && this.engine.wantsUp) return this.engine.key(k);
     if (k === 'up' && this.phase !== 'end') { bridge.say(fill(this.phase === 'intro' ? (this.game.say_intro || this.game.story) : (this.round && (this.round.say || this.round.prompt)))); return true; }
     if (this.phase === 'intro') { if (k === 'ok') this.startRound(); return true; }
     if (this.phase === 'reward') { if (k === 'ok' && time() - this.phaseT > .6) this.startRound(); return true; }

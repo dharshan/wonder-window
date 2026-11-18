@@ -37,7 +37,7 @@ export const HomeScreen = {
       if (w.key === 'try') PALETTE.forEach((c, k) => { const t = new THREE.Mesh(new THREE.TorusGeometry(4.3 + k * .22, .08, 6, 120), new THREE.MeshBasicMaterial({ color: c })); t.rotation.x = Math.PI / 2; w.orb.add(t); });
       else for (let k = 0; k < 6; k++) { const m = new THREE.Mesh(w.key === 'play' ? roundedBox(.8, .8, .25, .2) : new THREE.SphereGeometry(.35, 16, 12), new THREE.MeshLambertMaterial({ color: w.key === 'play' ? PALETTE[k] : 0xE9E2FF, emissive: w.key === 'watch' ? 0x443388 : 0 }));
         const a = k / 6 * 6.283; m.position.set(Math.cos(a) * 5, Math.sin(a * 2) * .4, Math.sin(a) * 5); w.orb.add(m); }
-      w.halo = glow(new THREE.Color(w.color), R * 3.2, 0); g.add(w.halo); w.focus = i === focus ? 1 : 0; });
+      w.focus = i === focus ? 1 : 0; });
     // rocket with Tara in a glass cockpit
     const rocket = this.rocket = new THREE.Group(); root.add(rocket); const body = this.body = new THREE.Group(); rocket.add(body);
     const prof = []; for (let i = 0; i <= 18; i++) { const t = i / 18; prof.push(new THREE.Vector2(Math.max(.001, .62 * Math.sin(Math.PI * Math.pow(t, .78)) * (1 - .25 * t)), t * 2.4 - 1.1)); }
@@ -63,7 +63,7 @@ export const HomeScreen = {
   update(t, dt) {
     const FLY = CFG.reduced ? .01 : 2.6, DIVE = CFG.reduced ? .2 : 2.2;
     WORLDS.forEach((w, i) => { w.planet.rotation.y = t * .12 + i; w.orb.rotation.y = t * (w.key === 'try' ? .05 : .35); w.focus += ((i === this.cur ? 1 : 0) - w.focus) * clamp(dt * 4);
-      w.g.scale.setScalar(.82 + .18 * w.focus); w.halo.material.opacity = .22 * w.focus; });
+      w.g.scale.setScalar(.82 + .18 * w.focus); w.planet.material.emissiveIntensity = .05 + .22 * w.focus; });
     const flyU = clamp((t - this.flyT) / FLY), diveU = t - this.diveT < DIVE ? (t - this.diveT) / DIVE : -1; const P = this.P;
     if (flyU < 1) { const u = ease(flyU); P[0].copy(park(this.from)); P[3].copy(park(this.cur)); P[1].copy(P[0]).add(this.tmp.set((P[3].x - P[0].x) * .15, 5.5, 7)); P[2].copy(P[3]).add(this.tmp.set((P[0].x - P[3].x) * .15, 5.5, 7));
       bez(P[0], P[1], P[2], P[3], u, this.rp); bez(P[0], P[1], P[2], P[3], Math.min(1, u + .01), this.dir).sub(this.rp).normalize(); }
