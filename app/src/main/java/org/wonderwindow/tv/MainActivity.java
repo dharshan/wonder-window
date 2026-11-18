@@ -546,7 +546,7 @@ public class MainActivity extends Activity {
         addBuddy(220, 330, 320, R.drawable.buddy_happy_wave);
         LinearLayout col = column();
         col.addView(text(getString(R.string.warmup_title) + "!", 80, Color.WHITE, true));
-        col.addView(text("5 quick questions, then videos.", 40, 0xFFB9B2D6, false));
+        col.addView(text("5 quick questions, just for fun.", 40, 0xFFB9B2D6, false));
         TextView go = button("Let's go!", 0xFF6553DB, v -> showItem());
         col.addView(spacer(60)); col.addView(go);
         center(col);
@@ -587,7 +587,7 @@ public class MainActivity extends Activity {
         addBuddy(220, 330, 320, R.drawable.buddy_happy_wave);
         LinearLayout col = column();
         col.addView(text(getString(R.string.warmup_title) + "!", 80, Color.WHITE, true));
-        col.addView(text("5 quick questions, then videos.", 40, 0xFFB9B2D6, false));
+        col.addView(text("5 quick questions, just for fun.", 40, 0xFFB9B2D6, false));
         TextView go = button("Let's go!", 0xFF6553DB, v -> showItem());
         col.addView(spacer(60)); col.addView(go);
         center(col);
@@ -721,47 +721,25 @@ public class MainActivity extends Activity {
         showItem();
     }
 
+    private boolean fromPlayWarmup;
+
+    /** Warm-up end: praise only. It never sets, unlocks or changes minutes (issue #1, point 6). */
     private void warmupDone() {
-        int n = 0;
-        wCorrect = 0; wTriedAll = 1;
-        for (Item x : warmItems) if (x.about == null) { n++; if (x.correct) wCorrect++; if (x.skipped || !x.done) wTriedAll = 0; }
-        int left = minutesLeftToday();
-        if (wCorrect == n) allowedMin = 30;
-        else if (wCorrect >= Math.ceil(n * 0.6)) allowedMin = 20;
-        else if (wCorrect >= 1 || wTriedAll == 1) allowedMin = 15;   // D42: trying every item counts as 15
-        else allowedMin = 10;
-        allowedMin = Math.min(allowedMin, left);
         root.removeAllViews();
         addBuddy(140, 120, 260, R.drawable.buddy_happy_wave);
         LinearLayout col = column();
-        if (wCorrect == n) {
-            col.addView(text("Amazing! You choose your adventure.", 64, Color.WHITE, true));
-
-            col.addView(spacer(50));
-            LinearLayout r = new LinearLayout(this);
-            r.setGravity(Gravity.CENTER);
-            TextView first = null;
-            for (int m : new int[]{5, 10, 15, 20, 30}) {
-                if (m > allowedMin) continue;
-                final int mm = m;
-                StringBuilder beads = new StringBuilder();
-                for (int i = 0; i < m / 5; i++) beads.append("●");
-                TextView t = button(beads + "\n" + m + " min", 0xFF3A3460, v -> beginSession(mm));
-                fit(t, 48, 22);
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(px(240), px(220));
-                lp.setMargins(px(18), 0, px(18), 0);
-                r.addView(t, lp);
-                if (first == null) first = t;
-            }
-            col.addView(r);
-            center(col);
-            if (first != null) first.requestFocus();
-        } else {
-            col.addView(text("Great trying!", 64, Color.WHITE, true));
-            col.addView(text(getString(R.string.buddy_name) + " picked a " + allowedMin + "-minute adventure for you.", 48, 0xFFFFD36B, false));
-            center(col);
-            ui.postDelayed(() -> beginSession(allowedMin), 3500);
-        }
+        col.addView(text("Great warm-up! 🌟", 64, Color.WHITE, true));
+        col.addView(spacer(40));
+        TextView play = button("🎲  Games", 0xFF6553DB, v -> { fromPlayWarmup = false; showPlayList(); });
+        TextView home = button("🏠  Home", 0xFF3A3460, v -> { fromPlayWarmup = false; showHub(); });
+        LinearLayout r = new LinearLayout(this);
+        r.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(px(20), 0, px(20), 0);
+        r.addView(play, lp); r.addView(home, lp);
+        col.addView(r);
+        center(col);
+        play.requestFocus();
     }
 
     // ------------------------------------------------------------------ the three doors: Watch · Play · Try
@@ -792,7 +770,8 @@ public class MainActivity extends Activity {
         String watchSub = cd > 0 ? "🌙 Resting " + (int) Math.ceil(cd / 60000.0) + " min" : minutesLeftToday() < 5 ? "🌙 Resting till tomorrow" : "Videos & stories";
         View w = door("🎬", "Watch", watchSub, 0xFF6553DB, v -> {
             if (cooldownLeftMs() > 0 || minutesLeftToday() < 5) { whyHub.setText("Videos are resting. Try Play or Try!"); return; }
-            showWarmup();
+            // Session length comes only from the parent's setting, capped by today's shared budget (issue #1, point 6).
+            beginSession(Math.max(1, Math.min(getResources().getInteger(R.integer.watch_session_min), minutesLeftToday())));
         });
         if (watchResting) w.setAlpha(0.55f);
         View pl = door("🎲", "Play", "Games to think", 0xFFE8590C, v -> showPlayList());
@@ -801,7 +780,7 @@ public class MainActivity extends Activity {
             if (getResources().getBoolean(R.bool.try_v3)) showTryHome3(); else showTryCats();
         });
         if (!getResources().getBoolean(R.bool.try_enabled)) tr.setVisibility(View.GONE);
-        for (View d : new View[]{w, pl, tr}) {
+        for (View d : new View[]{pl, tr, w}) {                       // home order PLAY → TRY → WATCH (docs/DECISIONS.md D1)
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(px(460), px(470));
             lp.setMargins(px(30), 0, px(30), 0);
             doors.addView(d, lp);
@@ -811,7 +790,7 @@ public class MainActivity extends Activity {
         col.addView(spacer(30));
         col.addView(whyHub);
         center(col);
-        (watchResting ? pl : w).requestFocus();
+        pl.requestFocus();
         ui.postDelayed(() -> hb.pose(R.drawable.buddy_idle), 1800);
     }
 
@@ -845,6 +824,8 @@ public class MainActivity extends Activity {
         LinearLayout col = column();
         col.addView(bubble("🎲 Pick a game!", 52));
         col.addView(spacer(16));
+        TextView warm = button("☀️  " + getString(R.string.warmup_title), 0xFFC9730A, v -> { fromPlayWarmup = true; showWarmup(); });
+        col.addView(warm);                                         // optional standalone warm-up: no gate, no effect on time
         LinearLayout grid = new LinearLayout(this);
         grid.setOrientation(LinearLayout.VERTICAL);
         LinearLayout row = null;
@@ -3736,7 +3717,7 @@ public class MainActivity extends Activity {
                     else if ("gather".equals(tryPhase)) showTryHook();
                     else showTryList(tryCat);
                     return true;
-                case "warmintro": showHub(); return true;
+                case "warmintro": if (fromPlayWarmup) { fromPlayWarmup = false; showPlayList(); } else showHub(); return true;
                 case "hub": return true;
                 case "t3home": showHub(); return true;
                 case "t3list": showTryHome3(); return true;

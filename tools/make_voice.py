@@ -28,7 +28,7 @@ def lines(p):
     buddy = p.get("buddy_name", "Gubbi")
     warm = p.get("warmup_title", buddy + "'s Warm-up")
     app = p.get("app_title", "Wonder Window")
-    out = [warm + "!", "Five quick questions, then videos.", "Let's go!", "Try again!", "Now you know!",
+    out = [warm + "!", "Five quick questions, just for fun.", "Let's go!", "Try again!", "Now you know!",
            "Amazing! You choose your adventure.", "Great trying!", "Pick a video!", "Two more minutes!",
            "Try it! Tell Amma or Appa one thing you learned.", "Let's go do it!", "Keep watching", "Not this one",
            "Stop for now", "I like this!", "Taking a little break", "TV is resting for a bit. Let's play!",
