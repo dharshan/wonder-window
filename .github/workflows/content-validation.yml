@@ -1,0 +1,19 @@
+name: Content validation
+on:
+  push:
+    paths: ["content/**", "examples/**", "tools/validate_content.py", ".github/workflows/content-validation.yml"]
+  pull_request:
+    paths: ["content/**", "examples/**", "tools/validate_content.py", ".github/workflows/content-validation.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install jsonschema
+      - run: python tools/validate_content.py

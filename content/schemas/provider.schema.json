@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "integration_type",
+    "terms_url",
+    "age_suitability_reviewed",
+    "review_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^WATCH-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "integration_type": {
+      "enum": [
+        "official_sdk",
+        "official_deep_link",
+        "documented_api"
+      ]
+    },
+    "terms_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "age_suitability_reviewed": {
+      "type": "boolean"
+    },
+    "external_account_required": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "needs_review",
+        "approved",
+        "rejected"
+      ]
+    }
+  }
+}

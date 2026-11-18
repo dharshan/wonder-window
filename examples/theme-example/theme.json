@@ -1,0 +1,17 @@
+{
+  "id": "THEME-SKY-GARDEN",
+  "name": "Sky Garden baseline example",
+  "tokens": {
+    "color.background.sky": "#87CEEB",
+    "color.surface.card": "#FFFFFF",
+    "color.focus.ring": "#F4C542",
+    "spacing.card.gap": 16,
+    "shape.card.radius": 20,
+    "motion.focus.duration_ms": 120
+  },
+  "provenance": {
+    "creator": "Wonder Window contributors",
+    "license": "CC-BY-4.0"
+  },
+  "review_status": "draft"
+}

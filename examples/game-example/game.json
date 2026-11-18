@@ -1,0 +1,31 @@
+{
+  "id": "PLAY-001",
+  "title": "Pattern Garden",
+  "summary": "Find the next item in a repeating pattern and help the garden grow.",
+  "age_band": "5-6",
+  "learning_goals": [
+    "Recognise and extend repeating visual patterns"
+  ],
+  "mechanics": [
+    "Choose one of three visible answers"
+  ],
+  "remote_mapping": {
+    "up": "Move focus up",
+    "down": "Move focus down",
+    "left": "Move focus left",
+    "right": "Move focus right",
+    "ok": "Select focused answer",
+    "back": "Pause or return to menu"
+  },
+  "estimated_minutes": 5,
+  "offline": true,
+  "accessibility": [
+    "Use shape and position as well as colour",
+    "Allow untimed decisions"
+  ],
+  "provenance": {
+    "creator": "Wonder Window contributors",
+    "license": "CC-BY-4.0"
+  },
+  "review_status": "draft"
+}

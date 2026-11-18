@@ -1,0 +1,10 @@
+{
+  "id": "WATCH-EXAMPLE-PROVIDER",
+  "name": "Example provider (placeholder)",
+  "integration_type": "official_deep_link",
+  "terms_url": "https://example.com/terms",
+  "age_suitability_reviewed": false,
+  "external_account_required": true,
+  "notes": "Non-functional example only; do not ship.",
+  "review_status": "draft"
+}

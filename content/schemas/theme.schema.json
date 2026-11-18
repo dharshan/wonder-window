@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "tokens",
+    "provenance",
+    "review_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^THEME-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "tokens": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number"
+        ]
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "creator",
+        "license"
+      ],
+      "properties": {
+        "creator": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        }
+      }
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "needs_review",
+        "approved",
+        "rejected"
+      ]
+    }
+  }
+}

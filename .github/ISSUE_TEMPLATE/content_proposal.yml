@@ -1,0 +1,30 @@
+name: Contribution proposal
+description: Propose PLAY, TRY, WATCH or design contribution
+title: "[Contribution]: "
+labels: ["content", "needs-review"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Contribution area
+      options: ["PLAY", "TRY", "Design system", "WATCH"]
+    validations:
+      required: true
+  - type: textarea
+    id: concept
+    attributes:
+      label: Concept and intended age band
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety, supervision and accessibility
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Content and asset provenance/licences
+    validations:
+      required: true

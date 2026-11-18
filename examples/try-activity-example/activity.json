@@ -1,0 +1,35 @@
+{
+  "id": "TRY-001",
+  "title": "Find Five Textures",
+  "summary": "Notice five different textures in a safe room without collecting anything.",
+  "family": "nature_notice",
+  "age_band": "5-6",
+  "goal": "Practise observation and descriptive language.",
+  "materials": [
+    "No materials required"
+  ],
+  "supervision": "nearby_adult",
+  "safety_notes": [
+    "Stay in the agreed safe area",
+    "Do not touch hot, sharp, electrical or fragile objects",
+    "Do not taste or collect unknown items"
+  ],
+  "steps": [
+    "Choose a safe room with an adult",
+    "Notice five surfaces that look or feel different",
+    "Describe each as smooth, rough, soft or bumpy",
+    "Tell someone which texture surprised you"
+  ],
+  "estimated_minutes": 8,
+  "accessibility": [
+    "Children who prefer not to touch can observe visually"
+  ],
+  "alternatives": [
+    "Use pictures of textures if moving around is not possible"
+  ],
+  "provenance": {
+    "creator": "Wonder Window contributors",
+    "license": "CC-BY-4.0"
+  },
+  "review_status": "needs_review"
+}

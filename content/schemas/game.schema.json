@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "age_band",
+    "learning_goals",
+    "mechanics",
+    "remote_mapping",
+    "estimated_minutes",
+    "offline",
+    "accessibility",
+    "provenance",
+    "review_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^PLAY-[0-9]{3,5}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "age_band": {
+      "enum": [
+        "3-4",
+        "5-6",
+        "7-8",
+        "9-10"
+      ]
+    },
+    "learning_goals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "mechanics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "remote_mapping": {
+      "type": "object",
+      "required": [
+        "up",
+        "down",
+        "left",
+        "right",
+        "ok",
+        "back"
+      ],
+      "properties": {
+        "up": {
+          "type": "string"
+        },
+        "down": {
+          "type": "string"
+        },
+        "left": {
+          "type": "string"
+        },
+        "right": {
+          "type": "string"
+        },
+        "ok": {
+          "type": "string"
+        },
+        "back": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "estimated_minutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "offline": {
+      "const": true
+    },
+    "accessibility": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "creator",
+        "license"
+      ],
+      "properties": {
+        "creator": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
+        }
+      }
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "needs_review",
+        "approved",
+        "rejected"
+      ]
+    }
+  }
+}

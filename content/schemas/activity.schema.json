@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "family",
+    "age_band",
+    "goal",
+    "materials",
+    "supervision",
+    "safety_notes",
+    "steps",
+    "estimated_minutes",
+    "accessibility",
+    "alternatives",
+    "provenance",
+    "review_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^TRY-[0-9]{3,5}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "family": {
+      "enum": [
+        "move_play",
+        "create_make",
+        "nature_notice",
+        "think_discover",
+        "help_everyday",
+        "family_connect",
+        "calm_mindful"
+      ]
+    },
+    "age_band": {
+      "enum": [
+        "3-4",
+        "5-6",
+        "7-8",
+        "9-10"
+      ]
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 5
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supervision": {
+      "enum": [
+        "independent_within_safe_environment",
+        "nearby_adult",
+        "adult_participation",
+        "continuous_adult_supervision"
+      ]
+    },
+    "safety_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "estimated_minutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 180
+    },
+    "accessibility": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "creator",
+        "license"
+      ],
+      "properties": {
+        "creator": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        }
+      }
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "needs_review",
+        "approved",
+        "parent_supervision_required",
+        "rejected"
+      ]
+    }
+  }
+}
