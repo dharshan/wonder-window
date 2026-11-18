@@ -11,7 +11,7 @@
    "category": "B. Memory & Concentration",
    "section": "play",
    "variant": "echo",
-   "story": "Cherry's shapes sing a little tune. Can you sing it back?",
+   "story": "{buddy}'s shapes sing a little tune. Can you sing it back?",
    "say_intro": "My shapes light up like a song. Watch carefully, then press them in the same order!",
    "cheers": [
     "You remembered!",
@@ -1634,7 +1634,7 @@
    "category": "I. Emotional Intelligence & Social Learning",
    "section": "play",
    "variant": "pick",
-   "story": "Help Cherry fill her feelings mirror.",
+   "story": "Help {buddy} fill her feelings mirror.",
    "say_intro": "Faces tell us how people feel. Let's look at faces together!",
    "cheers": [
     "You read that face!",
@@ -2436,7 +2436,7 @@
    "category": "H. Critical Thinking & Decision-Making",
    "section": "play",
    "variant": "pick",
-   "story": "Finish Cherry's little picture stories from everyday life.",
+   "story": "Finish {buddy}'s little picture stories from everyday life.",
    "say_intro": "Let's look at little picture stories from our day. You choose what happens next!",
    "cheers": [
     "Story done!",
@@ -3160,8 +3160,8 @@
    "category": "G. Spatial Awareness & Visual Intelligence",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's torch makes shadows. Whose shadow is it?",
-   "say_intro": "Cherry has a torch! It makes shadows on the wall. Find the shadow that matches the picture.",
+   "story": "{buddy}'s torch makes shadows. Whose shadow is it?",
+   "say_intro": "{buddy} has a torch! It makes shadows on the wall. Find the shadow that matches the picture.",
    "cheers": [
     "Shadow found!",
     "Perfect match!",
@@ -3841,7 +3841,7 @@
    "category": "I. Emotional Intelligence & Social Learning",
    "section": "play",
    "variant": "pick",
-   "story": "Fill Cherry's kindness jar with kind choices.",
+   "story": "Fill {buddy}'s kindness jar with kind choices.",
    "say_intro": "Little things can be kind. Let's think about what we could do to help.",
    "cheers": [
     "That's so kind!",
@@ -5220,7 +5220,7 @@
    "category": "A. Cognitive & Logical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Help Cherry pair up the socks in the washing basket.",
+   "story": "Help {buddy} pair up the socks in the washing basket.",
    "say_intro": "Look at two things. Are they the same, or different? Look carefully!",
    "cheers": [
     "Sharp eyes!",
@@ -5961,7 +5961,7 @@
    "category": "B. Memory & Concentration",
    "section": "play",
    "variant": "pick",
-   "story": "Ajji's tea tray keeps changing. Help Cherry spot what changed!",
+   "story": "Ajji's tea tray keeps changing. Help {buddy} spot what changed!",
    "say_intro": "Ajji has a tray of things. Look carefully and remember. Then find what changed!",
    "cheers": [
     "You spotted it!",
@@ -6876,7 +6876,7 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "order",
-   "story": "Line up Cherry's toys for the size parade.",
+   "story": "Line up {buddy}'s toys for the size parade.",
    "say_intro": "It's a size parade! Line things up from small to big.",
    "cheers": [
     "What a neat line!",
@@ -7597,7 +7597,7 @@
    "category": "D. Language & Literacy",
    "section": "play",
    "variant": "order",
-   "story": "Cherry's storybook pages got mixed up. Put them back in order!",
+   "story": "{buddy}'s storybook pages got mixed up. Put them back in order!",
    "say_intro": "Oh no, my storybook pages are mixed up! Help me put them in order.",
    "cheers": [
     "The story makes sense!",
@@ -8269,7 +8269,7 @@
    "category": "F. Science & Discovery",
    "section": "play",
    "variant": "pick",
-   "story": "Help Cherry get ready for any weather.",
+   "story": "Help {buddy} get ready for any weather.",
    "say_intro": "Let's look at the weather, and choose what helps!",
    "cheers": [
     "Ready for the weather!",
@@ -9107,7 +9107,7 @@
    "category": "G. Spatial Awareness & Visual Intelligence",
    "section": "play",
    "variant": "mirror",
-   "story": "Paint Cherry's butterfly friends so both wings match.",
+   "story": "Paint {buddy}'s butterfly friends so both wings match.",
    "say_intro": "A butterfly's two wings match, like a mirror. Help me paint the other wing!",
    "cheers": [
     "The wings match!",
@@ -10065,7 +10065,7 @@
    "category": "J. Real-World Knowledge & Life Skills",
    "section": "play",
    "variant": "pick",
-   "story": "Help Cherry and friends stay safe on Bangalore roads.",
+   "story": "Help {buddy} and friends stay safe on Bangalore roads.",
    "say_intro": "Roads are busy. Let's learn the safe things to do, always with a grown-up.",
    "cheers": [
     "Safe and smart!",
@@ -10850,8 +10850,8 @@
    "category": "B. Memory & Concentration",
    "section": "play",
    "variant": "echo",
-   "story": "Cherry's band plays a little tune. Can you play it back?",
-   "say_intro": "Cherry's band is playing! Listen carefully, then play the same sounds in the same order!",
+   "story": "{buddy}'s band plays a little tune. Can you play it back?",
+   "say_intro": "{buddy}'s band is playing! Listen carefully, then play the same sounds in the same order!",
    "cheers": [
     "You played it right!",
     "Same tune as me!",
@@ -11802,7 +11802,7 @@
    "category": "D. Language & Literacy",
    "section": "play",
    "variant": "order",
-   "story": "Cherry's word blocks fell down. Put the letters back in order!",
+   "story": "{buddy}'s word blocks fell down. Put the letters back in order!",
    "say_intro": "Oh no, my word blocks fell down! Help me put the sounds back in order.",
    "cheers": [
     "You built it!",
@@ -12314,8 +12314,8 @@
    "category": "F. Science & Discovery",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's pond is ready. What floats and what sinks?",
-   "say_intro": "Splash! Let's try things in Cherry's pond. Will it float, or sink?",
+   "story": "{buddy}'s pond is ready. What floats and what sinks?",
+   "say_intro": "Splash! Let's try things in {buddy}'s pond. Will it float, or sink?",
    "cheers": [
     "Splash! You guessed it!",
     "Just like the pond!",
@@ -13036,8 +13036,8 @@
    "category": "H. Critical Thinking & Decision-Making",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry has a job to do. Which helper is best?",
-   "say_intro": "Cherry has a job to do! Pick the best tool to help.",
+   "story": "{buddy} has a job to do. Which helper is best?",
+   "say_intro": "{buddy} has a job to do! Pick the best tool to help.",
    "cheers": [
     "The perfect helper!",
     "Just the right tool!",
@@ -13790,8 +13790,8 @@
    "category": "I. Emotional Intelligence & Social Learning",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry tells little stories about feelings. Can you help?",
-   "say_intro": "Cherry has little stories about feelings. Help Cherry understand how everyone feels.",
+   "story": "{buddy} tells little stories about feelings. Can you help?",
+   "say_intro": "{buddy} has little stories about feelings. Help {buddy} understand how everyone feels.",
    "cheers": [
     "You understood!",
     "What a kind heart!",
@@ -14570,8 +14570,8 @@
    "category": "A. Cognitive & Logical Thinking",
    "section": "play",
    "variant": "place",
-   "story": "Cherry has a basket of things. Sometimes the rule changes!",
-   "say_intro": "Let's sort Cherry's things. Listen to the rule. Sometimes it changes!",
+   "story": "{buddy} has a basket of things. Sometimes the rule changes!",
+   "say_intro": "Let's sort {buddy}'s things. Listen to the rule. Sometimes it changes!",
    "cheers": [
     "You switched so well!",
     "New rule, no problem!",
@@ -15682,8 +15682,8 @@
    "category": "F. Science & Discovery",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's garden needs a helper. What do the plants need?",
-   "say_intro": "Cherry's garden needs a helper! Let's find out what plants need to grow.",
+   "story": "{buddy}'s garden needs a helper. What do the plants need?",
+   "say_intro": "{buddy}'s garden needs a helper! Let's find out what plants need to grow.",
    "cheers": [
     "The plant says thank you!",
     "You helped it grow!",
@@ -16447,8 +16447,8 @@
    "category": "J. Real-World Knowledge & Life Skills",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's day has a time for everything. When does it happen?",
-   "say_intro": "Cherry's day has a time for everything! Let's find out when things happen.",
+   "story": "{buddy}'s day has a time for everything. When does it happen?",
+   "say_intro": "{buddy}'s day has a time for everything! Let's find out when things happen.",
    "cheers": [
     "Right on time!",
     "You know the day!",
@@ -17211,8 +17211,8 @@
    "category": "A. Cognitive & Logical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry loves to know why things happen. Can you tell?",
-   "say_intro": "Cherry wonders why things happen. Help Cherry find out!",
+   "story": "{buddy} loves to know why things happen. Can you tell?",
+   "say_intro": "{buddy} wonders why things happen. Help {buddy} find out!",
    "cheers": [
     "You figured it out!",
     "That makes sense!",
@@ -17222,7 +17222,7 @@
     "Clever thinking!"
    ],
    "end_lines": [
-    "Cherry knows why now. Thank you!",
+    "{buddy} knows why now. Thank you!",
     "Five things explained!",
     "Ask why at home, and find out together!",
     "Let's rest our thinking caps."
@@ -18039,8 +18039,8 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's seesaw is tipping. Can you make it level?",
-   "say_intro": "Cherry's seesaw is tipping! Help make both sides the same.",
+   "story": "{buddy}'s seesaw is tipping. Can you make it level?",
+   "say_intro": "{buddy}'s seesaw is tipping! Help make both sides the same.",
    "cheers": [
     "Perfectly level!",
     "Both sides match!",
@@ -18851,8 +18851,8 @@
    "category": "A. Cognitive & Logical Thinking",
    "section": "play",
    "variant": "place",
-   "story": "Cherry's things can go in homes two different ways. Can you switch?",
-   "say_intro": "Cherry has a puzzle! Sort the things one way. Then we switch to a new way!",
+   "story": "{buddy}'s things can go in homes two different ways. Can you switch?",
+   "say_intro": "{buddy} has a puzzle! Sort the things one way. Then we switch to a new way!",
    "cheers": [
     "You switched so well!",
     "New rule, new homes!",
@@ -19962,7 +19962,7 @@
    "category": "A. Cognitive & Logical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry shows one pair that go together. Find the pal for the next one!",
+   "story": "{buddy} shows one pair that go together. Find the pal for the next one!",
    "say_intro": "Look at the two that go together. Now find a pal for the next one!",
    "cheers": [
     "Same rule!",
@@ -20733,7 +20733,7 @@
    "category": "B. Memory & Concentration",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's picnic is full of look-alikes. Can you spot the same one?",
+   "story": "{buddy}'s picnic is full of look-alikes. Can you spot the same one?",
    "say_intro": "Look at this one. Can you find the same one in the picture?",
    "cheers": [
     "Sharp eyes!",
@@ -22075,8 +22075,8 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry is filling baskets. How many more fit?",
-   "say_intro": "Cherry fills baskets! How many more do we need to make the number?",
+   "story": "{buddy} is filling baskets. How many more fit?",
+   "say_intro": "{buddy} fills baskets! How many more do we need to make the number?",
    "cheers": [
     "Just enough!",
     "You made it!",
@@ -22816,7 +22816,7 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Some of Cherry's friends are leaving. How many stay?",
+   "story": "Some of {buddy}'s friends are leaving. How many stay?",
    "say_intro": "Some friends are going away! Let's count how many are left.",
    "cheers": [
     "That many are left!",
@@ -23558,7 +23558,7 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's shapes got mixed up. Count just one kind!",
+   "story": "{buddy}'s shapes got mixed up. Count just one kind!",
    "say_intro": "The shapes are all mixed up! Let's count just one kind.",
    "cheers": [
     "You counted right!",
@@ -24340,8 +24340,8 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry has two little heaps. Which has more?",
-   "say_intro": "Cherry has two little heaps. Can you tell which one has more?",
+   "story": "{buddy} has two little heaps. Which has more?",
+   "say_intro": "{buddy} has two little heaps. Can you tell which one has more?",
    "cheers": [
     "You compared well!",
     "Yes, that one!",
@@ -24916,8 +24916,8 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry is measuring the world with her eyes.",
-   "say_intro": "Cherry is measuring things with her eyes! Which one is more?",
+   "story": "{buddy} is measuring the world with her eyes.",
+   "say_intro": "{buddy} is measuring things with her eyes! Which one is more?",
    "cheers": [
     "Well measured!",
     "Yes, that one!",
@@ -25487,8 +25487,8 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry has treats to share. Everyone gets the same!",
-   "say_intro": "Cherry wants to share fairly. Everyone gets the same number!",
+   "story": "{buddy} has treats to share. Everyone gets the same!",
+   "say_intro": "{buddy} wants to share fairly. Everyone gets the same number!",
    "cheers": [
     "Fair shares!",
     "Everyone is happy!",
@@ -26239,7 +26239,7 @@
    "category": "D. Language & Literacy",
    "section": "play",
    "variant": "order",
-   "story": "Cherry's letter stones are scattered. Put them in song order!",
+   "story": "{buddy}'s letter stones are scattered. Put them in song order!",
    "say_intro": "The letter stones got mixed up! Put them in order, like the alphabet song.",
    "cheers": [
     "Alphabet order!",
@@ -26750,7 +26750,7 @@
    "category": "D. Language & Literacy",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's picture friends like to rhyme. Who sounds the same at the end?",
+   "story": "{buddy}'s picture friends like to rhyme. Who sounds the same at the end?",
    "say_intro": "Some words sound the same at the end, like cat and hat. Can you find them?",
    "cheers": [
     "They rhyme!",
@@ -27471,7 +27471,7 @@
    "category": "D. Language & Literacy",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's picture friends each have an opposite. Find it!",
+   "story": "{buddy}'s picture friends each have an opposite. Find it!",
    "say_intro": "Every picture has an opposite, like hot and cold. Can you find it?",
    "cheers": [
     "Opposites!",
@@ -28092,8 +28092,8 @@
    "category": "D. Language & Literacy",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry describes a secret picture. Listen carefully and find it!",
-   "say_intro": "Cherry will say a clue about a picture. Listen, then find the picture that fits.",
+   "story": "{buddy} describes a secret picture. Listen carefully and find it!",
+   "say_intro": "{buddy} will say a clue about a picture. Listen, then find the picture that fits.",
    "cheers": [
     "Good listening!",
     "You found it!",
@@ -28844,7 +28844,7 @@
    "category": "E. Creativity & Imagination",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's paint pots are open. What new colours can we make by mixing?",
+   "story": "{buddy}'s paint pots are open. What new colours can we make by mixing?",
    "say_intro": "Two paints mix together to make a new colour. Can you find it?",
    "cheers": [
     "What a new colour!",
@@ -29660,7 +29660,7 @@
    "category": "F. Science & Discovery",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry is moving things around. Does she push them or pull them?",
+   "story": "{buddy} is moving things around. Does she push them or pull them?",
    "say_intro": "A push sends things away. A pull brings things closer. Which one is it?",
    "cheers": [
     "Push or pull, you know!",
@@ -30382,7 +30382,7 @@
    "category": "G. Spatial Awareness & Visual Intelligence",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's pictures got turned around. Find the one that is the same picture.",
+   "story": "{buddy}'s pictures got turned around. Find the one that is the same picture.",
    "say_intro": "Some pictures are turned around. Find the one that is the same as this picture.",
    "cheers": [
     "It just turned around!",
@@ -31314,7 +31314,7 @@
    "category": "G. Spatial Awareness & Visual Intelligence",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's picture has a gap. Which piece fits and completes it?",
+   "story": "{buddy}'s picture has a gap. Which piece fits and completes it?",
    "say_intro": "Something is missing from the picture. Can you find the piece that fits?",
    "cheers": [
     "The picture is complete!",
@@ -32136,7 +32136,7 @@
    "category": "G. Spatial Awareness & Visual Intelligence",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry lines up her friends in a row. Who stands where?",
+   "story": "{buddy} lines up her friends in a row. Who stands where?",
    "say_intro": "My friends are standing in a row. Listen to where, and find who it is.",
    "cheers": [
     "Right place!",
@@ -33048,12 +33048,12 @@
    "category": "H. Critical Thinking & Decision-Making",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry has a problem every day. Which choice helps the most?",
-   "say_intro": "Cherry has a little problem. Listen, think, and find the best choice.",
+   "story": "{buddy} has a problem every day. Which choice helps the most?",
+   "say_intro": "{buddy} has a little problem. Listen, think, and find the best choice.",
    "cheers": [
     "Wise choice!",
     "That helps the most!",
-    "Good thinking, Cherry says!",
+    "Good thinking, {buddy} says!",
     "Smart pick!",
     "You thought it through!",
     "Best choice!"
@@ -33817,15 +33817,15 @@
    "category": "H. Critical Thinking & Decision-Making",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry drew a picture book, but silly mistakes crept in. Help her find them!",
-   "say_intro": "Cherry made a picture, but a silly mistake is hiding in it. Can you spot the mistake?",
+   "story": "{buddy} drew a picture book, but silly mistakes crept in. Help her find them!",
+   "say_intro": "{buddy} made a picture, but a silly mistake is hiding in it. Can you spot the mistake?",
    "cheers": [
     "You spotted it!",
     "Sharp eyes!",
     "Mistake found!",
     "What a detective!",
     "You noticed it!",
-    "Cherry says thank you!"
+    "{buddy} says thank you!"
    ],
    "end_lines": [
     "All the mistakes are fixed. Thank you!",
@@ -33857,7 +33857,7 @@
       {
        "id": "ww081-1-01",
        "prompt": "Which one is the mistake?",
-       "say": "It is raining. Cherry has an umbrella, boots, and a swimsuit. Which one is the mistake?",
+       "say": "It is raining. {buddy} has an umbrella, boots, and a swimsuit. Which one is the mistake?",
        "board": [
         "🌧️"
        ],
@@ -34094,7 +34094,7 @@
       {
        "id": "ww081-2-01",
        "prompt": "Which one is the mistake?",
-       "say": "It is bedtime. Cherry has a teddy, a bed, clean teeth, and sunglasses. Which one is the mistake?",
+       "say": "It is bedtime. {buddy} has a teddy, a bed, clean teeth, and sunglasses. Which one is the mistake?",
        "board": [
         "🌙"
        ],
@@ -34119,7 +34119,7 @@
       {
        "id": "ww081-2-02",
        "prompt": "Which one is the mistake?",
-       "say": "It is cold. Cherry wears a scarf, gloves, a coat, and a swimsuit. Which one is the mistake?",
+       "say": "It is cold. {buddy} wears a scarf, gloves, a coat, and a swimsuit. Which one is the mistake?",
        "board": [
         "❄️"
        ],
@@ -34271,7 +34271,7 @@
       {
        "id": "ww081-2-08",
        "prompt": "Which one is the mistake?",
-       "say": "It is a hot sunny day. Cherry has a cap, sunglasses, water, and gloves. Which one is the mistake?",
+       "say": "It is a hot sunny day. {buddy} has a cap, sunglasses, water, and gloves. Which one is the mistake?",
        "board": [
         "☀️"
        ],
@@ -34645,18 +34645,18 @@
    "category": "J. Real-World Knowledge & Life Skills",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry wants a strong body to fly high. Help her choose what is good for her!",
-   "say_intro": "Cherry wants to stay strong and healthy. Help her pick the healthy choice!",
+   "story": "{buddy} wants a strong body to fly high. Help her choose what is good for her!",
+   "say_intro": "{buddy} wants to stay strong and healthy. Help her pick the healthy choice!",
    "cheers": [
     "Healthy and strong!",
     "Good for your body!",
     "A healthy choice!",
     "Strong like a tree!",
     "What a smart pick!",
-    "Cherry feels great!"
+    "{buddy} feels great!"
    ],
    "end_lines": [
-    "Cherry feels strong. Thank you!",
+    "{buddy} feels strong. Thank you!",
     "Five healthy choices!",
     "Pick a healthy snack with Amma!",
     "Healthy time is done!"
@@ -35372,15 +35372,15 @@
    "category": "J. Real-World Knowledge & Life Skills",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry loves her garden, her trees, and her animal friends. Help her take care of them!",
-   "say_intro": "Cherry loves nature. Plants, birds, and animals need our care. Let's choose what helps!",
+   "story": "{buddy} loves her garden, her trees, and her animal friends. Help her take care of them!",
+   "say_intro": "{buddy} loves nature. Plants, birds, and animals need our care. Let's choose what helps!",
    "cheers": [
     "Nature says thank you!",
     "Kind to the earth!",
     "A caring choice!",
     "The plants are happy!",
     "Green and clean!",
-    "Cherry is chirping!"
+    "{buddy} is chirping!"
    ],
    "end_lines": [
     "Nature is happy. Thank you!",
@@ -36131,18 +36131,18 @@
    "category": "J. Real-World Knowledge & Life Skills",
    "section": "play",
    "variant": "order",
-   "story": "Cherry has a busy day. Help her do everything in the right order!",
-   "say_intro": "Cherry's day has lots of steps. Help her put them in order, one by one!",
+   "story": "{buddy} has a busy day. Help her do everything in the right order!",
+   "say_intro": "{buddy}'s day has lots of steps. Help her put them in order, one by one!",
    "cheers": [
     "All ready!",
     "Step by step!",
     "In the right order!",
     "You know the routine!",
-    "Cherry is ready!",
+    "{buddy} is ready!",
     "Well done, helper!"
    ],
    "end_lines": [
-    "Cherry is all ready. Thank you!",
+    "{buddy} is all ready. Thank you!",
     "Five routines in order!",
     "Tell Amma your morning steps!",
     "Routine time is done!"
@@ -36821,8 +36821,8 @@
    "category": "B. Memory & Concentration",
    "section": "play",
    "variant": "pairs",
-   "story": "Cherry's cards are face down. Remember where each twin hides!",
-   "say_intro": "Cherry turned her cards face down. Flip two cards and remember where each twin hides!",
+   "story": "{buddy}'s cards are face down. Remember where each twin hides!",
+   "say_intro": "{buddy} turned her cards face down. Flip two cards and remember where each twin hides!",
    "cheers": [
     "You remembered!",
     "What a memory!",
@@ -37553,8 +37553,8 @@
    "category": "C. Mathematics & Numerical Thinking",
    "section": "play",
    "variant": "pick",
-   "story": "Shapes are hiding everywhere! Help Cherry hunt for circles, triangles, and squares.",
-   "say_intro": "Shapes hide everywhere around us. Let's go on a shape hunt with Cherry!",
+   "story": "Shapes are hiding everywhere! Help {buddy} hunt for circles, triangles, and squares.",
+   "say_intro": "Shapes hide everywhere around us. Let's go on a shape hunt with {buddy}!",
    "cheers": [
     "You found the shape!",
     "Sharp shape eyes!",
@@ -38305,15 +38305,15 @@
    "category": "F. Science & Discovery",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry has animal friends who need her help. Can you choose what each one needs?",
-   "say_intro": "Cherry has animal friends. Each one needs something. Can you choose what it needs?",
+   "story": "{buddy} has animal friends who need her help. Can you choose what each one needs?",
+   "say_intro": "{buddy} has animal friends. Each one needs something. Can you choose what it needs?",
    "cheers": [
     "Happy animals!",
     "That is just right!",
     "The animal says thank you!",
     "Caring and kind!",
     "What a good helper!",
-    "Cherry is chirping!"
+    "{buddy} is chirping!"
    ],
    "end_lines": [
     "The animals are happy. Thank you!",
@@ -39090,14 +39090,14 @@
    "category": "J. Real-World Knowledge & Life Skills",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry is playing shop. She needs the right coins for each treat. Can you help?",
-   "say_intro": "Cherry is playing shop. Each treat has a price. Help her find the right coins!",
+   "story": "{buddy} is playing shop. She needs the right coins for each treat. Can you help?",
+   "say_intro": "{buddy} is playing shop. Each treat has a price. Help her find the right coins!",
    "cheers": [
     "Just the right coins!",
     "You paid it exactly!",
     "A good shopper!",
     "Clink, clink, clink!",
-    "Cherry says thank you!",
+    "{buddy} says thank you!",
     "Counting coins well!"
    ],
    "end_lines": [
@@ -39902,8 +39902,8 @@
    "category": "B. Memory & Concentration",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry shows you something, then hides it under her wing. Can you remember what it was?",
-   "say_intro": "Cherry will show you something, then hide it. Look carefully, then find what it was!",
+   "story": "{buddy} shows you something, then hides it under her wing. Can you remember what it was?",
+   "say_intro": "{buddy} will show you something, then hide it. Look carefully, then find what it was!",
    "cheers": [
     "You remembered!",
     "Sharp eyes and memory!",
@@ -39913,7 +39913,7 @@
     "You looked so well!"
    ],
    "end_lines": [
-    "Cherry's peeking is done. Thank you!",
+    "{buddy}'s peeking is done. Thank you!",
     "Five things remembered!",
     "Hide a toy and guess it with Amma!",
     "Let's rest our eyes now."
@@ -40834,7 +40834,7 @@
    "category": "B. Memory & Concentration",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's friends come in pairs. When one hides, can you remember who it was with?",
+   "story": "{buddy}'s friends come in pairs. When one hides, can you remember who it was with?",
    "say_intro": "My friends come in pairs. Look carefully. When one hides, tell me who it was with!",
    "cheers": [
     "You remembered the pair!",
@@ -42026,11 +42026,11 @@
    "category": "E. Creativity & Imagination",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry is dreaming up a story. Every idea is a good idea!",
+   "story": "{buddy} is dreaming up a story. Every idea is a good idea!",
    "say_intro": "Let's dream up an adventure! There is no wrong idea. Choose the one you like!",
    "cheers": [
     "What a lovely idea!",
-    "Cherry loves that!",
+    "{buddy} loves that!",
     "So creative!",
     "A wonderful adventure!",
     "Your idea is magic!",
@@ -42066,7 +42066,7 @@
       {
        "id": "ww150-1-01",
        "prompt": "Where could it go?",
-       "say": "Cherry finds a magic door. Where could it go? To the sea, to the stars, or to a garden?",
+       "say": "{buddy} finds a magic door. Where could it go? To the sea, to the stars, or to a garden?",
        "board": [
         "🚪",
         "❓"
@@ -42120,7 +42120,7 @@
       {
        "id": "ww150-1-03",
        "prompt": "Where could it go?",
-       "say": "Cherry has a magic paintbrush. What will you paint? A rainbow, a big fish, or a tall tree?",
+       "say": "{buddy} has a magic paintbrush. What will you paint? A rainbow, a big fish, or a tall tree?",
        "board": [
         "🖌️",
         "❓"
@@ -42147,7 +42147,7 @@
       {
        "id": "ww150-1-04",
        "prompt": "Where could it go?",
-       "say": "Cherry's rocket can land anywhere. Where shall we go? To the moon, to a jungle, or to a sweet shop?",
+       "say": "{buddy}'s rocket can land anywhere. Where shall we go? To the moon, to a jungle, or to a sweet shop?",
        "board": [
         "🚀",
         "❓"
@@ -42255,7 +42255,7 @@
       {
        "id": "ww150-1-08",
        "prompt": "Where could it go?",
-       "say": "Cherry finds a treasure map. Where is the treasure hidden? Under a tree, in a cave, or by the sea?",
+       "say": "{buddy} finds a treasure map. Where is the treasure hidden? Under a tree, in a cave, or by the sea?",
        "board": [
         "🗺️",
         "❓"
@@ -42282,7 +42282,7 @@
       {
        "id": "ww150-1-09",
        "prompt": "Where could it go?",
-       "say": "Cherry can fly! Who will she visit first? A whale, a cloud, or a bird?",
+       "say": "{buddy} can fly! Who will she visit first? A whale, a cloud, or a bird?",
        "board": [
         "🐦",
         "❓"
@@ -42422,7 +42422,7 @@
       {
        "id": "ww150-2-04",
        "prompt": "What should we add?",
-       "say": "Cherry is making a cake. What goes on top? A cherry, a star, or a candle?",
+       "say": "{buddy} is making a cake. What goes on top? A cherry, a star, or a candle?",
        "board": [
         "🎂",
         "❓"
@@ -42476,7 +42476,7 @@
       {
        "id": "ww150-2-06",
        "prompt": "What should we add?",
-       "say": "Cherry is having a party. What shall we do? Play music, play ball, or dance?",
+       "say": "{buddy} is having a party. What shall we do? Play music, play ball, or dance?",
        "board": [
         "🎉",
         "❓"
@@ -42616,7 +42616,7 @@
       {
        "id": "ww150-3-01",
        "prompt": "What happens next?",
-       "say": "Cherry's balloon floats up, up, up. Who does it meet? A bird, a cloud, or a butterfly?",
+       "say": "{buddy}'s balloon floats up, up, up. Who does it meet? A bird, a cloud, or a butterfly?",
        "board": [
         "🎈",
         "❓"
@@ -42832,7 +42832,7 @@
       {
        "id": "ww150-3-09",
        "prompt": "What happens next?",
-       "say": "Cherry finds a glowing egg. What hatches out? A dragon, a chick, or a unicorn?",
+       "say": "{buddy} finds a glowing egg. What hatches out? A dragon, a chick, or a unicorn?",
        "board": [
         "🥚",
         "❓"
@@ -42898,18 +42898,18 @@
    "category": "G. Spatial Awareness & Visual Intelligence",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry's friends see things in different ways. Can you see it their way?",
-   "say_intro": "Cherry's friends are all different. They like different things, and know different things. Can you see it their way?",
+   "story": "{buddy}'s friends see things in different ways. Can you see it their way?",
+   "say_intro": "{buddy}'s friends are all different. They like different things, and know different things. Can you see it their way?",
    "cheers": [
     "You see it their way!",
     "Just right!",
     "What a thinker!",
     "Everyone is different!",
-    "Cherry is chirping!",
+    "{buddy} is chirping!",
     "Kind and clever!"
    ],
    "end_lines": [
-    "Cherry's friends say thank you!",
+    "{buddy}'s friends say thank you!",
     "Five friends understood!",
     "Ask your family what they like!",
     "See you next time!"
@@ -43727,15 +43727,15 @@
    "category": "F. Science & Discovery",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry loves watching the sky. What is up there in the day and at night?",
-   "say_intro": "Cherry loves the sky. There is a sun, a moon, and lots of stars. Can you help Cherry?",
+   "story": "{buddy} loves watching the sky. What is up there in the day and at night?",
+   "say_intro": "{buddy} loves the sky. There is a sun, a moon, and lots of stars. Can you help {buddy}?",
    "cheers": [
     "The sky says thank you!",
     "Bright idea!",
     "Just like the stars!",
     "You know the sky!",
     "Twinkle twinkle!",
-    "Cherry is chirping!"
+    "{buddy} is chirping!"
    ],
    "end_lines": [
     "The sky is happy. Thank you!",
@@ -44475,18 +44475,18 @@
    "category": "J. Real-World Knowledge & Life Skills",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry wants to stay safe at home and outside. Help her tell safe from not safe!",
-   "say_intro": "Cherry wants to stay safe. Help her choose what is safe!",
+   "story": "{buddy} wants to stay safe at home and outside. Help her tell safe from not safe!",
+   "say_intro": "{buddy} wants to stay safe. Help her choose what is safe!",
    "cheers": [
     "A safe choice!",
-    "Cherry feels safe!",
+    "{buddy} feels safe!",
     "Careful and smart!",
     "Good thinking, safe friend!",
     "Safe and sound!",
     "You know what is safe!"
    ],
    "end_lines": [
-    "Cherry is safe now. Thank you!",
+    "{buddy} is safe now. Thank you!",
     "Five safe choices!",
     "Show Amma one safe thing you learned!",
     "Safety time is done!"
@@ -45198,18 +45198,18 @@
    "category": "F. Science & Discovery",
    "section": "play",
    "variant": "pick",
-   "story": "Cherry uses her eyes, ears, nose, tongue and hands all day. Which one does the job?",
-   "say_intro": "Cherry can see, hear, smell, taste, and touch! Which part of us does each job?",
+   "story": "{buddy} uses her eyes, ears, nose, tongue and hands all day. Which one does the job?",
+   "say_intro": "{buddy} can see, hear, smell, taste, and touch! Which part of us does each job?",
    "cheers": [
     "Just the right sense!",
-    "Cherry says well done!",
+    "{buddy} says well done!",
     "Your senses are clever!",
     "That is the one!",
     "Sense-ational!",
     "What a smart pick!"
    ],
    "end_lines": [
-    "Cherry used all her senses. Thank you!",
+    "{buddy} used all her senses. Thank you!",
     "Five senses found!",
     "Smell something nice with Amma!",
     "Senses time is done!"
@@ -45968,18 +45968,18 @@
    "category": "G. Spatial Awareness & Visual Intelligence",
    "section": "play",
    "variant": "compose",
-   "story": "Cherry shows a little picture made of parts. Can you build the very same one?",
-   "say_intro": "Cherry has a picture made of little parts. Build one just like it!",
+   "story": "{buddy} shows a little picture made of parts. Can you build the very same one?",
+   "say_intro": "{buddy} has a picture made of little parts. Build one just like it!",
    "cheers": [
     "You built it!",
     "Just the same!",
     "Every part in its place!",
     "What a builder!",
-    "Cherry is chirping!",
+    "{buddy} is chirping!",
     "Lovely building!"
    ],
    "end_lines": [
-    "Cherry loves what you built!",
+    "{buddy} loves what you built!",
     "Many pictures built today!",
     "Build something at home too!",
     "See you next time!"
@@ -46037,7 +46037,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the fish pond!",
-       "say": "Cherry made the fish pond. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the fish pond. Build the same one! Move, then press OK.",
        "rows": 2,
        "cols": 2,
        "parts": [
@@ -46120,7 +46120,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the little house!",
-       "say": "Cherry made the little house. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the little house. Build the same one! Move, then press OK.",
        "rows": 2,
        "cols": 2,
        "parts": [
@@ -46203,7 +46203,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the boat!",
-       "say": "Cherry made the boat. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the boat. Build the same one! Move, then press OK.",
        "rows": 2,
        "cols": 2,
        "parts": [
@@ -46325,7 +46325,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the sunny tree!",
-       "say": "Cherry made the sunny tree. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the sunny tree. Build the same one! Move, then press OK.",
        "rows": 3,
        "cols": 3,
        "parts": [
@@ -46430,7 +46430,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the flower garden!",
-       "say": "Cherry made the flower garden. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the flower garden. Build the same one! Move, then press OK.",
        "rows": 3,
        "cols": 3,
        "parts": [
@@ -46537,7 +46537,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the fish pond!",
-       "say": "Cherry made the fish pond. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the fish pond. Build the same one! Move, then press OK.",
        "rows": 3,
        "cols": 3,
        "parts": [
@@ -46691,7 +46691,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the flag tower!",
-       "say": "Cherry made the flag tower. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the flag tower. Build the same one! Move, then press OK.",
        "rows": 4,
        "cols": 3,
        "parts": [
@@ -46811,7 +46811,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the sea world!",
-       "say": "Cherry made the sea world. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the sea world. Build the same one! Move, then press OK.",
        "rows": 4,
        "cols": 3,
        "parts": [
@@ -46936,7 +46936,7 @@
        "variant": "compose",
        "mode": "build",
        "prompt": "Build the big castle!",
-       "say": "Cherry made the big castle. Build the same one! Move, then press OK.",
+       "say": "{buddy} made the big castle. Build the same one! Move, then press OK.",
        "rows": 4,
        "cols": 4,
        "parts": [
@@ -47080,18 +47080,18 @@
    "category": "E. Creativity & Imagination",
    "section": "play",
    "variant": "compose",
-   "story": "Cherry wants to build something new. It needs one special part, and you choose the rest!",
-   "say_intro": "Let's build something of your own. Cherry says what it needs. You choose the rest!",
+   "story": "{buddy} wants to build something new. It needs one special part, and you choose the rest!",
+   "say_intro": "Let's build something of your own. {buddy} says what it needs. You choose the rest!",
    "cheers": [
     "You made it your way!",
     "What a lovely thing!",
     "Your own idea!",
-    "Cherry loves it!",
-    "Cherry is chirping!",
+    "{buddy} loves it!",
+    "{buddy} is chirping!",
     "Great building!"
    ],
    "end_lines": [
-    "Cherry loves your building!",
+    "{buddy} loves your building!",
     "Many new things built!",
     "Build something at home too!",
     "See you next time!"
@@ -47847,18 +47847,18 @@
    "category": "E. Creativity & Imagination",
    "section": "play",
    "variant": "compose",
-   "story": "Cherry has a picture to fill with friends and things. Put them wherever you like!",
-   "say_intro": "Let's make a picture. Pick things and put them anywhere you like. Cherry loves every picture!",
+   "story": "{buddy} has a picture to fill with friends and things. Put them wherever you like!",
+   "say_intro": "Let's make a picture. Pick things and put them anywhere you like. {buddy} loves every picture!",
    "cheers": [
     "What a lovely picture!",
     "Your very own scene!",
-    "Cherry loves it!",
+    "{buddy} loves it!",
     "So much to see!",
-    "Cherry is chirping!",
+    "{buddy} is chirping!",
     "Beautiful!"
    ],
    "end_lines": [
-    "Cherry loves your pictures!",
+    "{buddy} loves your pictures!",
     "Many scenes made today!",
     "Draw a picture at home too!",
     "See you next time!"
@@ -47889,7 +47889,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a beach picture. Add things to finish it!",
+       "say": "{buddy} has started a beach picture. Add things to finish it!",
        "backdrop": "🌴",
        "palette": [
         "🐚",
@@ -47906,7 +47906,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "What a lovely beach! Cherry wants to go there.",
+       "story_say": "What a lovely beach! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own beach!",
        "scene": "🌴"
@@ -47916,7 +47916,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a garden picture. Add things to finish it!",
+       "say": "{buddy} has started a garden picture. Add things to finish it!",
        "backdrop": "🌳",
        "palette": [
         "🌸",
@@ -47933,7 +47933,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "Cherry loves your garden. What a nice picture!",
+       "story_say": "{buddy} loves your garden. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely garden!",
        "scene": "🌳"
@@ -47943,7 +47943,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a farm picture. Add things to finish it!",
+       "say": "{buddy} has started a farm picture. Add things to finish it!",
        "backdrop": "🌾",
        "palette": [
         "🐄",
@@ -47960,7 +47960,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "Look at your farm! Cherry is chirping.",
+       "story_say": "Look at your farm! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own farm!",
        "scene": "🌾"
@@ -47970,7 +47970,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a sky picture. Add things to finish it!",
+       "say": "{buddy} has started a sky picture. Add things to finish it!",
        "backdrop": "🌈",
        "palette": [
         "⭐",
@@ -47987,7 +47987,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "What a lovely sky! Cherry wants to go there.",
+       "story_say": "What a lovely sky! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own sky!",
        "scene": "🌈"
@@ -47997,7 +47997,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a pond picture. Add things to finish it!",
+       "say": "{buddy} has started a pond picture. Add things to finish it!",
        "backdrop": "🌊",
        "palette": [
         "🐸",
@@ -48014,7 +48014,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "Cherry loves your pond. What a nice picture!",
+       "story_say": "{buddy} loves your pond. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely pond!",
        "scene": "🌊"
@@ -48024,7 +48024,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a home picture. Add things to finish it!",
+       "say": "{buddy} has started a home picture. Add things to finish it!",
        "backdrop": "🏡",
        "palette": [
         "🌳",
@@ -48041,7 +48041,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "Look at your home! Cherry is chirping.",
+       "story_say": "Look at your home! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own home!",
        "scene": "🏡"
@@ -48051,7 +48051,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a zoo picture. Add things to finish it!",
+       "say": "{buddy} has started a zoo picture. Add things to finish it!",
        "backdrop": "🐘",
        "palette": [
         "🦁",
@@ -48068,7 +48068,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "What a lovely zoo! Cherry wants to go there.",
+       "story_say": "What a lovely zoo! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own zoo!",
        "scene": "🐘"
@@ -48078,7 +48078,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a party picture. Add things to finish it!",
+       "say": "{buddy} has started a party picture. Add things to finish it!",
        "backdrop": "🎂",
        "palette": [
         "🎈",
@@ -48095,7 +48095,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "Cherry loves your party. What a nice picture!",
+       "story_say": "{buddy} loves your party. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely party!",
        "scene": "🎂"
@@ -48105,7 +48105,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a night sky picture. Add things to finish it!",
+       "say": "{buddy} has started a night sky picture. Add things to finish it!",
        "backdrop": "🌙",
        "palette": [
         "⭐",
@@ -48122,7 +48122,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "Look at your night sky! Cherry is chirping.",
+       "story_say": "Look at your night sky! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own night sky!",
        "scene": "🌙"
@@ -48132,7 +48132,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Finish the picture!",
-       "say": "Cherry has started a forest picture. Add things to finish it!",
+       "say": "{buddy} has started a forest picture. Add things to finish it!",
        "backdrop": "🌲",
        "palette": [
         "🦊",
@@ -48149,7 +48149,7 @@
        "min_items": 2,
        "max_items": 4,
        "finish": "Done!",
-       "story_say": "What a lovely forest! Cherry wants to go there.",
+       "story_say": "What a lovely forest! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own forest!",
        "scene": "🌲"
@@ -48164,7 +48164,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the beach. Add things to make a beach scene!",
+       "say": "{buddy} loves the beach. Add things to make a beach scene!",
        "backdrop": "🌴",
        "palette": [
         "🐚",
@@ -48183,7 +48183,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "What a lovely beach! Cherry wants to go there.",
+       "story_say": "What a lovely beach! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own beach!",
        "scene": "🌴"
@@ -48193,7 +48193,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the garden. Add things to make a garden scene!",
+       "say": "{buddy} loves the garden. Add things to make a garden scene!",
        "backdrop": "🌳",
        "palette": [
         "🌸",
@@ -48212,7 +48212,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "Cherry loves your garden. What a nice picture!",
+       "story_say": "{buddy} loves your garden. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely garden!",
        "scene": "🌳"
@@ -48222,7 +48222,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the farm. Add things to make a farm scene!",
+       "say": "{buddy} loves the farm. Add things to make a farm scene!",
        "backdrop": "🌾",
        "palette": [
         "🐄",
@@ -48241,7 +48241,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "Look at your farm! Cherry is chirping.",
+       "story_say": "Look at your farm! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own farm!",
        "scene": "🌾"
@@ -48251,7 +48251,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the sky. Add things to make a sky scene!",
+       "say": "{buddy} loves the sky. Add things to make a sky scene!",
        "backdrop": "🌈",
        "palette": [
         "⭐",
@@ -48270,7 +48270,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "What a lovely sky! Cherry wants to go there.",
+       "story_say": "What a lovely sky! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own sky!",
        "scene": "🌈"
@@ -48280,7 +48280,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the pond. Add things to make a pond scene!",
+       "say": "{buddy} loves the pond. Add things to make a pond scene!",
        "backdrop": "🌊",
        "palette": [
         "🐸",
@@ -48299,7 +48299,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "Cherry loves your pond. What a nice picture!",
+       "story_say": "{buddy} loves your pond. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely pond!",
        "scene": "🌊"
@@ -48309,7 +48309,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the home. Add things to make a home scene!",
+       "say": "{buddy} loves the home. Add things to make a home scene!",
        "backdrop": "🏡",
        "palette": [
         "🌳",
@@ -48328,7 +48328,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "Look at your home! Cherry is chirping.",
+       "story_say": "Look at your home! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own home!",
        "scene": "🏡"
@@ -48338,7 +48338,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the zoo. Add things to make a zoo scene!",
+       "say": "{buddy} loves the zoo. Add things to make a zoo scene!",
        "backdrop": "🐘",
        "palette": [
         "🦁",
@@ -48357,7 +48357,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "What a lovely zoo! Cherry wants to go there.",
+       "story_say": "What a lovely zoo! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own zoo!",
        "scene": "🐘"
@@ -48367,7 +48367,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the party. Add things to make a party scene!",
+       "say": "{buddy} loves the party. Add things to make a party scene!",
        "backdrop": "🎂",
        "palette": [
         "🎈",
@@ -48386,7 +48386,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "Cherry loves your party. What a nice picture!",
+       "story_say": "{buddy} loves your party. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely party!",
        "scene": "🎂"
@@ -48396,7 +48396,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the night sky. Add things to make a night sky scene!",
+       "say": "{buddy} loves the night sky. Add things to make a night sky scene!",
        "backdrop": "🌙",
        "palette": [
         "⭐",
@@ -48415,7 +48415,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "Look at your night sky! Cherry is chirping.",
+       "story_say": "Look at your night sky! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own night sky!",
        "scene": "🌙"
@@ -48425,7 +48425,7 @@
        "variant": "compose",
        "mode": "canvas",
        "prompt": "Make a scene!",
-       "say": "Cherry loves the forest. Add things to make a forest scene!",
+       "say": "{buddy} loves the forest. Add things to make a forest scene!",
        "backdrop": "🌲",
        "palette": [
         "🦊",
@@ -48444,7 +48444,7 @@
        "min_items": 3,
        "max_items": 6,
        "finish": "Done!",
-       "story_say": "What a lovely forest! Cherry wants to go there.",
+       "story_say": "What a lovely forest! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own forest!",
        "scene": "🌲"
@@ -48480,7 +48480,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "What a lovely sea! Cherry wants to go there.",
+       "story_say": "What a lovely sea! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own sea!",
        "scene": "🌊"
@@ -48511,7 +48511,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "Cherry loves your spring garden. What a nice picture!",
+       "story_say": "{buddy} loves your spring garden. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely spring garden!",
        "scene": "🌸"
@@ -48542,7 +48542,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "Look at your big farm! Cherry is chirping.",
+       "story_say": "Look at your big farm! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own big farm!",
        "scene": "🌾"
@@ -48573,7 +48573,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "What a lovely rainbow sky! Cherry wants to go there.",
+       "story_say": "What a lovely rainbow sky! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own rainbow sky!",
        "scene": "🌈"
@@ -48604,7 +48604,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "Cherry loves your jungle. What a nice picture!",
+       "story_say": "{buddy} loves your jungle. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely jungle!",
        "scene": "🌴"
@@ -48635,7 +48635,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "Look at your busy street! Cherry is chirping.",
+       "story_say": "Look at your busy street! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own busy street!",
        "scene": "🏡"
@@ -48666,7 +48666,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "What a lovely zoo! Cherry wants to go there.",
+       "story_say": "What a lovely zoo! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own zoo!",
        "scene": "🐘"
@@ -48697,7 +48697,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "Cherry loves your big party. What a nice picture!",
+       "story_say": "{buddy} loves your big party. What a nice picture!",
        "hint": "Move to a spot, then press OK.",
        "why": "What a lovely big party!",
        "scene": "🎂"
@@ -48728,7 +48728,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "Look at your space! Cherry is chirping.",
+       "story_say": "Look at your space! {buddy} is chirping.",
        "hint": "Press BACK to take the last thing away.",
        "why": "Your very own space!",
        "scene": "🌙"
@@ -48759,7 +48759,7 @@
        "min_items": 4,
        "max_items": 8,
        "finish": "Done!",
-       "story_say": "What a lovely deep forest! Cherry wants to go there.",
+       "story_say": "What a lovely deep forest! {buddy} wants to go there.",
        "hint": "Pick a thing, then pick where it goes.",
        "why": "You made your own deep forest!",
        "scene": "🌲"
@@ -48778,18 +48778,18 @@
    "category": "E. Creativity & Imagination",
    "section": "play",
    "variant": "compose",
-   "story": "Cherry wants a new story. Pick who, where, and what happens, and Cherry will tell it!",
-   "say_intro": "Let's make a story. Pick who is in it, where it is, and what happens. Cherry tells it back!",
+   "story": "{buddy} wants a new story. Pick who, where, and what happens, and {buddy} will tell it!",
+   "say_intro": "Let's make a story. Pick who is in it, where it is, and what happens. {buddy} tells it back!",
    "cheers": [
     "What a lovely story!",
     "Your very own story!",
-    "Cherry loves it!",
+    "{buddy} loves it!",
     "What a storyteller!",
-    "Cherry is chirping!",
+    "{buddy} is chirping!",
     "A brand new tale!"
    ],
    "end_lines": [
-    "Cherry loves your stories!",
+    "{buddy} loves your stories!",
     "Many stories made today!",
     "Tell a story at home too!",
     "See you next time!"
@@ -48820,7 +48820,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make your own story!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐱",
@@ -48864,7 +48864,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "What a lovely story!",
        "scene": "📖"
@@ -48874,7 +48874,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Tell a new story!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🐻",
@@ -48918,9 +48918,9 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       },
       {
@@ -48982,7 +48982,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Pick who, where, and what!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🦊",
@@ -49026,7 +49026,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "You made it up!",
        "scene": "📖"
@@ -49035,8 +49035,8 @@
        "id": "ww213-1-05",
        "variant": "compose",
        "mode": "slots",
-       "prompt": "Make a story with Cherry!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "prompt": "Make a story with {buddy}!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🐷",
@@ -49080,7 +49080,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
        "why": "What a lovely story!",
        "scene": "📖"
@@ -49136,7 +49136,7 @@
        "any_ok": true,
        "story_say": "What a happy story! Tell it to your family!",
        "hint": "Move to a picture and press OK.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       },
       {
@@ -49144,7 +49144,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make a story today!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐰",
@@ -49188,7 +49188,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "A brand new story!",
        "scene": "📖"
@@ -49198,7 +49198,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Choose your story!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🐒",
@@ -49242,7 +49242,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
        "why": "You made it up!",
        "scene": "📖"
@@ -49306,7 +49306,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make a happy story!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🦉",
@@ -49350,9 +49350,9 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       }
      ]
@@ -49365,7 +49365,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make your own story!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐶",
@@ -49421,7 +49421,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "What a lovely story!",
        "scene": "📖"
@@ -49431,7 +49431,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Tell a new story!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🐦",
@@ -49487,9 +49487,9 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       },
       {
@@ -49563,7 +49563,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Pick who, where, and what!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐼",
@@ -49619,7 +49619,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "You made it up!",
        "scene": "📖"
@@ -49628,8 +49628,8 @@
        "id": "ww213-2-05",
        "variant": "compose",
        "mode": "slots",
-       "prompt": "Make a story with Cherry!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "prompt": "Make a story with {buddy}!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🤖",
@@ -49685,7 +49685,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
        "why": "What a lovely story!",
        "scene": "📖"
@@ -49753,7 +49753,7 @@
        "any_ok": true,
        "story_say": "What a happy story! Tell it to your family!",
        "hint": "Move to a picture and press OK.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       },
       {
@@ -49761,7 +49761,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make a story today!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐻",
@@ -49817,7 +49817,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "A brand new story!",
        "scene": "📖"
@@ -49827,7 +49827,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Choose your story!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🦁",
@@ -49883,7 +49883,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
        "why": "You made it up!",
        "scene": "📖"
@@ -49959,7 +49959,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make a happy story!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐷",
@@ -50015,9 +50015,9 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       }
      ]
@@ -50030,7 +50030,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make your own story!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐰",
@@ -50098,7 +50098,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "What a lovely story!",
        "scene": "📖"
@@ -50108,7 +50108,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Tell a new story!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🐒",
@@ -50176,9 +50176,9 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       },
       {
@@ -50264,7 +50264,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Pick who, where, and what!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🦉",
@@ -50332,7 +50332,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "You made it up!",
        "scene": "📖"
@@ -50341,8 +50341,8 @@
        "id": "ww213-3-05",
        "variant": "compose",
        "mode": "slots",
-       "prompt": "Make a story with Cherry!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "prompt": "Make a story with {buddy}!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🐮",
@@ -50410,7 +50410,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
        "why": "What a lovely story!",
        "scene": "📖"
@@ -50490,7 +50490,7 @@
        "any_ok": true,
        "story_say": "What a happy story! Tell it to your family!",
        "hint": "Move to a picture and press OK.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       },
       {
@@ -50498,7 +50498,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make a story today!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🐦",
@@ -50566,7 +50566,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
        "why": "A brand new story!",
        "scene": "📖"
@@ -50576,7 +50576,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Choose your story!",
-       "say": "Pick a friend, a place, and something to do. Cherry tells it back!",
+       "say": "Pick a friend, a place, and something to do. {buddy} tells it back!",
        "who": [
         {
          "face": "🐢",
@@ -50644,7 +50644,7 @@
         }
        ],
        "any_ok": true,
-       "story_say": "Your story is so nice! Cherry is chirping.",
+       "story_say": "Your story is so nice! {buddy} is chirping.",
        "hint": "Pick one in each row. Any story is a good story.",
        "why": "You made it up!",
        "scene": "📖"
@@ -50732,7 +50732,7 @@
        "variant": "compose",
        "mode": "slots",
        "prompt": "Make a happy story!",
-       "say": "Choose who, where, and what happens. Then Cherry tells your story!",
+       "say": "Choose who, where, and what happens. Then {buddy} tells your story!",
        "who": [
         {
          "face": "🤖",
@@ -50800,9 +50800,9 @@
         }
        ],
        "any_ok": true,
-       "story_say": "What a lovely story! Cherry loves it.",
+       "story_say": "What a lovely story! {buddy} loves it.",
        "hint": "Press left and right to choose. Then press OK.",
-       "why": "Cherry loves your story!",
+       "why": "{buddy} loves your story!",
        "scene": "📖"
       }
      ]
@@ -50819,18 +50819,18 @@
    "category": "E. Creativity & Imagination",
    "section": "play",
    "variant": "compose",
-   "story": "Cherry wants a new friend. Pick the parts and make a creature of your own!",
+   "story": "{buddy} wants a new friend. Pick the parts and make a creature of your own!",
    "say_intro": "Let's make a creature. Pick a part for each place, and your creature comes alive!",
    "cheers": [
     "What a lovely creature!",
     "Your very own friend!",
-    "Cherry loves it!",
+    "{buddy} loves it!",
     "So much fun!",
-    "Cherry is chirping!",
+    "{buddy} is chirping!",
     "A brand new friend!"
    ],
    "end_lines": [
-    "Cherry loves your creatures!",
+    "{buddy} loves your creatures!",
     "Many friends made today!",
     "Draw a creature at home too!",
     "See you next time!"
@@ -52080,18 +52080,18 @@
    "category": "E. Creativity & Imagination",
    "section": "play",
    "variant": "compose",
-   "story": "Cherry loves patterns. Pick a few things and repeat them to make your own pattern!",
+   "story": "{buddy} loves patterns. Pick a few things and repeat them to make your own pattern!",
    "say_intro": "Let's make a pattern. Pick a few things, and do them again and again!",
    "cheers": [
     "What a lovely pattern!",
     "Your own pattern!",
     "Again and again!",
     "So colourful!",
-    "Cherry is chirping!",
+    "{buddy} is chirping!",
     "Beautiful!"
    ],
    "end_lines": [
-    "Cherry loves your patterns!",
+    "{buddy} loves your patterns!",
     "Many patterns made today!",
     "Make a pattern at home too!",
     "See you next time!"

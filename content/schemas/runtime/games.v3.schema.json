@@ -1,0 +1,359 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/dharshan/wonder-window/content/schemas/runtime/games.v3.schema.json",
+ "title": "games.json - core PLAY runtime bank (format version 3)",
+ "x-status": "current",
+ "x-file": "app/src/main/assets/games.json",
+ "description": "Source of truth for the file the app loads. Deeper child-safety, TTS and emoji rules live in tools/content/validate_games.py.",
+ "type": "object",
+ "required": [
+  "version",
+  "games"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "version": {
+   "const": 3
+  },
+  "games": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/game"
+   },
+   "minItems": 1
+  }
+ },
+ "$defs": {
+  "game": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "minLength": 1
+    },
+    "name": {
+     "type": "string",
+     "minLength": 1
+    },
+    "icon": {
+     "type": "string",
+     "minLength": 1
+    },
+    "color": {
+     "type": "string",
+     "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "tagline": {
+     "type": "string",
+     "minLength": 1
+    },
+    "section": {
+     "const": "play"
+    },
+    "variant": {
+     "enum": [
+      "pick",
+      "sort",
+      "grid_path",
+      "keypad",
+      "recite",
+      "place",
+      "echo",
+      "order",
+      "peek",
+      "mirror",
+      "pairs",
+      "compose",
+      "scene_canvas"
+     ]
+    },
+    "story": {
+     "type": "string",
+     "minLength": 1
+    },
+    "say_intro": {
+     "type": "string",
+     "minLength": 1
+    },
+    "scene": {
+     "type": "string",
+     "minLength": 1
+    },
+    "skills": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "cheers": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     },
+     "minItems": 6,
+     "maxItems": 6
+    },
+    "end_lines": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     },
+     "minItems": 4,
+     "maxItems": 4
+    },
+    "levels_info": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "level": {
+        "type": "integer"
+       },
+       "title": {
+        "type": "string",
+        "minLength": 1
+       },
+       "emoji": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "level",
+       "title",
+       "emoji"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 1
+    },
+    "levels": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "level": {
+        "type": "integer"
+       },
+       "rounds": {
+        "type": "array",
+        "items": {
+         "$ref": "#/$defs/round"
+        },
+        "minItems": 1
+       }
+      },
+      "required": [
+       "level",
+       "rounds"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 1
+    },
+    "letter_font": {
+     "type": "string",
+     "minLength": 1
+    },
+    "adaptive": {
+     "type": "boolean"
+    },
+    "privacy": {
+     "type": "string",
+     "minLength": 1
+    }
+   },
+   "required": [
+    "id",
+    "name",
+    "icon",
+    "color",
+    "tagline",
+    "section",
+    "variant",
+    "story",
+    "say_intro",
+    "scene",
+    "cheers",
+    "end_lines",
+    "levels_info",
+    "levels"
+   ],
+   "additionalProperties": false
+  },
+  "round": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "minLength": 1
+    },
+    "prompt": {
+     "type": "string",
+     "minLength": 1
+    },
+    "say": {
+     "type": "string",
+     "minLength": 1
+    },
+    "hint": {
+     "type": "string",
+     "minLength": 1
+    },
+    "why": {
+     "type": "string",
+     "minLength": 1
+    },
+    "scene": {
+     "type": "string"
+    },
+    "variant": {
+     "enum": [
+      "pick",
+      "sort",
+      "grid_path",
+      "keypad",
+      "recite",
+      "place",
+      "echo",
+      "order",
+      "peek",
+      "mirror",
+      "pairs",
+      "compose",
+      "scene_canvas"
+     ]
+    },
+    "board": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "choices": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "answer": {
+     "type": "integer"
+    },
+    "fade": {
+     "type": "integer"
+    },
+    "labels": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "also_ok": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "any_ok": {
+     "type": "boolean"
+    },
+    "save_as": {
+     "type": "string",
+     "minLength": 1
+    },
+    "silly": {
+     "type": "boolean"
+    },
+    "oops": {
+     "type": "string",
+     "minLength": 1
+    },
+    "dynamic": {
+     "type": "string",
+     "minLength": 1
+    },
+    "shuffle": {
+     "type": "boolean"
+    },
+    "board_fade": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "count_with_me": {
+     "type": "boolean"
+    },
+    "count_item": {
+     "type": "string",
+     "minLength": 1
+    },
+    "grid": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     },
+     "minItems": 3
+    },
+    "legend": {
+     "type": "object",
+     "properties": {},
+     "required": [],
+     "additionalProperties": true
+    },
+    "need_star": {
+     "type": "boolean"
+    },
+    "hint_after_bumps": {
+     "type": "integer"
+    },
+    "first_move": {
+     "type": "string",
+     "minLength": 1
+    },
+    "check": {
+     "enum": [
+      "literal"
+     ]
+    },
+    "chunks": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "max_tries": {
+     "type": "integer"
+    },
+    "on_miss_say": {
+     "type": "string",
+     "minLength": 1
+    },
+    "parent_help": {
+     "type": "string",
+     "minLength": 1
+    },
+    "target": {
+     "type": "string",
+     "pattern": "^[0-9]+$"
+    }
+   },
+   "required": [
+    "id",
+    "prompt",
+    "say",
+    "hint",
+    "why"
+   ],
+   "additionalProperties": false,
+   "description": "One round of a core game (games.json v3)."
+  }
+ }
+}

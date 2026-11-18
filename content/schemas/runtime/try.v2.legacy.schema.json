@@ -1,0 +1,416 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/dharshan/wonder-window/content/schemas/runtime/try.v2.legacy.schema.json",
+ "title": "try.json - LEGACY Try v2 (format version 2); loaded only when the try_v3 switch is off",
+ "x-status": "legacy",
+ "x-file": "app/src/main/assets/try.json",
+ "description": "Rollback format kept for try_v3=false. Not a place for new activities: add them to try_activities.json (TRY v3). Not reviewed to the TRY v3 safety standard.",
+ "type": "object",
+ "required": [
+  "version",
+  "categories",
+  "lines",
+  "stuck_generic",
+  "activities"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "version": {
+   "const": 2
+  },
+  "categories": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "minLength": 1
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "icon": {
+      "type": "string",
+      "minLength": 1
+     },
+     "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     },
+     "say": {
+      "type": "string",
+      "minLength": 1
+     },
+     "wait": {
+      "type": "string",
+      "minLength": 1
+     },
+     "page": {
+      "type": "object",
+      "properties": {
+       "title": {
+        "type": "string",
+        "minLength": 1
+       },
+       "icon": {
+        "type": "string",
+        "minLength": 1
+       },
+       "say": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "title",
+       "icon",
+       "say"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "id",
+     "name",
+     "icon",
+     "color",
+     "say",
+     "wait",
+     "page"
+    ],
+    "additionalProperties": false
+   },
+   "minItems": 1
+  },
+  "lines": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "stuck_generic": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "pic": {
+      "type": "string",
+      "minLength": 1
+     },
+     "text": {
+      "type": "string",
+      "minLength": 1
+     },
+     "say": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "required": [
+     "pic",
+     "text",
+     "say"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "activities": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "minLength": 1
+     },
+     "category": {
+      "type": "string",
+      "minLength": 1
+     },
+     "title": {
+      "type": "string",
+      "minLength": 1
+     },
+     "icon": {
+      "type": "string",
+      "minLength": 1
+     },
+     "sticker": {
+      "type": "string",
+      "minLength": 1
+     },
+     "level": {
+      "type": "integer"
+     },
+     "time": {
+      "type": "string",
+      "minLength": 1
+     },
+     "grownup": {
+      "type": "boolean"
+     },
+     "mode": {
+      "enum": [
+       "along",
+       "away"
+      ]
+     },
+     "hook": {
+      "type": "object",
+      "properties": {
+       "say": {
+        "type": "string",
+        "minLength": 1
+       },
+       "text": {
+        "type": "string",
+        "minLength": 1
+       },
+       "scene": {
+        "type": "object",
+        "properties": {
+         "frames": {
+          "type": "array",
+          "items": {
+           "type": "string",
+           "minLength": 1
+          }
+         },
+         "motion": {
+          "type": "string",
+          "minLength": 1
+         }
+        },
+        "required": [
+         "frames",
+         "motion"
+        ],
+        "additionalProperties": true
+       }
+      },
+      "required": [
+       "say",
+       "text"
+      ],
+      "additionalProperties": true
+     },
+     "mission": {
+      "type": "object",
+      "properties": {
+       "pic": {
+        "type": "string",
+        "minLength": 1
+       },
+       "text": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "pic",
+       "text"
+      ],
+      "additionalProperties": true
+     },
+     "fun": {
+      "type": "string",
+      "minLength": 1
+     },
+     "word": {
+      "type": "object",
+      "properties": {
+       "en": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "en"
+      ],
+      "additionalProperties": true
+     },
+     "materials": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "gather": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "pic": {
+         "type": "string",
+         "minLength": 1
+        },
+        "name": {
+         "type": "string",
+         "minLength": 1
+        },
+        "grownup": {
+         "type": "boolean"
+        }
+       },
+       "required": [
+        "pic",
+        "name"
+       ],
+       "additionalProperties": true
+      }
+     },
+     "gather_say": {
+      "type": "string",
+      "minLength": 1
+     },
+     "steps": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "pic": {
+         "type": "string",
+         "minLength": 1
+        },
+        "text": {
+         "type": "string",
+         "minLength": 1
+        },
+        "say": {
+         "type": "string",
+         "minLength": 1
+        },
+        "demo": {
+         "type": "object",
+         "properties": {
+          "frames": {
+           "type": "array",
+           "items": {
+            "type": "string",
+            "minLength": 1
+           }
+          },
+          "motion": {
+           "type": "string",
+           "minLength": 1
+          }
+         },
+         "required": [
+          "frames",
+          "motion"
+         ],
+         "additionalProperties": true
+        },
+        "stuck": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "pic": {
+            "type": "string",
+            "minLength": 1
+           },
+           "text": {
+            "type": "string",
+            "minLength": 1
+           },
+           "say": {
+            "type": "string",
+            "minLength": 1
+           }
+          },
+          "required": [
+           "pic",
+           "text",
+           "say"
+          ],
+          "additionalProperties": false
+         }
+        }
+       },
+       "required": [
+        "pic",
+        "text",
+        "say",
+        "demo"
+       ],
+       "additionalProperties": false
+      },
+      "minItems": 1
+     },
+     "twist": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": true
+     },
+     "challenge": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": true
+     },
+     "show": {
+      "type": "string",
+      "minLength": 1
+     },
+     "done": {
+      "type": "string",
+      "minLength": 1
+     },
+     "why": {
+      "type": "string",
+      "minLength": 1
+     },
+     "guess_step": {
+      "type": "integer"
+     },
+     "guess_choices": {
+      "type": "array"
+     },
+     "guess_back": {
+      "type": "string",
+      "minLength": 1
+     },
+     "later": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": true
+     },
+     "grownup_steps": {
+      "type": "array"
+     }
+    },
+    "required": [
+     "id",
+     "category",
+     "title",
+     "icon",
+     "sticker",
+     "level",
+     "time",
+     "grownup",
+     "mode",
+     "hook",
+     "mission",
+     "fun",
+     "word",
+     "materials",
+     "gather",
+     "gather_say",
+     "steps",
+     "challenge",
+     "show",
+     "done",
+     "why"
+    ],
+    "additionalProperties": false
+   },
+   "minItems": 1
+  }
+ }
+}

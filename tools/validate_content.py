@@ -16,6 +16,13 @@ pairs = [
     ("content/schemas/activity.schema.json", "examples/try-activity-example/activity.json"),
     ("content/schemas/provider.schema.json", "examples/provider-example/provider.json"),
     ("content/schemas/theme.schema.json", "examples/theme-example/theme.json"),
+    # every committed runtime file the Android app loads (whole file = every record)
+    ("content/schemas/runtime/games.v3.schema.json", "app/src/main/assets/games.json"),
+    ("content/schemas/runtime/catalogue_games.v1.schema.json", "app/src/main/assets/catalogue_games.json"),
+    ("content/schemas/runtime/try_activities.v1.schema.json", "app/src/main/assets/try_activities.json"),
+    ("content/schemas/runtime/try.v2.legacy.schema.json", "app/src/main/assets/try.json"),
+    ("content/schemas/runtime/aboutme_bank.v1.schema.json", "app/src/main/assets/aboutme_bank.json"),
+    ("content/schemas/runtime/warmup_bank.v1.schema.json", "app/src/main/assets/warmup_bank.json"),
 ]
 errors = []
 for schema_rel, example_rel in pairs:
@@ -36,4 +43,4 @@ if errors:
     for error in errors:
         print(f"FAIL {error}")
     sys.exit(1)
-print(f"Validated {len(pairs)} example files.")
+print(f"Validated {len(pairs)} files.")

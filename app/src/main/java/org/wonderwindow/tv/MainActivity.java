@@ -1164,7 +1164,7 @@ public class MainActivity extends Activity {
 
     private void scheduleIdle(JSONObject r) {
         cancelIdle();
-        idleTask = () -> {                                     // 10 s without an answer: Cherry chirps and points at 🔊
+        idleTask = () -> {                                     // 10 s without an answer: the buddy chirps and points at 🔊
             if (!"game".equals(screen)) return;
             sfx("chirp");
             if (buddy != null) { buddy.hop(); }
@@ -2481,7 +2481,7 @@ public class MainActivity extends Activity {
 
     private void tSay(String s) { if (tryVoice && s != null && !s.isEmpty()) say(s); }
 
-    // 1. Hook: Cherry's little problem, as an animation + one line.
+    // 1. Hook: the buddy's little problem, as an animation + one line.
     private void showTryHook() {
         tryPhase = "hook";
         stopVoice(); root.removeAllViews(); setNight(false);
@@ -2696,7 +2696,7 @@ public class MainActivity extends Activity {
         playDemo(stage, demo, 140, null);
     }
 
-    // 5. Show & tell: Cherry listens; parent card with the word in Kannada/Hindi; guess check; best part.
+    // 5. Show & tell: the buddy listens; parent card with the word in Kannada/Hindi; guess check; best part.
     private void showTryTell() {
         tryPhase = "tell";
         screen = "trydone";
@@ -2848,8 +2848,8 @@ public class MainActivity extends Activity {
         (first != null ? first : back).requestFocus();
     }
 
-    /** away-mode: strip of step pictures, Cherry waits, "I'm back!" → show & tell. */
-    /** "Go do it!": strip of all step pictures to remember, then Cherry waits calmly in her nest. */
+    /** away-mode: strip of step pictures, the buddy waits, "I'm back!" → show & tell. */
+    /** "Go do it!": strip of all step pictures to remember, then the buddy waits calmly in her nest. */
     private void showTryGo(List<JSONObject> steps) {
         stopMeter();
         screen = "trysteps";
@@ -3902,7 +3902,8 @@ public class MainActivity extends Activity {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             byte[] buf = new byte[8192];
             for (int n; (n = in.read(buf)) > 0; ) out.write(buf, 0, n);
-            return new String(out.toByteArray(), StandardCharsets.UTF_8);
+            String t = new String(out.toByteArray(), StandardCharsets.UTF_8);
+            return name.endsWith(".json") ? t.replace("{buddy}", getString(R.string.buddy_name)) : t;   // shared content uses {buddy}
         }
     }
 }
