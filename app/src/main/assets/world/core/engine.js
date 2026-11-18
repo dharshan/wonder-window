@@ -70,7 +70,7 @@ export const router = {
   go(name, params = {}) { nextReq = { name, params }; fadeDir = 1; fadeT = 0; if (CFG.reduced) fadeT = 1; },
 };
 function swap() { if (current) { current.exit?.(); current.root && current.root.removeFromParent(); current.hudRoot && current.hudRoot.removeFromParent(); }
-  const S = router.screens[nextReq.name]; current = S; S.enter(nextReq.params); if (S.root) { scene0.add(S.root); } if (S.hudRoot) hud.add(S.hudRoot);
+  const S = router.screens[nextReq.name]; current = S; S.name = nextReq.name; S.enter(nextReq.params); if (S.root) { scene0.add(S.root); } if (S.hudRoot) hud.add(S.hudRoot);
   renderer.compile(scene0, camera); renderer.compile(hud, hudCam); nextReq = null; fadeDir = -1; fadeT = 0; }
 export const scene0 = new THREE.Scene();
 
@@ -97,7 +97,7 @@ export const bridge = {
 window.WWWorld = { key, go: (n, p) => router.go(n, typeof p === 'string' ? JSON.parse(p) : p), pause() { paused = true; }, resume() { paused = false; lastMs = performance.now(); } };
 
 // ---------- frame loop (fixed render order, perf probe) ----------
-let T = 0, lastMs = 0, paused = false; const perf = []; let perfDone = false, dynAcc = 0, dynN = 0, dynPR = CFG.pr;
+let T = 0, lastMs = 0, paused = false, perfT0 = performance.now(), prevNow = performance.now(), lastTick = performance.now(); const win = []; const perf = []; let perfDone = false, dynAcc = 0, dynN = 0, dynPR = CFG.pr;
 export const time = () => T;
 export function frame(dt) {
   T += dt;
@@ -111,6 +111,9 @@ export function start() {
   (function loop(now) { requestAnimationFrame(loop); if (paused) return; const d = Math.min(.05, Math.max(0, (now - lastMs) / 1000)); lastMs = now; frame(d);
     // safety net: if a screen goes over budget, render it at a lower internal resolution (0.75 measured smooth on the TV)
     if (!Q.has('fixedpr')) { dynAcc += d; if (++dynN === 50) { const avg = dynAcc / dynN * 1000; dynAcc = dynN = 0; if (avg > 22.5 && dynPR > .76) { dynPR = Math.max(.75, dynPR - .1); renderer.setPixelRatio(dynPR); console.log('WWDYN pr=' + dynPR.toFixed(2)); } } }
-    if (CFG.perf && T > 1.5) { perf.push(d * 1000); if (!perfDone && T > +(Q.get('secs') || 24)) { perfDone = true; const a = perf.slice().sort((x, y) => x - y), p = q => a[Math.floor(q * (a.length - 1))];
-      console.log(`WWPERF tag=world pr=${dynPR.toFixed(2)} screen=${Q.get('screen') || ''} frames=${a.length} p50=${p(.5).toFixed(1)} p95=${p(.95).toFixed(1)} p99=${p(.99).toFixed(1)} jank=${a.filter(x => x > 30).length}`); } } })(lastMs);
+    if (CFG.perf) { const nowS = (now - perfT0) / 1000; if (nowS > 1.5) { perf.push(now - prevNow); win.push(now - prevNow); }
+      if (now - lastTick > 5000) { lastTick = now; const a = win.splice(0); if (a.length) console.log(`WWTICK t=${nowS.toFixed(0)} screen=${router.current && router.current.name || ''} n=${a.length} avg=${(a.reduce((x, y) => x + y, 0) / a.length).toFixed(1)} max=${Math.max(...a).toFixed(0)} pr=${dynPR.toFixed(2)}`); }
+      if (!perfDone && nowS > +(Q.get('secs') || 24)) { perfDone = true; const a = perf.slice().sort((x, y) => x - y), p = q => a[Math.floor(q * (a.length - 1))];
+        console.log(`WWPERF tag=world pr=${dynPR.toFixed(2)} screen=${Q.get('screen') || ''} frames=${a.length} p50=${p(.5).toFixed(1)} p95=${p(.95).toFixed(1)} p99=${p(.99).toFixed(1)} jank=${a.filter(x => x > 30).length}`); } }
+    prevNow = now; } )(lastMs);
 }

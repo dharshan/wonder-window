@@ -11,7 +11,7 @@ import { CARD_GEO, RING_GEO, faceMesh, labelMesh, lam, basic, wig, tweens } from
 
 const BUCKET_GEO = new THREE.CylinderGeometry(1.2, .95, 1.7, 32, 1, true), BOTTOM_GEO = new THREE.CircleGeometry(.95, 32);
 const RIM_GEO = new THREE.TorusGeometry(1.2, .09, 8, 40), LID_GEO = new THREE.CylinderGeometry(1.28, 1.28, .16, 32), KNOB_GEO = new THREE.SphereGeometry(.2, 12, 8);
-const DISC_GEO = new THREE.CircleGeometry(.58, 32), QDISC_GEO = new THREE.CircleGeometry(.5, 24);
+const DISC_GEO = new THREE.CircleGeometry(.52, 32), QDISC_GEO = new THREE.CircleGeometry(.42, 24);
 
 /** cfg: { items, bins:[{face,label}], ok(itemIdx, binIdx) → bool, right(itemIdx) → bin index to point at,
  *        dimWrong, fade, focus, big } */
@@ -32,31 +32,31 @@ export function placeCore(ctx, r, cfg) {
     const hinge = new THREE.Group(); hinge.position.set(0, .9, -1.2); g.add(hinge);
     const lid = new THREE.Mesh(LID_GEO, lam(col)); lid.position.set(0, 0, 1.2); hinge.add(lid);
     const knob = new THREE.Mesh(KNOB_GEO, lam(0xF4F0FF)); knob.position.set(0, .15, 1.2); hinge.add(knob);
-    const disc = new THREE.Mesh(DISC_GEO, basic(0xFFFFFF)); disc.position.set(0, .22, 1.13); disc.rotation.x = -.15; g.add(disc);
-    const face = faceMesh(b.face || '', .95); face.position.set(0, .22, 1.16); face.rotation.x = -.15; g.add(face);
+    const disc = new THREE.Mesh(DISC_GEO, basic(0xFFFFFF)); disc.position.set(0, .3, 1.3); disc.rotation.x = -.14; g.add(disc);
+    const face = faceMesh(b.face || '', .85); face.position.set(0, .3, 1.33); face.rotation.x = -.14; g.add(face);
     let label = null; if (b.label) { label = labelMesh(b.label, 2.4, .64); label.position.set(0, -1.45, 1.1); g.add(label); }
-    const minis = new THREE.Group(); minis.position.set(0, -.5, 1.05); g.add(minis);
+    const minis = new THREE.Group(); minis.position.set(0, -.56, 1.14); g.add(minis);
     return { g, body, lid, hinge, ring, disc, face, label, minis, col, open: 0, lift: 0, wig: -9, slam: -9, pulse: false, off: false, cheer: -9 };
   });
 
   // ---------- current item (held above the focused bin) and the queue ----------
   const held = new THREE.Group(); root.add(held);
   const hs = cfg.big ? .95 : .72;
-  const heldBody = new THREE.Mesh(CARD_GEO, lam(0xFFF6E0)); heldBody.scale.setScalar(hs); held.add(heldBody);
+  const heldBody = new THREE.Mesh(CARD_GEO, lam(0xFFF6E0, { emissive: 0x4A4060 })); heldBody.scale.setScalar(hs); held.add(heldBody);
   let heldFace = null;
   const setHeld = i => { if (heldFace) held.remove(heldFace); heldFace = faceMesh(items[i], 1.65 * hs); heldFace.position.z = .32 * hs; held.add(heldFace); };
-  const HY = 2.45, hp = new THREE.Vector3(BX(focus), HY, BZ); held.position.copy(hp);
+  const HY = 3.0, hp = new THREE.Vector3(BX(focus), HY, BZ); held.position.copy(hp);
   let heldMode = 'hover', heldWig = -9, heldBorn = time();
   const queue = items.map((txt, i) => { if (i === 0) return null; const g = new THREE.Group(); root.add(g);
-    const d = new THREE.Mesh(QDISC_GEO, basic(0x2A1E7A)); g.add(d); const f = faceMesh(txt, .82); f.position.z = .02; g.add(f); g.userData.k = i; return g; });
-  const qx = j => 3.6 + j * Math.min(1.15, 5.6 / Math.max(1, items.length - 1)), QY = 3.95, QZ = -1.2;
+    const d = new THREE.Mesh(QDISC_GEO, basic(0x2A1E7A)); g.add(d); const f = faceMesh(txt, .7); f.position.z = .02; g.add(f); g.userData.k = i; return g; });
+  const qx = j => 3.5 + j * Math.min(1.0, 6.2 / Math.max(1, items.length - 1)), QY = 4.3, QZ = -1.2;
   function layoutQueue(t) { queue.forEach((q, i) => { if (!q) return; const j = i - cur - 1; q.visible = j >= 0; if (j < 0) return;
     const tx = qx(j); q.position.x += (tx - q.position.x) * (CFG.reduced ? 1 : .15); q.position.y = QY + (CFG.reduced ? 0 : Math.sin(t * 1.4 + i) * .08); q.position.z = QZ; }); }
   queue.forEach((q, i) => { if (q) q.position.set(qx(i - 1) + 4, QY, QZ); });
   setHeld(0);
 
   function move(d) { let i = focus + d; while (i >= 0 && i < nb && B[i].off) i += d; if (i >= 0 && i < nb) focus = i; return true; }
-  function dim(i) { const b = B[i]; if (b.off || i === cfg.right(cur)) return; b.off = true; b.body.material.color.multiplyScalar(.4); b.lid.material.color.multiplyScalar(.4); b.face.material.opacity = .35;
+  function dim(i) { const b = B[i]; if (b.off || i === cfg.right(cur) || cfg.ok(cur, i)) return; b.off = true; b.body.material.color.multiplyScalar(.4); b.lid.material.color.multiplyScalar(.4); b.face.material.opacity = .35;
     if (b.label) b.label.material.opacity = .45; b.disc.material.color.setHex(0x8A86A8); if (focus === i) { if (!move(1) || focus === i) move(-1); } }
   const TMP = new THREE.Vector3();
 
@@ -69,7 +69,7 @@ export function placeCore(ctx, r, cfg) {
       const to = TMP.set(b.g.position.x, BY + .55 * bs, BZ).clone();
       tw.run(t0, .45, u => { const e = ease(u); held.position.lerpVectors(from, to, e); held.scale.setScalar(1 - e * .7); held.rotation.y = e * 3.14; }, () => {
         held.visible = false; ctx.correct(TMP.set(b.g.position.x, BY + 1.2, BZ)); b.cheer = time();
-        const m = faceMesh(items[cur], .4); b.minis.add(m); const k = b.minis.children.length, sp = Math.min(.42, 1.75 / k);
+        const m = faceMesh(items[cur], .44); b.minis.add(m); const k = b.minis.children.length, sp = Math.min(.46, 1.75 / k);
         b.minis.children.forEach((c, j) => c.position.set((j - (k - 1) / 2) * sp, 0, 0));
         cur++; itemMiss = 0; B.forEach(x => x.pulse = false);
         if (cur >= items.length) { done = true; doneT = time(); tw.at(doneT + .8, () => ctx.finish({ firstTry: misses === 0, why: r.why })); busy = false; return; }
@@ -107,7 +107,7 @@ export function placeCore(ctx, r, cfg) {
         const f = i === focus && !done && !b.off;
         b.lift += ((f ? 1 : 0) - b.lift) * k;
         const slam = t - b.slam < .35, cheer = t - b.cheer < .5 || (done && t - doneT < 1.2);
-        const want = slam ? 0 : (heldMode === 'drop' && f) || cheer ? 1.25 : f ? .55 : 0;
+        const want = slam ? 0 : (heldMode === 'drop' && f) || cheer ? 1.25 : f ? .35 : 0;
         b.open += (want - b.open) * (CFG.reduced ? 1 : clamp(dt * (slam ? 30 : 9)));
         b.hinge.rotation.x = -b.open;
         b.g.position.y = BY + b.lift * .3; b.g.rotation.set(-.08 * b.lift, 0, wig(t, b.wig));

@@ -47,9 +47,9 @@ export function focusFrame(w, h, color = 0xFFE29A, th = .09) {
 }
 
 /** A chunky 3D button with a pill label: { group, body, set(focused,t) } */
-export function bigButton(text, { w = 3.6, h = 1.05, color = 0x2F9E5A, accent = '#7CF2B0' } = {}) {
+export function bigButton(text, { w = 3.6, h = 1.05, color = 0x2F9E5A, accent = null, bg = '#14402A' } = {}) {
   const group = new THREE.Group(); const body = new THREE.Mesh(rbox(w, h, .35, h * .45), lam(color)); group.add(body);
-  const lab = label3d(text, w * .92, h * .8, { accent, bg: '#14402A', font: 84 }); lab.position.z = .3; group.add(lab);
+  const lab = label3d(text, w * .92, h * .8, { accent, bg, font: 84 }); lab.position.z = .3; group.add(lab);
   const ring = focusFrame(w + .25, h + .25); ring.position.z = -.12; group.add(ring);
   return { group, body, lab, ring, born: time(), set(f, t) { ring.visible = f; ring.userData.mat.color.setHex(Math.sin(t * 6) > 0 ? 0xFFE29A : 0xFFC94A);
     group.scale.setScalar(pop(t, this.born) * (f ? 1.08 + .02 * Math.sin(t * 4) : 1)); group.rotation.x = f ? -.12 : 0; } };
