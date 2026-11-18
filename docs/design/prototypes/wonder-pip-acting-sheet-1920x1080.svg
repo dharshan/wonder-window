@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Pip character acting sheet: five canonical expressions</title>
+<desc>Five on-model Pip sparrow poses: neutral, curious, thinking, encouraging and resting. All retain the same cap, cream face and chest, brown body, marigold, beak, feet and wing markings.</desc>
+<defs><filter id="cardShadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#1F2547" flood-opacity=".12"/></filter></defs>
+<rect width="1920" height="1080" fill="#F8F3E8"/>
+<text x="80" y="100" font-family="Fredoka,Arial,sans-serif" font-size="52" font-weight="700" fill="#1F2547">Pip · one character, five clear feelings</text>
+<text x="82" y="150" font-family="Andika,Arial,sans-serif" font-size="25" fill="#46516B">Keep the silhouette and markings fixed. Use eyes, head angle and wing pose to communicate.</text>
+<g filter="url(#cardShadow)">
+ <rect x="70" y="210" width="330" height="690" rx="28" fill="#FFFFFF"/>
+ <rect x="440" y="210" width="330" height="690" rx="28" fill="#FFFFFF"/>
+ <rect x="810" y="210" width="330" height="690" rx="28" fill="#FFFFFF"/>
+ <rect x="1180" y="210" width="330" height="690" rx="28" fill="#FFFFFF"/>
+ <rect x="1550" y="210" width="300" height="690" rx="28" fill="#FFFFFF"/>
+</g>
+<!-- Shared body component reused in every pose -->
+<g id="pip-body">
+ <path d="M-55 80q-65 -25 -78 -90q45 -2 93 47" fill="#7E4B2A" stroke="#5E3A25" stroke-width="5"/>
+ <ellipse cx="0" cy="15" rx="92" ry="112" fill="#B87949" stroke="#7E4B2A" stroke-width="5"/>
+ <ellipse cx="5" cy="48" rx="60" ry="67" fill="#FFF1D9"/>
+ <path d="M-55 -60q35 -72 110 -43q45 18 49 61q-72 -28 -159 6z" fill="#75462B"/>
+ <path d="M-10 -95q-4 -36 32 -52q-6 26 8 43" fill="#75462B"/>
+ <circle cx="18" cy="-124" r="10" fill="#F2B52D"/>
+ <path d="M70 -10l48 17 -48 18z" fill="#E9A13A" stroke="#B96F27" stroke-width="4"/>
+ <path d="M-18 117v30m52 -30v30" stroke="#E9A13A" stroke-width="8" stroke-linecap="round"/>
+ <path d="M-32 149h27m33 0h27" stroke="#E9A13A" stroke-width="8" stroke-linecap="round"/>
+ <path d="M-78 -3q-40 -38 -35 -80q38 3 60 43" fill="#9B603A" stroke="#75462B" stroke-width="5"/>
+ <path d="M-103 -68l16 15m-9 -28l18 16" stroke="#F8E9D0" stroke-width="6" stroke-linecap="round"/>
+</g>
+<!-- Neutral -->
+<g transform="translate(235 510)">
+ <use href="#pip-body"/>
+ <ellipse cx="-22" cy="-25" rx="10" ry="14" fill="#261C19"/><ellipse cx="24" cy="-25" rx="10" ry="14" fill="#261C19"/>
+ <circle cx="-19" cy="-30" r="3.5" fill="#FFFFFF"/><circle cx="27" cy="-30" r="3.5" fill="#FFFFFF"/>
+ <path d="M-5 9q12 8 24 0" fill="none" stroke="#75462B" stroke-width="4" stroke-linecap="round"/>
+</g>
+<text x="235" y="740" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="32" font-weight="700" fill="#1F2547">Neutral</text>
+<text x="235" y="785" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B">Resting attention</text>
+<!-- Curious -->
+<g transform="translate(605 510) rotate(-8)">
+ <use href="#pip-body"/>
+ <ellipse cx="-22" cy="-25" rx="12" ry="15" fill="#261C19"/><ellipse cx="24" cy="-25" rx="12" ry="15" fill="#261C19"/>
+ <circle cx="-18" cy="-31" r="4" fill="#FFFFFF"/><circle cx="28" cy="-31" r="4" fill="#FFFFFF"/>
+ <path d="M-5 8q12 8 24 0" fill="none" stroke="#75462B" stroke-width="4" stroke-linecap="round"/>
+ <path d="M-95 4q-52 -75 -20 -105q54 16 60 79" fill="#9B603A" stroke="#75462B" stroke-width="5"/>
+ <path d="M-106 -82l20 16m-10 -28l22 17" stroke="#F8E9D0" stroke-width="6" stroke-linecap="round"/>
+</g>
+<text x="605" y="740" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="32" font-weight="700" fill="#1F2547">Curious</text>
+<text x="605" y="785" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B">Head tilt + raised wing</text>
+<!-- Thinking -->
+<g transform="translate(975 510) rotate(5)">
+ <use href="#pip-body"/>
+ <path d="M-34 -25q10 -12 20 0M12 -25q10 -12 20 0" fill="none" stroke="#261C19" stroke-width="6" stroke-linecap="round"/>
+ <path d="M-4 10q10 4 20 -2" fill="none" stroke="#75462B" stroke-width="4" stroke-linecap="round"/>
+ <path d="M-80 10q-35 -8 -42 -48q42 -25 74 10" fill="#9B603A" stroke="#75462B" stroke-width="5"/>
+ <path d="M-104 -28l16 12m-8 -23l18 13" stroke="#F8E9D0" stroke-width="6" stroke-linecap="round"/>
+ <circle cx="116" cy="-110" r="5" fill="#F2B52D"/><circle cx="140" cy="-140" r="4" fill="#F2B52D"/>
+</g>
+<text x="975" y="740" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="32" font-weight="700" fill="#1F2547">Thinking</text>
+<text x="975" y="785" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B">Soft eyes + wing near chest</text>
+<!-- Encouraging -->
+<g transform="translate(1345 510)">
+ <use href="#pip-body"/>
+ <path d="M-35 -25q10 -12 20 0M12 -25q10 -12 20 0" fill="none" stroke="#261C19" stroke-width="6" stroke-linecap="round"/>
+ <path d="M-8 7q18 20 36 0" fill="none" stroke="#75462B" stroke-width="5" stroke-linecap="round"/>
+ <path d="M-90 4q-65 -65 -30 -108q62 18 76 78" fill="#9B603A" stroke="#75462B" stroke-width="5"/>
+ <path d="M-108 -82l20 16m-10 -28l22 17" stroke="#F8E9D0" stroke-width="6" stroke-linecap="round"/>
+ <path d="M90 8q65 -65 30 -108q-62 18 -76 78" fill="#9B603A" stroke="#75462B" stroke-width="5"/>
+</g>
+<text x="1345" y="740" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="32" font-weight="700" fill="#1F2547">Encouraging</text>
+<text x="1345" y="785" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B">Open wings + warm smile</text>
+<!-- Resting -->
+<g transform="translate(1700 510)">
+ <use href="#pip-body"/>
+ <path d="M-34 -25q10 8 20 0M12 -25q10 8 20 0" fill="none" stroke="#261C19" stroke-width="6" stroke-linecap="round"/>
+ <path d="M-7 8q12 3 24 -3" fill="none" stroke="#75462B" stroke-width="4" stroke-linecap="round"/>
+ <path d="M-82 8q-28 -8 -38 -42q36 -18 70 7" fill="#9B603A" stroke="#75462B" stroke-width="5"/>
+</g>
+<text x="1700" y="740" text-anchor="middle" font-family="Fredoka,Arial,sans-serif" font-size="32" font-weight="700" fill="#1F2547">Resting</text>
+<text x="1700" y="785" text-anchor="middle" font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B">Closed eyes + folded wing</text>
+<rect x="80" y="850" width="1760" height="100" rx="22" fill="#FFFFFF" stroke="#E6DDC9" stroke-width="3"/>
+<text x="110" y="910" font-family="Andika,Arial,sans-serif" font-size="23" fill="#1F2547">On-model rule:</text>
+<text x="275" y="910" font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B">same silhouette, markings, cap, marigold and proportions in every pose. No looped waving or attention-seeking idle.</text>
+</svg>
