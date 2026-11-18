@@ -79,8 +79,8 @@ export function makeBurst(n = 140) {
 // ---------- reward garden: a space crystal grows for every finished round ----------
 const SPOTS = [[-7.5, -1.25, -3.5], [7.6, -1.25, -3.2], [-6.1, -1.4, -6.5], [6.4, -1.4, -6.8], [0, -1.6, -8], [-9.4, -1.6, -1], [9.5, -1.6, -1.2], [-3.4, -1.7, -8.6], [3.6, -1.7, -8.8], [0, -1.8, -11]];
 const CRYSTAL = new THREE.OctahedronGeometry(.5, 0);
-export function makeGarden() { const g = new THREE.Group(); let n = 0;
-  g.userData = { grow(color = 0x7CF2B0) { const c = new THREE.Group(); const p = SPOTS[n++ % SPOTS.length]; c.position.set(p[0], p[1], p[2]);
+export function makeGarden() { const g = new THREE.Group(); let n = -1;
+  g.userData = { grow(color = 0x7CF2B0) { const c = new THREE.Group(); const p = SPOTS[Math.max(0, n++) % SPOTS.length]; c.position.set(p[0], p[1], p[2]);
       [[0, 1.0, 0, 1.3], [.45, .6, .1, .8], [-.4, .55, -.1, .7]].forEach(([x, y, z, s]) => { const m = new THREE.Mesh(CRYSTAL, new THREE.MeshLambertMaterial({ color, emissive: color, emissiveIntensity: .35, flatShading: true }));
         m.position.set(x, y, z); m.scale.set(s * .7, s * 1.6, s * .7); m.rotation.z = -x * .5; c.add(m); });
       c.userData.born = time(); c.scale.setScalar(.001); g.add(c); },

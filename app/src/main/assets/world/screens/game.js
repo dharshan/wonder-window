@@ -36,6 +36,8 @@ export const GameScreen = {
     this.tara = makeMascot(); this.tara.position.set(-7.6, 2.2, -1.2); this.tara.scale.setScalar(.95); this.root.add(this.tara);
     this.burst = makeBurst(); this.root.add(this.burst); this.garden = makeGarden(); this.root.add(this.garden);
     this.bubble = makeBubble(this.hudRoot);
+    // shader warm-up: the burst and reward crystals are compiled during the screen fade, not at the first correct answer
+    this.burst.visible = true; this.burst.position.y = -400; this.garden.userData.grow(0x7CF2B0); this.warm = this.garden.children[0]; this.warm.position.y = -400; this.warmT = time();
     const levels = g.levels || []; this.maxLevel = Math.max(1, ...levels.map(l => l.level || 1));
     this.level = Math.min(bridge.get('glevel:' + id, 1), this.maxLevel); this.cur = this.level;
     this.SET = g.rounds_per_session || 5; this.seeds = makeSeeds(this.hudRoot, this.SET); this.seeds.set(0, -1);
@@ -104,6 +106,7 @@ export const GameScreen = {
     if (this.phase === 'intro' && t - this.phaseT > (CFG.reduced ? .2 : 2.2)) this.startRound();
     if (this.phase === 'reward' && t - this.phaseT > 3.0) this.startRound();
     this.engine && this.engine.update && this.engine.update(t, dt);
+    if (this.warm && t - this.warmT > .5) { this.warm.removeFromParent(); this.warm = null; this.burst.position.y = 0; this.burst.visible = false; }
     this.burst.userData.update(t, dt); this.garden.userData.update(t); this.bubble.update(t); this.buttons && this.buttons.update(t);
     this.tara.userData.update(t, this.engine && this.engine.lookX ? this.engine.lookX() : 0);
     const fx = this.engine && this.engine.focusX ? this.engine.focusX() : 0; this.camX += (fx * .12 - this.camX) * clamp(dt * 3);
