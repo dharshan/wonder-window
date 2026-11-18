@@ -22,3 +22,5 @@ Rendered with headless Chrome and the app's own bundled Fredoka and Andika fonts
 ## `design-7d6f550/`: PR #12 concepts at 7d6f550, rendered at 1080 and 720
 
 ## `design-11733fb/` (PR #12) and `pr15-766ff38/` (PR #15): rendered at 1080 and 720
+
+## `pr15-tv/`: PR #15 sheets shown full-screen on the OnePlus TV (screencap, 1920x1080)
