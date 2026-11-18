@@ -14,3 +14,5 @@ Capture script: `adb exec-out screencap -p` after `am start` and `input keyevent
 Rendered with headless Chrome and the app's own bundled Fredoka and Andika fonts at 1920×1080, plus the home concept at 1280×720. The SVG files are unchanged.
 
 ## `design-92350ba/`: revised PR #12 concepts rendered the same way
+
+## `design-e1f71ce/`: PR #12 concepts at e1f71ce, rendered at 1080 and 720
