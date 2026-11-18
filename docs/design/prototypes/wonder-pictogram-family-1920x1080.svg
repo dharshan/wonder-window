@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Wonder Window shared pictogram family</title>
+<desc>Original consistent vector pictograms for PLAY mechanics and TRY activity families. Every symbol uses the same rounded line, ink outline and limited realm palette; no system emoji.</desc>
+<rect width="1920" height="1080" fill="#F8F3E8"/>
+<text x="80" y="95" font-family="Fredoka,Arial,sans-serif" font-size="52" font-weight="700" fill="#1F2547">One pictogram family, many discoveries</text>
+<text x="82" y="145" font-family="Andika,Arial,sans-serif" font-size="25" fill="#46516B">A consistent silhouette, outline and light direction — the object changes, the visual grammar stays.</text>
+<text x="90" y="235" font-family="Fredoka,Arial,sans-serif" font-size="34" font-weight="700" fill="#1F2547">PLAY · ways to think</text>
+<g stroke="#1F2547" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+ <g transform="translate(210 430)"><circle r="105" fill="#FBE8B9"/><path d="M-55 25h110v-65h-110z" fill="#F3C75F"/><path d="M-20 -40v-24h40v24" fill="none"/><path d="M-18 -5h36m-18 -18v36" fill="none"/><circle cx="0" cy="0" r="10" fill="#FFFFFF"/></g>
+ <g transform="translate(510 430)"><circle r="105" fill="#DCECF8"/><path d="M-52 45l30 -85h44l30 85z" fill="#83BCE7"/><path d="M-28 -5h56M-18 20h36" fill="none"/><circle cx="0" cy="-42" r="18" fill="#FFFFFF"/></g>
+ <g transform="translate(810 430)"><circle r="105" fill="#FBE8B9"/><rect x="-52" y="-52" width="104" height="104" rx="18" fill="#F3C75F"/><path d="M-20 -25v50m40 -50v50M-40 0h80" fill="none"/><circle cx="-20" cy="-25" r="8" fill="#FFFFFF"/><circle cx="20" cy="25" r="8" fill="#FFFFFF"/></g>
+ <g transform="translate(1110 430)"><circle r="105" fill="#DCECF8"/><circle r="60" fill="#83BCE7"/><path d="M0 -60v120M-60 0h120" fill="none"/><path d="M-10 -28l10 -25 10 25M-10 28l10 25 10 -25" fill="#FFFFFF"/></g>
+ <g transform="translate(1410 430)"><circle r="105" fill="#F4DDE8"/><path d="M-58 -20q58 -65 116 0q-58 65 -116 0z" fill="#D77E9B"/><path d="M-35 35h70M-22 10h44" fill="none"/><circle r="15" fill="#FFFFFF"/></g>
+ <g transform="translate(1710 430)"><circle r="105" fill="#D9EEE5"/><path d="M-45 45v-80h90v80z" fill="#63A987"/><path d="M-22 20l18 -45 18 45M-32 2h64" fill="none"/><circle cx="0" cy="-25" r="9" fill="#FFFFFF"/></g>
+</g>
+<g font-family="Andika,Arial,sans-serif" font-size="23" fill="#46516B" text-anchor="middle">
+ <text x="210" y="585">Patterns</text><text x="510" y="585">Sorting</text><text x="810" y="585">Numbers</text><text x="1110" y="585">Navigation</text><text x="1410" y="585">Words</text><text x="1710" y="585">Experiments</text>
+</g>
+<path d="M80 640h1760" stroke="#E2D7C1" stroke-width="3"/>
+<text x="90" y="720" font-family="Fredoka,Arial,sans-serif" font-size="34" font-weight="700" fill="#1F2547">TRY · ways to experience</text>
+<g stroke="#1F2547" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+ <g transform="translate(210 875)"><circle r="82" fill="#D9EEE5"/><path d="M-15 45l15 -35 15 35M0 10l-30 -45m30 45l30 -45" fill="none"/><circle cx="-30" cy="-35" r="18" fill="#63A987"/><circle cx="30" cy="-35" r="18" fill="#63A987"/></g>
+ <g transform="translate(465 875)"><circle r="82" fill="#F4DDE8"/><path d="M-40 25l40 -65 40 65z" fill="#D77E9B"/><path d="M-15 -5h30m-15 -20v40" fill="none"/></g>
+ <g transform="translate(720 875)"><circle r="82" fill="#D9EEE5"/><path d="M-42 18q42 -75 84 0q-42 65 -84 0z" fill="#63A987"/><path d="M-30 18l60 0" fill="none"/></g>
+ <g transform="translate(975 875)"><circle r="82" fill="#DCECF8"/><circle r="38" fill="#83BCE7"/><path d="M28 28l35 35" fill="none"/><circle cx="-12" cy="-12" r="6" fill="#FFFFFF"/></g>
+ <g transform="translate(1230 875)"><circle r="82" fill="#FBE8B9"/><path d="M-45 20q45 -55 90 0" fill="none"/><path d="M-30 20v20m60 -20v20" fill="none"/><circle cx="-30" cy="-20" r="14" fill="#F3C75F"/><circle cx="30" cy="-20" r="14" fill="#F3C75F"/></g>
+ <g transform="translate(1485 875)"><circle r="82" fill="#FBE8B9"/><circle cx="-20" cy="-15" r="22" fill="#F3C75F"/><circle cx="20" cy="-15" r="22" fill="#E98778"/><path d="M-45 40q45 -55 90 0" fill="none"/></g>
+ <g transform="translate(1740 875)"><circle r="82" fill="#DCECF8"/><path d="M0 -50q-48 48 0 95q48 -47 0 -95z" fill="#83BCE7"/><path d="M-30 45q30 -20 60 0" fill="none"/></g>
+</g>
+<g font-family="Andika,Arial,sans-serif" font-size="21" fill="#46516B" text-anchor="middle">
+ <text x="210" y="1000">Move</text><text x="465" y="1000">Create</text><text x="720" y="1000">Nature</text><text x="975" y="1000">Discover</text><text x="1230" y="1000">Help</text><text x="1485" y="1000">Connect</text><text x="1740" y="1000">Calm</text>
+</g>
+</svg>

@@ -35,7 +35,11 @@ Public edition on a OnePlus Android TV (Android 10, 1920×1080), driven with the
 | **TRY: step by step, then step away from the TV** | |
 | ![First step of Move Like an Animal with Back and Next](docs/screenshots/try-step.jpg) | |
 
-WATCH (parent-curated channel rows played through the YouTube IFrame player) is not pictured, because its tiles show third-party video thumbnails. The UI/UX redesign in progress is tracked in #11 and #12.
+WATCH (parent-curated channel rows played through the YouTube IFrame player) is not pictured, because its tiles show third-party video thumbnails.
+
+## Design direction
+
+The design proposal evolves the existing Sky Garden into one coherent illustrated world with three distinct invitations: PLAY, TRY and WATCH. The reusable art, motion and animation principles are in [the Wonder System](docs/design/2026-wonder-system.md), supported by the [2026 UI/UX blueprint](docs/design/2026-ui-ux-blueprint.md), screen specifications and original design-only SVG prototypes. These are proposals for owner review, not claims about shipped runtime behaviour.
 
 ## Start with your coding agent
 

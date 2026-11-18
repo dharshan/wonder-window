@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Wonder Window world atlas: Puzzle Grove, Maker Meadow and Dusk Story Hill</title>
+<desc>Three connected illustrated realms in a consistent storybook cut-paper vector style. Shared ink, warm paper, soft layered hills and Pip identity; distinct foreground palettes and landmarks.</desc>
+<defs>
+ <filter id="paperShadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#26324B" flood-opacity=".14"/></filter>
+ <clipPath id="clipPlay"><rect x="70" y="210" width="560" height="650" rx="32"/></clipPath>
+ <clipPath id="clipTry"><rect x="680" y="210" width="560" height="650" rx="32"/></clipPath>
+ <clipPath id="clipWatch"><rect x="1290" y="210" width="560" height="650" rx="32"/></clipPath>
+</defs>
+<rect width="1920" height="1080" fill="#F8F3E8"/>
+<circle cx="1780" cy="95" r="46" fill="#F3D37C" opacity=".55"/>
+<text x="80" y="95" font-family="Fredoka,Arial,sans-serif" font-size="54" font-weight="700" fill="#1F2547">One world. Three ways to wonder.</text>
+<text x="82" y="145" font-family="Andika,Arial,sans-serif" font-size="26" fill="#46516B">A shared sky, three distinct invitations — think, make and watch together.</text>
+<!-- PLAY -->
+<g filter="url(#paperShadow)">
+ <rect x="70" y="210" width="560" height="650" rx="32" fill="#FFFFFF"/>
+ <g clip-path="url(#clipPlay)">
+  <rect x="70" y="210" width="560" height="650" fill="#CDEBFA"/>
+  <circle cx="520" cy="295" r="42" fill="#FFE39A"/>
+  <path d="M70 590 Q190 500 315 590 T630 580 V860 H70Z" fill="#A7D69B"/>
+  <path d="M70 690 Q210 600 350 695 T630 690 V860 H70Z" fill="#6FB47C"/>
+  <path d="M90 690 Q185 620 280 690 T475 690" fill="none" stroke="#F6E5B6" stroke-width="22" stroke-linecap="round"/>
+  <!-- Puzzle tree -->
+  <path d="M160 600 Q180 470 170 390" stroke="#80563B" stroke-width="30" stroke-linecap="round" fill="none"/>
+  <path d="M170 445 Q90 405 110 350 Q165 325 195 395 Q250 335 285 380 Q290 445 205 470Z" fill="#4F9866" stroke="#286B43" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="142" cy="385" r="17" fill="#F3C75F"/><circle cx="220" cy="400" r="14" fill="#F3C75F"/>
+  <!-- puzzle stepping stones -->
+  <g stroke="#1F2547" stroke-width="6" stroke-linejoin="round">
+   <path d="M300 675h82v72h-82z" fill="#F4B65E"/><path d="M326 675v-18h28v18" fill="none"/>
+   <path d="M410 620h76v68h-76z" fill="#83BCE7"/><path d="M438 620v-16h24v16" fill="none"/>
+   <path d="M510 680h74v70h-74z" fill="#D77E72"/><path d="M536 680v-16h22v16" fill="none"/>
+  </g>
+  <path d="M330 745q55 30 100 -15t95 10" fill="none" stroke="#F6E5B6" stroke-width="13" stroke-linecap="round"/>
+  <!-- puzzle piece -->
+  <path d="M340 395h58q-5 -25 18 -25q26 0 19 25h52v58h-28q-2 24 -24 24q-23 0 -23 -24h-72z" fill="#F1C35E" stroke="#1F2547" stroke-width="7" stroke-linejoin="round"/>
+ </g>
+ <rect x="70" y="210" width="560" height="650" rx="32" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+</g>
+<text x="110" y="925" font-family="Fredoka,Arial,sans-serif" font-size="42" font-weight="700" fill="#1F2547">PLAY · Puzzle Grove</text>
+<text x="112" y="970" font-family="Andika,Arial,sans-serif" font-size="25" fill="#46516B">Patterns, paths and little discoveries.</text>
+<!-- TRY -->
+<g filter="url(#paperShadow)">
+ <rect x="680" y="210" width="560" height="650" rx="32" fill="#FFFFFF"/>
+ <g clip-path="url(#clipTry)">
+  <rect x="680" y="210" width="560" height="650" fill="#E5F1D8"/>
+  <circle cx="1110" cy="300" r="40" fill="#F3D37C"/>
+  <path d="M680 600 Q800 520 930 600 T1240 590 V860 H680Z" fill="#B4D99A"/>
+  <path d="M680 700 Q820 610 960 700 T1240 690 V860 H680Z" fill="#73B77C"/>
+  <!-- Maker meadow tree -->
+  <path d="M790 620v-220" stroke="#8A5C3C" stroke-width="26" stroke-linecap="round"/>
+  <path d="M790 465q-80 -55 -65 -112q65 -35 94 44q58 -65 103 -10q10 67 -72 98z" fill="#559A65" stroke="#286B43" stroke-width="7"/>
+  <!-- paper kite -->
+  <path d="M1050 330l82 72 -82 110 -82 -110z" fill="#E98778" stroke="#1F2547" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M1050 330v182m-82 -110h164" stroke="#FFF3E3" stroke-width="6" fill="none"/>
+  <path d="M1050 512q45 38 6 78q-35 32 8 66" stroke="#80563B" stroke-width="5" fill="none" stroke-dasharray="10 12"/>
+  <path d="M1050 574l-14 -18 25 -3zM1065 637l-14 -18 25 -3z" fill="#F3D37C"/>
+  <!-- workbench -->
+  <rect x="850" y="640" width="300" height="32" rx="12" fill="#B87B4B" stroke="#80563B" stroke-width="7"/>
+  <path d="M875 672v95m250 -95v95" stroke="#80563B" stroke-width="18" stroke-linecap="round"/>
+  <rect x="900" y="560" width="90" height="78" rx="10" fill="#FFF8E9" stroke="#80563B" stroke-width="6" transform="rotate(-8 945 599)"/>
+  <path d="M920 610q25 -48 54 -23q-14 45 -54 23z" fill="#5B9D69" stroke="#286B43" stroke-width="4"/>
+  <circle cx="1060" cy="605" r="32" fill="#F3C75F" stroke="#80563B" stroke-width="5"/>
+  <circle cx="1050" cy="595" r="7" fill="#E98778"/><circle cx="1070" cy="614" r="7" fill="#5A9FC7"/>
+  <!-- path -->
+  <path d="M710 780q120 -45 205 0t190 0t135 0" stroke="#F7E9C8" stroke-width="18" fill="none" stroke-linecap="round"/>
+ </g>
+ <rect x="680" y="210" width="560" height="650" rx="32" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+</g>
+<text x="720" y="925" font-family="Fredoka,Arial,sans-serif" font-size="42" font-weight="700" fill="#1F2547">TRY · Maker Meadow</text>
+<text x="722" y="970" font-family="Andika,Arial,sans-serif" font-size="25" fill="#46516B">Ideas become things you do away from TV.</text>
+<!-- WATCH -->
+<g filter="url(#paperShadow)">
+ <rect x="1290" y="210" width="560" height="650" rx="32" fill="#FFFFFF"/>
+ <g clip-path="url(#clipWatch)">
+  <rect x="1290" y="210" width="560" height="650" fill="#29315E"/>
+  <circle cx="1740" cy="300" r="58" fill="#F8E7B4"/>
+  <circle cx="1765" cy="278" r="58" fill="#29315E"/>
+  <g fill="#F8E7B4"><circle cx="1410" cy="300" r="5"/><circle cx="1510" cy="365" r="4"/><circle cx="1650" cy="250" r="5"/><circle cx="1810" cy="430" r="4"/></g>
+  <path d="M1290 630q150 -115 280 0t280 -5v235h-560z" fill="#4A5487"/>
+  <path d="M1290 720q155 -80 300 0t260 0v140h-560z" fill="#313D70"/>
+  <!-- framed story window -->
+  <rect x="1420" y="390" width="300" height="210" rx="20" fill="#F7EBCB" stroke="#E6C978" stroke-width="12"/>
+  <rect x="1442" y="412" width="256" height="166" rx="12" fill="#9DCBE5"/>
+  <circle cx="1640" cy="455" r="26" fill="#FFE39A"/>
+  <path d="M1442 540q75 -70 128 -10t128 0v48h-256z" fill="#6E9D85"/>
+  <path d="M1540 545v-70m0 25q-48 -40 -54 10q35 28 54 -10m0 18q48 -40 54 10q-35 28 -54 -10" fill="#397B5A" stroke="#286B43" stroke-width="4"/>
+  <!-- book -->
+  <path d="M1450 675q90 -38 170 0v105q-80 -38 -170 0z" fill="#F7E7BD" stroke="#1F2547" stroke-width="7"/>
+  <path d="M1620 675q90 -38 170 0v105q-80 -38 -170 0z" fill="#FFF6E4" stroke="#1F2547" stroke-width="7"/>
+  <path d="M1620 675v105" stroke="#B68C54" stroke-width="5"/>
+  <path d="M1480 705h100m-100 25h90m-90 25h70m110 -50h95m-95 25h85m-85 25h70" stroke="#9A805B" stroke-width="5" stroke-linecap="round"/>
+ </g>
+ <rect x="1290" y="210" width="560" height="650" rx="32" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+</g>
+<text x="1330" y="925" font-family="Fredoka,Arial,sans-serif" font-size="42" font-weight="700" fill="#1F2547">WATCH · Dusk Story Hill</text>
+<text x="1332" y="970" font-family="Andika,Arial,sans-serif" font-size="25" fill="#46516B">A quiet window for parent-approved stories.</text>
+<text x="80" y="1035" font-family="Andika,Arial,sans-serif" font-size="22" fill="#667087">Shared grammar: warm paper · deep ink · layered hills · one clear landmark · visible remote focus.</text>
+</svg>

@@ -15,3 +15,18 @@ Every non-code file the app ships, where it came from and its licence. Add a row
 Not shipped and not committed:
 - **Spoken voice clips.** `tools/make_voice.py` generates them locally with the macOS `say` command. Redistribution rights for system-generated speech are not verified, so clips are never committed or attached to releases. The app works silently without them.
 - **YouTube titles and thumbnails.** Fetched locally from public RSS feeds into `catalog/catalog.json`, which is git-ignored.
+
+## Design-only proposal assets
+
+The SVGs below are original project-authored concepts for review. They are not shipped by the app and are not yet production Android assets. The new Wonder System additions use the established project Pip character identity; no third-party character, logo or artwork is included.
+
+| Asset | Path | Source / status |
+| --- | --- | --- |
+| UI/UX screen prototypes and storyboards | `docs/design/prototypes/*.svg` | Project-authored concepts; CC BY 4.0; owner review and production conversion pending |
+| Three-realm world atlas | `docs/design/prototypes/wonder-world-atlas-1920x1080.svg` | Project-authored cut-paper vector concept; CC BY 4.0 |
+| Five-beat story arc | `docs/design/prototypes/wonder-story-arc-1920x1080.svg` | Project-authored flow storyboard; CC BY 4.0 |
+| Pip acting sheet | `docs/design/prototypes/wonder-pip-acting-sheet-1920x1080.svg` | Project-authored pose study based on existing Pip identity; CC BY 4.0 |
+| Shared pictogram family | `docs/design/prototypes/wonder-pictogram-family-1920x1080.svg` | Project-authored icon concepts; CC BY 4.0 |
+| Motion grammar board | `docs/design/prototypes/wonder-motion-grammar-1920x1080.svg` | Project-authored motion/state concepts; CC BY 4.0 |
+
+Before any concept is used at runtime, record its final source, author, exact licence, target size, semantic label, contrast review, static fallback and device/performance validation. Do not treat a design prototype as an implemented screen.
