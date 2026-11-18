@@ -70,7 +70,7 @@ import java.util.TimeZone;
  * Wonder Window test build 0.1: warm-up -> time -> curated rows -> framed YouTube player -> resting.
  * Spec: docs/spec (design.md S1w/S2/S3/S5/S11, tech.md §2, educator.md §5A). Plain Java, API-29-safe.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements WorldView.Host {
     static final String TAG = "WW";
     static final int COOLDOWN_MIN = 90, HEADS_UP_SEC = 120, FINISH_IF_LEFT_SEC = 90;
 
@@ -692,6 +692,7 @@ public class MainActivity extends Activity {
     private long cooldownLeftMs() { return prefs.getLong("cooldownUntil", 0) - System.currentTimeMillis(); }
 
     private void showHub() {
+        if (world3d() && showWorld("home")) return;
         stopMeter();
         screen = "hub";
         inItem = false;
@@ -807,6 +808,7 @@ public class MainActivity extends Activity {
 
     // ------------------------------------------------------------------ Play: games (games.json, generic round engine)
     private void showPlayList() {
+        if (world3d() && showWorld("playlist")) return;
         screen = "play";
         stopVoice();
         root.removeAllViews();
@@ -3670,6 +3672,15 @@ public class MainActivity extends Activity {
     @Override
     public boolean dispatchKeyEvent(KeyEvent e) {
         int k = e.getKeyCode();
+        if (worldShown && world != null) {                          // the 3D world gets the remote as plain D-pad words
+            String w = k == KeyEvent.KEYCODE_DPAD_LEFT ? "left" : k == KeyEvent.KEYCODE_DPAD_RIGHT ? "right" : k == KeyEvent.KEYCODE_DPAD_UP ? "up"
+                    : k == KeyEvent.KEYCODE_DPAD_DOWN ? "down" : (k == KeyEvent.KEYCODE_DPAD_CENTER || k == KeyEvent.KEYCODE_ENTER || k == KeyEvent.KEYCODE_NUMPAD_ENTER) ? "ok"
+                    : k == KeyEvent.KEYCODE_BACK ? "back" : null;
+            if (w == null) return super.dispatchKeyEvent(e);
+            boolean fire = "back".equals(w) ? e.getAction() == KeyEvent.ACTION_UP : e.getAction() == KeyEvent.ACTION_DOWN;
+            if (fire) world.js("WWWorld.key('" + w + "')");
+            return true;
+        }
         if (web == null && "game".equals(screen) && maze != null && e.getAction() == KeyEvent.ACTION_DOWN && mazeKey(k)) return true;
         if (web == null && "t3away".equals(screen)) {
             if (e.getAction() == KeyEvent.ACTION_UP) showReturn3();
@@ -3731,6 +3742,7 @@ public class MainActivity extends Activity {
         for (ValueAnimator d : drifts) d.pause();                  // ambient motion stops when the app is not visible
         stopMeter();
         if (sessionActive) endSessionQuiet();
+        if (world != null && worldShown) { world.js("WWWorld.pause()"); world.onPause(); }
     }
 
     private void endSessionQuiet() { recordSessionEnd(); }
@@ -3743,6 +3755,82 @@ public class MainActivity extends Activity {
         warmItems = null; inItem = false;
         start();
     }
+
+
+    // ------------------------------------------------------------------ 3D world layer (home + PLAY games in three.js; docs/DECISIONS.md D12)
+    private WorldView world;
+    private boolean worldShown;
+
+    private boolean world3d() { return getResources().getBoolean(R.bool.world3d); }
+
+    /** Shows the world on top of everything; native screens stay available underneath for TRY, WATCH and unported games. */
+    private boolean showWorld(String where) {
+        try {
+            stopMeter(); stopVoice(); inItem = false; screen = "world"; root.removeAllViews();
+            if (world == null) {
+                world = new WorldView(this, this);
+                outer.addView(world, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                world.open(where, getIntent() == null ? null : getIntent().getStringExtra("worldq"));
+            } else {
+                world.setVisibility(View.VISIBLE); world.onResume();
+                world.js("WWWorld.resume(), WWWorld.go('" + where + "', {})");
+            }
+            worldShown = true; world.requestFocus();
+            return true;
+        } catch (Throwable t) { Log.e(TAG, "world unavailable, using classic screens", t); worldShown = false; return false; }
+    }
+
+    private void hideWorld() {
+        if (world == null || !worldShown) return;
+        worldShown = false; world.js("WWWorld.pause()"); world.setVisibility(View.GONE); world.onPause();
+    }
+
+    @Override public void worldSay(String t) { if (worldShown) say(t); }
+    @Override public void worldSfx(String n) { if (worldShown) sfx(n); }
+    @Override public String worldGet(String k) {
+        if (k.startsWith("glevel:")) return String.valueOf(prefs.getInt(k, 1));                 // shared with the classic shell
+        if (k.startsWith("gseen:")) return JSONObject.quote(prefs.getString(k, ""));
+        if ("watchResting".equals(k)) return String.valueOf(cooldownLeftMs() > 0 || minutesLeftToday() < 5);
+        return prefs.getString("w:" + k, "");
+    }
+    @Override public void worldSet(String k, String v) {
+        try {
+            if (k.startsWith("glevel:")) prefs.edit().putInt(k, Math.max(1, Math.min(9, Integer.parseInt(v.trim())))).apply();
+            else if (k.startsWith("gseen:")) prefs.edit().putString(k, new JSONArray("[" + v + "]").getString(0)).apply();
+            else if (k.matches("[a-zA-Z0-9_:.-]{1,60}") && v.length() < 2000) prefs.edit().putString("w:" + k, v).apply();
+        } catch (Exception e) { Log.w(TAG, "worldSet " + k); }
+    }
+    @Override public void worldEvent(String name, String json) {
+        if ("game_start".equals(name)) {
+            if (minutesLeftToday() < 1) { hideWorld(); showResting("TV is resting now.", -1); return; }
+            gameStart = SystemClock.elapsedRealtime();                 // same Play accounting as the classic shell
+        } else if ("game_end".equals(name)) addPlayTime();
+    }
+    @Override public void worldBack() { /* Back never leaves the app from the home planets (same as the classic doors). */ }
+    @Override public void worldOpen(String w) {
+        if ("try".equals(w)) {
+            if (minutesLeftToday() < 1) { hideWorld(); showResting("TV is resting now.", -1); return; }
+            hideWorld();
+            if (getResources().getBoolean(R.bool.try_v3)) showTryHome3(); else showTryCats();
+        } else if ("watch".equals(w)) {
+            if (cooldownLeftMs() > 0 || minutesLeftToday() < 5) { sfx("bump"); return; }
+            hideWorld();
+            beginSession(Math.max(1, Math.min(getResources().getInteger(R.integer.watch_session_min), minutesLeftToday())));
+        } else if (w.startsWith("native-game:")) {
+            String id = w.substring("native-game:".length());
+            for (int i = 0; games != null && i < games.length(); i++) {
+                JSONObject g = games.optJSONObject(i);
+                if (g != null && id.equals(g.optString("id"))) { hideWorld(); startGame(g); return; }
+            }
+        }
+    }
+    @Override public String worldResolve(String r) { try { return resolveRound(new JSONObject(r)).toString(); } catch (Exception e) { return r; } }
+    @Override public boolean worldCanResolve(String dyn) {
+        if (dyn.startsWith("name")) return !childName().isEmpty();
+        if (dyn.startsWith("age")) return childAge() > 0;
+        return false;
+    }
+    @Override public String worldBuddy() { return getString(R.string.buddy_name); }
 
     // ------------------------------------------------------------------ small UI helpers
     private int px(float v) { return Math.round(v * s); }

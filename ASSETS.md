@@ -6,6 +6,8 @@ Every non-code file the app ships, where it came from and its licence. Add a row
 |---|---|---|---|
 | Fredoka (variable) | `app/src/main/assets/fonts/Fredoka.ttf` | Google Fonts, Fredoka project | SIL Open Font License 1.1 |
 | Andika Bold | `app/src/main/assets/fonts/Andika-Bold.ttf` | SIL International | SIL Open Font License 1.1 |
+| three.js r170 (`three.module.min.js`, sha256 08fd7545…3c39e7) | `app/src/main/assets/world/vendor/` | npm `three@0.170.0`, unmodified | MIT (`world/vendor/THREE_LICENSE`) |
+| Tara, space world scenes, planets, rocket | `app/src/main/assets/world/**/*.js` (generated in code, no image files) | Original project code and art | MIT (code); Tara name/likeness covered by TRADEMARKS.md |
 | Sound effects | `app/src/main/assets/sfx/*.wav` | Synthesized by project code | MIT |
 | Buddy poses, clouds, hills, banner, launcher | `app/src/main/res/drawable/*.xml`, `res/mipmap-anydpi-v26/` | Original project vectors | CC BY 4.0; mascot/name also covered by TRADEMARKS.md |
 | Emoji in game content | TV system emoji font | Not shipped | Device font licence |
