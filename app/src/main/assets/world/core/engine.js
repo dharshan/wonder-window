@@ -76,7 +76,7 @@ export const scene0 = new THREE.Scene();
 
 // ---------- input: D-pad keys + BACK (delivered by Java via WWWorld.key) ----------
 const KEYMAP = { ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down', Enter: 'ok', ' ': 'ok', Escape: 'back', Backspace: 'back' };
-export function key(k) { if (nextReq || fadeDir === 1) return; if (k === 'back' && !(current && current.key && current.key('back'))) { bridge.back(); return; } current && current.key && current.key(k); }
+export function key(k) { if (window.__introSkip) { window.__introSkip(); return; } if (nextReq || fadeDir === 1) return; if (k === 'back' && !(current && current.key && current.key('back'))) { bridge.back(); return; } current && current.key && current.key(k); }
 addEventListener('keydown', e => { const k = KEYMAP[e.key]; if (k) { e.preventDefault(); key(k); } });
 
 // ---------- bridge to the Android app (falls back to no-ops in a browser) ----------

@@ -57,7 +57,7 @@ for f, cp, tp in [(1, (-15, -16, -1), (-11, 0, -2)), (40, (-12, -18, 2), (-9, -2
     cam.location = cp; cam.keyframe_insert('location', frame=f); tgt.location = tp; tgt.keyframe_insert('location', frame=f)
 # title
 bpy.ops.object.text_add(location=(0, -12, 6.2), rotation=(math.radians(80), 0, 0)); t = bpy.context.object; t.data.body = 'Wonder Window'
-t.data.font = bpy.data.fonts.load(FONT); t.data.align_x = 'CENTER'; t.data.size = 2.3; t.data.extrude = 0.12
+t.data.font = bpy.data.fonts.load(FONT); t.data.align_x = 'CENTER'; t.data.size = 2.5; t.data.extrude = 0.14; t.data.offset = 0.045; t.data.bevel_depth = 0.02
 tm = bpy.data.materials.new('title'); tm.use_nodes = True; tn = tm.node_tree; te = tn.nodes.new('ShaderNodeEmission'); te.inputs['Color'].default_value = (1, 0.79, 0.29, 1); te.inputs['Strength'].default_value = 1.6
 tn.links.new(te.outputs['Emission'], tn.nodes['Material Output'].inputs['Surface']); t.data.materials.append(tm)
 t.scale = (0.001,) * 3; t.keyframe_insert('scale', frame=138); t.scale = (1.08,) * 3; t.keyframe_insert('scale', frame=152); t.scale = (1,) * 3; t.keyframe_insert('scale', frame=158)

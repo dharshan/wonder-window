@@ -52,7 +52,7 @@ public final class WorldView extends WebView {
         s.setLoadWithOverviewMode(true);
         s.setAllowFileAccess(false);
         s.setAllowContentAccess(false);
-        s.setMediaPlaybackRequiresUserGesture(true);
+        s.setMediaPlaybackRequiresUserGesture(false);          // only the bundled, silent intro film plays (no network)
         s.setDomStorageEnabled(false);                 // all state goes through the host (SharedPreferences)
         setBackgroundColor(0xFF05041A);
         setFocusable(true);
@@ -86,6 +86,8 @@ public final class WorldView extends WebView {
         if (p.endsWith(".jpg")) return "image/jpeg";
         if (p.endsWith(".svg")) return "image/svg+xml";
         if (p.endsWith(".ttf")) return "font/ttf";
+        if (p.endsWith(".mp4")) return "video/mp4";
+        if (p.endsWith(".glb")) return "model/gltf-binary";
         return "application/octet-stream";
     }
 

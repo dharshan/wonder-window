@@ -15,6 +15,16 @@ import { PlaylistScreen } from './screens/playlist.js';
 import { GameScreen, loadGames } from './screens/game.js';
 import { TryScreen } from './screens/try.js';
 
+// Intro film (Blender, 6 s) once per app start; any remote key skips it. The 3D world starts after it.
+const intro = document.getElementById('intro');
+const playIntro = () => new Promise(res => {
+  const Qs = new URLSearchParams(location.search);
+  if (!intro || Qs.has('perf') || Qs.has('scripted') || Qs.has('nointro') || (Qs.get('screen') || 'home') !== 'home') { intro && intro.remove(); return res(); }
+  let done = false; const end = () => { if (done) return; done = true; window.__introSkip = null; intro.remove(); res(); };
+  window.__introSkip = end; intro.onended = end; intro.onerror = end; setTimeout(end, 9000);
+  intro.play().catch(end);
+});
+const introDone = playIntro();
 await fontsReady();
 setMascotCamera(camera);
 const [D] = await Promise.all([loadGames(), loadBlenderAssets(), loadProps()]);
@@ -23,4 +33,5 @@ Object.assign(router.screens, { home: HomeScreen, playlist: PlaylistScreen, game
 const Q = new URLSearchParams(location.search);
 const first = Q.get('screen') || 'home';
 router.go(first, first === 'game' ? { id: Q.get('id') || D.list[0].id } : {});
+await introDone;
 start();
