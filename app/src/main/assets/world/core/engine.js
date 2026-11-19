@@ -71,7 +71,7 @@ export const router = {
 };
 function swap() { if (current) { current.exit?.(); current.root && current.root.removeFromParent(); current.hudRoot && current.hudRoot.removeFromParent(); }
   const S = router.screens[nextReq.name]; current = S; S.name = nextReq.name; S.enter(nextReq.params); if (S.root) { scene0.add(S.root); } if (S.hudRoot) hud.add(S.hudRoot);
-  renderer.compile(scene0, camera); renderer.compile(hud, hudCam); nextReq = null; fadeDir = -1; fadeT = 0; }
+  renderer.compile(scene0, camera); renderer.compile(hud, hudCam); lastSwap = performance.now(); nextReq = null; fadeDir = -1; fadeT = 0; }
 export const scene0 = new THREE.Scene();
 
 // ---------- input: D-pad keys + BACK (delivered by Java via WWWorld.key) ----------
@@ -97,6 +97,7 @@ export const bridge = {
 window.WWWorld = { key, go: (n, p) => router.go(n, typeof p === 'string' ? JSON.parse(p) : p), pause() { paused = true; }, resume() { paused = false; lastMs = performance.now(); } };
 
 // ---------- frame loop (fixed render order, perf probe) ----------
+const dynWin = []; let lastSwap = performance.now();
 let T = 0, lastMs = 0, paused = false, perfT0 = performance.now(), prevNow = performance.now(), lastTick = performance.now(); const win = []; const perf = []; let perfDone = false, dynAcc = 0, dynN = 0, dynPR = CFG.pr;
 export const time = () => T;
 export function frame(dt) {
@@ -110,8 +111,11 @@ export function start() {
   lastMs = performance.now();
   (function loop(now) { requestAnimationFrame(loop); if (paused) return; const d = Math.min(.05, Math.max(0, (now - lastMs) / 1000)); lastMs = now; frame(d);
     // safety net: if a screen goes over budget, render it at a lower internal resolution (0.75 measured smooth on the TV)
-    if (!Q.has('fixedpr')) { dynAcc += d; if (++dynN === 50) { const avg = dynAcc / dynN * 1000; dynAcc = dynN = 0; if (avg > 22.5 && dynPR > .76) { dynPR = Math.max(.75, dynPR - .1); renderer.setPixelRatio(dynPR); console.log('WWDYN pr=' + dynPR.toFixed(2)); } } }
+    if (!Q.has('fixedpr') && now - lastSwap > 2500) { const ms = (now - prevNow); dynWin.push(ms); if (dynWin.length === 90) {   // works at 50 or 60 Hz: compare against this TV's own frame interval
+        const srt = dynWin.slice().sort((x, y) => x - y), vsync = srt[Math.floor(srt.length * .3)], slipped = dynWin.filter(x => x > vsync * 1.5).length / dynWin.length; dynWin.length = 0;
+        if (slipped > .06 && dynPR > .71) { dynPR = Math.max(.7, Math.round((dynPR - .1) * 100) / 100); renderer.setPixelRatio(dynPR); console.log('WWDYN pr=' + dynPR.toFixed(2) + ' slipped=' + (slipped * 100).toFixed(0) + '%'); } } }
     if (CFG.perf) { const nowS = (now - perfT0) / 1000; if (nowS > 1.5) { perf.push(now - prevNow); win.push(now - prevNow); }
+      if (perfDone === false && Q.has('dynlog') && dynWin.length === 0 && nowS > 3) { }
       if (now - lastTick > 5000) { lastTick = now; const a = win.splice(0); if (a.length) console.log(`WWTICK t=${nowS.toFixed(0)} screen=${router.current && router.current.name || ''} n=${a.length} avg=${(a.reduce((x, y) => x + y, 0) / a.length).toFixed(1)} max=${Math.max(...a).toFixed(0)} pr=${dynPR.toFixed(2)}`); }
       if (!perfDone && nowS > +(Q.get('secs') || 24)) { perfDone = true; const a = perf.slice().sort((x, y) => x - y), p = q => a[Math.floor(q * (a.length - 1))];
         console.log(`WWPERF tag=world pr=${dynPR.toFixed(2)} screen=${Q.get('screen') || ''} frames=${a.length} p50=${p(.5).toFixed(1)} p95=${p(.95).toFixed(1)} p99=${p(.99).toFixed(1)} jank=${a.filter(x => x > 30).length}`); } }
