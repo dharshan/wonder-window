@@ -2,6 +2,14 @@
 // https://appassets.androidplatform.net/world/index.html?screen=home from APK assets (offline).
 import { router, start, fontsReady, CFG, camera } from './core/engine.js';
 import { setMascotCamera } from './core/mascot.js';
+import { setProps } from './core/kit.js';
+import { GLTFLoader } from './vendor/jsm/loaders/GLTFLoader.js';
+import { THREE } from './core/engine.js';
+async function loadProps() {
+  if (new URLSearchParams(location.search).has('procedural')) return;
+  try { const g = await new GLTFLoader().loadAsync('models/props.glb'); const t = g.scene.getObjectByName('tile'), p = g.scene.getObjectByName('pedestal');
+    const fix = m => { m.material.map.colorSpace = THREE.SRGBColorSpace; return m.material.map; };
+    setProps({ tileGeo: t.geometry, tileTex: fix(t), pedGeo: p.geometry, pedTex: fix(p) }); } catch (e) { console.log('props unavailable: ' + e); } }
 import { HomeScreen, loadBlenderAssets } from './screens/home.js';
 import { PlaylistScreen } from './screens/playlist.js';
 import { GameScreen, loadGames } from './screens/game.js';
@@ -9,7 +17,7 @@ import { TryScreen } from './screens/try.js';
 
 await fontsReady();
 setMascotCamera(camera);
-const [D] = await Promise.all([loadGames(), loadBlenderAssets()]);
+const [D] = await Promise.all([loadGames(), loadBlenderAssets(), loadProps()]);
 PlaylistScreen.D = D;
 Object.assign(router.screens, { home: HomeScreen, playlist: PlaylistScreen, game: GameScreen, try: TryScreen });
 const Q = new URLSearchParams(location.search);

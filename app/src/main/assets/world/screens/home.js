@@ -13,10 +13,11 @@ let BAKED = null;
 export async function loadBlenderAssets() {
   if (new URLSearchParams(location.search).has('procedural')) return null;
   try {
-    const g = await new GLTFLoader().loadAsync('models/puzzle_planet.glb'); const out = {};
+    let g; try { g = await new GLTFLoader().loadAsync('models/space_home.glb'); } catch (e) { g = await new GLTFLoader().loadAsync('models/puzzle_planet.glb'); }
+    const out = {};
     g.scene.traverse(o => { if (o.isMesh) { const map = o.material.map; if (map) { map.colorSpace = THREE.SRGBColorSpace; map.anisotropy = 4; }
       o.material = new THREE.MeshBasicMaterial({ map: map || null, color: map ? 0xffffff : o.material.color }); } });
-    ['planet_play', 'pieces', 'rocket'].forEach(n => { out[n] = g.scene.getObjectByName(n); });
+    ['planet_play', 'pieces', 'rocket', 'planet_try', 'rings', 'planet_watch', 'observatory', 'moonlet'].forEach(n => { out[n] = g.scene.getObjectByName(n); });
     BAKED = out; return out;
   } catch (e) { console.log('blender assets unavailable: ' + e); return null; }
 }
@@ -49,9 +50,12 @@ export const HomeScreen = {
     WORLDS.forEach((w, i) => { const g = new THREE.Group(); g.position.copy(w.pos); root.add(g); w.g = g; const sp = new THREE.Group(); sp.rotation.z = w.tilt; g.add(sp);
       w.planet = new THREE.Mesh(new THREE.SphereGeometry(R, 56, 40), new THREE.MeshLambertMaterial({ map: w.tex || (w.tex = planetTex(w.key)), emissive: new THREE.Color(w.color), emissiveIntensity: .05 })); sp.add(w.planet);
       w.orb = new THREE.Group(); sp.add(w.orb);
-      if (w.key === 'play' && BAKED && BAKED.planet_play) { w.planet.visible = false; const bp = BAKED.planet_play.clone(); bp.position.set(0, 0, 0); bp.rotation.set(0, 0, 0); sp.add(bp); w.baked = bp;
-        if (BAKED.pieces) { const pc = BAKED.pieces.clone(); w.orb.add(pc); w.bakedOrb = true; } }
-      if (w.key === 'try') PALETTE.forEach((c, k) => { const t = new THREE.Mesh(new THREE.TorusGeometry(4.3 + k * .22, .08, 6, 120), new THREE.MeshBasicMaterial({ color: c })); t.rotation.x = Math.PI / 2; w.orb.add(t); });
+      const B = BAKED && BAKED['planet_' + w.key];
+      if (B) { w.planet.visible = false; const bp = B.clone(); if (w.key === 'watch') bp.traverse(o => { if (o.isMesh) { o.material = o.material.clone(); o.material.color.setScalar(1.35); } }); bp.position.set(0, 0, 0); bp.rotation.set(0, 0, 0); sp.add(bp); w.baked = bp;
+        const orb = w.key === 'play' ? BAKED.pieces : w.key === 'try' ? BAKED.rings : BAKED.moonlet;
+        if (orb) { const oc = orb.clone(); w.orb.add(oc); w.bakedOrb = true; }
+        if (w.key === 'watch' && BAKED.observatory) bp.add(BAKED.observatory.clone()); }
+      if (w.key === 'try' && !w.bakedOrb) PALETTE.forEach((c, k) => { const t = new THREE.Mesh(new THREE.TorusGeometry(4.3 + k * .22, .08, 6, 120), new THREE.MeshBasicMaterial({ color: c })); t.rotation.x = Math.PI / 2; w.orb.add(t); });
       else if (!w.bakedOrb) for (let k = 0; k < 6; k++) { const m = new THREE.Mesh(w.key === 'play' ? roundedBox(.8, .8, .25, .2) : new THREE.SphereGeometry(.35, 16, 12), new THREE.MeshLambertMaterial({ color: w.key === 'play' ? PALETTE[k] : 0xE9E2FF, emissive: w.key === 'watch' ? 0x443388 : 0 }));
         const a = k / 6 * 6.283; m.position.set(Math.cos(a) * 5, Math.sin(a * 2) * .4, Math.sin(a) * 5); w.orb.add(m); }
       w.focus = i === focus ? 1 : 0; });

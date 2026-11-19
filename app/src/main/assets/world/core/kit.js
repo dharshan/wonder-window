@@ -8,6 +8,9 @@ export function roundedBox(w, h, d, r) { const s = new THREE.Shape(), x = -w / 2
   s.lineTo(x + r, y + h); s.quadraticCurveTo(x, y + h, x, y + h - r); s.lineTo(x, y + r); s.quadraticCurveTo(x, y, x + r, y);
   const g = new THREE.ExtrudeGeometry(s, { depth: d, bevelEnabled: true, bevelThickness: .1, bevelSize: .09, bevelSegments: 3, curveSegments: 6 }); g.center(); return g; }
 const POD_GEO = roundedBox(2.05, 2.05, .42, .42), PED_GEO = new THREE.CylinderGeometry(1.05, 1.25, .5, 32), RING_GEO = new THREE.TorusGeometry(1.08, .07, 8, 48);
+// Blender-baked props (white, lit in Cycles): tinted per pod at runtime. Set by app.js when models/props.glb loads.
+let PROPS = null;
+export function setProps(p) { PROPS = p; }
 export const PALETTE = [0xFFC94A, 0x4DD6FF, 0xFF7AA8, 0x7CF2B0, 0xB49CFF, 0xFF9F5A];
 
 // ---------- choice pods on pedestals ----------
@@ -17,10 +20,13 @@ export function makePods(items, { spacing = 3.1, y = -.2, z = 1.2, colors = PALE
   const group = new THREE.Group(); const n = items.length, sc = n > 4 ? 4 / n * 1.05 : 1;
   const list = items.map((txt, i) => {
     const base = new THREE.Group(); base.position.set((i - (n - 1) / 2) * spacing * sc, y, z); base.scale.setScalar(sc * (small ? .8 : 1)); group.add(base);
-    const ped = new THREE.Mesh(PED_GEO, new THREE.MeshLambertMaterial({ color: 0x3A2A9E })); ped.position.y = -1.15; base.add(ped);
+    const ped = PROPS ? new THREE.Mesh(PROPS.pedGeo, new THREE.MeshBasicMaterial({ map: PROPS.pedTex, color: 0x6B55E0 })) : new THREE.Mesh(PED_GEO, new THREE.MeshLambertMaterial({ color: 0x3A2A9E }));
+    ped.position.y = -1.15; base.add(ped);
     const ring = new THREE.Mesh(RING_GEO, new THREE.MeshBasicMaterial({ color: 0x8C7BFF })); ring.rotation.x = Math.PI / 2; ring.position.y = -.88; base.add(ring);
     const pod = new THREE.Group(); base.add(pod);
-    const body = new THREE.Mesh(POD_GEO, new THREE.MeshLambertMaterial({ color: colors[i % colors.length] })); pod.add(body);
+    const body = PROPS ? new THREE.Mesh(PROPS.tileGeo, new THREE.MeshBasicMaterial({ map: PROPS.tileTex, color: new THREE.Color(colors[i % colors.length]).multiplyScalar(1.08) }))
+                       : new THREE.Mesh(POD_GEO, new THREE.MeshLambertMaterial({ color: colors[i % colors.length] }));
+    pod.add(body);
     const face = new THREE.Mesh(new THREE.PlaneGeometry(1.75, 1.75), new THREE.MeshBasicMaterial({ map: itemTex(String(txt)), transparent: true })); face.position.z = .33; pod.add(face);
     return { i, txt, base, pod, body, face, ring, lift: 0, wig: -9, pulse: 0, off: false, hidden: false, born: time(), fly: null };
   });
