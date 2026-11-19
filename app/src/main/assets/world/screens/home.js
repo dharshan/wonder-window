@@ -5,6 +5,21 @@ import { THREE, CFG, camera, router, bridge, time, clamp, ease, canvasTex, pillT
 import { makeSpace } from '../core/space.js';
 import { roundedBox, PALETTE } from '../core/kit.js';
 import { makeMascot } from '../core/mascot.js';
+import { GLTFLoader } from '../vendor/jsm/loaders/GLTFLoader.js';
+
+// Blender pilot: Puzzle Planet, its jigsaw pieces and the rocket modelled in Blender with lighting baked
+// into the textures; shown unlit here, so they cost no more than the procedural versions.
+let BAKED = null;
+export async function loadBlenderAssets() {
+  if (new URLSearchParams(location.search).has('procedural')) return null;
+  try {
+    const g = await new GLTFLoader().loadAsync('models/puzzle_planet.glb'); const out = {};
+    g.scene.traverse(o => { if (o.isMesh) { const map = o.material.map; if (map) { map.colorSpace = THREE.SRGBColorSpace; map.anisotropy = 4; }
+      o.material = new THREE.MeshBasicMaterial({ map: map || null, color: map ? 0xffffff : o.material.color }); } });
+    ['planet_play', 'pieces', 'rocket'].forEach(n => { out[n] = g.scene.getObjectByName(n); });
+    BAKED = out; return out;
+  } catch (e) { console.log('blender assets unavailable: ' + e); return null; }
+}
 
 const R = 3.2;
 const WORLDS = [
@@ -34,8 +49,10 @@ export const HomeScreen = {
     WORLDS.forEach((w, i) => { const g = new THREE.Group(); g.position.copy(w.pos); root.add(g); w.g = g; const sp = new THREE.Group(); sp.rotation.z = w.tilt; g.add(sp);
       w.planet = new THREE.Mesh(new THREE.SphereGeometry(R, 56, 40), new THREE.MeshLambertMaterial({ map: w.tex || (w.tex = planetTex(w.key)), emissive: new THREE.Color(w.color), emissiveIntensity: .05 })); sp.add(w.planet);
       w.orb = new THREE.Group(); sp.add(w.orb);
+      if (w.key === 'play' && BAKED && BAKED.planet_play) { w.planet.visible = false; const bp = BAKED.planet_play.clone(); bp.position.set(0, 0, 0); bp.rotation.set(0, 0, 0); sp.add(bp); w.baked = bp;
+        if (BAKED.pieces) { const pc = BAKED.pieces.clone(); w.orb.add(pc); w.bakedOrb = true; } }
       if (w.key === 'try') PALETTE.forEach((c, k) => { const t = new THREE.Mesh(new THREE.TorusGeometry(4.3 + k * .22, .08, 6, 120), new THREE.MeshBasicMaterial({ color: c })); t.rotation.x = Math.PI / 2; w.orb.add(t); });
-      else for (let k = 0; k < 6; k++) { const m = new THREE.Mesh(w.key === 'play' ? roundedBox(.8, .8, .25, .2) : new THREE.SphereGeometry(.35, 16, 12), new THREE.MeshLambertMaterial({ color: w.key === 'play' ? PALETTE[k] : 0xE9E2FF, emissive: w.key === 'watch' ? 0x443388 : 0 }));
+      else if (!w.bakedOrb) for (let k = 0; k < 6; k++) { const m = new THREE.Mesh(w.key === 'play' ? roundedBox(.8, .8, .25, .2) : new THREE.SphereGeometry(.35, 16, 12), new THREE.MeshLambertMaterial({ color: w.key === 'play' ? PALETTE[k] : 0xE9E2FF, emissive: w.key === 'watch' ? 0x443388 : 0 }));
         const a = k / 6 * 6.283; m.position.set(Math.cos(a) * 5, Math.sin(a * 2) * .4, Math.sin(a) * 5); w.orb.add(m); }
       w.focus = i === focus ? 1 : 0; });
     // rocket with Astro in a glass cockpit
@@ -45,6 +62,7 @@ export const HomeScreen = {
     const band = new THREE.Mesh(new THREE.CylinderGeometry(.6, .61, .22, 32, 1, true), new THREE.MeshLambertMaterial({ color: 0x6B4BF0 })); band.position.y = -.25; body.add(band);
     for (let k = 0; k < 3; k++) { const fs = new THREE.Shape(); fs.moveTo(0, 0); fs.quadraticCurveTo(.75, -.2, .8, -.95); fs.lineTo(.1, -.55); fs.lineTo(0, -.6); fs.closePath();
       const fin = new THREE.Mesh(new THREE.ExtrudeGeometry(fs, { depth: .08, bevelEnabled: false }), new THREE.MeshLambertMaterial({ color: 0xFF5D73 })); const h = new THREE.Group(); h.rotation.y = k * 2.094; fin.position.set(.42, -.35, -.04); h.add(fin); body.add(h); }
+    if (BAKED && BAKED.rocket) { body.clear(); const br = BAKED.rocket.clone(); br.position.set(0, 0, 0); br.rotation.set(0, 0, 0); body.add(br); }
     this.tara = makeMascot({ seated: true }); this.tara.scale.setScalar(1.05); this.tara.position.set(.15, 2.0, .2); rocket.add(this.tara);   // Astro pops out of the rocket's top hatch
     this.flame = new THREE.Mesh(new THREE.ConeGeometry(.32, 1.1, 16), new THREE.MeshBasicMaterial({ color: 0xFFA54A })); this.flame.rotation.x = Math.PI; this.flame.position.y = -1.6; rocket.add(this.flame);
     this.flameCore = new THREE.Mesh(new THREE.ConeGeometry(.17, .7, 12), new THREE.MeshBasicMaterial({ color: 0xFFF1C2 })); this.flameCore.rotation.x = Math.PI; this.flameCore.position.y = -1.45; rocket.add(this.flameCore);
@@ -66,7 +84,7 @@ export const HomeScreen = {
   go(i) { this.from = this.cur; this.cur = i; this.flyT = time(); this.labelT = time() + 2.6; bridge.sfx('pop'); },
   update(t, dt) {
     const FLY = CFG.reduced ? .01 : 2.6, DIVE = CFG.reduced ? .2 : 2.2;
-    WORLDS.forEach((w, i) => { w.planet.rotation.y = t * .12 + i; w.orb.rotation.y = t * (w.key === 'try' ? .05 : .35); w.focus += ((i === this.cur ? 1 : 0) - w.focus) * clamp(dt * 4);
+    WORLDS.forEach((w, i) => { w.planet.rotation.y = t * .12 + i; if (w.baked) w.baked.rotation.y = t * .12 + i; w.orb.rotation.y = t * (w.key === 'try' ? .05 : .35); w.focus += ((i === this.cur ? 1 : 0) - w.focus) * clamp(dt * 4);
       w.g.scale.setScalar(.82 + .18 * w.focus); w.planet.material.emissiveIntensity = .05 + .22 * w.focus; });
     const flyU = clamp((t - this.flyT) / FLY), diveU = t - this.diveT < DIVE ? (t - this.diveT) / DIVE : -1; const P = this.P;
     if (flyU < 1) { const u = ease(flyU); P[0].copy(park(this.from)); P[3].copy(park(this.cur)); P[1].copy(P[0]).add(this.tmp.set((P[3].x - P[0].x) * .15, 5.5, 7)); P[2].copy(P[3]).add(this.tmp.set((P[0].x - P[3].x) * .15, 5.5, 7));
