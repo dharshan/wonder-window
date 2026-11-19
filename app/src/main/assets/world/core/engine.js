@@ -92,7 +92,7 @@ export const bridge = {
   /** Personal rounds ({name}, {age_candles}, dynamic=name/age) are filled in by the Android host, never in JS. */
   resolve(r) { try { return N && N.resolve ? JSON.parse(N.resolve(JSON.stringify(r))) : r; } catch (e) { return r; } },
   canResolve(dyn) { try { return !!(N && N.canResolve && N.canResolve(dyn)); } catch (e) { return false; } },
-  buddy() { try { return (N && N.buddy && N.buddy()) || 'Tara'; } catch (e) { return 'Tara'; } },
+  buddy() { try { return (N && N.buddy && N.buddy()) || 'Astro'; } catch (e) { return 'Astro'; } },
 };
 window.WWWorld = { key, go: (n, p) => router.go(n, typeof p === 'string' ? JSON.parse(p) : p), pause() { paused = true; }, resume() { paused = false; lastMs = performance.now(); } };
 

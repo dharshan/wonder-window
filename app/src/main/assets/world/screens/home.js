@@ -1,4 +1,4 @@
-// HOME: three planets for the three pillars (PLAY → TRY → WATCH order is fixed, D1). Tara rides the rocket;
+// HOME: three planets for the three pillars (PLAY → TRY → WATCH order is fixed, D1). Astro rides the rocket;
 // LEFT/RIGHT flies to the next planet with a cinematic camera, OK dives in. Budget-safe on the TV:
 // no atmosphere shells, no tone mapping, small sprites only, one baked sky.
 import { THREE, CFG, camera, router, bridge, time, clamp, ease, canvasTex, pillTex, rnd, reseed, glow } from '../core/engine.js';
@@ -38,25 +38,29 @@ export const HomeScreen = {
       else for (let k = 0; k < 6; k++) { const m = new THREE.Mesh(w.key === 'play' ? roundedBox(.8, .8, .25, .2) : new THREE.SphereGeometry(.35, 16, 12), new THREE.MeshLambertMaterial({ color: w.key === 'play' ? PALETTE[k] : 0xE9E2FF, emissive: w.key === 'watch' ? 0x443388 : 0 }));
         const a = k / 6 * 6.283; m.position.set(Math.cos(a) * 5, Math.sin(a * 2) * .4, Math.sin(a) * 5); w.orb.add(m); }
       w.focus = i === focus ? 1 : 0; });
-    // rocket with Tara in a glass cockpit
+    // rocket with Astro in a glass cockpit
     const rocket = this.rocket = new THREE.Group(); root.add(rocket); const body = this.body = new THREE.Group(); rocket.add(body);
     const prof = []; for (let i = 0; i <= 18; i++) { const t = i / 18; prof.push(new THREE.Vector2(Math.max(.001, .62 * Math.sin(Math.PI * Math.pow(t, .78)) * (1 - .25 * t)), t * 2.4 - 1.1)); }
     body.add(new THREE.Mesh(new THREE.LatheGeometry(prof, 32), new THREE.MeshLambertMaterial({ color: 0xFBF7FF })));
     const band = new THREE.Mesh(new THREE.CylinderGeometry(.6, .61, .22, 32, 1, true), new THREE.MeshLambertMaterial({ color: 0x6B4BF0 })); band.position.y = -.25; body.add(band);
     for (let k = 0; k < 3; k++) { const fs = new THREE.Shape(); fs.moveTo(0, 0); fs.quadraticCurveTo(.75, -.2, .8, -.95); fs.lineTo(.1, -.55); fs.lineTo(0, -.6); fs.closePath();
       const fin = new THREE.Mesh(new THREE.ExtrudeGeometry(fs, { depth: .08, bevelEnabled: false }), new THREE.MeshLambertMaterial({ color: 0xFF5D73 })); const h = new THREE.Group(); h.rotation.y = k * 2.094; fin.position.set(.42, -.35, -.04); h.add(fin); body.add(h); }
-    this.tara = makeMascot(); this.tara.scale.setScalar(.42); this.tara.position.set(0, 1.55, 0); rocket.add(this.tara);
+    this.tara = makeMascot({ seated: true }); this.tara.scale.setScalar(.5); this.tara.position.set(0, 1.25, 0); rocket.add(this.tara);   // Astro pops out of the rocket's top hatch
     this.flame = new THREE.Mesh(new THREE.ConeGeometry(.32, 1.1, 16), new THREE.MeshBasicMaterial({ color: 0xFFA54A })); this.flame.rotation.x = Math.PI; this.flame.position.y = -1.6; rocket.add(this.flame);
     this.flameCore = new THREE.Mesh(new THREE.ConeGeometry(.17, .7, 12), new THREE.MeshBasicMaterial({ color: 0xFFF1C2 })); this.flameCore.rotation.x = Math.PI; this.flameCore.position.y = -1.45; rocket.add(this.flameCore);
     // HUD label
     this.pills = WORLDS.map(w => { const m = new THREE.Mesh(new THREE.PlaneGeometry(760, 190), new THREE.MeshBasicMaterial({ map: pillTex(w.name + '  ·  ' + w.sub, { w: 1520, h: 380, accent: w.color, font: 110 }), transparent: true, depthTest: false, toneMapped: false, opacity: 0 }));
       m.position.set(960, 1080 * .82, 0); this.hudRoot.add(m); return m; });
+    const hello = bridge.get('greeting', 'Hi! Where shall we fly today?');
+    this.hello = new THREE.Mesh(new THREE.PlaneGeometry(1300, 170), new THREE.MeshBasicMaterial({ map: pillTex(hello, { w: 1700, h: 220, accent: '#FFC94A', font: 80 }), transparent: true, depthTest: false, toneMapped: false }));
+    this.hello.position.set(960, 1080 * .82, 0); this.hudRoot.add(this.hello); this.helloT = time(); this.downs = 0; this.downT = 0;
     this.cur = focus; this.from = focus; this.flyT = -9; this.diveT = -9; this.labelT = time();
     this.rp = park(focus); this.tmp = new THREE.Vector3(); this.cp = new THREE.Vector3(); this.cl = new THREE.Vector3(); this.cp2 = new THREE.Vector3(); this.cl2 = new THREE.Vector3(); this.q = new THREE.Quaternion(); this.up = v(0, 1, 0); this.dir = new THREE.Vector3();
     this.P = [new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()];
     bridge.event('home', {});
   },
-  key(k) { const t = time(); if (t - this.diveT < 2.5) return true; if (t - this.flyT < 1.4) return true;
+  key(k) { const t = time();
+    if (k === 'down') { this.downs = t - this.downT < 2.5 ? this.downs + 1 : 1; this.downT = t; if (this.downs >= 5) { this.downs = 0; bridge.open('parent'); } return true; } if (t - this.diveT < 2.5) return true; if (t - this.flyT < 1.4) return true;
     if (k === 'right' && this.cur < 2) this.go(this.cur + 1); else if (k === 'left' && this.cur > 0) this.go(this.cur - 1);
     else if (k === 'ok') { if (WORLDS[this.cur].key === 'watch' && bridge.get('watchResting', false)) { this.resting(); return true; } this.diveT = t; bridge.sfx('twinkle'); } else if (k === 'back') return false; else return false; return true; },
   go(i) { this.from = this.cur; this.cur = i; this.flyT = time(); this.labelT = time() + 2.6; bridge.sfx('pop'); },
@@ -82,6 +86,8 @@ export const HomeScreen = {
     if (diveU >= 0) { const k = ease(Math.min(1, diveU * 1.3)); this.cp.lerp(this.tmp.copy(this.rp).add(this.cp2.set(1.5, 1.4, 5.5)), k); this.cl.lerp(WORLDS[this.cur].pos, k); camera.fov = 42 + 20 * diveU * diveU; }
     else camera.fov = 42;
     camera.updateProjectionMatrix(); camera.position.copy(this.cp); camera.lookAt(this.cl); this.space.userData.follow(camera);
+    const hk = t - this.helloT; this.hello.visible = hk < 3.6; this.hello.material.opacity = clamp(hk / .3) * clamp((3.6 - hk) / .4);
+    if (hk < 3.6) this.labelT = Math.max(this.labelT, this.helloT + 3.6);
     const lk = clamp((t - this.labelT) / .35); this.pills.forEach((p, i) => { const on = i === this.cur && flyU >= 1 && diveU < 0; p.visible = on; p.material.opacity = on ? lk : 0; p.scale.setScalar(.9 + .1 * lk); });
   },
   resting() { bridge.sfx('bump'); this.tara.userData.setMood('think', time()); const p = this.pills[2]; p.material.map = pillTex('Videos are resting. Try Play or Try!', { w: 1520, h: 380, accent: WORLDS[2].color, font: 90 }); p.material.needsUpdate = true; this.labelT = time(); },

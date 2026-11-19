@@ -25,7 +25,7 @@ export default function myEngine(ctx, round) {
     key(k) { /* 'left'|'right'|'up'|'down'|'ok' → return true if handled ('up' is taken by the shell for voice) */ },
     update(t, dt) { /* animate */ },
     focusX() { return 0; },  // world x of the focused thing (camera leans toward it)
-    lookX() { return 0; },   // -1..1 where Tara looks
+    lookX() { return 0; },   // -1..1 where Astro looks
     dispose() {},
   };
 }
@@ -34,8 +34,8 @@ export default function myEngine(ctx, round) {
 - `root`, `hudRoot`, `game`, `round`, `tara`, `fill(text)` (replaces `{buddy}`);
 - `bubble(text, accentColor)` and `say(text)` (voice; the host plays recorded clips);
 - `sfx(name)`, where name is one of chime, pop, boing, bump, twinkle, fanfare, chirp;
-- `correct(worldPos?)`: chime, Tara happy, and a burst at `worldPos`;
-- `wrong(hint?)`: boing, Tara thinking, and a bubble with the hint after the second miss;
+- `correct(worldPos?)`: chime, Astro happy, and a burst at `worldPos`;
+- `wrong(hint?)`: boing, Astro thinking, and a bubble with the hint after the second miss;
 - `finish({ firstTry, why })`: ends the round. The shell grows a reward crystal, shows `why` and moves to the next round after 3 s.
 
 Shared kit (`core/kit.js`):

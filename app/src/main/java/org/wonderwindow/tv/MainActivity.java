@@ -39,6 +39,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -189,6 +190,7 @@ public class MainActivity extends Activity implements WorldView.Host {
 
     private void start() {
         rollDay();
+        if (!prefs.getBoolean("setup_seen", false) && !(getIntent() != null && getIntent().getBooleanExtra("skipsetup", false))) { showParentGate(); return; }
         long cooldownLeft = prefs.getLong("cooldownUntil", 0) - System.currentTimeMillis();
         showHub();
     }
@@ -2873,7 +2875,8 @@ public class MainActivity extends Activity implements WorldView.Host {
 
 
     // ------------------------------------------------------------------ About Me / Explorer Passport (aboutme_design.md)
-    private String childName() { return getString(R.string.child_name).trim(); }
+    /** The child's first name: set by a grown-up on this TV (parent setup), else the family-build value. Never leaves the TV. */
+    private String childName() { String n = prefs == null ? "" : prefs.getString("child_name_local", "").trim(); return n.isEmpty() ? getString(R.string.child_name).trim() : n; }
 
     private int childAge() {
         String b = getString(R.string.child_birth).trim();          // YYYY-MM
@@ -3700,6 +3703,7 @@ public class MainActivity extends Activity implements WorldView.Host {
                     return true;
                 case "warmintro": if (fromPlayWarmup) { fromPlayWarmup = false; showPlayList(); } else showHub(); return true;
                 case "hub": return true;
+                case "parentgate": case "parentsetup": prefs.edit().putBoolean("setup_seen", true).apply(); showHub(); return true;
                 case "t3home": showHub(); return true;
                 case "t3list": showTryHome3(); return true;
                 case "t3prev": showTryList3(t3Fam); return true;
@@ -3792,6 +3796,7 @@ public class MainActivity extends Activity implements WorldView.Host {
         if (k.startsWith("gseen:")) return JSONObject.quote(prefs.getString(k, ""));
         if ("watchResting".equals(k)) return String.valueOf(cooldownLeftMs() > 0 || minutesLeftToday() < 5);
         if ("try3".equals(k)) return worldTry3();
+        if ("greeting".equals(k)) { String n = childName(); return JSONObject.quote(n.isEmpty() ? "Hi! Where shall we fly today?" : "Hi " + n + "! Where shall we fly today?"); }
         return prefs.getString("w:" + k, "");
     }
     @Override public void worldSet(String k, String v) {
@@ -3842,7 +3847,9 @@ public class MainActivity extends Activity implements WorldView.Host {
             return r.toString();
         } catch (Exception e) { Log.w(TAG, "worldTry3 " + e); return ""; }
     }
-    @Override public void worldBack() { /* Back never leaves the app from the home planets (same as the classic doors). */ }
+    @Override public void worldBack() {
+        // Back on the home planets never leaves the app.
+    }
     @Override public void worldOpen(String w) {
         if ("try".equals(w)) {
             if (minutesLeftToday() < 1) { hideWorld(); showResting("TV is resting now.", -1); return; }
@@ -3852,6 +3859,7 @@ public class MainActivity extends Activity implements WorldView.Host {
             if (cooldownLeftMs() > 0 || minutesLeftToday() < 5) { sfx("bump"); return; }
             hideWorld();
             beginSession(Math.max(1, Math.min(getResources().getInteger(R.integer.watch_session_min), minutesLeftToday())));
+        } else if ("parent".equals(w)) { showParentGate();
         } else if (w.startsWith("native-game:")) {
             String id = w.substring("native-game:".length());
             for (int i = 0; games != null && i < games.length(); i++) {
@@ -3867,6 +3875,59 @@ public class MainActivity extends Activity implements WorldView.Host {
         return false;
     }
     @Override public String worldBuddy() { return getString(R.string.buddy_name); }
+
+
+    // ------------------------------------------------------------------ parent setup (owner 19 Nov): child's first name, stored only on this TV
+    private int gateA, gateB;
+
+    /** Grown-ups-only question before setup (a sum a UKG child can't do at a glance). */
+    private void showParentGate() {
+        if (world != null && worldShown) hideWorld();
+        screen = "parentgate"; stopVoice(); root.removeAllViews(); setNight(true);
+        gateA = 6 + rng.nextInt(4); gateB = 7 + rng.nextInt(3);
+        int ans = gateA + gateB;
+        LinearLayout col = column();
+        col.addView(text("Grown-ups only", 64, Color.WHITE, true));
+        col.addView(text("What is " + gateA + " + " + gateB + " ?", 56, AMBER, true));
+        col.addView(spacer(30));
+        int[] opts = {ans - 2, ans, ans + 3};
+        int shift = rng.nextInt(3);
+        List<TextView> bs = new ArrayList<>();
+        for (int i = 0; i < 3; i++) { int v = opts[(i + shift) % 3];
+            bs.add(button(String.valueOf(v), 0xFF3A3460, x -> { if (v == ans) showParentSetup(); else { prefs.edit().putBoolean("setup_seen", true).apply(); showHub(); } })); }
+        TextView later = button("Later", 0xFF2A2547, x -> { prefs.edit().putBoolean("setup_seen", true).apply(); showHub(); });
+        col.addView(btnRow(bs.get(0), bs.get(1), bs.get(2), later));
+        center(col);
+        bs.get(0).requestFocus();
+    }
+
+    private void showParentSetup() {
+        screen = "parentsetup"; root.removeAllViews(); setNight(true);
+        LinearLayout col = column();
+        col.addView(text("Grown-up setup", 64, Color.WHITE, true));
+        col.addView(text("Your child's first name (optional). It stays on this TV only.", 40, AMBER, true));
+        col.addView(spacer(24));
+        EditText name = new EditText(this);
+        name.setSingleLine(true); name.setTextSize(android.util.TypedValue.COMPLEX_UNIT_PX, px(56)); name.setTextColor(Color.WHITE);
+        name.setHint("First name"); name.setHintTextColor(0x88FFFFFF); name.setGravity(Gravity.CENTER);
+        name.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(20)});
+        name.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_FLAG_CAP_WORDS | android.text.InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+        name.setText(prefs.getString("child_name_local", ""));
+        GradientDrawable bg = new GradientDrawable(); bg.setColor(0xFF2A2547); bg.setCornerRadius(px(28)); bg.setStroke(px(4), AMBER); name.setBackground(bg);
+        name.setPadding(px(30), px(18), px(30), px(18));
+        col.addView(name, new LinearLayout.LayoutParams(px(800), ViewGroup.LayoutParams.WRAP_CONTENT));
+        col.addView(spacer(30));
+        TextView save = button("Save", 0xFF6553DB, x -> {
+            String v = name.getText().toString().trim().replaceAll("[^\\p{L} .'-]", "");
+            prefs.edit().putString("child_name_local", v).putBoolean("setup_seen", true).apply();
+            showHub();
+        });
+        TextView clear = button("Remove name", 0xFF3A3460, x -> { prefs.edit().remove("child_name_local").putBoolean("setup_seen", true).apply(); showHub(); });
+        TextView skip = button("Skip", 0xFF2A2547, x -> { prefs.edit().putBoolean("setup_seen", true).apply(); showHub(); });
+        col.addView(btnRow(save, clear, skip));
+        center(col);
+        name.requestFocus();
+    }
 
     // ------------------------------------------------------------------ small UI helpers
     private int px(float v) { return Math.round(v * s); }

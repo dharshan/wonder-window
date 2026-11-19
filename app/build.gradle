@@ -9,7 +9,7 @@ plugins { id 'com.android.application' }
 def esc = { String v -> v.replace('&', '&amp;').replace('<', '&lt;').replace("'", "\\'") }
 
 def publicDefaults = [
-        app_name: 'Wonder Window', buddy_name: 'Tara', warmup_title: "Tara's Warm-up", world3d: 'true',
+        app_name: 'Wonder Window', buddy_name: 'Astro', warmup_title: "Astro's Warm-up", world3d: 'true',
         child_name: '', child_birth: '', aboutme_unlock_all: 'false', daily_limit_min: '120', watch_session_min: '20',
         try_v3: 'true', try_enabled: 'true', try_allow_supervised: 'true', try_families: '', try_age_band: '5-6'
 ]

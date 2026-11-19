@@ -1,5 +1,5 @@
 // Shared building blocks for every 3D game engine: choice pods, a board tray, a celebration burst,
-// the reward garden, Tara's speech bubble, progress seeds and HUD buttons. All D-pad driven.
+// the reward garden, Astro's speech bubble, progress seeds and HUD buttons. All D-pad driven.
 import { THREE, CFG, hud, itemTex, pillTex, canvasTex, clamp, ease, easeOutBack, glow, time } from './engine.js';
 
 // ---------- geometry ----------

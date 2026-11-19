@@ -6,7 +6,7 @@
 // firstTry = bumps <= 2. No time limit.
 // NOTE: engines/index.js sends every round that has a truthy `grid` here, but scene_canvas rounds use
 // grid: {rows, cols} (an object) — native routes those to compose, so this engine hands them to compose too.
-// 3D: a tilted tile maze on the planet surface; Tara hops tile to tile with the hero and collects the star.
+// 3D: a tilted tile maze on the planet surface; Astro hops tile to tile with the hero and collects the star.
 // Needs 'up' (wantsUp) and 'down' for movement.
 import { THREE, CFG, time, clamp } from '../core/engine.js';
 import { rbox, lam, face, STAR_GEO, RING_GEO, wig, prog , makeTimers } from './bkit.js';
@@ -41,7 +41,7 @@ export default function gridPath(ctx, r) {
   for (let i = 0; i < rows; i++) { steps.push([]); for (let j = 0; j < cols; j++) { if (cell[i][j] === '#') { steps[i].push(null); continue; }
     const d = new THREE.Group(); [-1, 1].forEach(k => { const m = new THREE.Mesh(STEP, stepM); m.rotation.x = -Math.PI / 2; m.position.set(k * s * .12, .25, k * s * .08); d.add(m); });
     pos(i, j, 0, d.position); d.visible = false; board.add(d); steps[i].push(d); } }
-  // walker: the hero (legend S) riding along with a mini Tara
+  // walker: the hero (legend S) riding along with a mini Astro
   const walker = new THREE.Group(); board.add(walker);
   const heroF = face(hero, s * .78); heroF.renderOrder = 4; heroF.rotation.x = -TILT; heroF.position.set(-s * .08, s * .42, s * .12); walker.add(heroF);
   const pad = new THREE.Mesh(RING_GEO, new THREE.MeshBasicMaterial({ color: 0x7CF2B0 })); pad.rotation.x = Math.PI / 2; pad.scale.setScalar(s * .38); pad.position.y = .26; walker.add(pad);
@@ -92,7 +92,7 @@ export default function gridPath(ctx, r) {
       walker.rotation.z = wig(t, bumpT, .25);
       const sq = CFG.reduced ? 1 : 1 + (u < 1 ? -.08 * Math.sin(u * Math.PI) : 0); heroF.scale.set(1 / sq, sq, 1);
       if (won && !CFG.reduced && t > won) walker.position.y += Math.abs(Math.sin((t - won) * 7)) * s * .35;
-      // mini Tara rides just behind-right of the hero
+      // mini Astro rides just behind-right of the hero
       board.localToWorld(tmp.set(walker.position.x + s * .42, walker.position.y + s * .9, walker.position.z - s * .15));
       tara.position.copy(tmp); tara.scale.setScalar(s * .3);
       pad.material.color.setHex(Math.sin(t * 5) > 0 ? 0x7CF2B0 : 0xB8FFD8);

@@ -3,7 +3,7 @@
 // Round fields: prompt, parent_prompt, buttons [ok, again] (default ✅ 🔁), labels (default "Said it!",
 // "Practise more"), practise_say, why.
 // Rules kept from native: ✅ always finishes the round as first try; 🔁 just shows/speaks practise_say and stays.
-// 3D: a little stage where Tara's sound rings pulse while he speaks; two big buttons (left/right + OK).
+// 3D: a little stage where Astro's sound rings pulse while he speaks; two big buttons (left/right + OK).
 import { THREE, CFG, time, clamp, bridge } from '../core/engine.js';
 import { lam, face, label3d, bigButton, wig , makeTimers } from './bkit.js';
 
