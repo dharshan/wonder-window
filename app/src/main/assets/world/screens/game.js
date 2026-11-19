@@ -33,7 +33,7 @@ export const GameScreen = {
     const g = DATA.byId[id]; this.game = g; this.root = new THREE.Group(); this.hudRoot = new THREE.Group();
     this.space = makeSpace(); this.root.add(this.space);
     this.root.add(makeGround(g.color || '#F08A3E', 'puzzle'));
-    this.tara = makeMascot(); this.tara.position.set(-8.6, 2.3, -1.2); this.tara.scale.setScalar(.95); this.root.add(this.tara);
+    this.tara = makeMascot(); this.tara.position.set(-8.2, 1.5, -1.2); this.tara.scale.setScalar(1.75); this.root.add(this.tara);
     this.burst = makeBurst(); this.root.add(this.burst); this.garden = makeGarden(); this.root.add(this.garden);
     this.bubble = makeBubble(this.hudRoot);
     // shader warm-up: the burst and reward crystals are compiled during the screen fade, not at the first correct answer

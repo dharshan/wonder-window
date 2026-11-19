@@ -12,7 +12,7 @@ export const PlaylistScreen = {
   enter({ focus } = {}) {
     const D = this.D; this.root = new THREE.Group(); this.hudRoot = new THREE.Group();
     this.space = makeSpace(); this.root.add(this.space); this.root.add(makeGround('#F08A3E', 'puzzle'));
-    this.tara = makeMascot(); this.tara.position.set(-8.4, 1.6, 2); this.tara.scale.setScalar(.8); this.root.add(this.tara);
+    this.tara = makeMascot(); this.tara.position.set(-8.2, 1.2, 2); this.tara.scale.setScalar(1.6); this.root.add(this.tara);
     // order: by category then id, so UP/DOWN can jump categories
     this.games = D.list.slice().sort((a, b) => String(a.category || '').localeCompare(String(b.category || '')) || a.id.localeCompare(b.id));
     this.shelf = new THREE.Group(); this.root.add(this.shelf);

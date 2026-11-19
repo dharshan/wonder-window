@@ -45,7 +45,7 @@ export const HomeScreen = {
     const band = new THREE.Mesh(new THREE.CylinderGeometry(.6, .61, .22, 32, 1, true), new THREE.MeshLambertMaterial({ color: 0x6B4BF0 })); band.position.y = -.25; body.add(band);
     for (let k = 0; k < 3; k++) { const fs = new THREE.Shape(); fs.moveTo(0, 0); fs.quadraticCurveTo(.75, -.2, .8, -.95); fs.lineTo(.1, -.55); fs.lineTo(0, -.6); fs.closePath();
       const fin = new THREE.Mesh(new THREE.ExtrudeGeometry(fs, { depth: .08, bevelEnabled: false }), new THREE.MeshLambertMaterial({ color: 0xFF5D73 })); const h = new THREE.Group(); h.rotation.y = k * 2.094; fin.position.set(.42, -.35, -.04); h.add(fin); body.add(h); }
-    this.tara = makeMascot({ seated: true }); this.tara.scale.setScalar(.5); this.tara.position.set(0, 1.25, 0); rocket.add(this.tara);   // Astro pops out of the rocket's top hatch
+    this.tara = makeMascot({ seated: true }); this.tara.scale.setScalar(1.05); this.tara.position.set(.15, 2.0, .2); rocket.add(this.tara);   // Astro pops out of the rocket's top hatch
     this.flame = new THREE.Mesh(new THREE.ConeGeometry(.32, 1.1, 16), new THREE.MeshBasicMaterial({ color: 0xFFA54A })); this.flame.rotation.x = Math.PI; this.flame.position.y = -1.6; rocket.add(this.flame);
     this.flameCore = new THREE.Mesh(new THREE.ConeGeometry(.17, .7, 12), new THREE.MeshBasicMaterial({ color: 0xFFF1C2 })); this.flameCore.rotation.x = Math.PI; this.flameCore.position.y = -1.45; rocket.add(this.flameCore);
     // HUD label

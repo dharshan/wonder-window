@@ -16,7 +16,7 @@ export const TryScreen = {
     if (!data || !data.families || !data.families.length) { bridge.open('try'); router.go('home', { focus: 1 }); return; }
     this.data = data; this.root = new THREE.Group(); this.hudRoot = new THREE.Group();
     this.space = makeSpace(); this.root.add(this.space); this.root.add(makeGround('#2FBF8F', 'craters'));
-    this.tara = makeMascot(); this.tara.position.set(-8, 1.8, 0); this.tara.scale.setScalar(.85); this.root.add(this.tara);
+    this.tara = makeMascot(); this.tara.position.set(-8.2, 1.3, 0); this.tara.scale.setScalar(1.65); this.root.add(this.tara);
     this.stage = new THREE.Group(); this.root.add(this.stage);
     this.title = hudPill(this.hudRoot, 1300, 150, 960, 1080 - 105); this.line = hudPill(this.hudRoot, 1500, 120, 960, 300); this.dots = hudPill(this.hudRoot, 600, 70, 960, 1080 - 205);
     this.dimQ = new THREE.Mesh(new THREE.PlaneGeometry(1920, 1080), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0, depthTest: false, toneMapped: false })); this.dimQ.position.set(960, 540, 5); this.hudRoot.add(this.dimQ);
