@@ -10,15 +10,15 @@ H = ["choking_small_parts","sharp_tools","heat_fire","electricity","chemicals","
 def rev(**m): return {h: m.get(h, "none") for h in H}
 def st(pic, text, say): return {"pic": pic, "text": text, "say": say}
 A = []
-def add(i, cat, pic, title, desc, say, ages, dur, mats, adult, steps, safety, adapt, acc, tags, review, indoor=None, outdoor=None, setup=None):
+def add(i, cat, pic, title, desc, say, ages, dur, mats, adult, steps, safety, adapt, acc, tags, review, indoor=None, outdoor=None, setup=None, status="approved", approved="parent, 17 Nov 2026"):
     A.append({"schema_version":1,"activity_id":i,"title":title,"short_description":desc,"say":say,"pic":pic,"category":cat,
       "subcategories":[],"recommended_age_bands":ages,"difficulty":"easy","duration_minutes":{"min":dur[0],"max":dur[1]},
       "screen_intro_seconds":45,"learning_intentions":[],"materials":mats,"setup_steps":setup or [],"child_steps":steps,
       "adult_support":adult,"safety_notes":safety,"adaptations_by_age":adapt,"accessibility_adaptations":acc,
       "indoor_alternative":indoor,"outdoor_alternative":outdoor,"video_topic_tags":tags,
       "language_variants":{"en":{"title":title},"kn":{},"hi":{}},"illustration_asset":None,"audio_asset":None,
-      "parent_review_required":True,"safety_review":review,"safety_status":"approved","content_status":"reviewed",
-      "approved_by":"parent, 17 Nov 2026"})
+      "parent_review_required":True,"safety_review":review,"safety_status":status,"content_status":"reviewed",
+      "approved_by":approved})
 add("TRY-MOVE-001","move_and_play","🐘","Move Like an Animal","Pick an animal and move like it.","Pick an animal and move just like it!",
   ["3-4","5-6","7-8"],(3,5),[],"optional",
   [st("🐘","Pick an animal","Pick an animal. An elephant? A rabbit? A tortoise?"),st("🐢","Move slowly like it","Move slowly, like a tortoise."),
@@ -89,6 +89,96 @@ add("TRY-CALM-001","calm_and_mindful","👀","Five Things I Can See","Look aroun
   ["No eyes-closed or breathing instructions; stop any time."],
   {"3-4":"Find two things with a grown-up.","5-6":"Five things.","9-10":"Five things, then three sounds."},
   ["A child with low vision can find five things to touch or hear."],["calm","colours","shapes"],rev())
+RV="Claude review 24 Nov 2026 (owner asked Claude to review)"; PS="parent_supervision_required"
+def M(pic,name,kind="household"): return {"pic":pic,"name":name,"kind":kind}
+add("TRY-THINK-002","think_and_discover","🧺","Three Baskets at Home","Sort things into three baskets.","Sort things into three baskets. Let's see how!",
+  ["3-4","5-6","7-8"],(5,10),[M("🧺","three baskets or bowls"),M("🧸","toys or steel kitchen things")],"optional",
+  [st("🧺","Put out three baskets","Put out three baskets."),st("🧸","Pick a pile of things","Pick a pile of toys or steel things."),
+   st("👆","Make three groups","Make three groups. Which things go together?"),st("🗣️","Tell what each group is","Tell a grown-up why they go together.")],
+  ["Big toys and steel kitchen things only; no small parts, glass or sharp things.","A grown-up checks the pile first."],
+  {"3-4":"Two baskets, sorted by colour.","5-6":"Three baskets; the child picks the rule.","7-8":"Sort again by a new rule."},
+  ["Seated on the floor works.","Sort by touch if sight is low."],["sorting","home","groups"],rev(choking_small_parts="mitigated"),status=PS,approved=RV)
+add("TRY-THINK-003","think_and_discover","🥄","Make Ten with Spoons","Two piles of spoons that make ten.","Make two piles of spoons that make ten!",
+  ["5-6","6-7"],(5,10),[M("🥄","10 steel spoons"),M("🍽️","two plates")],"recommended",
+  [st("🥄","Count ten spoons","Count ten spoons. One, two, three..."),st("🍽️","Put some on each plate","Put some on each plate."),
+   st("👀","Count each pile","Count each plate. How many?"),st("🔁","Try a new way","Now make ten a new way!")],
+  ["Steel spoons only, no knives or forks.","A grown-up fetches the spoons."],
+  {"5-6":"Find two or three ways to make ten.","6-7":"Find every way; say 7 and 3 make ten."},
+  ["A grown-up can point while the child counts aloud.","Seated at a table works."],["numbers","counting","kitchen"],rev(sharp_tools="mitigated"),status=PS,approved=RV)
+add("TRY-THINK-004","think_and_discover","📊","Window Tally","Count birds or vehicles with tally marks.","Count what passes the window. Make a mark for each one!",
+  ["5-6","7-8"],(5,10),[M("🏠","a window"),M("📄","paper"),M("🖍️","a crayon")],"optional",
+  [st("🏠","Sit at a window","Sit at a window."),st("🚗","Pick cars or birds","Pick cars or birds to count."),
+   st("✏️","Make a mark for each","Make one mark for each one."),st("🏆","Which had the most?","Count your marks. Which had most?")],
+  ["Stay inside at the window; keep it closed or with a grille.","Crayon, not a pen."],
+  {"5-6":"Count one thing for a few minutes.","7-8":"Count two things and compare; bundle marks in fives."},
+  ["A grown-up can mark while the child tells.","Listen for vehicles if sight is low."],["counting","data","vehicles"],rev(outdoor_environment="mitigated"),status=PS,approved=RV)
+add("TRY-THINK-005","think_and_discover","🧭","Draw a Maze for Appa or Amma","Draw a path for a grown-up to follow.","Draw a winding path. Can Appa or Amma follow it?",
+  ["5-6","7-8"],(5,10),[M("📄","paper"),M("🖍️","a crayon")],"recommended",
+  [st("📄","Get paper and a crayon","Get paper and a crayon."),st("🏁","Mark start and finish","Mark a start and a finish."),
+   st("🌀","Draw a winding path","Draw a winding path between them."),st("👨","Ask a grown-up to follow","Ask Appa or Amma to follow it!")],
+  ["Crayons only; a grown-up sits close by."],
+  {"5-6":"One wiggly path.","7-8":"Add dead ends, then say left and right turns."},
+  ["Trace the path with a finger.","A grown-up can draw while the child gives directions."],["maze","paths","directions"],rev(adult_involvement="mitigated"),status=PS,approved=RV)
+add("TRY-NATURE-002","nature_and_notice","🌱","Seed in a Cup","Plant a seed and watch it for a week.","Plant a seed in a cup and watch it grow!",
+  ["3-4","5-6","7-8"],(5,10),[M("🥛","a paper or plastic cup"),M("🌱","soil and a moong seed"),M("💧","a little water")],"recommended",
+  [st("🥛","Put soil in the cup","Put soil in the cup."),st("🌱","Press a seed in","Press a seed into the soil."),
+   st("💧","Give a little water","Give it a little water."),st("☀️","Put it in the light","Put it by a bright window."),
+   st("👀","Look each day","Look every day. What changed?")],
+  ["Wash hands with soap after touching soil or seeds.","Seeds are not for eating; keep them away from younger siblings.","A grown-up checks the soil is clean."],
+  {"3-4":"Plant with help and look each day.","5-6":"Water it and tell what it needs.","7-8":"Draw it each day for a week."},
+  ["Seated at a table works.","Feel the soil if sight is low."],["plants","growing","science"],
+  rev(food_allergy_choking="mitigated",animal_plant_insect="mitigated",choking_small_parts="mitigated"),status=PS,approved=RV)
+add("TRY-NATURE-003","nature_and_notice","🌞","Shadow Tracing","Trace a toy's shadow, then again later.","Trace your toy's shadow. Then look again later!",
+  ["5-6","7-8"],(5,10),[M("🧸","a toy"),M("📄","big paper"),M("🖍️","a crayon")],"recommended",
+  [st("🧸","Put a toy in the sun","Put a toy in the sunlight."),st("✏️","Trace its shadow","Trace the shadow with a crayon."),
+   st("⏰","Wait for later","Wait until later in the day."),st("🔍","Trace it again","Trace it again. What changed?")],
+  ["Stay inside by a sunny window or go out with a grown-up.","Never look at the sun.","Crayon only."],
+  {"5-6":"Trace twice and say what changed.","7-8":"Trace three times and guess where it moves next."},
+  ["A grown-up can hold the paper still.","Seated by the window works."],["sun","shadows","time"],rev(outdoor_environment="mitigated"),status=PS,approved=RV)
+add("TRY-HELP-002","help_and_everyday","💰","Rupee Shop","Play shop with toy prices of one to five rupees.","Let's play shop! Toys cost one to five rupees.",
+  ["5-6","7-8"],(10,15),[M("🧸","toys with price papers"),M("💰","paper coins or a few real coins")],"required",
+  [st("🧸","Put prices on toys","Put a price on each toy."),st("💰","Get your coins","Get your paper coins."),
+   st("🛍️","Choose and pay","Choose a toy and pay."),st("🔁","Swap shop and buyer","Now swap! Who is the shopkeeper?")],
+  ["Paper coins are best. Real coins only with a grown-up watching.","Coins are a choking risk for little ones; count them before and after, and put them away.","Keep coins out of the mouth."],
+  {"5-6":"Prices one to three; pay with paper coins.","7-8":"Prices up to five; work out change."},
+  ["A grown-up can count coins aloud with the child.","Sort coins by touch."],["money","shopping","counting"],
+  rev(choking_small_parts="mitigated",adult_involvement="mitigated"),status=PS,approved=RV)
+add("TRY-HELP-003","help_and_everyday","🔊","Sound Hunt","Find three things that start with the same sound.","Find three things that start with the same sound!",
+  ["5-6","7-8"],(5,10),[M("🏠","things around the home")],"optional",
+  [st("🍌","Hear the first sound","Banana starts with buh. Say buh!"),st("🔍","Look around the room","Look around for something with buh."),
+   st("🧺","Bring it to a grown-up","Show it to a grown-up. Say its name."),st("🔁","Find three in all","Find three things with buh!")],
+  ["Carry only safe things; leave glass, knives and hot things.","A grown-up helps with high shelves."],
+  {"5-6":"Hunt one sound with help.","7-8":"Hunt a new sound each round."},
+  ["Say the names aloud together.","Point instead of fetching if moving is hard."],["sounds","words","language"],rev(exertion_fall="mitigated"),status=PS,approved=RV)
+add("TRY-MOVE-004","move_and_play","🙌","Left Hand, Right Foot","Simon says with left and right.","Simon says! Move your left or right hand and foot!",
+  ["5-6","7-8"],(3,5),[M("👫","a grown-up caller","none")],"recommended",
+  [st("🙋","Stand in a clear spot","Stand in a clear spot."),st("✋","Raise your right hand","Simon says, raise your right hand!"),
+   st("🦶","Tap your left foot","Simon says, tap your left foot."),st("🔄","Swap and be Simon","Now you be Simon!")],
+  ["Clear floor, no furniture nearby.","Slow moves; no hopping or spinning."],
+  {"5-6":"One hand or foot at a time.","7-8":"Cross over and do two moves at once."},
+  ["Seated: use hands only.","A coloured band marks the right hand."],["movement","body","left-right"],rev(exertion_fall="mitigated",adult_involvement="mitigated"),status=PS,approved=RV)
+add("TRY-MOVE-005","move_and_play","🔢","Number Hop","Hop to the number that is called out.","Hop to the number you hear! One, two, three!",
+  ["5-6","7-8"],(5,10),[M("📄","paper numbers one to ten"),M("🖍️","chalk or crayon")],"recommended",
+  [st("🔢","Put numbers on the floor","Put numbers one to ten down."),st("👂","Listen to a number","Listen for a number."),
+   st("🐇","Hop to it","Hop to that number!"),st("🔁","Take turns calling","Now you call a number.")],
+  ["Dry floor; tape paper down so it does not slide.","Small hops only, no jumping from furniture.","Chalk only outdoors on a clear path."],
+  {"5-6":"Numbers one to five.","7-8":"Numbers one to ten; hop the sum of two numbers."},
+  ["Seated: point or tap the number.","Large numbers help low vision."],["numbers","movement","counting"],rev(exertion_fall="mitigated",water_slip="mitigated"),status=PS,approved=RV)
+add("TRY-FAMILY-002","family_and_connect","🎾","Question Ball","Pass a soft ball and answer a question.","Pass the soft ball. Whoever holds it answers!",
+  ["5-6","7-8","9-10"],(5,10),[M("🎾","a soft ball or rolled socks"),M("👪","a family member","none")],"required",
+  [st("👪","Sit in a circle","Sit in a circle."),st("🎾","Roll the soft ball","Roll the soft ball to someone."),
+   st("❓","Ask a picture question","Ask: What is your favourite food?"),st("🗣️","Answer, then roll on","Answer, then roll it on!")],
+  ["Soft ball or rolled socks only; roll along the floor.","Keep questions simple and happy; no private questions."],
+  {"5-6":"Questions about food, colours and animals.","7-8":"Ask why, and tell a little story."},
+  ["Answer by pointing or showing.","Any language at home is welcome."],["talking","family","language"],rev(adult_involvement="mitigated"),status=PS,approved=RV)
+add("TRY-CREATE-003","create_and_make","🔷","Shape Picture","Make a picture from paper shapes.","Make a picture out of paper shapes!",
+  ["3-4","5-6","7-8"],(5,15),[M("📄","paper shapes cut by a grown-up"),M("🖍️","a glue stick"),M("📄","a sheet of paper")],"required",
+  [st("✂️","A grown-up cuts shapes","Ask a grown-up to cut shapes."),st("🔷","Pick your shapes","Pick circles, squares and triangles."),
+   st("🏠","Make a picture","Make a house, a bus or a cat."),st("🖍️","Stick it down","Stick it down with a glue stick.")],
+  ["A grown-up does all the cutting; the child never uses scissors.","Glue stick only; tidy up the paper scraps.","Keep small scraps from younger siblings."],
+  {"3-4":"Stick three big shapes.","5-6":"Build a picture and name each shape.","7-8":"Make a scene with ten shapes."},
+  ["Big shapes are easier to hold.","Telling the picture aloud counts."],["shapes","art","paper"],
+  rev(sharp_tools="mitigated",choking_small_parts="mitigated",adult_involvement="mitigated"),status=PS,approved=RV)
 out={"schema_version":1,"families":[{"id":i,"name":n,"icon":ic,"color":c} for i,n,ic,c in FAM],
      "lines":{"home":"Let's do something in the real world!","away":"Now go and try it. You don't need to stay here.","notice":"What did you notice?","rest":"Time to rest."},
      "activities":A}
