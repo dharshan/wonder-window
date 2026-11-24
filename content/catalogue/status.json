@@ -311,15 +311,9 @@
   "spec": "specs/WW-042.md"
  },
  "WW-043": {
-  "stage": "deferred",
-  "approval": "design_spec_draft",
-  "family": "grid_path",
-  "gates": [
-   "catalogue_intake",
-   "dedup_review"
-  ],
-  "notes": "deferred: needs variant clue_path",
-  "spec": "specs/WW-043.md"
+  "stage": "design_spec",
+  "family": "pick",
+  "notes": "36 rounds. Was deferred; built on pick with clue icons on the board (no new variant)."
  },
  "WW-044": {
   "stage": "design_spec",
@@ -651,16 +645,9 @@
   "spec": "specs/WW-026.md"
  },
  "WW-027": {
-  "stage": "deferred",
-  "approval": "not_started",
+  "stage": "design_spec",
   "family": "grid_path",
-  "family_rough": "grid_path",
-  "gates": [
-   "catalogue_intake",
-   "dedup_review"
-  ],
-  "notes": "deferred: needs variant grid_path catalogue support (validate_catalogue rejects it) plus a relative-direction mode. Little Navigator (core `nav`) already lets him move a character to a goal with arrow buttons. The new part is relative turns, which needs a mode where",
-  "spec": "specs/WW-027.md"
+  "notes": "30 mazes (10 per level: 3x3/4x4, 5x5 with dead end, 6x6 with star). Built on grid_path (3D engine). Catalogue validator needs >=10 rounds, so 10 per level."
  },
  "WW-028": {
   "stage": "design_spec",
@@ -2221,7 +2208,7 @@
    "learning_objective_review",
    "design_spec"
   ],
-  "notes": "30 rounds, 3 levels. compose slots (who/where/what, any_ok). Also covers WW-210, WW-066, WW-174: same action, pick one per slot to make a story. No placeholder template is shipped; the buddy (Pip) tells it from per-option label clips plus one generic story_say line.",
+  "notes": "30 rounds, 3 levels. compose slots (who/where/what, any_ok). Also covers WW-210, WW-066, WW-174: same action, pick one per slot to make a story. No placeholder template is shipped; Cherry tells it from per-option label clips plus one generic story_say line.",
   "spec": "specs/WW-213.md"
  },
  "WW-214": {
@@ -5129,7 +5116,7 @@
    "catalogue_intake",
    "dedup_review"
   ],
-  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; the buddy (Pip) tells it back). Same objective, same action. Cluster WW-DUP-056 (canonical WW-213)."
+  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; Cherry tells it back). Same objective, same action. Cluster WW-DUP-056 (canonical WW-213)."
  },
  "WW-259": {
   "approval": "design_spec_draft",
@@ -6118,7 +6105,7 @@
    "catalogue_intake",
    "dedup_review"
   ],
-  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; the buddy (Pip) tells it back). Same objective, same action. Cluster WW-DUP-033 (canonical WW-174)."
+  "notes": "Making an original story from picture prompts is Story Slots (compose slots: who, where, what; Cherry tells it back). Same objective, same action. Cluster WW-DUP-033 (canonical WW-174)."
  },
  "WW-334": {
   "approval": "design_spec_draft",
@@ -6677,5 +6664,30 @@
    "dedup_review"
   ],
   "notes": "Simple reasoning about an everyday situation is Best Choice (what is best for rain, thirst, a cold night) with Best Tool (ww028). Same objective, same pick action."
+ },
+ "WW-501": {
+  "stage": "design_spec",
+  "family": "pick",
+  "notes": "36 rounds. Ten-frame (gold stars) plus extras; L3 compares teen numbers."
+ },
+ "WW-502": {
+  "stage": "design_spec",
+  "family": "pick",
+  "notes": "36 rounds. Skip counting by 10, 5, 2; missing number in the middle only in L3."
+ },
+ "WW-503": {
+  "stage": "design_spec",
+  "family": "pick",
+  "notes": "36 rounds. L2 keeps {buddy} facing the same way as the child (left = screen left). L3 uses arrow-pair choices."
+ },
+ "WW-504": {
+  "stage": "design_spec",
+  "family": "pick",
+  "notes": "36 rounds. Emoji rows up to 6 per row; L3 differences 1-3."
+ },
+ "WW-505": {
+  "stage": "design_spec",
+  "family": "sort",
+  "notes": "36 rounds. Three bins work in the sort engine and validator (pick rule allows 2-4 choices), so no deferral."
  }
 }

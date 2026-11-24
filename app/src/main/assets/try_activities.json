@@ -1037,6 +1037,1268 @@
    "safety_status": "approved",
    "content_status": "reviewed",
    "approved_by": "parent, 17 Nov 2026"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-THINK-002",
+   "title": "Three Baskets at Home",
+   "short_description": "Sort things into three baskets.",
+   "say": "Sort things into three baskets. Let's see how!",
+   "pic": "🧺",
+   "category": "think_and_discover",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🧺",
+     "name": "three baskets or bowls",
+     "kind": "household"
+    },
+    {
+     "pic": "🧸",
+     "name": "toys or steel kitchen things",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🧺",
+     "text": "Put out three baskets",
+     "say": "Put out three baskets."
+    },
+    {
+     "pic": "🧸",
+     "text": "Pick a pile of things",
+     "say": "Pick a pile of toys or steel things."
+    },
+    {
+     "pic": "👆",
+     "text": "Make three groups",
+     "say": "Make three groups. Which things go together?"
+    },
+    {
+     "pic": "🗣️",
+     "text": "Tell what each group is",
+     "say": "Tell a grown-up why they go together."
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Big toys and steel kitchen things only; no small parts, glass or sharp things.",
+    "A grown-up checks the pile first."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Two baskets, sorted by colour.",
+    "5-6": "Three baskets; the child picks the rule.",
+    "7-8": "Sort again by a new rule."
+   },
+   "accessibility_adaptations": [
+    "Seated on the floor works.",
+    "Sort by touch if sight is low."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "sorting",
+    "home",
+    "groups"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Three Baskets at Home"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "mitigated",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-THINK-003",
+   "title": "Make Ten with Spoons",
+   "short_description": "Two piles of spoons that make ten.",
+   "say": "Make two piles of spoons that make ten!",
+   "pic": "🥄",
+   "category": "think_and_discover",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "6-7"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🥄",
+     "name": "10 steel spoons",
+     "kind": "household"
+    },
+    {
+     "pic": "🍽️",
+     "name": "two plates",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🥄",
+     "text": "Count ten spoons",
+     "say": "Count ten spoons. One, two, three..."
+    },
+    {
+     "pic": "🍽️",
+     "text": "Put some on each plate",
+     "say": "Put some on each plate."
+    },
+    {
+     "pic": "👀",
+     "text": "Count each pile",
+     "say": "Count each plate. How many?"
+    },
+    {
+     "pic": "🔁",
+     "text": "Try a new way",
+     "say": "Now make ten a new way!"
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Steel spoons only, no knives or forks.",
+    "A grown-up fetches the spoons."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Find two or three ways to make ten.",
+    "6-7": "Find every way; say 7 and 3 make ten."
+   },
+   "accessibility_adaptations": [
+    "A grown-up can point while the child counts aloud.",
+    "Seated at a table works."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "numbers",
+    "counting",
+    "kitchen"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Make Ten with Spoons"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "mitigated",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-THINK-004",
+   "title": "Window Tally",
+   "short_description": "Count birds or vehicles with tally marks.",
+   "say": "Count what passes the window. Make a mark for each one!",
+   "pic": "📊",
+   "category": "think_and_discover",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🏠",
+     "name": "a window",
+     "kind": "household"
+    },
+    {
+     "pic": "📄",
+     "name": "paper",
+     "kind": "household"
+    },
+    {
+     "pic": "🖍️",
+     "name": "a crayon",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🏠",
+     "text": "Sit at a window",
+     "say": "Sit at a window."
+    },
+    {
+     "pic": "🚗",
+     "text": "Pick cars or birds",
+     "say": "Pick cars or birds to count."
+    },
+    {
+     "pic": "✏️",
+     "text": "Make a mark for each",
+     "say": "Make one mark for each one."
+    },
+    {
+     "pic": "🏆",
+     "text": "Which had the most?",
+     "say": "Count your marks. Which had most?"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Stay inside at the window; keep it closed or with a grille.",
+    "Crayon, not a pen."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Count one thing for a few minutes.",
+    "7-8": "Count two things and compare; bundle marks in fives."
+   },
+   "accessibility_adaptations": [
+    "A grown-up can mark while the child tells.",
+    "Listen for vehicles if sight is low."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "counting",
+    "data",
+    "vehicles"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Window Tally"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "mitigated",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-THINK-005",
+   "title": "Draw a Maze for Appa or Amma",
+   "short_description": "Draw a path for a grown-up to follow.",
+   "say": "Draw a winding path. Can Appa or Amma follow it?",
+   "pic": "🧭",
+   "category": "think_and_discover",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "📄",
+     "name": "paper",
+     "kind": "household"
+    },
+    {
+     "pic": "🖍️",
+     "name": "a crayon",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "📄",
+     "text": "Get paper and a crayon",
+     "say": "Get paper and a crayon."
+    },
+    {
+     "pic": "🏁",
+     "text": "Mark start and finish",
+     "say": "Mark a start and a finish."
+    },
+    {
+     "pic": "🌀",
+     "text": "Draw a winding path",
+     "say": "Draw a winding path between them."
+    },
+    {
+     "pic": "👨",
+     "text": "Ask a grown-up to follow",
+     "say": "Ask Appa or Amma to follow it!"
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Crayons only; a grown-up sits close by."
+   ],
+   "adaptations_by_age": {
+    "5-6": "One wiggly path.",
+    "7-8": "Add dead ends, then say left and right turns."
+   },
+   "accessibility_adaptations": [
+    "Trace the path with a finger.",
+    "A grown-up can draw while the child gives directions."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "maze",
+    "paths",
+    "directions"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Draw a Maze for Appa or Amma"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-NATURE-002",
+   "title": "Seed in a Cup",
+   "short_description": "Plant a seed and watch it for a week.",
+   "say": "Plant a seed in a cup and watch it grow!",
+   "pic": "🌱",
+   "category": "nature_and_notice",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🥛",
+     "name": "a paper or plastic cup",
+     "kind": "household"
+    },
+    {
+     "pic": "🌱",
+     "name": "soil and a moong seed",
+     "kind": "household"
+    },
+    {
+     "pic": "💧",
+     "name": "a little water",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🥛",
+     "text": "Put soil in the cup",
+     "say": "Put soil in the cup."
+    },
+    {
+     "pic": "🌱",
+     "text": "Press a seed in",
+     "say": "Press a seed into the soil."
+    },
+    {
+     "pic": "💧",
+     "text": "Give a little water",
+     "say": "Give it a little water."
+    },
+    {
+     "pic": "☀️",
+     "text": "Put it in the light",
+     "say": "Put it by a bright window."
+    },
+    {
+     "pic": "👀",
+     "text": "Look each day",
+     "say": "Look every day. What changed?"
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Wash hands with soap after touching soil or seeds.",
+    "Seeds are not for eating; keep them away from younger siblings.",
+    "A grown-up checks the soil is clean."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Plant with help and look each day.",
+    "5-6": "Water it and tell what it needs.",
+    "7-8": "Draw it each day for a week."
+   },
+   "accessibility_adaptations": [
+    "Seated at a table works.",
+    "Feel the soil if sight is low."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "plants",
+    "growing",
+    "science"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Seed in a Cup"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "mitigated",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "mitigated",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "mitigated",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-NATURE-003",
+   "title": "Shadow Tracing",
+   "short_description": "Trace a toy's shadow, then again later.",
+   "say": "Trace your toy's shadow. Then look again later!",
+   "pic": "🌞",
+   "category": "nature_and_notice",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🧸",
+     "name": "a toy",
+     "kind": "household"
+    },
+    {
+     "pic": "📄",
+     "name": "big paper",
+     "kind": "household"
+    },
+    {
+     "pic": "🖍️",
+     "name": "a crayon",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🧸",
+     "text": "Put a toy in the sun",
+     "say": "Put a toy in the sunlight."
+    },
+    {
+     "pic": "✏️",
+     "text": "Trace its shadow",
+     "say": "Trace the shadow with a crayon."
+    },
+    {
+     "pic": "⏰",
+     "text": "Wait for later",
+     "say": "Wait until later in the day."
+    },
+    {
+     "pic": "🔍",
+     "text": "Trace it again",
+     "say": "Trace it again. What changed?"
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Stay inside by a sunny window or go out with a grown-up.",
+    "Never look at the sun.",
+    "Crayon only."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Trace twice and say what changed.",
+    "7-8": "Trace three times and guess where it moves next."
+   },
+   "accessibility_adaptations": [
+    "A grown-up can hold the paper still.",
+    "Seated by the window works."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "sun",
+    "shadows",
+    "time"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Shadow Tracing"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "mitigated",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-HELP-002",
+   "title": "Rupee Shop",
+   "short_description": "Play shop with toy prices of one to five rupees.",
+   "say": "Let's play shop! Toys cost one to five rupees.",
+   "pic": "💰",
+   "category": "help_and_everyday",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 10,
+    "max": 15
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🧸",
+     "name": "toys with price papers",
+     "kind": "household"
+    },
+    {
+     "pic": "💰",
+     "name": "paper coins or a few real coins",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🧸",
+     "text": "Put prices on toys",
+     "say": "Put a price on each toy."
+    },
+    {
+     "pic": "💰",
+     "text": "Get your coins",
+     "say": "Get your paper coins."
+    },
+    {
+     "pic": "🛍️",
+     "text": "Choose and pay",
+     "say": "Choose a toy and pay."
+    },
+    {
+     "pic": "🔁",
+     "text": "Swap shop and buyer",
+     "say": "Now swap! Who is the shopkeeper?"
+    }
+   ],
+   "adult_support": "required",
+   "safety_notes": [
+    "Paper coins are best. Real coins only with a grown-up watching.",
+    "Coins are a choking risk for little ones; count them before and after, and put them away.",
+    "Keep coins out of the mouth."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Prices one to three; pay with paper coins.",
+    "7-8": "Prices up to five; work out change."
+   },
+   "accessibility_adaptations": [
+    "A grown-up can count coins aloud with the child.",
+    "Sort coins by touch."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "money",
+    "shopping",
+    "counting"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Rupee Shop"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "mitigated",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-HELP-003",
+   "title": "Sound Hunt",
+   "short_description": "Find three things that start with the same sound.",
+   "say": "Find three things that start with the same sound!",
+   "pic": "🔊",
+   "category": "help_and_everyday",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🏠",
+     "name": "things around the home",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🍌",
+     "text": "Hear the first sound",
+     "say": "Banana starts with buh. Say buh!"
+    },
+    {
+     "pic": "🔍",
+     "text": "Look around the room",
+     "say": "Look around for something with buh."
+    },
+    {
+     "pic": "🧺",
+     "text": "Bring it to a grown-up",
+     "say": "Show it to a grown-up. Say its name."
+    },
+    {
+     "pic": "🔁",
+     "text": "Find three in all",
+     "say": "Find three things with buh!"
+    }
+   ],
+   "adult_support": "optional",
+   "safety_notes": [
+    "Carry only safe things; leave glass, knives and hot things.",
+    "A grown-up helps with high shelves."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Hunt one sound with help.",
+    "7-8": "Hunt a new sound each round."
+   },
+   "accessibility_adaptations": [
+    "Say the names aloud together.",
+    "Point instead of fetching if moving is hard."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "sounds",
+    "words",
+    "language"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Sound Hunt"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "mitigated",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-MOVE-004",
+   "title": "Left Hand, Right Foot",
+   "short_description": "Simon says with left and right.",
+   "say": "Simon says! Move your left or right hand and foot!",
+   "pic": "🙌",
+   "category": "move_and_play",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 3,
+    "max": 5
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "👫",
+     "name": "a grown-up caller",
+     "kind": "none"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🙋",
+     "text": "Stand in a clear spot",
+     "say": "Stand in a clear spot."
+    },
+    {
+     "pic": "✋",
+     "text": "Raise your right hand",
+     "say": "Simon says, raise your right hand!"
+    },
+    {
+     "pic": "🦶",
+     "text": "Tap your left foot",
+     "say": "Simon says, tap your left foot."
+    },
+    {
+     "pic": "🔄",
+     "text": "Swap and be Simon",
+     "say": "Now you be Simon!"
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Clear floor, no furniture nearby.",
+    "Slow moves; no hopping or spinning."
+   ],
+   "adaptations_by_age": {
+    "5-6": "One hand or foot at a time.",
+    "7-8": "Cross over and do two moves at once."
+   },
+   "accessibility_adaptations": [
+    "Seated: use hands only.",
+    "A coloured band marks the right hand."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "movement",
+    "body",
+    "left-right"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Left Hand, Right Foot"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "mitigated",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-MOVE-005",
+   "title": "Number Hop",
+   "short_description": "Hop to the number that is called out.",
+   "say": "Hop to the number you hear! One, two, three!",
+   "pic": "🔢",
+   "category": "move_and_play",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "📄",
+     "name": "paper numbers one to ten",
+     "kind": "household"
+    },
+    {
+     "pic": "🖍️",
+     "name": "chalk or crayon",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "🔢",
+     "text": "Put numbers on the floor",
+     "say": "Put numbers one to ten down."
+    },
+    {
+     "pic": "👂",
+     "text": "Listen to a number",
+     "say": "Listen for a number."
+    },
+    {
+     "pic": "🐇",
+     "text": "Hop to it",
+     "say": "Hop to that number!"
+    },
+    {
+     "pic": "🔁",
+     "text": "Take turns calling",
+     "say": "Now you call a number."
+    }
+   ],
+   "adult_support": "recommended",
+   "safety_notes": [
+    "Dry floor; tape paper down so it does not slide.",
+    "Small hops only, no jumping from furniture.",
+    "Chalk only outdoors on a clear path."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Numbers one to five.",
+    "7-8": "Numbers one to ten; hop the sum of two numbers."
+   },
+   "accessibility_adaptations": [
+    "Seated: point or tap the number.",
+    "Large numbers help low vision."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "numbers",
+    "movement",
+    "counting"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Number Hop"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "mitigated",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "mitigated",
+    "privacy_disclosure": "none",
+    "adult_involvement": "none"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-FAMILY-002",
+   "title": "Question Ball",
+   "short_description": "Pass a soft ball and answer a question.",
+   "say": "Pass the soft ball. Whoever holds it answers!",
+   "pic": "🎾",
+   "category": "family_and_connect",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "5-6",
+    "7-8",
+    "9-10"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 10
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "🎾",
+     "name": "a soft ball or rolled socks",
+     "kind": "household"
+    },
+    {
+     "pic": "👪",
+     "name": "a family member",
+     "kind": "none"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "👪",
+     "text": "Sit in a circle",
+     "say": "Sit in a circle."
+    },
+    {
+     "pic": "🎾",
+     "text": "Roll the soft ball",
+     "say": "Roll the soft ball to someone."
+    },
+    {
+     "pic": "❓",
+     "text": "Ask a picture question",
+     "say": "Ask: What is your favourite food?"
+    },
+    {
+     "pic": "🗣️",
+     "text": "Answer, then roll on",
+     "say": "Answer, then roll it on!"
+    }
+   ],
+   "adult_support": "required",
+   "safety_notes": [
+    "Soft ball or rolled socks only; roll along the floor.",
+    "Keep questions simple and happy; no private questions."
+   ],
+   "adaptations_by_age": {
+    "5-6": "Questions about food, colours and animals.",
+    "7-8": "Ask why, and tell a little story."
+   },
+   "accessibility_adaptations": [
+    "Answer by pointing or showing.",
+    "Any language at home is welcome."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "talking",
+    "family",
+    "language"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Question Ball"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "none",
+    "sharp_tools": "none",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
+  },
+  {
+   "schema_version": 1,
+   "activity_id": "TRY-CREATE-003",
+   "title": "Shape Picture",
+   "short_description": "Make a picture from paper shapes.",
+   "say": "Make a picture out of paper shapes!",
+   "pic": "🔷",
+   "category": "create_and_make",
+   "subcategories": [],
+   "recommended_age_bands": [
+    "3-4",
+    "5-6",
+    "7-8"
+   ],
+   "difficulty": "easy",
+   "duration_minutes": {
+    "min": 5,
+    "max": 15
+   },
+   "screen_intro_seconds": 45,
+   "learning_intentions": [],
+   "materials": [
+    {
+     "pic": "📄",
+     "name": "paper shapes cut by a grown-up",
+     "kind": "household"
+    },
+    {
+     "pic": "🖍️",
+     "name": "a glue stick",
+     "kind": "household"
+    },
+    {
+     "pic": "📄",
+     "name": "a sheet of paper",
+     "kind": "household"
+    }
+   ],
+   "setup_steps": [],
+   "child_steps": [
+    {
+     "pic": "✂️",
+     "text": "A grown-up cuts shapes",
+     "say": "Ask a grown-up to cut shapes."
+    },
+    {
+     "pic": "🔷",
+     "text": "Pick your shapes",
+     "say": "Pick circles, squares and triangles."
+    },
+    {
+     "pic": "🏠",
+     "text": "Make a picture",
+     "say": "Make a house, a bus or a cat."
+    },
+    {
+     "pic": "🖍️",
+     "text": "Stick it down",
+     "say": "Stick it down with a glue stick."
+    }
+   ],
+   "adult_support": "required",
+   "safety_notes": [
+    "A grown-up does all the cutting; the child never uses scissors.",
+    "Glue stick only; tidy up the paper scraps.",
+    "Keep small scraps from younger siblings."
+   ],
+   "adaptations_by_age": {
+    "3-4": "Stick three big shapes.",
+    "5-6": "Build a picture and name each shape.",
+    "7-8": "Make a scene with ten shapes."
+   },
+   "accessibility_adaptations": [
+    "Big shapes are easier to hold.",
+    "Telling the picture aloud counts."
+   ],
+   "indoor_alternative": null,
+   "outdoor_alternative": null,
+   "video_topic_tags": [
+    "shapes",
+    "art",
+    "paper"
+   ],
+   "language_variants": {
+    "en": {
+     "title": "Shape Picture"
+    },
+    "kn": {},
+    "hi": {}
+   },
+   "illustration_asset": null,
+   "audio_asset": null,
+   "parent_review_required": true,
+   "safety_review": {
+    "choking_small_parts": "mitigated",
+    "sharp_tools": "mitigated",
+    "heat_fire": "none",
+    "electricity": "none",
+    "chemicals": "none",
+    "food_allergy_choking": "none",
+    "water_slip": "none",
+    "outdoor_environment": "none",
+    "animal_plant_insect": "none",
+    "exertion_fall": "none",
+    "privacy_disclosure": "none",
+    "adult_involvement": "mitigated"
+   },
+   "safety_status": "parent_supervision_required",
+   "content_status": "reviewed",
+   "approved_by": "Claude review 24 Nov 2026 (owner asked Claude to review)"
   }
  ]
 }
