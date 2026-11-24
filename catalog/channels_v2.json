@@ -1,10 +1,12 @@
 {
  "version": "v2",
- "generated": "2026-11-16",
+ "generated": "2026-11-24",
  "rules": {
   "songs_cap_total": 0.12,
   "min_videos_per_row": 20,
-  "no_repeat_days": 14
+  "no_repeat_days": 14,
+  "age_ceiling": 10,
+  "age_note": "Owner 24 Nov: allow any video suitable for under-10s (he grasps content above his age). Title filters still apply."
  },
  "rows": [
   {
@@ -40,21 +42,75 @@
     [
      "UCoookXUzPciGrEZEXmh4Jjg",
      "Sesame Street (STEM clips)"
-    ]
-   ],
-   "pending": [
-    [
-     "@ScienceMax",
-     "Science Max",
-     "resolve UC id with channels.list"
     ],
     [
-     "youtube.com/user/NatGeoKids",
-     "Nat Geo Kids",
-     "resolve UC id"
+     "UCc_-hy0u9-oKlNdMKHBudcQ",
+     "TheDadLab (home experiments)"
+    ],
+    [
+     "UCbprhISv-0ReKPPyhf7-Dtw",
+     "Science Max - Scholastic"
+    ],
+    [
+     "UCDom90xOqP4avehFjSJO6NA",
+     "Sick Science! (Steve Spangler)",
+     {
+      "skip": "fire|flame|burn|dry ice|explod|lighter|candle"
+     }
+    ],
+    [
+     "UCAJnyTWJPpKXuwgWQDdNWrQ",
+     "Netflix Jr. (StoryBots, Ada Twist, Magic School Bus, Creature Cases only)",
+     {
+      "only": "storybots|ada twist|magic school bus|creature cases|dr\\.? raven|octonauts|izzy|ask the|answer time"
+     }
     ]
    ],
-   "notes": "Animals now live here (the hidden Animals row is merged in). Peekaboo Kidz and PBS KIDS are Tier 2. Body topics go to H under R8."
+   "pending": [],
+   "notes": "Animals now live here (the hidden Animals row is merged in). Peekaboo Kidz and PBS KIDS are Tier 2. Body topics go to H under R8. 24 Nov: owner's 30-channel list; Netflix Jr. limited to the science shows by title."
+  },
+  {
+   "id": "explorer",
+   "name": "Explorer Lab",
+   "color": "#6B3FD6",
+   "share": 0.06,
+   "target_videos": 40,
+   "covers": [
+    "Bigger-kid science (ages 7-10): engineering, how things work, earth and life science"
+   ],
+   "channels": [
+    [
+     "UCY1kMZp36IQSyNx_9h4mpCg",
+     "Mark Rober",
+     {
+      "skip": "glitter|porch pirate|scam|revenge|prank|squid game|beast"
+     }
+    ],
+    [
+     "UCONtPx56PSebXJOxbFv-2jQ",
+     "Crash Course Kids"
+    ],
+    [
+     "UCjxu5mHqZnVlb_8-Zjv-D1A",
+     "Generation Genius"
+    ],
+    [
+     "UCPRCRM3JKm3sw55lB_427qg",
+     "Mystery Science"
+    ],
+    [
+     "UCeiYXex_fwgYDonaTcSIk6w",
+     "MinuteEarth",
+     {
+      "skip": "poop|sex|mating|evolution|death|die|disease|war|parasite|cannibal"
+     }
+    ],
+    [
+     "UCbprhISv-0ReKPPyhf7-Dtw",
+     "Science Max - Scholastic"
+    ]
+   ],
+   "notes": "Added 24 Nov for the under-10 policy. Held back: SciShow and TED-Ed (adult or dark topics), KiwiCo and Engineering for Kids (adverts)."
   },
   {
    "id": "animals",
@@ -174,6 +230,13 @@
     [
      "UC4p_YSvJlJpEhAh5PMyhkiQ",
      "Highlights Kids (Hidden Pictures puzzles)"
+    ],
+    [
+     "UC2ri4rEb8abnNwXvTjg5ARw",
+     "Khan Academy Kids (circle time, maths, reading)",
+     {
+      "skip": "\\bapp\\b|download|parents?\\b|teachers?\\b"
+     }
     ]
    ],
    "notes": "Brain games share this row; the warm-up (§5A) already gives puzzle practice every session. Smile and Learn is Tier 2: its titles often carry emoji, so R9 will drop some videos, and it posts Shorts (R1). Highlights Kids targets ages 6-12; its ID came from a mirror site (medium confidence), and every video goes to H."
@@ -345,7 +408,14 @@
      "Bing (everyday routines)"
     ]
    ],
-   "notes": "Gap: no verified Indian road-safety channel. Hand-pick 5 road-safety videos (H). Western road clips show right-hand traffic, so prefer Indian ones."
+   "notes": "Gap: no verified Indian road-safety channel. Hand-pick 5 road-safety videos (H). Western road clips show right-hand traffic, so prefer Indian ones.",
+   "pending": [
+    [
+     "@OperationOuch",
+     "Operation Ouch (human body; skip injury and surgery titles)",
+     "resolve UC id; REJECT already drops surgery/blood"
+    ]
+   ]
   },
   {
    "id": "india",
