@@ -1,0 +1,10 @@
+// THROWAWAY SPIKE (Phase 0 input logger). Never merged. Separate package so the child's app and its data are never touched.
+plugins { id 'com.android.application' }
+android {
+    namespace 'org.wonderwindow.tv.spike'
+    compileSdk 34
+    defaultConfig { applicationId 'org.wonderwindow.tv.spike'; minSdk 26; targetSdk 34; versionCode 1; versionName 'spike-input-1' }
+    buildTypes { release { minifyEnabled false; signingConfig signingConfigs.debug } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    lint { abortOnError false; checkReleaseBuilds false }
+}
