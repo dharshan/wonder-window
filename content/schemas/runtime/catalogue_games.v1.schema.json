@@ -96,7 +96,8 @@
       "mirror",
       "pairs",
       "compose",
-      "scene_canvas"
+      "scene_canvas",
+      "catch"
      ]
     },
     "story": {
@@ -203,7 +204,8 @@
       "mirror",
       "pairs",
       "compose",
-      "scene_canvas"
+      "scene_canvas",
+      "catch"
      ]
     }
    },
@@ -259,7 +261,8 @@
       "mirror",
       "pairs",
       "compose",
-      "scene_canvas"
+      "scene_canvas",
+      "catch"
      ]
     },
     "rounds_per_session": {
@@ -367,7 +370,8 @@
       "mirror",
       "pairs",
       "compose",
-      "scene_canvas"
+      "scene_canvas",
+      "catch"
      ]
     },
     "board": {

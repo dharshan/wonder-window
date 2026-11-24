@@ -10,16 +10,20 @@ import { makeSpace, makeGround } from '../core/space.js';
 import { makeBurst, makeGarden, makeBubble, makeSeeds, makeButtons } from '../core/kit.js';
 import { makeMascot } from '../core/mascot.js';
 import { ENGINES, engineFor } from '../engines/index.js';
+const releaseHeld = e => { if (e && e.hold) ['left', 'right', 'up', 'down', 'ok'].forEach(k => e.hold(k, false)); };
 
 let DATA = null;
 export async function loadGames() {
   if (DATA) return DATA;
   const [a, b] = await Promise.all([fetch('../games.json').then(r => r.json()).catch(() => ({ games: [] })), fetch('../catalogue_games.json').then(r => r.json()).catch(() => ({ games: [] }))]);
   // same filtering as MainActivity.onCreate: merged games are hidden, merged modes are shown, unbuilt variants skipped
-  const BUILT = new Set(['pick', 'sort', 'grid_path', 'keypad', 'recite', 'place', 'echo', 'order', 'peek', 'mirror', 'pairs', 'compose', 'scene_canvas', 'slots']);
+  const BUILT = new Set(['catch', 'bench', 'pick', 'sort', 'grid_path', 'keypad', 'recite', 'place', 'echo', 'order', 'peek', 'mirror', 'pairs', 'compose', 'scene_canvas', 'slots']);
   const modes = (b.merged_modes || []).map(m => Object.assign({}, m, { id: m.id || m.mode_id || (m.alias_of + '-' + String(m.name || '').toLowerCase()) }));
   const cat = (b.games || []).filter(g => !g.merged_into && !(g.needs_variant && !BUILT.has(g.needs_variant)));
   const list = [...(a.games || []), ...modes, ...cat].filter(g => g && g.id && g.levels);
+  // Phase 2 benchmark game: only with ?bench (runner/adb), never in the child's shelf.
+  if (new URLSearchParams(location.search).has('bench')) list.push({ id: 'bench', name: 'Bench', variant: 'bench', adaptive: false, rounds_per_session: 1, story: 'Bench',
+    levels: [{ level: 1, rounds: [{ id: 'bench-1', variant: 'bench', prompt: 'Benchmark', say: '', hint: '', why: '' }] }] });
   DATA = { list, byId: Object.fromEntries(list.map(g => [g.id, g])) }; return DATA;
 }
 const BUDDY = () => bridge.buddy();
@@ -42,7 +46,7 @@ export const GameScreen = {
     this.level = Math.min(bridge.get('glevel:' + id, 1), this.maxLevel); this.cur = this.level;
     this.SET = g.rounds_per_session || 5; this.seeds = makeSeeds(this.hudRoot, this.SET); this.seeds.set(0, -1);
     this.used = new Set(); this.idx = 0; this.firstTry = 0; this.streak = 0; this.miss = 0; this.upDone = this.downDone = false;
-    this.engine = null; this.phase = 'intro'; this.phaseT = time(); this.buttons = null; this.camX = 0;
+    this.engine = null; this.paused = false; this.pauseUI = null; this.engT = 0; this.phase = 'intro'; this.phaseT = time(); this.buttons = null; this.camX = 0;
     this.bubble.set(fill(g.story || g.say_intro || g.name));
     if (bridge.get('autovoice', false)) bridge.say(fill(g.say_intro || g.story));
     bridge.event('game_start', { id }); this.startMs = Date.now();
@@ -62,7 +66,8 @@ export const GameScreen = {
     const r = this.nextRound(); this.round = r; this.tries = 0;
     this.engineRoot = new THREE.Group(); this.root.add(this.engineRoot); this.engineHud = new THREE.Group(); this.hudRoot.add(this.engineHud);
     const make = engineFor(this.game, r); const self = this;
-    const ctx = { root: this.engineRoot, hudRoot: this.engineHud, game: this.game, round: r, tara: this.tara, fill,
+    this.engT = 0;
+    const ctx = { root: this.engineRoot, adaptKey: 'adapt:' + this.game.id, hudRoot: this.engineHud, game: this.game, round: r, tara: this.tara, fill,
       bubble: (t, a) => self.bubble.set(fill(t), a), say: t => bridge.say(fill(t)), sfx: n => bridge.sfx(n),
       correct(at) { bridge.sfx('chime'); if (at) self.burst.userData.fire(at); self.tara.userData.setMood('happy', time()); },
       wrong(hint) { self.tries++; bridge.sfx('boing'); self.tara.userData.setMood('think', time()); self.bubble.set(fill(self.tries >= 2 && hint ? hint : (r.retry || 'Hmm, look again!')), '#FFB347'); },
@@ -93,19 +98,31 @@ export const GameScreen = {
       { text: 'More games', accent: '#FFC94A', act: () => router.go('playlist', {}) },
       { text: 'Home', accent: '#B49CFF', act: () => router.go('home', {}) }], { y: 260 });
   },
-  key(k) {
-    if (k === 'back') { router.go('playlist', {}); return true; }
+  // Action engines (pausable): BACK pauses; BACK again (or "More games") leaves. Turn-based engines leave at once, as before.
+  pauseGame() { if (this.paused) return; this.paused = true; releaseHeld(this.engine); bridge.sfx('pop');
+    this.bubble.set(fill('Paused. Have a little rest.'), '#B49CFF');
+    this.pauseUI = makeButtons(this.hudRoot, [{ text: 'Keep playing', accent: '#7CF2B0', act: () => this.resumeGame() },
+      { text: 'More games', accent: '#FFC94A', act: () => router.go('playlist', {}) }], { y: 430 }); },
+  resumeGame() { if (!this.paused) return; this.paused = false; this.pauseUI && this.pauseUI.group.removeFromParent(); this.pauseUI = null;
+    this.bubble.set(fill((this.round && this.round.prompt) || ''), '#FFC94A'); },
+  appPaused() { if (this.phase === 'play' && this.engine && this.engine.pausable) this.pauseGame(); },
+  hold(k, down) { if (this.phase === 'play' && !this.paused && this.engine && this.engine.hold) this.engine.hold(k, down); },
+  key(k, rep) {
+    if (k === 'back') { if (this.phase === 'play' && this.engine && this.engine.pausable && !this.paused) { this.pauseGame(); return true; }
+      router.go('playlist', {}); return true; }
+    if (this.paused) { if (!rep) this.pauseUI.key(k); return true; }
     if (k === 'up' && this.phase === 'play' && this.engine && this.engine.wantsUp) return this.engine.key(k);
     if (k === 'up' && this.phase !== 'end') { bridge.say(fill(this.phase === 'intro' ? (this.game.say_intro || this.game.story) : (this.round && (this.round.say || this.round.prompt)))); return true; }
     if (this.phase === 'intro') { if (k === 'ok') this.startRound(); return true; }
     if (this.phase === 'reward') { if (k === 'ok' && time() - this.phaseT > .6) this.startRound(); return true; }
     if (this.phase === 'end') return this.buttons.key(k);
-    return this.engine && this.engine.key ? this.engine.key(k) : false;
+    return this.engine && this.engine.key ? this.engine.key(k, rep) : false;
   },
   update(t, dt) {
     if (this.phase === 'intro' && t - this.phaseT > (CFG.reduced ? .2 : 2.2)) this.startRound();
     if (this.phase === 'reward' && t - this.phaseT > 3.0) this.startRound();
-    this.engine && this.engine.update && this.engine.update(t, dt);
+    if (this.engine && this.engine.update) { if (this.engine.pausable) { if (!this.paused) { this.engT += dt; this.engine.update(this.engT, dt); } } else this.engine.update(t, dt); }
+    this.pauseUI && this.pauseUI.update(t);
     if (this.warm && t - this.warmT > .5) { this.warm.removeFromParent(); this.warm = null; this.burst.position.y = 0; this.burst.visible = false; }
     this.burst.userData.update(t, dt); this.garden.userData.update(t); this.bubble.update(t); this.buttons && this.buttons.update(t);
     this.tara.userData.update(t, this.engine && this.engine.lookX ? this.engine.lookX() : 0);

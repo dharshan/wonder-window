@@ -59285,6 +59285,73 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ww601",
+   "catalogue_id": "WW-601",
+   "name": "Star Catcher",
+   "icon": "⭐",
+   "color": "#E0A21F",
+   "tagline": "Catch stars, let rocks fly!",
+   "category": "B. Memory & Concentration",
+   "section": "play",
+   "variant": "catch",
+   "needs_variant": "catch",
+   "rounds_per_session": 3,
+   "story": "Help {buddy} fill a jar with shining stars.",
+   "say_intro": "Stars and rocks are coming! Press OK when a gold star is in the net. Let the rocks float by.",
+   "cheers": [
+    "Great catching!",
+    "Super waiting!",
+    "What a jar!",
+    "So careful!",
+    "You waited well!",
+    "Shining stars!"
+   ],
+   "end_lines": [
+    "Our star jar is full. Time to rest!",
+    "The stars are sleepy now. Goodnight, stars!",
+    "You caught so many stars!",
+    "Lovely waiting. Let's rest our eyes."
+   ],
+   "levels_info": [
+    {
+     "level": 1,
+     "title": "Gold stars",
+     "emoji": "⭐"
+    }
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "rounds": [
+      {
+       "id": "ww601-1-01",
+       "variant": "catch",
+       "prompt": "Catch the gold stars!",
+       "say": "Press OK when a gold star is in the net.",
+       "hint": "Rocks float by. Wait for stars!",
+       "why": "Your jar is filling up!"
+      },
+      {
+       "id": "ww601-1-02",
+       "variant": "catch",
+       "prompt": "Star in the net? Press OK!",
+       "say": "Watch the net. Press OK for a star. Let rocks go by.",
+       "hint": "Rocks float by. Wait for stars!",
+       "why": "So many shining stars!"
+      },
+      {
+       "id": "ww601-1-03",
+       "variant": "catch",
+       "prompt": "Wait for the stars!",
+       "say": "Wait, wait, wait. Now a star! Press OK.",
+       "hint": "Rocks float by. Wait for stars!",
+       "why": "You waited so well!"
+      }
+     ]
+    }
+   ]
   }
  ],
  "merged_modes": [

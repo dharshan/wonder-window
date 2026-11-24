@@ -76,8 +76,26 @@ export const scene0 = new THREE.Scene();
 
 // ---------- input: D-pad keys + BACK (delivered by Java via WWWorld.key) ----------
 const KEYMAP = { ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down', Enter: 'ok', ' ': 'ok', Escape: 'back', Backspace: 'back' };
-export function key(k) { if (window.__introSkip) { window.__introSkip(); return; } if (nextReq || fadeDir === 1) return; if (k === 'back' && !(current && current.key && current.key('back'))) { bridge.back(); return; } current && current.key && current.key(k); }
-addEventListener('keydown', e => { const k = KEYMAP[e.key]; if (k) { e.preventDefault(); key(k); } });
+// key(k, rep): every press, including system auto-repeats (rep = true). Existing engines ignore `rep`.
+// hold(k, down): first press and release only, for real-time games that steer while a key is held.
+// A release can be lost (remote sleeps or reconnects mid-hold), so a held key with no repeat for a while is released here.
+const HELD = {};
+export const held = k => !!HELD[k];
+export function hold(k, down) {
+  if (k === 'back') return;
+  if (down) HELD[k] = { t: performance.now(), rep: false }; else if (HELD[k]) delete HELD[k]; else return;
+  current && current.hold && current.hold(k, down);
+}
+function sweepHeld(now) { for (const k in HELD) { const h = HELD[k]; if (now - h.t > (h.rep ? 400 : 900)) hold(k, false); } }
+function releaseAll() { for (const k in HELD) hold(k, false); }
+export function key(k, rep = false) {
+  if (HELD[k]) { HELD[k].t = performance.now(); if (rep) HELD[k].rep = true; }
+  if (window.__introSkip) { window.__introSkip(); return; } if (nextReq || fadeDir === 1) return;
+  // BACK is delivered once: the screen handles it, or (if it doesn't) the host gets it. (It used to reach the screen twice.)
+  if (k === 'back') { if (!(current && current.key && current.key('back'))) bridge.back(); return; }
+  current && current.key && current.key(k, rep); }
+addEventListener('keydown', e => { const k = KEYMAP[e.key]; if (k) { e.preventDefault(); if (!e.repeat) hold(k, true); key(k, e.repeat); } });
+addEventListener('keyup', e => { const k = KEYMAP[e.key]; if (k) hold(k, false); });
 
 // ---------- bridge to the Android app (falls back to no-ops in a browser) ----------
 const N = window.WWN || null;
@@ -94,14 +112,15 @@ export const bridge = {
   canResolve(dyn) { try { return !!(N && N.canResolve && N.canResolve(dyn)); } catch (e) { return false; } },
   buddy() { try { return (N && N.buddy && N.buddy()) || 'Astro'; } catch (e) { return 'Astro'; } },
 };
-window.WWWorld = { key, go: (n, p) => router.go(n, typeof p === 'string' ? JSON.parse(p) : p), pause() { paused = true; }, resume() { paused = false; lastMs = performance.now(); } };
+window.WWWorld = { key, hold, go: (n, p) => router.go(n, typeof p === 'string' ? JSON.parse(p) : p),
+  pause() { paused = true; releaseAll(); current && current.appPaused && current.appPaused(); }, resume() { paused = false; lastMs = performance.now(); } };
 
 // ---------- frame loop (fixed render order, perf probe) ----------
 const dynWin = []; let lastSwap = performance.now();
 let T = 0, lastMs = 0, paused = false, perfT0 = performance.now(), prevNow = performance.now(), lastTick = performance.now(); const win = []; const perf = []; let perfDone = false, dynAcc = 0, dynN = 0, dynPR = CFG.pr;
 export const time = () => T;
 export function frame(dt) {
-  T += dt;
+  T += dt; sweepHeld(performance.now());
   if (fadeDir) { fadeT = clamp(fadeT + dt / .28); fade.material.opacity = fadeDir > 0 ? fadeT : 1 - fadeT; if (fadeDir > 0 && fadeT >= 1) swap(); else if (fadeDir < 0 && fadeT >= 1) { fadeDir = 0; fade.material.opacity = 0; } }
   current && current.update && current.update(T, dt);
   renderer.clear(); renderer.render(scene0, camera); renderer.render(hud, hudCam);

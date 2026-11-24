@@ -3680,8 +3680,12 @@ public class MainActivity extends Activity implements WorldView.Host {
                     : k == KeyEvent.KEYCODE_DPAD_DOWN ? "down" : (k == KeyEvent.KEYCODE_DPAD_CENTER || k == KeyEvent.KEYCODE_ENTER || k == KeyEvent.KEYCODE_NUMPAD_ENTER) ? "ok"
                     : k == KeyEvent.KEYCODE_BACK ? "back" : null;
             if (w == null) return super.dispatchKeyEvent(e);
-            boolean fire = "back".equals(w) ? e.getAction() == KeyEvent.ACTION_UP : e.getAction() == KeyEvent.ACTION_DOWN;
-            if (fire) world.js("WWWorld.key('" + w + "')");
+            boolean down = e.getAction() == KeyEvent.ACTION_DOWN, up = e.getAction() == KeyEvent.ACTION_UP;
+            // Held-key state for real-time games: first DOWN and the UP. (System auto-repeat: 500 ms, then every 80 ms on our TV.)
+            if (!"back".equals(w) && down && e.getRepeatCount() == 0) world.js("WWWorld.hold('" + w + "',true)");
+            if (!"back".equals(w) && up) world.js("WWWorld.hold('" + w + "',false)");
+            boolean fire = "back".equals(w) ? up : down;
+            if (fire) world.js("WWWorld.key('" + w + "'," + (e.getRepeatCount() > 0) + ")");
             return true;
         }
         if (web == null && "game".equals(screen) && maze != null && e.getAction() == KeyEvent.ACTION_DOWN && mazeKey(k)) return true;
