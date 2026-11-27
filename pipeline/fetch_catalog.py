@@ -57,9 +57,12 @@ def main(src, dst, per_row=40):
     cfg = json.load(open(src, encoding="utf-8"))
     rows = cfg["rows"]
     homes = {}                                   # channel id -> list of row ids (in order)
+    opts = {}                                    # channel id -> {"only": regex, "skip": regex} (optional 3rd element)
     for row in rows:
         for ch in row["channels"]:
             homes.setdefault(ch[0], []).append(row["id"])
+            if len(ch) > 2 and isinstance(ch[2], dict):
+                opts.setdefault(ch[0], {}).update(ch[2])
     buckets = {row["id"]: [] for row in rows}
     seen, report, feeds = set(), [], {}
     for cid, rids in homes.items():
@@ -70,11 +73,15 @@ def main(src, dst, per_row=40):
             continue
         title = feed.findtext("a:title", default="", namespaces=NS)
         kept = 0
+        only = re.compile(opts[cid]["only"], re.I) if opts.get(cid, {}).get("only") else None
+        skip = re.compile(opts[cid]["skip"], re.I) if opts.get(cid, {}).get("skip") else None
         for e in feed.findall("a:entry", NS):
             vid = e.findtext("yt:videoId", namespaces=NS)
             t = e.findtext("a:title", default="", namespaces=NS).strip()
             link = e.find("a:link", NS).get("href", "")
             if vid in seen or "/shorts/" in link or REJECT.search(t) or clickbait(t):
+                continue
+            if (only and not only.search(t)) or (skip and skip.search(t)):
                 continue
             target = rids[0]
             if len(rids) > 1:
@@ -85,7 +92,7 @@ def main(src, dst, per_row=40):
             seen.add(vid)
             buckets[target].append({"id": vid, "title": t, "channel": title})
             kept += 1
-        report.append(f"{title or cid}: {kept} kept -> {', '.join(rids)}")
+        report.append(f"{title or cid} [{cid}]: {kept} kept -> {', '.join(rids)}")
     out = {"schemaVersion": 2, "catalogVersion": int(time.strftime("%Y%m%d%H")), "rows": []}
     for row in rows:
         vids = buckets[row["id"]][:per_row]
